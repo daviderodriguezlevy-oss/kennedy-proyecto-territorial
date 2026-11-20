@@ -1,0 +1,12 @@
+* text=auto
+*.pdf binary
+*.bin binary
+*.gz binary
+*.zip binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.mp4 binary
+*.webm binary
+*.woff2 binary
