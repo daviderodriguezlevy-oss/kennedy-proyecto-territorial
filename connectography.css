@@ -1,0 +1,13 @@
+#territory-context{padding:20px;border-bottom:1px solid #344047;color:#c2cbd0;font-size:13px;line-height:1.65}
+#territory-context[hidden]{display:none}
+#territory-context h2{font-size:17px;color:#e2e8eb;margin:0 0 12px}
+#territory-context p{margin:0 0 12px}
+#territory-context ul{padding:0;list-style:none}
+#territory-context li{margin:7px 0}
+#territory-context i{display:inline-block;width:13px;height:13px;margin-right:8px;vertical-align:middle;border:1px solid #9ba7ad}
+.context-dark{background:#25353e}.context-light{background:#929b9e}.context-border{background:#d7cda6}
+#territory-context .context-note{font-size:11px;color:#9aabb4}
+#territory-context a{font-size:11px;color:#bfd2da}
+body[data-network="urban"] #sidebar{overflow-y:auto}
+body[data-network="urban"] #sidebar .explore{min-height:280px;flex-shrink:0}
+body[data-network="urban"] #territory-context{flex-shrink:0}

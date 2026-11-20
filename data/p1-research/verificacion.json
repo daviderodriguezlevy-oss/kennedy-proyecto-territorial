@@ -1,0 +1,594 @@
+{
+  "checks": [
+    {
+      "node": 1384,
+      "hour": "06:00–07:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "06:00–07:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "07:00–08:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "07:00–08:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "11:00–12:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "11:00–12:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "12:00–13:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "12:00–13:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "13:00–14:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "13:00–14:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "17:00–18:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "17:00–18:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "18:00–19:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 1384,
+      "hour": "18:00–19:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 72
+    },
+    {
+      "node": 990,
+      "hour": "06:00–07:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "06:00–07:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "07:00–08:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "07:00–08:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "11:00–12:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "11:00–12:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "12:00–13:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "12:00–13:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "13:00–14:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "13:00–14:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "17:00–18:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "17:00–18:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "18:00–19:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 990,
+      "hour": "18:00–19:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 60
+    },
+    {
+      "node": 985,
+      "hour": "06:00–07:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "06:00–07:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "07:00–08:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "07:00–08:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "11:00–12:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "11:00–12:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "12:00–13:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "12:00–13:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "13:00–14:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "13:00–14:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "17:00–18:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "17:00–18:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "18:00–19:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 985,
+      "hour": "18:00–19:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "06:00–07:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "06:00–07:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "07:00–08:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "07:00–08:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "11:00–12:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "11:00–12:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "12:00–13:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "12:00–13:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "13:00–14:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "13:00–14:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "17:00–18:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "17:00–18:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "18:00–19:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1219,
+      "hour": "18:00–19:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "06:00–07:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "06:00–07:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "07:00–08:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "07:00–08:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "11:00–12:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "11:00–12:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "12:00–13:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "12:00–13:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "13:00–14:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "13:00–14:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "17:00–18:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "17:00–18:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "18:00–19:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 988,
+      "hour": "18:00–19:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 56
+    },
+    {
+      "node": 1389,
+      "hour": "06:00–07:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "06:00–07:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "07:00–08:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "07:00–08:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "11:00–12:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "11:00–12:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "12:00–13:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "12:00–13:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "13:00–14:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "13:00–14:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "17:00–18:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "17:00–18:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "18:00–19:00",
+      "variable": "trucks",
+      "matched": true,
+      "raw_rows": 96
+    },
+    {
+      "node": 1389,
+      "hour": "18:00–19:00",
+      "variable": "pedestrians",
+      "matched": true,
+      "raw_rows": 96
+    }
+  ],
+  "matched_values": 84,
+  "records": 42
+}

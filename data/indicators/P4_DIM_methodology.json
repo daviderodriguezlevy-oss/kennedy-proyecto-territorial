@@ -1,0 +1,35 @@
+{
+  "source": "Secretaría Distrital de Movilidad · DIM · Tablero de congestión",
+  "urls": {
+    "bootstrap": "https://dim.movilidadbogota.gov.co/congestion/api/bootstrap/",
+    "zones": "https://dim.movilidadbogota.gov.co/congestion/api/geojson/",
+    "september_weekday_am": "https://dim.movilidadbogota.gov.co/congestion/api/dashboard/?anio=2026&mes=9&tipo_dia=H%C3%A1bil&hora=7&hora=8"
+  },
+  "retrieved_at": "2026-10-08T23:27:00.334860+00:00",
+  "filters": {
+    "anio": 2026,
+    "mes": 9,
+    "tipo_dia": "Hábil",
+    "hora": [
+      7,
+      8
+    ]
+  },
+  "period": "Septiembre 2026 · días hábiles · horas 07 y 08",
+  "source_updated": {
+    "fecha": "2026-10-07",
+    "exacta": true
+  },
+  "spatial_unit": "ZAT · valor promedio zonal, no observación individual de calle",
+  "zone_count": 58,
+  "coverage_pct": 96.12026152874516,
+  "min": 0.0,
+  "max": 75.22598039215687,
+  "interpretation": "Índice de congestión publicado por DIM; no conteo de vehículos, velocidad por calle ni emisiones.",
+  "grid_coverage_pct": 96.14306478405315,
+  "grid_known_cells": 55563,
+  "road_fragments": 7921,
+  "formula": "I4_v2 = X * (0.5 * C + 0.5 * Z); C = congestion_pct / 100",
+  "previous_version": "Six-aforo volume version archived; C is not interchangeable with vehicle counts",
+  "animation": "All clipped road fragments; illustrative particles, not measured volumes or real-time vehicles"
+}

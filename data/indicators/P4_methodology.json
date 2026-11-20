@@ -1,0 +1,48 @@
+{
+  "group": "Aves asociadas a vegetación y humedales; escenario genérico no calibrado",
+  "sources": {
+    "Parques": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/recreaciondeporte/parquesyescenarios/MapServer/1",
+    "Cobertura_humedales": "https://mapas.ambientebogota.gov.co/server/rest/services/Humedales/Cobertura_Vegetal_de_Humedales/MapServer/0",
+    "Calzadas": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/Mapa_Referencia/Mapa_Referencia/MapServer/15"
+  },
+  "features": {
+    "Parques": 276,
+    "Cobertura_humedales": 831,
+    "Calzadas": 6316
+  },
+  "patches": 64,
+  "connections": 122,
+  "grid": [
+    224,
+    258
+  ],
+  "cell_m": [
+    19.967931268320694,
+    19.94401969815694
+  ],
+  "area_km2": 23.01513315417778,
+  "traffic_nodes": 6,
+  "traffic_max": 4926.0,
+  "traffic_support_percent": 0.7717331118493909,
+  "date": "2026-02-24 06:00–07:00",
+  "formula": "I=X*(0.5*Y+0.5*Z)",
+  "bounds": "Imin=0.5*X*Z; Imax=0.5*X*(1+Z)",
+  "height": "Rhino Z=2640+1200*I; no physical phenomenon units",
+  "assumptions": {
+    "patch_min_m2": 5000,
+    "neighbors": 3,
+    "cost_reference_patch": 1,
+    "cost_other": 10,
+    "corridor_sigma_m": 50,
+    "aforo_support_m": 100
+  },
+  "limits": [
+    "Parques are reference polygons, not observed vegetation or confirmed bird habitat",
+    "Wetland cover includes several cover classes; not all equally suitable",
+    "X excludes roads; reference habitat use and resistance are not calibrated",
+    "Road area fraction is a geometric proxy, not measured crossing probability",
+    "Y is an unvalidated local assignment within 100 m of six nodes, not measured road-segment volume",
+    "No traffic outside support is imputed; main view is structural lower bound",
+    "Connections clipped to study polygon; external connectivity not evaluated"
+  ]
+}

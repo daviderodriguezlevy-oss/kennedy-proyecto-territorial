@@ -1,0 +1,422 @@
+{
+  "date": "2026-10-13",
+  "title": "Centralización del acopio alimentario y su relación con la gestión privada y la dependencia del abastecimiento externo",
+  "local_result": "Coincidencia relativa de pasos de camiones y peatones: diagnóstico parcial, no centralización ni privatización",
+  "formula": "D(i,t)=sqrt((C(i,t)/Cmax)*(P(i,t)/Pmax))",
+  "cmax": 336.0,
+  "pmax": 2203.0,
+  "normalization": "Maximum across the same six sites and seven one-hour intervals, fixed across hours",
+  "aforo_date": "2026-02-24",
+  "cell_m": [
+    19.967931268320694,
+    19.94401969815694
+  ],
+  "cells": 1790,
+  "graphic_support_percent": 3.097314507198228,
+  "graphic_support_radius_m": 250,
+  "area_km2": 23.01513315417778,
+  "stats": {
+    "corabastos_tonnes": 183001.7655,
+    "four_markets_tonnes": 193530.6521,
+    "share_monitored_markets": 0.9455957674624091,
+    "recorded_outside_bogota_fraction": 0.9678390479790208,
+    "foreign_origin_fraction": 0.031707797922856655,
+    "foreign_origins_tonnes": {
+      "ECUADOR": 2719.563,
+      "CHINA": 237.2,
+      "ESTADOS UNIDOS DE AMÉRICA": 182.999,
+      "CANADÁ": 583.95,
+      "ITALIA": 160.58,
+      "CHILE": 1525.06,
+      "PERÚ": 69.86,
+      "GRECIA": 34.0,
+      "ARGENTINA": 94.0,
+      "FRANCIA": 65.291,
+      "PORTUGAL": 22.0,
+      "ESPAÑA": 10.5,
+      "VIETNAM": 9.0,
+      "POLONIA": 54.58,
+      "BRASIL": 34.0
+    },
+    "monthly_share": [
+      {
+        "month": "2026-01",
+        "share": 0.9501330955660594
+      },
+      {
+        "month": "2026-02",
+        "share": 0.9455957674624091
+      },
+      {
+        "month": "2026-03",
+        "share": 0.9459999497369287
+      },
+      {
+        "month": "2026-04",
+        "share": 0.9467276816015427
+      }
+    ]
+  },
+  "periods": [
+    {
+      "id": "0600",
+      "label": "06:00–07:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 243.0,
+          "pedestrians": 619.0,
+          "index": 0.45078719811377693
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 217.0,
+          "pedestrians": 2203.0,
+          "index": 0.8036375634160796
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 68.0,
+          "pedestrians": 698.0,
+          "index": 0.2532242423508552
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 12.0,
+          "pedestrians": 432.0,
+          "index": 0.083686539370428
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 67.0,
+          "pedestrians": 732.0,
+          "index": 0.2574044523155147
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 54.0,
+          "pedestrians": 431.0,
+          "index": 0.17732036954528752
+        }
+      ],
+      "surfaceKey": "P1supply0600"
+    },
+    {
+      "id": "0700",
+      "label": "07:00–08:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 264.0,
+          "pedestrians": 536.0,
+          "index": 0.4372275013594296
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 224.0,
+          "pedestrians": 876.0,
+          "index": 0.5148718820494106
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 84.0,
+          "pedestrians": 443.0,
+          "index": 0.2242149769269388
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 12.0,
+          "pedestrians": 330.0,
+          "index": 0.07314265247037052
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 36.0,
+          "pedestrians": 453.0,
+          "index": 0.14843060721831766
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 63.0,
+          "pedestrians": 394.0,
+          "index": 0.18312241130337245
+        }
+      ],
+      "surfaceKey": "P1supply0700"
+    },
+    {
+      "id": "1100",
+      "label": "11:00–12:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 336.0,
+          "pedestrians": 630.0,
+          "index": 0.534765062681822
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 335.0,
+          "pedestrians": 1523.0,
+          "index": 0.8302243520662653
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 82.0,
+          "pedestrians": 421.0,
+          "index": 0.21595889012450348
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 22.0,
+          "pedestrians": 390.0,
+          "index": 0.10766306929120606
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 73.0,
+          "pedestrians": 531.0,
+          "index": 0.22883992846329998
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 79.0,
+          "pedestrians": 432.0,
+          "index": 0.21472298294780837
+        }
+      ],
+      "surfaceKey": "P1supply1100"
+    },
+    {
+      "id": "1200",
+      "label": "12:00–13:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 314.0,
+          "pedestrians": 640.0,
+          "index": 0.5210482285851121
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 299.0,
+          "pedestrians": 1555.0,
+          "index": 0.7925449509633474
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 81.0,
+          "pedestrians": 607.0,
+          "index": 0.25772702920136453
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 14.0,
+          "pedestrians": 357.0,
+          "index": 0.08217150449336794
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 57.0,
+          "pedestrians": 709.0,
+          "index": 0.23365961574497388
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 63.0,
+          "pedestrians": 479.0,
+          "index": 0.20191154137436645
+        }
+      ],
+      "surfaceKey": "P1supply1200"
+    },
+    {
+      "id": "1300",
+      "label": "13:00–14:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 294.0,
+          "pedestrians": 409.0,
+          "index": 0.4030495419583178
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 298.0,
+          "pedestrians": 751.0,
+          "index": 0.549858842196403
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 83.0,
+          "pedestrians": 343.0,
+          "index": 0.1961142804980866
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 15.0,
+          "pedestrians": 244.0,
+          "index": 0.07031753781785118
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 62.0,
+          "pedestrians": 392.0,
+          "index": 0.18120158449370471
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 92.0,
+          "pedestrians": 452.0,
+          "index": 0.2370206822108355
+        }
+      ],
+      "surfaceKey": "P1supply1300"
+    },
+    {
+      "id": "1700",
+      "label": "17:00–18:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 161.0,
+          "pedestrians": 429.0,
+          "index": 0.30546727932478207
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 186.0,
+          "pedestrians": 1262.0,
+          "index": 0.5631307752391086
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 52.0,
+          "pedestrians": 500.0,
+          "index": 0.18741734735209023
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 22.0,
+          "pedestrians": 296.0,
+          "index": 0.09379513410379545
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 48.0,
+          "pedestrians": 563.0,
+          "index": 0.19107238687506156
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 75.0,
+          "pedestrians": 515.0,
+          "index": 0.22843221921545018
+        }
+      ],
+      "surfaceKey": "P1supply1700"
+    },
+    {
+      "id": "1800",
+      "label": "18:00–19:00",
+      "rows": [
+        {
+          "node": 1384,
+          "address": "AC_80_X_CL_38C_S",
+          "trucks": 162.0,
+          "pedestrians": 383.0,
+          "index": 0.28952095789309396
+        },
+        {
+          "node": 990,
+          "address": "AK_80_X_CL_40C_SUR",
+          "trucks": 179.0,
+          "pedestrians": 1557.0,
+          "index": 0.6136121275456807
+        },
+        {
+          "node": 985,
+          "address": "KR_79_X_CL_38C_S",
+          "trucks": 55.0,
+          "pedestrians": 451.0,
+          "index": 0.1830596924613447
+        },
+        {
+          "node": 1219,
+          "address": "CL_40C_SUR_X_KR_79F",
+          "trucks": 19.0,
+          "pedestrians": 435.0,
+          "index": 0.1056682564883359
+        },
+        {
+          "node": 988,
+          "address": "KR_79_X_CL_40_C_SUR",
+          "trucks": 47.0,
+          "pedestrians": 815.0,
+          "index": 0.22748399472860337
+        },
+        {
+          "node": 1389,
+          "address": "KR_78_M_X_CL_38C_S",
+          "trucks": 39.0,
+          "pedestrians": 601.0,
+          "index": 0.17794781193590828
+        }
+      ],
+      "surfaceKey": "P1supply1800"
+    }
+  ],
+  "local_market_inventory_count": 6,
+  "source_supply": "https://www.dane.gov.co/files/operaciones/SIPSA/anex-Microdato-abastecimiento-2026.xlsx",
+  "source_markets": "https://sinu.sdp.gov.co/serverp/rest/services/EQUIPAMIENTO/Sistema_Abastecimientos_Seguridad_Alimentaria/MapServer/1",
+  "source_departments": "https://visualizador.ideam.gov.co/gisserver/rest/services/Hosted/MGN_DPTO_POLITICO/FeatureServer/0",
+  "source_rivi": "https://datosabiertos.bogota.gov.co/dataset/rivi-vendedoresinformales",
+  "limitations": [
+    "Aforos count passages, not unique individuals; no route or purpose attribution to Corabastos.",
+    "250 m is a display footprint, not measured coverage or an impact radius.",
+    "No calculation beyond data support; no imputation from residential population.",
+    "SIPSA shares refer only to four monitored markets, not the entire food system.",
+    "Recorded origin is not necessarily production origin; no self-sufficiency estimate.",
+    "Food totals do not enter the local raster: monthly destination totals cannot be assigned to streets.",
+    "No informal-vendor spatial time series verified at KML scale; RIVI locality totals are not disaggregated.",
+    "SDP property codes are not used; current mixed ownership is sourced from Corabastos, not inferred from maps.",
+    "No institutional causality or historical privatization index is calculated.",
+    "Context national and city-region maps are explicitly outside the KML; local maps and surfaces are strictly clipped."
+  ]
+}

@@ -1,0 +1,527 @@
+[
+  {
+    "a": "E07",
+    "b": "E01",
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "reason": "Ingreso y despacho controlado de mercancía.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E01",
+    "b": "E04",
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "reason": "Traslado de producto a selección y empaque.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E01",
+    "b": "E05",
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "reason": "Entrega de alimentos recuperables bajo control sanitario.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E04",
+    "b": "E06",
+    "profiles": [
+      "tecnico"
+    ],
+    "reason": "Circuito separado de residuos: acceso de operación.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E06",
+    "b": "E07",
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "reason": "Salida de residuos hacia recolección.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E12",
+    "b": "E10",
+    "profiles": [
+      "peaton",
+      "tecnico"
+    ],
+    "reason": "Acceso residencial accesible.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E12",
+    "b": "E11",
+    "profiles": [
+      "peaton",
+      "tecnico"
+    ],
+    "reason": "Atención a hogares durante la transformación.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E12",
+    "b": "E14",
+    "profiles": [
+      "peaton",
+      "tecnico"
+    ],
+    "reason": "Camino peatonal a paraderos.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E12",
+    "b": "E13",
+    "profiles": [
+      "peaton",
+      "tecnico"
+    ],
+    "reason": "Llegada al puesto de observación; acceso de visitantes según horario.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E12",
+    "b": "E16",
+    "profiles": [
+      "peaton",
+      "tecnico"
+    ],
+    "reason": "Ingreso al espacio de coordinación.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E13",
+    "b": "E08",
+    "profiles": [
+      "tecnico"
+    ],
+    "reason": "Acceso técnico condicionado a sensibilidad y ciclos del hábitat.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E13",
+    "b": "E09",
+    "profiles": [
+      "tecnico"
+    ],
+    "reason": "Seguimiento técnico de refugios con protocolo.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E08",
+    "b": "E09",
+    "profiles": [
+      "fauna"
+    ],
+    "reason": "Continuidad propuesta para fauna compatible con ambos hábitats.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E12",
+    "b": "E15",
+    "profiles": [
+      "tecnico"
+    ],
+    "reason": "Acceso de mantenimiento a drenajes; el agua circula en otra red.",
+    "direct": true,
+    "via": [],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E16",
+    "b": "E07",
+    "profiles": [
+      "tecnico"
+    ],
+    "reason": "Visita operativa mediante recorrido de servicio.",
+    "direct": false,
+    "via": [
+      "Recorrido de servicio"
+    ],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E01",
+    "b": "E02",
+    "profiles": [
+      "carga"
+    ],
+    "reason": "Transferencia entre centros por transporte metropolitano.",
+    "direct": false,
+    "via": [
+      "E07",
+      "Red vial metropolitana"
+    ],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E01",
+    "b": "E03",
+    "profiles": [
+      "carga"
+    ],
+    "reason": "Transferencia entre centros por transporte metropolitano.",
+    "direct": false,
+    "via": [
+      "E07",
+      "Red vial metropolitana"
+    ],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E02",
+    "b": "E03",
+    "profiles": [
+      "carga"
+    ],
+    "reason": "Coordinación y transferencia entre centros externos.",
+    "direct": false,
+    "via": [
+      "Red vial metropolitana"
+    ],
+    "both": true,
+    "type": "access"
+  },
+  {
+    "a": "E01",
+    "b": "E04",
+    "reason": "Proximidad entre recepción y preparación.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E01",
+    "b": "E05",
+    "reason": "Proximidad a alimento recuperable con separación sanitaria.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E06",
+    "b": "E07",
+    "reason": "Proximidad para retiro de residuos.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E08",
+    "b": "E09",
+    "reason": "Continuidad de refugio y vegetación.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E08",
+    "b": "E12",
+    "reason": "Borde de transición con control de acceso.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E10",
+    "b": "E11",
+    "reason": "Atención cercana a los hogares.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E10",
+    "b": "E12",
+    "reason": "Relación vivienda–espacio público.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E12",
+    "b": "E14",
+    "reason": "Acceso cotidiano a paraderos.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E13",
+    "b": "E12",
+    "reason": "Observación vinculada al recorrido público.",
+    "type": "adjacency"
+  },
+  {
+    "a": "E04",
+    "b": "E06",
+    "type": "adjacency",
+    "reason": "Cercanía para retiro por circuito separado y barrera sanitaria."
+  },
+  {
+    "a": "E12",
+    "b": "E16",
+    "type": "adjacency",
+    "reason": "Coordinación accesible desde el recorrido público."
+  },
+  {
+    "a": "E12",
+    "b": "E15",
+    "type": "adjacency",
+    "reason": "Acceso al drenaje para mantenimiento desde el espacio público."
+  },
+  {
+    "a": "E17",
+    "b": "E18",
+    "type": "access",
+    "direct": true,
+    "via": [],
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "both": true,
+    "reason": "Clasificación, conservación y empaque en origen."
+  },
+  {
+    "a": "E17",
+    "b": "E01",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red regional",
+      "E07"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Envíos consolidados hacia Corabastos."
+  },
+  {
+    "a": "E17",
+    "b": "E02",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red regional"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Recepción directa en centro metropolitano B."
+  },
+  {
+    "a": "E17",
+    "b": "E03",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red regional"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Recepción directa en centro metropolitano C."
+  },
+  {
+    "a": "E01",
+    "b": "E19",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "E07"
+    ],
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "both": true,
+    "reason": "Transferencia hacia distribución urbana."
+  },
+  {
+    "a": "E19",
+    "b": "E20",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red urbana de reparto"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Entrega a mercados de otros barrios."
+  },
+  {
+    "a": "E02",
+    "b": "E20",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red urbana de reparto"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Abastecimiento de proximidad desde B."
+  },
+  {
+    "a": "E03",
+    "b": "E20",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red urbana de reparto"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Abastecimiento de proximidad desde C."
+  },
+  {
+    "a": "E19",
+    "b": "E22",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Recorrido de reparto"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Entrega en muelle de la plaza local."
+  },
+  {
+    "a": "E12",
+    "b": "E22",
+    "type": "access",
+    "direct": true,
+    "via": [],
+    "profiles": [
+      "peaton",
+      "tecnico"
+    ],
+    "both": true,
+    "reason": "Entrada pública desde andenes y estancia."
+  },
+  {
+    "a": "E06",
+    "b": "E21",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "Red regional"
+    ],
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "both": true,
+    "reason": "Salida de materiales separados para aprovechamiento."
+  },
+  {
+    "a": "E19",
+    "b": "E23",
+    "type": "access",
+    "direct": false,
+    "via": [
+      "E07"
+    ],
+    "profiles": [
+      "carga"
+    ],
+    "both": true,
+    "reason": "Retorno de envases."
+  },
+  {
+    "a": "E23",
+    "b": "E04",
+    "type": "access",
+    "direct": true,
+    "via": [],
+    "profiles": [
+      "carga",
+      "tecnico"
+    ],
+    "both": true,
+    "reason": "Entrega de envases limpios."
+  },
+  {
+    "a": "E23",
+    "b": "E06",
+    "type": "access",
+    "direct": true,
+    "via": [],
+    "profiles": [
+      "tecnico"
+    ],
+    "both": true,
+    "reason": "Separación de materiales no recuperables."
+  },
+  {
+    "a": "E17",
+    "b": "E18",
+    "type": "adjacency",
+    "reason": "Conservación próxima al acondicionamiento en origen."
+  },
+  {
+    "a": "E07",
+    "b": "E19",
+    "type": "adjacency",
+    "reason": "Transferencia de carga y reparto."
+  },
+  {
+    "a": "E12",
+    "b": "E22",
+    "type": "adjacency",
+    "reason": "Acceso público a mercado local."
+  },
+  {
+    "a": "E04",
+    "b": "E23",
+    "type": "adjacency",
+    "reason": "Suministro de envases limpios con separación sanitaria."
+  }
+]

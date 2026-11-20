@@ -1,0 +1,12 @@
+{
+  "source": "https://geoportal.jbb.gov.co/agc/rest/services/IDECA/CensoArbol/FeatureServer/0",
+  "catalog": "https://www.ideca.gov.co/recursos/mapas/arbolado-urbano",
+  "license": "CC BY 4.0 · Jardín Botánico de Bogotá",
+  "downloaded": "2026-10-11",
+  "catalog_updated": "2025-12-31",
+  "queried": 72292,
+  "count": 72292,
+  "scope": "Todos los registros devueltos por la capa oficial dentro del KML. Inventario de arbolado público: no garantiza todos los árboles privados ni supervivencia actual. Incluye árboles, arbustos, palmas y helechos arborescentes.",
+  "symbol": "Esfera de radio gráfico uniforme; no representa diámetro de copa.",
+  "filter": "Consulta espacial seguida de covers del polígono exacto en EPSG:4326. Sin muestreo ni reducción del inventario."
+}

@@ -1,0 +1,115 @@
+{
+  "method": "Five highest local maxima, separated by at least 400m; nearest two network anchors in plan. Distances rounded to metres, approximate. Not flow or causality.",
+  "peaks": [
+    {
+      "peak": 1,
+      "position": [
+        -1.8399021625518799,
+        1.2891572713851929,
+        1.1037254333496094
+      ],
+      "nodes": [
+        {
+          "id": "N12",
+          "label": "Comercio callejero",
+          "distance_m": 80,
+          "placement": "representativa_aproximada"
+        },
+        {
+          "id": "N45",
+          "label": "Reciclaje",
+          "distance_m": 82,
+          "placement": "representativa_aproximada"
+        }
+      ]
+    },
+    {
+      "peak": 2,
+      "position": [
+        -2.2078826427459717,
+        1.1979687213897705,
+        0.23651260137557983
+      ],
+      "nodes": [
+        {
+          "id": "N03",
+          "label": "Bodegas de barrio",
+          "distance_m": 220,
+          "placement": "representativa_aproximada"
+        },
+        {
+          "id": "N44",
+          "label": "Buses y transporte público",
+          "distance_m": 423,
+          "placement": "representativa_aproximada"
+        }
+      ]
+    },
+    {
+      "peak": 3,
+      "position": [
+        0.23655885457992554,
+        1.1530290842056274,
+        0.2890709638595581
+      ],
+      "nodes": [
+        {
+          "id": "N25",
+          "label": "Humedal El Burro",
+          "distance_m": 227,
+          "placement": "referencia_cartografica"
+        },
+        {
+          "id": "N19",
+          "label": "Parques de barrio",
+          "distance_m": 373,
+          "placement": "representativa_aproximada"
+        }
+      ]
+    },
+    {
+      "peak": 4,
+      "position": [
+        -2.260451316833496,
+        1.057979702949524,
+        1.261400580406189
+      ],
+      "nodes": [
+        {
+          "id": "N45",
+          "label": "Reciclaje",
+          "distance_m": 372,
+          "placement": "representativa_aproximada"
+        },
+        {
+          "id": "N18",
+          "label": "Instalaciones deportivas",
+          "distance_m": 421,
+          "placement": "representativa_aproximada"
+        }
+      ]
+    },
+    {
+      "peak": 5,
+      "position": [
+        2.1290297508239746,
+        1.0281020402908325,
+        0.026279179379343987
+      ],
+      "nodes": [
+        {
+          "id": "N28",
+          "label": "Río Fucha",
+          "distance_m": 946,
+          "placement": "representativa_aproximada"
+        },
+        {
+          "id": "N26",
+          "label": "Humedal de Techo",
+          "distance_m": 994,
+          "placement": "referencia_cartografica"
+        }
+      ]
+    }
+  ]
+}

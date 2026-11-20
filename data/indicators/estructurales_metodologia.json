@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-12",
+  "area_km2": 23.01513315417778,
+  "grid": [
+    224,
+    258
+  ],
+  "cell_m": [
+    19.967931268320694,
+    19.94401969815694
+  ],
+  "metrics": {
+    "P1": {
+      "cells": 698,
+      "coverage_percent": 1.208,
+      "maximum": 0.7555143848255165
+    },
+    "P2": {
+      "cells": 3563,
+      "coverage_percent": 6.165,
+      "maximum": 0.4122431613943842
+    }
+  },
+  "parameters": {
+    "logistics_graphic_support_m": 250,
+    "population_P95_persons_ha": 1118.4630592073715,
+    "growth_positive_P95_percent": 103.34462327117623,
+    "wetland_reference_buffer_m": 200,
+    "raster_subsamples": 4,
+    "noise_valid_subpixel_coverage_min": 0.8
+  },
+  "formulas": {
+    "P1": "L * P * N; diagnostic coincidence, not conflict of interests",
+    "P2": "G * H; recent building increase near protected wetlands, not historical wetland loss"
+  },
+  "records": {
+    "Valor_2017": 2564,
+    "Valor_2026": 2472,
+    "Variacion_construida": 2558,
+    "Barrios_legalizados": 87,
+    "Humedales_PEDH": 4,
+    "Humedales_RDH": 3
+  },
+  "sources": {
+    "Valor_2017": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/catastro/valorreferencia/MapServer/0",
+    "Valor_2026": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/catastro/valorreferencia/MapServer/0",
+    "Variacion_construida": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/catastro/variacionareaconstruida/MapServer/1",
+    "Barrios_legalizados": "https://sinu.sdp.gov.co/serverp/rest/services/Consultas/MapServer/11",
+    "Humedales_PEDH": "https://mapas.ambientebogota.gov.co/server/rest/services/Mapa_comparativo_Humedales_MIL1/MapServer/0",
+    "Humedales_RDH": "https://mapas.ambientebogota.gov.co/server/rest/services/Mapa_comparativo_Humedales_MIL1/MapServer/1"
+  },
+  "limitations": [
+    "Hypotheses of interests are untested; indicators do not measure power or benefits.",
+    "P1 combines 2026 aforos, 2018 census, and MER 2018-2021; no simultaneous causal inference.",
+    "L is a graphic nearest-aforo assignment only within 250m; not observed road flow outside points.",
+    "N ranks 11 official noise classes from 0 to 1; not a physical decibel average or legal threshold.",
+    "P2 growth is total floor area, not footprint expansion; may include vertical growth or cadastral updates.",
+    "Protected legal boundaries are not historic wetland cover or observed water.",
+    "Price maps are nominal, not inflation-adjusted, use the same 0-6M COP/m2 legend; not profits.",
+    "Legalization dates are administrative dates, not dates of construction or proof of illegality elsewhere.",
+    "No historical wetland conversion indicator is calculated: historical georeferencing and validation still required."
+  ],
+  "pending": {
+    "P1": [
+      "Logistics footprint and full routes by time",
+      "Employment and economic benefits linked to Corabastos",
+      "Decisions, agreements and distribution of costs",
+      "Attributable emissions, incidents, actual sidewalk obstacles"
+    ],
+    "P2": [
+      "Georeferenced historical wetland cover and urbanization sequence",
+      "Land ownership and transactions",
+      "Licensing and infrastructure chronology",
+      "Inflation-adjusted comparable land-value series",
+      "Event-level environmental and urban costs"
+    ]
+  }
+}

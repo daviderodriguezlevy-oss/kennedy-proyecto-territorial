@@ -1,0 +1,40 @@
+{
+  "layers": {
+    "roads": {
+      "vertices": 122094,
+      "features": 6316,
+      "sourceFile": "P4_barreras_aves/Calzadas.geojson"
+    },
+    "sidewalks": {
+      "vertices": 130677,
+      "features": 10679,
+      "sourceFile": "fuentes_indicadores/Andenes_recortado.geojson"
+    },
+    "parks": {
+      "vertices": 7890,
+      "features": 276,
+      "sourceFile": "P4_barreras_aves/Parques.geojson"
+    },
+    "hydrology": {
+      "vertices": 358188,
+      "features": 35,
+      "sourceFile": "fuentes_indicadores/Sistema_hidrico_recortado.geojson"
+    }
+  },
+  "trees": 72292,
+  "recordedHeights": 72291,
+  "heightGrid": {
+    "nx": 420,
+    "nz": 365,
+    "xmin": -2.575863,
+    "xmax": 2.575863,
+    "zmin": -2.23373,
+    "zmax": 2.23373
+  },
+  "reference": "GeometrÃ­a Rhino exportada 2026-10-07; arbolado descargado 2026-10-11; capas cartogrÃ¡ficas conservadas en octubre de 2026. Fechas de levantamiento variables.",
+  "treeNote": "Copa y tronco estilizados; altura vÃ¡lida del registro o 5 m si falta. Inventario pÃºblico, no censo de todos los Ã¡rboles vivos.",
+  "hydroNote": "Sistema hÃ­drico y Ã¡mbitos de protecciÃ³n; la extensiÃ³n coloreada no equivale al espejo de agua observado.",
+  "buildingsNote": "GeometrÃ­a y alturas del archivo Rhino original, sin auditorÃ­a de fecha de cada edificio.",
+  "banksVertices": 9438,
+  "wetlandDisplay": "Depresión visual de 1,2 m para separar la superficie hídrica del terreno. Ajuste gráfico, no batimetría medida. Superficies hídricas disueltas para eliminar solapes."
+}

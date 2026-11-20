@@ -1,0 +1,1280 @@
+{
+  "id": "elalto-rojava",
+  "title": "Organización colectiva y espacio habitable",
+  "subtitle": "El Alto–FEJUVE / Rojava–Jinwar",
+  "date": "19/10/2026",
+  "authors": "Nicolás y David",
+  "sources": {
+    "G": {
+      "title": "Guía de trabajo del Corte III, Modelamiento Dinámico y Simulación Computacional",
+      "date": "Material del curso, fecha no visible",
+      "type": "Consigna docente",
+      "url": "",
+      "limit": "Capturas suministradas por David. No son evidencia de los casos."
+    },
+    "E1": {
+      "title": "Deledicque y Contartese. Las Juntas Vecinales de El Alto entre la institucionalidad y la rebelión. Lavboratorio 23",
+      "date": "2010; ficha publicada en 2014",
+      "type": "Investigación con entrevistas",
+      "url": "https://publicaciones.sociales.uba.ar/index.php/lavboratorio/en/article/view/103",
+      "limit": "Explica un periodo histórico. No acredita la composición actual de todas las dirigencias."
+    },
+    "E2": {
+      "title": "GAMEA. PTDI para Vivir Bien del Municipio de El Alto 2021–2025, mapa 29, p.123; mapa 63, p.271",
+      "date": "Diagnóstico 2022 / red de agua 2021; PDF alojado en 2025",
+      "type": "Cartografía municipal",
+      "url": "https://www.elalto.gob.bo/wp-content/uploads/2025/04/PTDI-AJUSTADO-PARA-VIVIR-BIEN-DEL-MUNICIPIO-DE-EL-ALTO-21-25.pdf",
+      "limit": "La primera lámina registra carencias. La segunda muestra interconexión, no conexiones efectivas de cada hogar ni continuidad horaria."
+    },
+    "E3": {
+      "title": "Foster e Irusta. Does Infrastructure Reform Work for the Poor? WPS 3177",
+      "date": "Diciembre de 2003; datos históricos",
+      "type": "Documento de investigación del Banco Mundial",
+      "url": "https://documents1.worldbank.org/curated/en/300471468768293222/pdf/WPS3177.pdf",
+      "limit": "Fuentes y ámbitos de cobertura distintos. No trasladar porcentajes al presente."
+    },
+    "E4": {
+      "title": "Banco Mundial. Bolivia, informe 32066, apartado 74",
+      "date": "2005",
+      "type": "Evaluación institucional",
+      "url": "https://documents1.worldbank.org/curated/en/583351468198869186/pdf/320660rev.pdf",
+      "limit": "Evalúa la concesión desde una perspectiva institucional. Debe contrastarse con demandas vecinales."
+    },
+    "E5": {
+      "title": "Spronk. Roots of Resistance to Urban Water Privatization in Bolivia. ILWCH 71",
+      "date": "2007",
+      "type": "Investigación sobre el conflicto del agua",
+      "url": "https://history.yale.edu/sites/default/files/files/ILWCH-Kleinarticle.pdf",
+      "limit": "Distingue área servida de ámbito urbano y atribuye las estimaciones de exclusión a FEJUVE. Aquí no se usan como conteos actuales."
+    },
+    "R1": {
+      "title": "DAANES. Contrato social, arts. 74–81 y 110. Traducción publicada por RIC",
+      "date": "12 de diciembre de 2023",
+      "type": "Norma / traducción de organización vinculada al territorio",
+      "url": "https://rojavainformationcenter.org/2023/12/aanes-social-contract-2023-edition/",
+      "limit": "Describe reglas declaradas de ese momento. No demuestra su cumplimiento universal ni su vigencia práctica en 2026."
+    },
+    "R2": {
+      "title": "Cioni, Fabiana. Convivenze ai margini dei territori di guerra: Jinwar. Scienze del Territorio 12(1), 88–96",
+      "date": "2024; campo 2018–2020",
+      "type": "Investigación-acción participante, CC BY 4.0",
+      "url": "https://doi.org/10.36253/sdt-15107",
+      "limit": "Caso localizado y autora participante. Fotografías de construcción en junio de 2018 y galerías en mayo de 2019. No representa toda Rojava."
+    },
+    "R3": {
+      "title": "Wartmann. Negotiating what it means to be “free”: gender equality and governance in North and East Syria",
+      "date": "En línea 2023; volumen 26(4), 2024, pp.903–924",
+      "type": "Estudio etnográfico",
+      "url": "https://doi.org/10.1080/14616742.2023.2269154",
+      "limit": "Analiza reformas, disciplina y resistencia. No ofrece una medición representativa de toda la población."
+    },
+    "R4": {
+      "title": "ONU. Secretary-General welcomes Syrian Government–Syrian Democratic Forces agreement",
+      "date": "30 de enero de 2026",
+      "type": "Pronunciamiento institucional",
+      "url": "https://digitallibrary.un.org/record/4100882",
+      "limit": "Constata un acuerdo. No demuestra su ejecución completa ni la continuidad de cada comuna."
+    },
+    "R5": {
+      "title": "Parlamento Europeo. Violence in north-east Syria may amount to war crimes, warn MEPs",
+      "date": "12 de febrero de 2026",
+      "type": "Pronunciamiento institucional",
+      "url": "https://www.europarl.europa.eu/news/en/press-room/20260205IPR33627/",
+      "limit": "Es un corte documental fechado, no una descripción exhaustiva del estado territorial en octubre de 2026."
+    },
+    "R6": {
+      "title": "Internationalist Commune. Women’s village: Jinwar",
+      "date": "26 de septiembre de 2017",
+      "type": "Testimonio de participantes / proyecto en construcción",
+      "url": "https://internationalistcommune.com/jinwar/",
+      "limit": "Distinguir lo proyectado en 2017 de lo observado posteriormente. No certifica autosuficiencia."
+    },
+    "R7": {
+      "title": "Rojava Information Center. Communes: the building block of democratic confederalism",
+      "date": "2020",
+      "type": "Descripción organizativa situada",
+      "url": "https://rojavainformationcenter.org/2020/05/explainer-communes-the-building-block-of-democratic-confederalism/",
+      "limit": "Informa de distribución de recursos y generadores. No equivale a auditoría independiente de todas las comunas."
+    },
+    "C1": {
+      "title": "Rodríguez Levy, Restrepo Vélez y Trujillo del Hierro. Çatalhöyük, presentación del curso",
+      "date": "Sin fecha visible; recibida 19/10/2026",
+      "type": "Material del curso",
+      "url": "",
+      "limit": "Se retoman pp.11–15 y 18–23. Las imágenes del PDF no incluyen créditos completos: se conservan como material docente, no como nuevo registro arqueológico."
+    },
+    "C2": {
+      "title": "MTR. Property Developments",
+      "date": "Consulta 19/10/2026",
+      "type": "Fuente del operador",
+      "url": "https://www.mtr.com.hk/en/corporate/properties/prop_dev_index.html",
+      "limit": "Documenta desarrollos asociados a estaciones. No mide asequibilidad o igualdad de acceso."
+    },
+    "C3": {
+      "title": "Hao, Sliuzas y Geertman. The development and redevelopment of urban villages in Shenzhen. Habitat International 35(2), 214–224",
+      "date": "2011",
+      "type": "Investigación académica",
+      "url": "https://doi.org/10.1016/j.habitatint.2010.09.001",
+      "limit": "Caso y periodo de estudio. No describe toda política actual de Shenzhen."
+    },
+    "C4": {
+      "title": "Liu et al. Towards inclusive and sustainable transformation in Shenzhen. Journal of Cleaner Production 173, 24–38",
+      "date": "2018",
+      "type": "Investigación académica",
+      "url": "https://doi.org/10.1016/j.jclepro.2016.09.224",
+      "limit": "Examina renovación y desplazamiento. No autoriza generalizar a cada barrio."
+    },
+    "K": {
+      "title": "Nicolás y David. Kennedy, redes, conectografía e indicador de actividades y espacio público",
+      "date": "Trabajo del Corte II; datos DANE 2018 y cartografía citada en la web",
+      "type": "Análisis propio del proyecto",
+      "url": "index.html?view=urban",
+      "limit": "El indicador identifica concurrencia relativa. No mide flujos actuales, poder de decisión ni prueba por sí solo una causalidad ideológica."
+    },
+    "IMG-alto-tejada": {
+      "title": "Tejada Sorzano: tejido cotidiano",
+      "date": "Qhanaaru · 16/12/2024 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+      "type": "Fotografía documental",
+      "url": "https://commons.wikimedia.org/wiki/File:Calles_en_El_Alto_1.jpg",
+      "limit": "Lectura visual de un lugar y fecha; no prueba representación, financiación ni desempeño."
+    },
+    "IMG-alto-calle": {
+      "title": "Ciudad Satélite: la escala de la calle",
+      "date": "JoacoMCh · 29/05/2025 · Wikimedia Commons. Licencia CC BY/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+      "type": "Fotografía documental",
+      "url": "https://commons.wikimedia.org/wiki/File:Calles_El_Alto.jpg",
+      "limit": "Lectura visual de un lugar y fecha; no prueba representación, financiación ni desempeño."
+    },
+    "IMG-alto-arquitectura": {
+      "title": "Fachadas, comercio y transporte",
+      "date": "MeyvisMLM · 19/06/2025 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+      "type": "Fotografía documental",
+      "url": "https://commons.wikimedia.org/wiki/File:Arquitectura_en_La_cuidad_de_El_Alto.jpg",
+      "limit": "Lectura visual de un lugar y fecha; no prueba representación, financiación ni desempeño."
+    },
+    "IMG-alto-cholet": {
+      "title": "Diosa Temis: expresión de la fachada",
+      "date": "VelascoMamani · 24/06/2025 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+      "type": "Fotografía documental",
+      "url": "https://commons.wikimedia.org/wiki/File:Calles_de_la_Ciudad_de_El_Alto.jpg",
+      "limit": "Lectura visual de un lugar y fecha; no prueba representación, financiación ni desempeño."
+    },
+    "IMG-alto-feria": {
+      "title": "Feria 16 de Julio: puestos temporales",
+      "date": "Olga Lidia Paredes Alcoreza · 30/08/2018 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+      "type": "Fotografía documental",
+      "url": "https://commons.wikimedia.org/wiki/File:Feria_16_de_julio_El_Alto.jpg",
+      "limit": "Lectura visual de un lugar y fecha; no prueba representación, financiación ni desempeño."
+    },
+    "IMG-alto-puente": {
+      "title": "Senkata: infraestructura en construcción",
+      "date": "Qhanaaru · 02/07/2024 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+      "type": "Fotografía documental",
+      "url": "https://commons.wikimedia.org/wiki/File:Construcci%C3%B3n_del_puente_Senkata_El_Alto.jpg",
+      "limit": "Lectura visual de un lugar y fecha; no prueba representación, financiación ni desempeño."
+    },
+    "N": {
+      "title": "Nicolás y David: narrativa cronológica entregada para reorganizar la exposición",
+      "date": "21/10/2026",
+      "type": "Apuntes del grupo",
+      "url": "",
+      "limit": "Guía narrativa aportada por el grupo. No es una fuente independiente; las fechas y relaciones requieren el contraste indicado en cada escena."
+    },
+    "H1": {
+      "title": "Antecedentes de FEJUVE, biblioteca CLACSO",
+      "url": "https://biblioteca.clacso.edu.ar/Bolivia/agruco/20171003032431/pdf_552.pdf",
+      "limit": "Historia organizativa: diferencia Sub-Federación de 1966 y reconocimiento de 1979.",
+      "date": "Documento histórico; consulta 21/10/2026",
+      "type": "Fuente documental"
+    },
+    "H2": {
+      "title": "OACNUDH: situación de derechos humanos en Bolivia, crisis de 2019",
+      "url": "https://www.ohchr.org/Documents/Countries/BO/OACNUDH-Informe-Bolivia-SP.pdf",
+      "limit": "Informe sobre el conflicto; no confundir Senkata 2019 con fotografías posteriores de obras.",
+      "date": "Documento histórico; consulta 21/10/2026",
+      "type": "Fuente documental"
+    },
+    "H3": {
+      "title": "Human Rights Watch: Syria, The Silenced Kurds",
+      "url": "https://www.hrw.org/report/1996/10/01/syria-silenced-kurds",
+      "limit": "Informe de 1996 sobre el censo de 1962 y pérdida de ciudadanía; no describe el presente.",
+      "date": "Documento histórico; consulta 21/10/2026",
+      "type": "Fuente documental"
+    },
+    "H4": {
+      "title": "Rumet Heval: How we built Jinwar Women’s Village",
+      "url": "https://theanarchistlibrary.org/library/rumet-heval-how-we-built-jinwar-women-s-village-in-rojava-northern-syria",
+      "limit": "Testimonio de participantes. Indica inicio el 10 de marzo de 2017; se usa marzo de 2017 ante la diferencia con los apuntes del grupo.",
+      "date": "Documento histórico; consulta 21/10/2026",
+      "type": "Fuente documental"
+    },
+    "H5": {
+      "title": "ONU: desplazamiento y destrucción de viviendas en Siria",
+      "url": "https://digitallibrary.un.org/record/842522/files/A_HRC_32_35_Add.2-ES.pdf",
+      "limit": "Contexto de destrucción y reconstrucción. Jinwar no es una reconstrucción de Kobane.",
+      "date": "Documento histórico; consulta 21/10/2026",
+      "type": "Fuente documental"
+    }
+  },
+  "slides": [
+    {
+      "title": "¿Cómo pasa una necesidad de vivienda a una forma de organización?",
+      "question": "El Alto / Rojava–Jinwar",
+      "kind": "opening",
+      "labels": [
+        "El Alto: viviendas, calles y actividad urbana",
+        "Jinwar: el asentamiento y sus espacios abiertos"
+      ],
+      "notes": "¿Qué hace posible habitar una casa: sus muros o también los servicios y acuerdos que la sostienen? Primero recorreremos El Alto, después Rojava y el caso de Jinwar. Al final compararemos sus mecanismos y lo que aportan a Kennedy.",
+      "action": "Presenta la pregunta común y anuncia el orden: El Alto → Rojava/Jinwar → comparación y Kennedy.",
+      "refs": [
+        "G"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "image1.jpg",
+          "title": "El Alto: viviendas, calles y actividad urbana",
+          "look": "Mira el tejido de edificaciones y la calle. La pregunta es cómo llegan los servicios a cada vivienda.",
+          "credit": "Imagen incluida en el PowerPoint original del grupo. Autor y fecha no identificados; uso contextual, no prueba de cobertura."
+        },
+        {
+          "file": "image2.jpg",
+          "title": "Jinwar: el asentamiento y sus espacios abiertos",
+          "look": "Mira las viviendas y su relación con los espacios exteriores. La vista permite preguntar cómo se organizan los recorridos.",
+          "credit": "Imagen incluida en el PowerPoint original; marca ANHA visible. Fecha y autor pendientes de completar; uso contextual."
+        }
+      ],
+      "simpleTitle": "Primero El Alto; después Rojava y Jinwar.",
+      "simple": "Seguiremos dos historias en orden. En El Alto, los barrios se coordinan para reclamar servicios y discutir decisiones. En Rojava, la exclusión y la guerra forman el contexto del autogobierno; Jinwar permite observar una experiencia concreta de vivienda y organización de mujeres.",
+      "section": "Inicio",
+      "guide": "Anuncia el recorrido: origen → organización → conflictos → arquitectura y vida cotidiana. La comparación llega después de conocer cada caso."
+    },
+    {
+      "title": "Antes de 1948 · Un territorio conectado con La Paz",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Conexiones con La Paz",
+        "Expansión del poblamiento",
+        "Necesidades de vivienda y servicios"
+      ],
+      "notes": "La narrativa comienza en la meseta vinculada a La Paz por caminos, ferrocarril y transporte. La expansión del poblamiento plantea necesidades de vivienda, acceso e infraestructura. La diferencia entre crecimiento urbano y provisión de servicios orienta nuestro análisis. Presenta el territorio antes de presentar a FEJUVE. La imagen reciente ayuda a reconocer el tejido construido; no reconstruye la ciudad de aquella época.",
+      "action": "Presenta el territorio antes de presentar a FEJUVE. La imagen reciente ayuda a reconocer el tejido construido; no reconstruye la ciudad de aquella época.",
+      "refs": [
+        "N",
+        "E1"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-01.svg",
+          "title": "Antes de 1948 · secuencia del relato",
+          "look": "Presenta el territorio antes de presentar a FEJUVE. La imagen reciente ayuda a reconocer el tejido construido; no reconstruye la ciudad de aquella época.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "image1.jpg",
+          "title": "Contexto posterior · El Alto: viviendas, calles y actividad urbana",
+          "look": "Esta foto no corresponde al hecho histórico narrado. Mira el tejido de edificaciones y la calle. La pregunta es cómo llegan los servicios a cada vivienda.",
+          "credit": "Imagen incluida en el PowerPoint original del grupo. Autor y fecha no identificados; uso contextual, no prueba de cobertura."
+        }
+      ],
+      "simpleTitle": "Un territorio conectado con La Paz",
+      "simple": "La narrativa comienza en la meseta vinculada a La Paz por caminos, ferrocarril y transporte. La expansión del poblamiento plantea necesidades de vivienda, acceso e infraestructura. La diferencia entre crecimiento urbano y provisión de servicios orienta nuestro análisis.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Presenta el territorio antes de presentar a FEJUVE. La imagen reciente ayuda a reconocer el tejido construido; no reconstruye la ciudad de aquella época."
+    },
+    {
+      "title": "1948 · Alto Lima: organizar la necesidad del barrio",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Necesidades de los hogares",
+        "Organización barrial",
+        "Demanda compartida"
+      ],
+      "notes": "Los apuntes del grupo sitúan en 1948 una de las primeras juntas vecinales documentadas, en Alto Lima. Lo que debemos recordar es el paso de necesidades domésticas a una respuesta barrial organizada. La referencia específica de esta fecha queda pendiente de completar. Explica el cambio de escala: un hogar necesita un servicio; varios hogares pueden convertirlo en una demanda del barrio. No atribuyas una fotografía actual a la junta de 1948.",
+      "action": "Explica el cambio de escala: un hogar necesita un servicio; varios hogares pueden convertirlo en una demanda del barrio. No atribuyas una fotografía actual a la junta de 1948.",
+      "refs": [
+        "N",
+        "E1"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-02.svg",
+          "title": "1948 · secuencia del relato",
+          "look": "Explica el cambio de escala: un hogar necesita un servicio; varios hogares pueden convertirlo en una demanda del barrio. No atribuyas una fotografía actual a la junta de 1948.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "demanda.svg",
+          "title": "De la necesidad a la respuesta",
+          "look": "Sigue quién necesita, quién organiza, quién decide y quién presta el servicio.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        },
+        {
+          "file": "alto-calle.jpg",
+          "title": "Contexto posterior · Ciudad Satélite: la escala de la calle",
+          "look": "Fotografía posterior al acontecimiento narrado. Observa las fachadas, el ancho del recorrido y la relación entre edificios y espacio público.",
+          "credit": "JoacoMCh · 29/05/2025 · Wikimedia Commons. Licencia CC BY/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+          "url": "https://commons.wikimedia.org/wiki/File:Calles_El_Alto.jpg",
+          "license": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "simpleTitle": "Alto Lima: organizar la necesidad del barrio",
+      "simple": "Los apuntes del grupo sitúan en 1948 una de las primeras juntas vecinales documentadas, en Alto Lima. Lo que debemos recordar es el paso de necesidades domésticas a una respuesta barrial organizada. La referencia específica de esta fecha queda pendiente de completar.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Explica el cambio de escala: un hogar necesita un servicio; varios hogares pueden convertirlo en una demanda del barrio. No atribuyas una fotografía actual a la junta de 1948."
+    },
+    {
+      "title": "1957 → 1966 → 1979 · De las juntas a la federación",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "1957 · Consejo Central de Vecinos",
+        "1966 · Sub-Federación",
+        "1979 · Reconocimiento de FEJUVE"
+      ],
+      "notes": "En 1957 se organiza el Consejo Central de Vecinos; la narrativa reúne allí siete juntas. En 1966 se constituye la Sub-Federación. En 1979 llega el reconocimiento como FEJUVE. Son etapas distintas de articulación entre barrios, no tres fechas equivalentes de fundación. Recorre las tres fechas. FEJUVE articula demandas e interlocución: no es el gobierno municipal. El detalle de las siete juntas procede de los apuntes del grupo.",
+      "action": "Recorre las tres fechas. FEJUVE articula demandas e interlocución: no es el gobierno municipal. El detalle de las siete juntas procede de los apuntes del grupo.",
+      "refs": [
+        "N",
+        "H1",
+        "E1"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-03.svg",
+          "title": "1957 → 1966 → 1979 · secuencia del relato",
+          "look": "Recorre las tres fechas. FEJUVE articula demandas e interlocución: no es el gobierno municipal. El detalle de las siete juntas procede de los apuntes del grupo.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "participar.svg",
+          "title": "Una reunión no garantiza que todos puedan participar",
+          "look": "Preguntamos por acceso, tiempo, voz y seguimiento de los acuerdos.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        },
+        {
+          "file": "fejuve-sede.jpg",
+          "title": "FEJUVE · su sede en El Alto",
+          "look": "Observa el edificio de la federación: un lugar concreto para la organización entre barrios. Foto posterior a las fechas de esta diapositiva; fecha de toma no identificada.",
+          "credit": "EABolivia · Frontis de la sede de FEJUVE. Autor y fecha fotográfica no identificados.",
+          "url": "https://www.eabolivia.com/blogs/4819-fejuve-de-la-ciudad-de-el-alto.html"
+        }
+      ],
+      "simpleTitle": "De las juntas a la federación",
+      "simple": "En 1957 se organiza el Consejo Central de Vecinos; la narrativa reúne allí siete juntas. En 1966 se constituye la Sub-Federación. En 1979 llega el reconocimiento como FEJUVE. Son etapas distintas de articulación entre barrios, no tres fechas equivalentes de fundación.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Recorre las tres fechas. FEJUVE articula demandas e interlocución: no es el gobierno municipal. El detalle de las siete juntas procede de los apuntes del grupo."
+    },
+    {
+      "title": "1985–1986 · Municipio propio y crecimiento acelerado",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Separación administrativa",
+        "Llegada de nuevas familias",
+        "Presión sobre vivienda y servicios"
+      ],
+      "notes": "La Ley 728 crea en 1985 la cuarta sección municipal de la provincia Murillo. Después, los despidos mineros vinculados a las reformas económicas impulsan migraciones. El relato conecta crecimiento urbano con presión por vivienda y servicios; no atribuye toda la expansión a una sola causa. Relaciona el cambio administrativo con el crecimiento de la ciudad. Usa las fachadas posteriores para plantear cómo se materializa la expansión, no para fechar edificios.",
+      "action": "Relaciona el cambio administrativo con el crecimiento de la ciudad. Usa las fachadas posteriores para plantear cómo se materializa la expansión, no para fechar edificios.",
+      "refs": [
+        "N",
+        "E1",
+        "IMG-alto-arquitectura"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-04.svg",
+          "title": "1985–1986 · secuencia del relato",
+          "look": "Relaciona el cambio administrativo con el crecimiento de la ciudad. Usa las fachadas posteriores para plantear cómo se materializa la expansión, no para fechar edificios.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "alto-arquitectura.jpg",
+          "title": "Contexto posterior · Fachadas, comercio y transporte",
+          "look": "Esta foto no corresponde al hecho histórico narrado. Observa la diferencia entre el ladrillo expuesto y las fachadas revestidas, junto a la circulación de carga.",
+          "credit": "MeyvisMLM · 19/06/2025 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+          "url": "https://commons.wikimedia.org/wiki/File:Arquitectura_en_La_cuidad_de_El_Alto.jpg",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        {
+          "file": "alto-tejada.jpg",
+          "title": "Contexto posterior · Tejada Sorzano: tejido cotidiano",
+          "look": "Fotografía posterior al acontecimiento narrado. Mira los frentes de las construcciones y su continuidad con la calle. Esta vista es de un sector, no de toda la ciudad.",
+          "credit": "Qhanaaru · 16/12/2024 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+          "url": "https://commons.wikimedia.org/wiki/File:Calles_en_El_Alto_1.jpg",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ],
+      "simpleTitle": "Municipio propio y crecimiento acelerado",
+      "simple": "La Ley 728 crea en 1985 la cuarta sección municipal de la provincia Murillo. Después, los despidos mineros vinculados a las reformas económicas impulsan migraciones. El relato conecta crecimiento urbano con presión por vivienda y servicios; no atribuye toda la expansión a una sola causa.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Relaciona el cambio administrativo con el crecimiento de la ciudad. Usa las fachadas posteriores para plantear cómo se materializa la expansión, no para fechar edificios."
+    },
+    {
+      "title": "Septiembre–octubre de 2003 · De la demanda local a la crisis nacional",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Disputa por el gas",
+        "Movilización y represión",
+        "Crisis política nacional"
+      ],
+      "notes": "La Guerra del Gas convierte a El Alto en un centro de movilización contra el proyecto de exportación y la respuesta gubernamental. La represión causa decenas de muertes y Sánchez de Lozada renuncia el 17 de octubre. Las demandas por recursos alcanzan una escala nacional. Explica por qué esta historia ya no trata solamente de servicios de un barrio. No confundas los hechos de 2003 con Senkata en 2019.",
+      "action": "Explica por qué esta historia ya no trata solamente de servicios de un barrio. No confundas los hechos de 2003 con Senkata en 2019.",
+      "refs": [
+        "N",
+        "E1"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-05.svg",
+          "title": "Septiembre–octubre de 2003 · secuencia del relato",
+          "look": "Explica por qué esta historia ya no trata solamente de servicios de un barrio. No confundas los hechos de 2003 con Senkata en 2019.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "gas-protesta.jpg",
+          "title": "2003 · protesta por el gas",
+          "look": "La pancarta convierte una decisión sobre recursos en una demanda visible en la calle. Relaciona la movilización local con la discusión nacional.",
+          "credit": "EABolivia · Archivo de la Guerra del Gas, 2003. Autor fotográfico no identificado.",
+          "url": "https://www.eabolivia.com/guerra-del-gas-en-el-alto-bolivia.html"
+        },
+        {
+          "file": "gas-marcha.jpg",
+          "title": "2003 · conflicto en el espacio de la calle",
+          "look": "Observa la ocupación de la vía, los obstáculos y el humo. El espacio de circulación se convierte en escenario del conflicto.",
+          "credit": "EABolivia · Archivo de la Guerra del Gas, 2003. Autor fotográfico no identificado.",
+          "url": "https://www.eabolivia.com/guerra-del-gas-en-el-alto-bolivia.html"
+        }
+      ],
+      "simpleTitle": "De la demanda local a la crisis nacional",
+      "simple": "La Guerra del Gas convierte a El Alto en un centro de movilización contra el proyecto de exportación y la respuesta gubernamental. La represión causa decenas de muertes y Sánchez de Lozada renuncia el 17 de octubre. Las demandas por recursos alcanzan una escala nacional.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Explica por qué esta historia ya no trata solamente de servicios de un barrio. No confundas los hechos de 2003 con Senkata en 2019."
+    },
+    {
+      "title": "2005 · El agua: acceso, costo y control",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Acceso y costo del servicio",
+        "Organización de la protesta",
+        "Disputa por la gestión"
+      ],
+      "notes": "FEJUVE impulsa un paro para exigir la rescisión del contrato con Aguas del Illimani. La discusión reúne acceso y costos con la pregunta por quién controla la provisión. Cambiar el contrato no significa que todas las viviendas reciban inmediatamente un servicio adecuado. Sigue la cadena de la imagen: red, conexión y funcionamiento. La demanda es tangible: agua que pueda llegar y utilizarse.",
+      "action": "Sigue la cadena de la imagen: red, conexión y funcionamiento. La demanda es tangible: agua que pueda llegar y utilizarse.",
+      "refs": [
+        "N",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-06.svg",
+          "title": "2005 · secuencia del relato",
+          "look": "Sigue la cadena de la imagen: red, conexión y funcionamiento. La demanda es tangible: agua que pueda llegar y utilizarse.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "servicio.svg",
+          "title": "Tener red no es lo mismo que tener servicio",
+          "look": "Lee de izquierda a derecha: cada paso necesita una condición distinta.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        },
+        {
+          "file": "alto-puente.jpg",
+          "title": "Contexto posterior · Senkata: infraestructura en construcción",
+          "look": "Fotografía posterior al acontecimiento narrado. Mira la obra elevada, los materiales y los edificios contiguos. La infraestructura transforma accesos y relaciones con la calle.",
+          "credit": "Qhanaaru · 02/07/2024 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+          "url": "https://commons.wikimedia.org/wiki/File:Construcci%C3%B3n_del_puente_Senkata_El_Alto.jpg",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ],
+      "simpleTitle": "El agua: acceso, costo y control",
+      "simple": "FEJUVE impulsa un paro para exigir la rescisión del contrato con Aguas del Illimani. La discusión reúne acceso y costos con la pregunta por quién controla la provisión. Cambiar el contrato no significa que todas las viviendas reciban inmediatamente un servicio adecuado.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Sigue la cadena de la imagen: red, conexión y funcionamiento. La demanda es tangible: agua que pueda llegar y utilizarse."
+    },
+    {
+      "title": "Desde 2006 · Colaborar con el gobierno y conservar autonomía",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Apoyo e interlocución",
+        "Vínculos con el poder",
+        "Tensiones sobre autonomía"
+      ],
+      "notes": "Sectores de FEJUVE apoyan al gobierno de Evo Morales. Las relaciones entre organizaciones y partido generan tensiones sobre representación e independencia. La colaboración puede abrir canales de interlocución, pero debemos examinar quién conserva capacidad para cuestionar decisiones. No presentes a todas las juntas como un actor que piensa igual. Explica la tensión entre interlocución e independencia.",
+      "action": "No presentes a todas las juntas como un actor que piensa igual. Explica la tensión entre interlocución e independencia.",
+      "refs": [
+        "N",
+        "E1"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-07.svg",
+          "title": "Desde 2006 · secuencia del relato",
+          "look": "No presentes a todas las juntas como un actor que piensa igual. Explica la tensión entre interlocución e independencia.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "participar.svg",
+          "title": "Una reunión no garantiza que todos puedan participar",
+          "look": "Preguntamos por acceso, tiempo, voz y seguimiento de los acuerdos.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        },
+        {
+          "file": "fejuve-dirigente.jpg",
+          "title": "Representación vecinal · Fanny Nina",
+          "look": "La fuente identifica a Fanny Nina como dirigente de FEJUVE. La fotografía permite reconocer una situación de interlocución; no demuestra por sí sola autonomía ni representa la dirigencia actual.",
+          "credit": "EABolivia · Fanny Nina. Fecha de toma no identificada.",
+          "url": "https://www.eabolivia.com/blogs/4819-fejuve-de-la-ciudad-de-el-alto.html"
+        }
+      ],
+      "simpleTitle": "Colaborar con el gobierno y conservar autonomía",
+      "simple": "Sectores de FEJUVE apoyan al gobierno de Evo Morales. Las relaciones entre organizaciones y partido generan tensiones sobre representación e independencia. La colaboración puede abrir canales de interlocución, pero debemos examinar quién conserva capacidad para cuestionar decisiones.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "No presentes a todas las juntas como un actor que piensa igual. Explica la tensión entre interlocución e independencia."
+    },
+    {
+      "title": "Diciembre de 2010 · El gasolinazo muestra los desacuerdos",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Aumento anunciado",
+        "Protestas y desacuerdo",
+        "Retiro de la medida"
+      ],
+      "notes": "El anuncio de un fuerte aumento de combustibles provoca protestas, también en El Alto. La medida se revierte días después. El episodio permite recordar que apoyar a un gobierno no elimina los desacuerdos con sus decisiones. Conecta este momento con el anterior: las alianzas políticas no equivalen a obediencia permanente.",
+      "action": "Conecta este momento con el anterior: las alianzas políticas no equivalen a obediencia permanente.",
+      "refs": [
+        "N"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-08.svg",
+          "title": "Diciembre de 2010 · secuencia del relato",
+          "look": "Conecta este momento con el anterior: las alianzas políticas no equivalen a obediencia permanente.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "gasolinazo.jpg",
+          "title": "Diciembre de 2010 · protestas por el gasolinazo",
+          "look": "La fotografía muestra la intensidad del conflicto en el espacio urbano. Corresponde al gasolinazo de 2010, no a la Guerra del Gas de 2003.",
+          "credit": "RTVE · Fotogalería Violentas protestas en Bolivia por el gasolinazo · diciembre de 2010.",
+          "url": "https://www.rtve.es/fotogalerias/violentas-protestas-en-bolivia-por-el-gasolinazo/64915/protestas-ciudades-bolivianas-contra-gasolinazo-se-tornan-violentas/4/"
+        }
+      ],
+      "simpleTitle": "El gasolinazo muestra los desacuerdos",
+      "simple": "El anuncio de un fuerte aumento de combustibles provoca protestas, también en El Alto. La medida se revierte días después. El episodio permite recordar que apoyar a un gobierno no elimina los desacuerdos con sus decisiones.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Conecta este momento con el anterior: las alianzas políticas no equivalen a obediencia permanente."
+    },
+    {
+      "title": "19 de noviembre de 2019 · Senkata: movilización y represión",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Crisis política",
+        "Protestas en Senkata",
+        "Muertes y exigencia de esclarecimiento"
+      ],
+      "notes": "Durante la crisis posterior a la renuncia de Morales, diez personas murieron en Senkata, según la documentación de Naciones Unidas. Este cierre histórico recuerda el costo humano de los conflictos y la persistencia de El Alto como escenario de movilización. Separa este hecho de la Guerra del Gas. La secuencia gráfica no sustituye un registro fotográfico del acontecimiento.",
+      "action": "Separa este hecho de la Guerra del Gas. La secuencia gráfica no sustituye un registro fotográfico del acontecimiento.",
+      "refs": [
+        "N",
+        "H2"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-09.svg",
+          "title": "19 de noviembre de 2019 · secuencia del relato",
+          "look": "Separa este hecho de la Guerra del Gas. La secuencia gráfica no sustituye un registro fotográfico del acontecimiento.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "senkata-homenaje.jpg",
+          "title": "Senkata · memoria de las víctimas",
+          "look": "El mural y el homenaje muestran cómo se recuerda a las víctimas en el territorio. Es una conmemoración posterior, no una fotografía de la represión del 19 de noviembre de 2019.",
+          "credit": "Defensoría del Pueblo de Bolivia · Homenaje a las víctimas de Senkata. Fotografía institucional.",
+          "url": "https://www.defensoria.gob.bo/noticias/la-defensoria-del-pueblo-rinde-homenaje-a-las-victimas-de-la-masacre-de-senkata"
+        }
+      ],
+      "simpleTitle": "Senkata: movilización y represión",
+      "simple": "Durante la crisis posterior a la renuncia de Morales, diez personas murieron en Senkata, según la documentación de Naciones Unidas. Este cierre histórico recuerda el costo humano de los conflictos y la persistencia de El Alto como escenario de movilización.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Separa este hecho de la Guerra del Gas. La secuencia gráfica no sustituye un registro fotográfico del acontecimiento."
+    },
+    {
+      "title": "Síntesis de El Alto · Del barrio a las decisiones sobre la ciudad",
+      "question": "01 · El Alto y FEJUVE",
+      "kind": "photo",
+      "labels": [
+        "Organizar demandas",
+        "Disputar decisiones",
+        "Examinar acceso y espacio construido"
+      ],
+      "notes": "Barrios que se organizan → federación → ciudad que crece → demandas por servicios y recursos → movilización → tensiones con el poder. Los mapas municipales posteriores permiten volver a la pregunta arquitectónica: dónde hay infraestructura y dónde persisten carencias. Cierra el caso con sus consecuencias espaciales. Los mapas son de 2021–2022: no representan automáticamente las condiciones de 2003 o 2005.",
+      "action": "Cierra el caso con sus consecuencias espaciales. Los mapas son de 2021–2022: no representan automáticamente las condiciones de 2003 o 2005.",
+      "refs": [
+        "N",
+        "E2"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "narrativa-10.svg",
+          "title": "Síntesis de El Alto · secuencia del relato",
+          "look": "Cierra el caso con sus consecuencias espaciales. Los mapas son de 2021–2022: no representan automáticamente las condiciones de 2003 o 2005.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "elalto-services-1.png",
+          "title": "Dónde se registran carencias de servicios",
+          "look": "Amplía la leyenda: el amarillo señala carencias de agua. Las otras clases representan otros servicios.",
+          "credit": "GAMEA, PTDI 2021–2025, mapa 29, p.123. Diagnóstico 2022."
+        },
+        {
+          "file": "elalto-water-1.png",
+          "title": "La infraestructura cruza varios distritos",
+          "look": "Sigue las líneas de interconexión. Una tubería cercana no demuestra que todas las casas estén conectadas.",
+          "credit": "GAMEA, PTDI 2021–2025, mapa 63, p.271. Unidad de Saneamiento Básico, 2021."
+        },
+        {
+          "file": "fejuve-asamblea.jpg",
+          "title": "FEJUVE · asamblea publicada en julio de 2023",
+          "look": "Mira la participación reunida y la relación entre asistentes y dirigentes. Es un registro de 2023, no de la fundación de FEJUVE; la noticia describe también disputas de representación.",
+          "credit": "El Alteño · Una multitud elige al presidente de la FEJUVE · 9 de julio de 2023.",
+          "url": "https://www.elalteno.com.bo/sociedad/20230709/una-multitud-elige-al-presidente-de-la-fejuve"
+        },
+        {
+          "file": "alto-feria.jpg",
+          "title": "Contexto posterior · Feria 16 de Julio: puestos temporales",
+          "look": "Fotografía posterior al acontecimiento narrado. Sigue el espacio ocupado por los puestos y el espacio que queda para circular. La calle también funciona como lugar de trabajo.",
+          "credit": "Olga Lidia Paredes Alcoreza · 30/08/2018 · Wikimedia Commons. Licencia CC BY-SA/4.0. Imagen documental de ese lugar y fecha; no acredita quién decidió o financió la obra.",
+          "url": "https://commons.wikimedia.org/wiki/File:Feria_16_de_julio_El_Alto.jpg",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ],
+      "simpleTitle": "Del barrio a las decisiones sobre la ciudad",
+      "simple": "Barrios que se organizan → federación → ciudad que crece → demandas por servicios y recursos → movilización → tensiones con el poder. Los mapas municipales posteriores permiten volver a la pregunta arquitectónica: dónde hay infraestructura y dónde persisten carencias.",
+      "section": "01 · El Alto y FEJUVE",
+      "guide": "Cierra el caso con sus consecuencias espaciales. Los mapas son de 2021–2022: no representan automáticamente las condiciones de 2003 o 2005."
+    },
+    {
+      "title": "1962 · El antecedente de la exclusión",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Censo en Hasaka",
+        "Pérdida de ciudadanía",
+        "Restricciones de derechos"
+      ],
+      "notes": "Un censo especial en Hasaka deja a decenas de miles de kurdos sin ciudadanía. Este antecedente introduce la relación entre pertenencia, derechos y capacidad para decidir sobre la propia vida. Las cifras dependen de la fuente y del periodo considerado. Empieza por el contexto de derechos. No presentes Jinwar como una respuesta directa e inmediata a un único acontecimiento.",
+      "action": "Empieza por el contexto de derechos. No presentes Jinwar como una respuesta directa e inmediata a un único acontecimiento.",
+      "refs": [
+        "N",
+        "H3"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-11.svg",
+          "title": "1962 · secuencia del relato",
+          "look": "Empieza por el contexto de derechos. No presentes Jinwar como una respuesta directa e inmediata a un único acontecimiento.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        }
+      ],
+      "simpleTitle": "El antecedente de la exclusión",
+      "simple": "Un censo especial en Hasaka deja a decenas de miles de kurdos sin ciudadanía. Este antecedente introduce la relación entre pertenencia, derechos y capacidad para decidir sobre la propia vida. Las cifras dependen de la fuente y del periodo considerado.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Empieza por el contexto de derechos. No presentes Jinwar como una respuesta directa e inmediata a un único acontecimiento."
+    },
+    {
+      "title": "2011 · La guerra cambia el territorio",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Protestas y conflicto armado",
+        "Transformación del control territorial",
+        "Reorganización local"
+      ],
+      "notes": "Las protestas contra Bashar al-Assad escalan a una guerra. La retirada parcial del Estado en el norte, dentro del proceso posterior, abre espacio a organizaciones kurdas y locales. La guerra modifica las condiciones para habitar, desplazarse y organizar instituciones. Explica el contexto antes del proyecto arquitectónico. La retirada y el autogobierno son un proceso, no un cambio completo y simultáneo en toda Siria.",
+      "action": "Explica el contexto antes del proyecto arquitectónico. La retirada y el autogobierno son un proceso, no un cambio completo y simultáneo en toda Siria.",
+      "refs": [
+        "N",
+        "R2"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-12.svg",
+          "title": "2011 · secuencia del relato",
+          "look": "Explica el contexto antes del proyecto arquitectónico. La retirada y el autogobierno son un proceso, no un cambio completo y simultáneo en toda Siria.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "siria-douma.jpg",
+          "title": "Douma, Siria · manifestación de abril de 2011",
+          "look": "Este registro sitúa el contexto sirio de las protestas de 2011. Douma no es Kobane ni Jinwar: sirve para explicar la escala nacional del contexto.",
+          "credit": "shamsnn · Syrian Demonstration Douma Damascus · abril de 2011 · CC BY 2.0.",
+          "url": "https://commons.wikimedia.org/wiki/File:Syrian_Demonstration_Douma_Damascus_08-04-2011.jpg",
+          "license": "https://creativecommons.org/licenses/by/2.0/"
+        }
+      ],
+      "simpleTitle": "La guerra cambia el territorio",
+      "simple": "Las protestas contra Bashar al-Assad escalan a una guerra. La retirada parcial del Estado en el norte, dentro del proceso posterior, abre espacio a organizaciones kurdas y locales. La guerra modifica las condiciones para habitar, desplazarse y organizar instituciones.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Explica el contexto antes del proyecto arquitectónico. La retirada y el autogobierno son un proceso, no un cambio completo y simultáneo en toda Siria."
+    },
+    {
+      "title": "19 de julio de 2012 · Kobane y el inicio del autogobierno",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Kobane",
+        "Control de instituciones",
+        "Autogobierno en distintas localidades"
+      ],
+      "notes": "La narrativa sitúa en Kobane la toma de edificios estatales por fuerzas kurdas y el comienzo de una experiencia de autogobierno que se extiende por partes del noreste sirio. Rojava es un contexto territorial y político, no una aldea. Distingue territorio, instituciones y asentamientos. Más adelante bajaremos de esta escala a Jinwar.",
+      "action": "Distingue territorio, instituciones y asentamientos. Más adelante bajaremos de esta escala a Jinwar.",
+      "refs": [
+        "N",
+        "R2"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-13.svg",
+          "title": "19 de julio de 2012 · secuencia del relato",
+          "look": "Distingue territorio, instituciones y asentamientos. Más adelante bajaremos de esta escala a Jinwar.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        }
+      ],
+      "simpleTitle": "Kobane y el inicio del autogobierno",
+      "simple": "La narrativa sitúa en Kobane la toma de edificios estatales por fuerzas kurdas y el comienzo de una experiencia de autogobierno que se extiende por partes del noreste sirio. Rojava es un contexto territorial y político, no una aldea.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Distingue territorio, instituciones y asentamientos. Más adelante bajaremos de esta escala a Jinwar."
+    },
+    {
+      "title": "2014–enero de 2015 · Kobane: guerra y destrucción urbana",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Asedio y combates",
+        "Destrucción de viviendas y servicios",
+        "Necesidad de reconstrucción"
+      ],
+      "notes": "El asedio de ISIS y los combates dejan una ciudad profundamente destruida. Las fuerzas kurdas resisten con apoyo aéreo de la coalición liderada por Estados Unidos. La recuperación del control no equivale a recuperar de inmediato viviendas, calles y servicios. Lleva la historia al espacio: perder infraestructura cambia la posibilidad de volver a habitar. Jinwar está en otro lugar; no es la reconstrucción de Kobane.",
+      "action": "Lleva la historia al espacio: perder infraestructura cambia la posibilidad de volver a habitar. Jinwar está en otro lugar; no es la reconstrucción de Kobane.",
+      "refs": [
+        "N",
+        "H5"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-14.svg",
+          "title": "2014–enero de 2015 · secuencia del relato",
+          "look": "Lleva la historia al espacio: perder infraestructura cambia la posibilidad de volver a habitar. Jinwar está en otro lugar; no es la reconstrucción de Kobane.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "kobane-asedio.jpg",
+          "title": "Kobane · ciudad durante el asedio de 2014",
+          "look": "Observa la continuidad del tejido edificado y el humo sobre la ciudad. La guerra se desarrolla sobre viviendas, calles e infraestructuras existentes.",
+          "credit": "Voice of America · Kobanê, 2014 · archivo Wikimedia Commons.",
+          "url": "https://commons.wikimedia.org/wiki/File:Koban%C3%A9VOA1.JPG"
+        }
+      ],
+      "simpleTitle": "Kobane: guerra y destrucción urbana",
+      "simple": "El asedio de ISIS y los combates dejan una ciudad profundamente destruida. Las fuerzas kurdas resisten con apoyo aéreo de la coalición liderada por Estados Unidos. La recuperación del control no equivale a recuperar de inmediato viviendas, calles y servicios.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Lleva la historia al espacio: perder infraestructura cambia la posibilidad de volver a habitar. Jinwar está en otro lugar; no es la reconstrucción de Kobane."
+    },
+    {
+      "title": "Marzo de 2017 · Jinwar: comienza la construcción",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Organización de mujeres",
+        "Trabajo y materiales",
+        "Construcción de viviendas"
+      ],
+      "notes": "Mujeres impulsan una aldea para vivir con mayor autonomía y apoyo mutuo. Comienza aquí el caso arquitectónico localizado. Se usa marzo de 2017 porque el testimonio de participantes indica el día 10, mientras los apuntes señalan el 8. Las fotografías muestran trabajo de junio de 2018. Señala tierra, molde y bloques. La fecha de una fotografía del proceso no tiene que coincidir con la fecha de inicio de la obra.",
+      "action": "Señala tierra, molde y bloques. La fecha de una fotografía del proceso no tiene que coincidir con la fecha de inicio de la obra.",
+      "refs": [
+        "N",
+        "R2",
+        "H4"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-15.svg",
+          "title": "Marzo de 2017 · secuencia del relato",
+          "look": "Señala tierra, molde y bloques. La fecha de una fotografía del proceso no tiene que coincidir con la fecha de inicio de la obra.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "cioni-p6-0.png",
+          "title": "Preparar los bloques de tierra",
+          "look": "Observa las manos, el molde y el material: construir también implica trabajo y aprendizaje compartido.",
+          "credit": "Fabiana Cioni, junio de 2018. Publicado en 2024, p.93. CC BY 4.0. Jinwar; no representa toda Rojava."
+        },
+        {
+          "file": "cioni-p6-1.png",
+          "title": "Del molde al muro",
+          "look": "Observa la extracción del molde y los bloques secándose. La técnica necesita materiales, tiempo y organización.",
+          "credit": "Fabiana Cioni, junio de 2018. Publicado en 2024, p.93. CC BY 4.0. Jinwar; no representa toda Rojava."
+        },
+        {
+          "file": "jinwar-obra2017.jpg",
+          "title": "Jinwar · construcción con adobe, 2017",
+          "look": "Se ven personas levantando muros con piezas de tierra. Conecta el trabajo material y la organización de quienes construyen el asentamiento.",
+          "credit": "Internationalist Commune · Jinwar, publicado el 26 de septiembre de 2017. Fuente participante del proyecto.",
+          "url": "https://internationalistcommune.com/jinwar/"
+        }
+      ],
+      "simpleTitle": "Jinwar: comienza la construcción",
+      "simple": "Mujeres impulsan una aldea para vivir con mayor autonomía y apoyo mutuo. Comienza aquí el caso arquitectónico localizado. Se usa marzo de 2017 porque el testimonio de participantes indica el día 10, mientras los apuntes señalan el 8. Las fotografías muestran trabajo de junio de 2018.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Señala tierra, molde y bloques. La fecha de una fotografía del proceso no tiene que coincidir con la fecha de inicio de la obra."
+    },
+    {
+      "title": "25 de noviembre de 2018 · Abre Jinwar",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Viviendas",
+        "Espacios compartidos",
+        "Cuidado y vida comunitaria"
+      ],
+      "notes": "Jinwar se inaugura en el entorno rural de Dirbesiyê, en Hasaka. Las viviendas de tierra y los espacios compartidos relacionan habitación, trabajo y cuidado. Escuela, panadería y atención sanitaria forman parte del desarrollo del proyecto; no se da por hecho que todos abrieran el mismo día. Distingue la apertura del asentamiento de la puesta en funcionamiento de cada equipamiento. Mira cómo las viviendas se orientan hacia espacios comunes.",
+      "action": "Distingue la apertura del asentamiento de la puesta en funcionamiento de cada equipamiento. Mira cómo las viviendas se orientan hacia espacios comunes.",
+      "refs": [
+        "N",
+        "R2",
+        "H4"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-16.svg",
+          "title": "25 de noviembre de 2018 · secuencia del relato",
+          "look": "Distingue la apertura del asentamiento de la puesta en funcionamiento de cada equipamiento. Mira cómo las viviendas se orientan hacia espacios comunes.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "image2.jpg",
+          "title": "Jinwar: el asentamiento y sus espacios abiertos",
+          "look": "Mira las viviendas y su relación con los espacios exteriores. La vista permite preguntar cómo se organizan los recorridos.",
+          "credit": "Imagen incluida en el PowerPoint original; marca ANHA visible. Fecha y autor pendientes de completar; uso contextual."
+        }
+      ],
+      "simpleTitle": "Abre Jinwar",
+      "simple": "Jinwar se inaugura en el entorno rural de Dirbesiyê, en Hasaka. Las viviendas de tierra y los espacios compartidos relacionan habitación, trabajo y cuidado. Escuela, panadería y atención sanitaria forman parte del desarrollo del proyecto; no se da por hecho que todos abrieran el mismo día.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Distingue la apertura del asentamiento de la puesta en funcionamiento de cada equipamiento. Mira cómo las viviendas se orientan hacia espacios comunes."
+    },
+    {
+      "title": "Desde 2018 · Autonomía dentro de un territorio en conflicto",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Vida comunitaria",
+        "Relaciones con el exterior",
+        "Conflictos y vulnerabilidad"
+      ],
+      "notes": "El proyecto busca sostener la vida de mujeres y niños, pero depende de un entorno atravesado por guerra, desplazamiento y disputas políticas. Sus prácticas no permiten concluir que toda Rojava funcione igual ni que la comunidad esté aislada de relaciones externas. Relaciona el asentamiento con su contexto. Habla de autonomía como una práctica que necesita condiciones materiales y seguridad.",
+      "action": "Relaciona el asentamiento con su contexto. Habla de autonomía como una práctica que necesita condiciones materiales y seguridad.",
+      "refs": [
+        "N",
+        "R2",
+        "R3"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-17.svg",
+          "title": "Desde 2018 · secuencia del relato",
+          "look": "Relaciona el asentamiento con su contexto. Habla de autonomía como una práctica que necesita condiciones materiales y seguridad.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "cioni-p7-0.png",
+          "title": "Salida de una asamblea en Jinwar",
+          "look": "Relaciona el edificio con quienes lo usan: el lugar de reunión forma parte del funcionamiento del asentamiento.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.94. CC BY 4.0. Jinwar; no representa toda Rojava."
+        }
+      ],
+      "simpleTitle": "Autonomía dentro de un territorio en conflicto",
+      "simple": "El proyecto busca sostener la vida de mujeres y niños, pero depende de un entorno atravesado por guerra, desplazamiento y disputas políticas. Sus prácticas no permiten concluir que toda Rojava funcione igual ni que la comunidad esté aislada de relaciones externas.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Relaciona el asentamiento con su contexto. Habla de autonomía como una práctica que necesita condiciones materiales y seguridad."
+    },
+    {
+      "title": "Una galería admite distintos momentos de vida",
+      "question": "Jinwar: usos documentados en mayo de 2019",
+      "kind": "photo",
+      "labels": [
+        "La galería sirve para compartir la comida",
+        "Una galería con usos que cambian"
+      ],
+      "notes": "Aquí observamos la galería, un espacio intermedio. La investigación registra su uso para comer y, según las condiciones de la estación, para descansar. La arquitectura ofrece una posibilidad de adaptación entre vida doméstica y vida colectiva. No obliga a una única actividad. Esta flexibilidad ayuda a entender que convivencia tampoco significa exposición permanente a otras personas. El espacio compartido necesita acuerdos sobre acceso, intimidad y cuidado. La pregunta comparativa con El Alto es qué soportes espaciales hacen posible organizar la vida cotidiana. No tenemos que copiar una galería para aprender del caso; podemos estudiar cómo un umbral permite elegir entre participar y retirarse.",
+      "action": "Compara los dos usos documentados de la galería: comer y preparar el descanso. El valor arquitectónico está en la transición y la flexibilidad de uso.",
+      "refs": [
+        "R2"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "images": [
+        "cioni-p6-2.png",
+        "cioni-p6-3.png"
+      ],
+      "gallery": [
+        {
+          "file": "cioni-p6-2.png",
+          "title": "La galería sirve para compartir la comida",
+          "look": "Mira dónde se sientan: la vida cotidiana también ocurre en la transición entre la vivienda y el exterior.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.93. CC BY 4.0. Jinwar; no representa toda Rojava."
+        },
+        {
+          "file": "cioni-p6-3.png",
+          "title": "Una galería con usos que cambian",
+          "look": "Mira el espacio cubierto frente a la casa. La fuente describe su preparación para el descanso nocturno.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.93. CC BY 4.0. Jinwar; no representa toda Rojava."
+        }
+      ],
+      "simpleTitle": "Un mismo lugar puede servir para varias actividades.",
+      "simple": "La galería aparece preparada para comer y también para descansar. El interés arquitectónico está en esa capacidad de cambiar de uso sin necesitar un edificio distinto para cada actividad.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Compara los dos usos documentados de la galería: comer y preparar el descanso. El valor arquitectónico está en la transición y la flexibilidad de uso."
+    },
+    {
+      "title": "El territorio depende de recursos que vienen de fuera",
+      "question": "Acceso, práctica ecológica y resultado son distintos",
+      "kind": "ecology",
+      "labels": [
+        "Plantar también necesita cooperación",
+        "La producción de alimentos necesita trabajo"
+      ],
+      "notes": "En ambos casos necesitamos seguir lo que entra, lo que se usa y lo que sale. Conseguir agua para un barrio resuelve una necesidad, pero no demuestra que ese actor gestione toda la cuenca. Construir con tierra o cultivar alimentos tampoco certifica autosuficiencia. Debemos identificar quién hace cada tarea y en qué lugar recaen sus efectos. Proponemos leer las redes de recursos junto con las redes de decisión: dónde se obtiene el agua, quién opera la infraestructura, quién trabaja y quién absorbe los residuos. La habitabilidad multiespecie exige además evidencia sobre hábitats y efectos ecológicos. Esa evidencia no se sustituye con un color verde o con el nombre ecológico de un proyecto.",
+      "action": "Muestra árboles y cosecha. Explica que producir alimentos necesita trabajo y relaciones externas; una fotografía de cultivo no demuestra autosuficiencia.",
+      "refs": [
+        "E2",
+        "R2",
+        "R6"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "cioni-p8-0.png",
+          "title": "Plantar también necesita cooperación",
+          "look": "La fuente registra árboles donados por una cooperativa de Derik. El asentamiento mantiene relaciones con otros lugares.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.95. CC BY 4.0. Jinwar; no representa toda Rojava."
+        },
+        {
+          "file": "cioni-p8-1.png",
+          "title": "La producción de alimentos necesita trabajo",
+          "look": "Mira la recolección manual de lentejas. Esta foto documenta una actividad, no un balance completo de autosuficiencia.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.95. CC BY 4.0. Jinwar; no representa toda Rojava."
+        },
+        {
+          "file": "jinwar-construccion2017.jpg",
+          "title": "Jinwar · cultivo documentado en 2017",
+          "look": "La imagen muestra trabajo agrícola y productos en la parcela. Es evidencia de una práctica; no demuestra que el asentamiento sea autosuficiente.",
+          "credit": "Internationalist Commune · Jinwar, publicado el 26 de septiembre de 2017. Fuente participante del proyecto.",
+          "url": "https://internationalistcommune.com/jinwar/"
+        }
+      ],
+      "simpleTitle": "La vida cotidiana depende de recursos y de trabajo.",
+      "simple": "Plantar, cosechar, conseguir agua y mantener el suelo requieren relaciones y recursos. La donación de árboles desde otra cooperativa muestra que Jinwar también se relaciona con el exterior.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Muestra árboles y cosecha. Explica que producir alimentos necesita trabajo y relaciones externas; una fotografía de cultivo no demuestra autosuficiencia."
+    },
+    {
+      "title": "Síntesis de Rojava y Jinwar · La arquitectura hace visible la organización",
+      "question": "02 · Rojava y Jinwar",
+      "kind": "photo",
+      "labels": [
+        "Contexto de derechos y guerra",
+        "Organización de mujeres",
+        "Arquitectura y prácticas cotidianas"
+      ],
+      "notes": "Discriminación → guerra y autogobierno → destrucción urbana → creación de Jinwar → espacios para vivir, cuidarse y organizarse. Es un hilo de contexto, no una cadena causal demostrada donde un hecho produzca inevitablemente el siguiente. Recorre casa, galería y espacio común. Explica cómo la vida colectiva necesita tanto acuerdos como lugares y recursos para sostenerlos.",
+      "action": "Recorre casa, galería y espacio común. Explica cómo la vida colectiva necesita tanto acuerdos como lugares y recursos para sostenerlos.",
+      "refs": [
+        "N",
+        "R2"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "narrativa-20.svg",
+          "title": "Síntesis de Rojava y Jinwar · secuencia del relato",
+          "look": "Recorre casa, galería y espacio común. Explica cómo la vida colectiva necesita tanto acuerdos como lugares y recursos para sostenerlos.",
+          "credit": "Elaboración propia a partir de la narrativa y fuentes de esta diapositiva. Las flechas organizan la explicación; no cuantifican causalidad."
+        },
+        {
+          "file": "umbral.svg",
+          "title": "La arquitectura relaciona interior y exterior",
+          "look": "Sigue la secuencia. La galería permite actividades sin estar completamente dentro ni fuera de la vivienda.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        }
+      ],
+      "simpleTitle": "La arquitectura hace visible la organización",
+      "simple": "Discriminación → guerra y autogobierno → destrucción urbana → creación de Jinwar → espacios para vivir, cuidarse y organizarse. Es un hilo de contexto, no una cadena causal demostrada donde un hecho produzca inevitablemente el siguiente.",
+      "section": "02 · Rojava y Jinwar",
+      "guide": "Recorre casa, galería y espacio común. Explica cómo la vida colectiva necesita tanto acuerdos como lugares y recursos para sostenerlos."
+    },
+    {
+      "title": "La comparación conecta seis dimensiones",
+      "question": "Mecanismos y límites, sin clasificar un ganador",
+      "kind": "matrix",
+      "labels": [
+        "El Alto: viviendas, calles y actividad urbana",
+        "Jinwar: el asentamiento y sus espacios abiertos",
+        "Salida de una asamblea en Jinwar"
+      ],
+      "notes": "Ahora reunimos los recorridos. La génesis se materializa en tejidos y edificios. La organización conecta demandas o tareas. El poder depende de reglas efectivas. La economía incluye los costos de operar y mantener, además de construir. El bienestar exige comprobar acceso real. La ecología necesita seguir dependencias y efectos a lo largo del tiempo. El Alto muestra cómo una demanda por servicios puede articular escalas organizativas. Jinwar permite observar una relación localizada entre gestión colectiva, vivienda y espacios de cuidado. La comparación no decide cuál sociedad es mejor. Permite preguntar qué mecanismo funciona, para quién y bajo qué condiciones. Los vacíos también importan: no contamos con una evaluación comparable de resultados ambientales o de exclusión en ambos casos.",
+      "action": "Comparamos las mismas preguntas, no elegimos un ganador. En ambos casos preguntamos cómo comenzaron, quién decide, cómo se sostienen y cómo se materializan esas relaciones en viviendas y servicios. Las escalas y las evidencias siguen siendo diferentes.",
+      "refs": [
+        "E1",
+        "E2",
+        "R2",
+        "R3"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "image1.jpg",
+          "title": "El Alto: viviendas, calles y actividad urbana",
+          "look": "Mira el tejido de edificaciones y la calle. La pregunta es cómo llegan los servicios a cada vivienda.",
+          "credit": "Imagen incluida en el PowerPoint original del grupo. Autor y fecha no identificados; uso contextual, no prueba de cobertura."
+        },
+        {
+          "file": "image2.jpg",
+          "title": "Jinwar: el asentamiento y sus espacios abiertos",
+          "look": "Mira las viviendas y su relación con los espacios exteriores. La vista permite preguntar cómo se organizan los recorridos.",
+          "credit": "Imagen incluida en el PowerPoint original; marca ANHA visible. Fecha y autor pendientes de completar; uso contextual."
+        },
+        {
+          "file": "cioni-p7-0.png",
+          "title": "Salida de una asamblea en Jinwar",
+          "look": "Relaciona el edificio con quienes lo usan: el lugar de reunión forma parte del funcionamiento del asentamiento.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.94. CC BY 4.0. Jinwar; no representa toda Rojava."
+        }
+      ],
+      "simpleTitle": "Comparamos las mismas preguntas, no elegimos un ganador.",
+      "simple": "En ambos casos preguntamos cómo comenzaron, quién decide, cómo se sostienen y cómo se materializan esas relaciones en viviendas y servicios. Las escalas y las evidencias siguen siendo diferentes.",
+      "section": "03 · Comparación y aprendizajes",
+      "guide": "Comparamos las mismas preguntas, no elegimos un ganador. En ambos casos preguntamos cómo comenzaron, quién decide, cómo se sostienen y cómo se materializan esas relaciones en viviendas y servicios. Las escalas y las evidencias siguen siendo diferentes."
+    },
+    {
+      "title": "Medir acceso requiere definir población y periodo",
+      "question": "Indicadores propuestos, todavía sin resultados comparables",
+      "kind": "indicators",
+      "labels": [
+        "Dónde se registran carencias de servicios",
+        "Tener red no es lo mismo que tener servicio",
+        "La construcción es solo una etapa"
+      ],
+      "notes": "Estas cuatro medidas son una propuesta de investigación, no resultados calculados. Para la conexión efectiva contaríamos hogares con servicio operativo sobre hogares del ámbito definido. Para la continuidad registraríamos horas de suministro por día. Para la carga económica relacionaríamos el gasto con el ingreso del hogar y separaríamos el pago inicial. Para el seguimiento preguntaríamos cuántas decisiones tienen responsable, recursos y revisión documentada. Debemos fijar un periodo y una población compatibles antes de comparar. Las medidas se relacionan con agua y saneamiento, acceso urbano y participación, pero no constituyen por sí mismas una evaluación completa de los Objetivos de Desarrollo Sostenible. Nos ayudan a pasar de infraestructura visible a condiciones verificables.",
+      "action": "Queremos medir si las condiciones realmente funcionan. Proponemos medir conexión efectiva, horas de suministro, esfuerzo económico y seguimiento de decisiones. Todavía no tenemos datos equivalentes para darles un puntaje a los dos casos.",
+      "refs": [
+        "G",
+        "E3"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "elalto-services-1.png",
+          "title": "Dónde se registran carencias de servicios",
+          "look": "Amplía la leyenda: el amarillo señala carencias de agua. Las otras clases representan otros servicios.",
+          "credit": "GAMEA, PTDI 2021–2025, mapa 29, p.123. Diagnóstico 2022."
+        },
+        {
+          "file": "servicio.svg",
+          "title": "Tener red no es lo mismo que tener servicio",
+          "look": "Lee de izquierda a derecha: cada paso necesita una condición distinta.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        },
+        {
+          "file": "mantener.svg",
+          "title": "La construcción es solo una etapa",
+          "look": "Una obra puede permanecer mientras su servicio o su organización dejan de funcionar.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        }
+      ],
+      "simpleTitle": "Queremos medir si las condiciones realmente funcionan.",
+      "simple": "Proponemos medir conexión efectiva, horas de suministro, esfuerzo económico y seguimiento de decisiones. Todavía no tenemos datos equivalentes para darles un puntaje a los dos casos.",
+      "section": "03 · Comparación y aprendizajes",
+      "guide": "Queremos medir si las condiciones realmente funcionan. Proponemos medir conexión efectiva, horas de suministro, esfuerzo económico y seguimiento de decisiones. Todavía no tenemos datos equivalentes para darles un puntaje a los dos casos."
+    },
+    {
+      "title": "Otros casos cambian la forma de la misma pregunta",
+      "question": "¿Qué relaciones hacen habitable una configuración?",
+      "kind": "contrast",
+      "labels": [
+        "Çatalhöyük: viviendas contiguas",
+        "Çatalhöyük: usos dentro de la vivienda",
+        "Çatalhöyük: circulación por cubiertas"
+      ],
+      "notes": "En el material de Çatalhöyük vimos viviendas contiguas, circulación por cubiertas y funciones domésticas múltiples. Retomamos también su advertencia: similitud física no equivale a ausencia de diferencias sociales. En Hong Kong, MTR documenta desarrollos inmobiliarios vinculados a estaciones; sirve para estudiar la coordinación entre forma construida y transporte, sin suponer que cercanía significa asequibilidad. Para Shenzhen, la investigación sobre aldeas urbanas identifica alojamiento para migrantes y tensiones de renovación y desplazamiento. No estamos comparando cinco ciudades como si tuvieran la misma escala o historia. Estamos cambiando la pregunta: quién puede entrar, permanecer y decidir en cada configuración. Esa pregunta conecta los referentes con El Alto y con Jinwar.",
+      "action": "La forma de la ciudad cambia la forma de acceder y convivir. Çatalhöyük permite mirar viviendas y recorridos; Hong Kong, la relación entre estaciones y desarrollo; Shenzhen, vivienda de alquiler y renovación. Las imágenes de esta escena son exclusivamente del material de Çatalhöyük.",
+      "refs": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "seconds": 46,
+      "speaker": "Nicolás",
+      "gallery": [
+        {
+          "file": "catal-11.png",
+          "title": "Çatalhöyük: viviendas contiguas",
+          "look": "Observa cómo la proximidad entre casas organiza el conjunto.",
+          "credit": "Material de clase Çatalhöyük, p.11, suministrado por el grupo. Se conserva la lámina completa; créditos de imágenes incompletos en el original."
+        },
+        {
+          "file": "catal-12.png",
+          "title": "Çatalhöyük: usos dentro de la vivienda",
+          "look": "Observa cómo se relacionan las actividades y los espacios domésticos.",
+          "credit": "Material de clase Çatalhöyük, p.12, suministrado por el grupo. Se conserva la lámina completa; créditos de imágenes incompletos en el original."
+        },
+        {
+          "file": "catal-13.png",
+          "title": "Çatalhöyük: circulación por cubiertas",
+          "look": "Sigue el recorrido mostrado: la forma de acceder condiciona las relaciones entre viviendas.",
+          "credit": "Material de clase Çatalhöyük, p.13, suministrado por el grupo. Se conserva la lámina completa; créditos de imágenes incompletos en el original."
+        }
+      ],
+      "simpleTitle": "La forma de la ciudad cambia la forma de acceder y convivir.",
+      "simple": "Çatalhöyük permite mirar viviendas y recorridos; Hong Kong, la relación entre estaciones y desarrollo; Shenzhen, vivienda de alquiler y renovación. Las imágenes de esta escena son exclusivamente del material de Çatalhöyük.",
+      "section": "03 · Comparación y aprendizajes",
+      "guide": "La forma de la ciudad cambia la forma de acceder y convivir. Çatalhöyük permite mirar viviendas y recorridos; Hong Kong, la relación entre estaciones y desarrollo; Shenzhen, vivienda de alquiler y renovación. Las imágenes de esta escena son exclusivamente del material de Çatalhöyük."
+    },
+    {
+      "title": "Kennedy necesita una red de responsabilidades",
+      "question": "Complementar la conectografía del Corte II",
+      "kind": "kennedy",
+      "labels": [
+        "El Alto: viviendas, calles y actividad urbana",
+        "Lo que falta preguntar en Kennedy",
+        "De la necesidad a la respuesta"
+      ],
+      "notes": "Nuestra conectografía de Kennedy ya relaciona actividades, flujos y lugares. El indicador de actividades y espacio público muestra concurrencias relativas. Pero esas representaciones no identifican por sí solas quién puede cambiar una regla ni quién financia una respuesta. El Alto nos lleva a incorporar demandas y negociación. Jinwar nos invita a estudiar cómo la gestión y el mantenimiento se relacionan con el espacio cotidiano. La transferencia requiere verificar organizaciones locales, competencias, recursos y acceso al suelo. No proponemos copiar una federación o un asentamiento. Proponemos completar la red existente con responsabilidades y contrastar si las personas afectadas pueden intervenir en decisiones sobre los espacios que usan.",
+      "action": "En Kennedy ya vemos dónde ocurren actividades; falta seguir las decisiones. El siguiente paso es preguntar quién recibe una necesidad, quién puede actuar y quién aporta recursos. Esto es una propuesta de investigación, no una red institucional que ya hayamos comprobado.",
+      "refs": [
+        "K",
+        "E1",
+        "R2"
+      ],
+      "seconds": 46,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "image1.jpg",
+          "title": "El Alto: viviendas, calles y actividad urbana",
+          "look": "Mira el tejido de edificaciones y la calle. La pregunta es cómo llegan los servicios a cada vivienda.",
+          "credit": "Imagen incluida en el PowerPoint original del grupo. Autor y fecha no identificados; uso contextual, no prueba de cobertura."
+        },
+        {
+          "file": "kennedy.svg",
+          "title": "Lo que falta preguntar en Kennedy",
+          "look": "Además de localizar actividades, debemos identificar quién decide y mantiene los espacios.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        },
+        {
+          "file": "demanda.svg",
+          "title": "De la necesidad a la respuesta",
+          "look": "Sigue quién necesita, quién organiza, quién decide y quién presta el servicio.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        }
+      ],
+      "simpleTitle": "En Kennedy ya vemos dónde ocurren actividades; falta seguir las decisiones.",
+      "simple": "El siguiente paso es preguntar quién recibe una necesidad, quién puede actuar y quién aporta recursos. Esto es una propuesta de investigación, no una red institucional que ya hayamos comprobado.",
+      "section": "03 · Comparación y aprendizajes",
+      "guide": "En Kennedy ya vemos dónde ocurren actividades; falta seguir las decisiones. El siguiente paso es preguntar quién recibe una necesidad, quién puede actuar y quién aporta recursos. Esto es una propuesta de investigación, no una red institucional que ya hayamos comprobado."
+    },
+    {
+      "title": "La arquitectura organiza posibilidades y responsabilidades",
+      "question": "¿Quién puede transformar y sostener el espacio que habita?",
+      "kind": "closing",
+      "labels": [
+        "El Alto: viviendas, calles y actividad urbana",
+        "La galería sirve para compartir la comida",
+        "La construcción es solo una etapa"
+      ],
+      "notes": "Volvemos a la pregunta inicial. Habitar depende de relaciones que permiten construir, usar y sostener el espacio. Los casos muestran mecanismos distintos y también límites: la representación puede no convertirse en influencia, la infraestructura puede no convertirse en acceso y la permanencia material puede no asegurar continuidad social. Para Kennedy dejamos una pregunta de seguimiento: cómo se tramitan las necesidades de quienes comparten los bordes de la actividad logística. Nuestra hipótesis es que la posibilidad de responder depende de la articulación entre representación, competencia institucional y recursos de mantenimiento. Todavía debe contrastarse. La próxima red tendrá que mostrar esas relaciones y documentarlas. Ese es el aporte al modelo: explicar quién hace posible cada dinámica territorial y quién queda fuera de la decisión.",
+      "action": "La arquitectura también trata de quién puede usar y sostener un lugar. El Alto ayuda a entender la organización de demandas; Jinwar, la relación entre vida colectiva y espacio doméstico. Volvemos a Kennedy con una pregunta más precisa: ¿quién puede transformar y mantener los espacios que usa?",
+      "refs": [
+        "K",
+        "G"
+      ],
+      "seconds": 50,
+      "speaker": "David",
+      "gallery": [
+        {
+          "file": "image1.jpg",
+          "title": "El Alto: viviendas, calles y actividad urbana",
+          "look": "Mira el tejido de edificaciones y la calle. La pregunta es cómo llegan los servicios a cada vivienda.",
+          "credit": "Imagen incluida en el PowerPoint original del grupo. Autor y fecha no identificados; uso contextual, no prueba de cobertura."
+        },
+        {
+          "file": "cioni-p6-2.png",
+          "title": "La galería sirve para compartir la comida",
+          "look": "Mira dónde se sientan: la vida cotidiana también ocurre en la transición entre la vivienda y el exterior.",
+          "credit": "Fabiana Cioni, mayo de 2019. Publicado en 2024, p.93. CC BY 4.0. Jinwar; no representa toda Rojava."
+        },
+        {
+          "file": "mantener.svg",
+          "title": "La construcción es solo una etapa",
+          "look": "Una obra puede permanecer mientras su servicio o su organización dejan de funcionar.",
+          "credit": "Elaboración propia. Esquema conceptual, no fotografía ni plano medido."
+        }
+      ],
+      "simpleTitle": "La arquitectura también trata de quién puede usar y sostener un lugar.",
+      "simple": "El Alto ayuda a entender la organización de demandas; Jinwar, la relación entre vida colectiva y espacio doméstico. Volvemos a Kennedy con una pregunta más precisa: ¿quién puede transformar y mantener los espacios que usa?",
+      "section": "03 · Comparación y aprendizajes",
+      "guide": "La arquitectura también trata de quién puede usar y sostener un lugar. El Alto ayuda a entender la organización de demandas; Jinwar, la relación entre vida colectiva y espacio doméstico. Volvemos a Kennedy con una pregunta más precisa: ¿quién puede transformar y mantener los espacios que usa?"
+    }
+  ]
+}

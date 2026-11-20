@@ -1,0 +1,517 @@
+{
+  "date": "23/10/2026",
+  "sources": [
+    [
+      "S10",
+      "Secretaría de Ambiente · Informe de gestión La Vaca 2023",
+      "https://ambientebogota.gov.co/documents/10184/7130449/2023%2BRDHVA%2BINFORME%2BDE%2BGESTION.pdf/5bdcc164-4601-4d2e-8aa8-715dda62277d",
+      "Referencia del ingreso norte: 4.628904, −74.163147. Punto de acceso reportado; no delimita el humedal ni acredita su estado actual."
+    ],
+    [
+      "S1",
+      "Corabastos · Informe de gestión 2025",
+      "https://corabastos.com.co/wp-content/uploads/2026/03/Informe-de-Gestion-2025.pdf",
+      "Páginas impresas 50–51, páginas PDF 49–50. Relato institucional de problemas y seguimiento contractual en 2025; no prueba el estado de octubre de 2026."
+    ],
+    [
+      "S2",
+      "Corabastos · Convocatorias",
+      "https://corabastos.com.co/convocatorias/",
+      "Procesos 005 y 006 de 2022: manejo de residuos al interior e interventoría. No se confunde este ámbito contractual con el aseo de toda Kennedy."
+    ],
+    [
+      "S3",
+      "Secretaría de Movilidad · Cargue y estacionamiento",
+      "https://www.movilidadbogota.gov.co/preguntas-frecuentes/cuales-son-las-normas-que-regulan-el-estacionamiento-en-publica",
+      "Consulta 23/10/2026. La autoridad de tránsito determina zonas y horas. La mesa propuesta no autoriza ocupación de andenes ni nuevas zonas de cargue."
+    ],
+    [
+      "S4",
+      "Secretaría de Ambiente · Humedal La Vaca",
+      "https://ambientebogota.gov.co/es/humedal-la-vaca",
+      "Documenta separación norte/sur, relación del norte con Corabastos y recuperación comunitaria. No se usa una cifra única de extensión: las fuentes consultadas presentan cifras distintas."
+    ],
+    [
+      "S5",
+      "Corabastos · Horarios",
+      "https://corabastos.com.co/horarios/",
+      "Existen horarios diferenciados por bodegas; la página contiene entradas repetidas para algunas. No se fija un nuevo horario ni se interpreta una franja como universal."
+    ],
+    [
+      "S6",
+      "Corabastos · Directorio de cargos",
+      "https://corabastos.com.co/colaboradores/",
+      "Consulta 23/10/2026. Identifica áreas operativas, ambientales y financieras; no acredita la distribución efectiva de influencia de una decisión concreta."
+    ],
+    [
+      "S7",
+      "RIBB · Archivo utilizado por la red existente",
+      "https://redbiotica.jbb.gov.co/data/RIBB_v2024-12-30.xlsx",
+      "Extracción local: fila 7205, visita floral, coordenada de referencia 4.62891, −74.16298. Registro documental, no censo actual ni trayectoria de vuelo."
+    ],
+    [
+      "S8",
+      "Referencia original de la fila 7205",
+      "https://www.inaturalist.org/observations/95042572",
+      "Citada por RIBB como Garcia (2022). El enlace original no pudo verificarse en esta sesión; no se afirma confirmación independiente."
+    ],
+    [
+      "S9",
+      "Universidad de Melbourne · More-than-human Urban Design",
+      "https://msd.unimelb.edu.au/research/impact-agendas/future-practice/more-than-human-urban-design",
+      "Sustenta el marco de relaciones humanas y no humanas; las reglas de la mesa son diseño propio."
+    ],
+    [
+      "L1",
+      "Cartografía y red urbana del proyecto",
+      "data/organizacion/territorio.json",
+      "Reutiliza el KML del usuario y las posiciones de la conectografía. Algunas posiciones son representativas. Las vías conservan la cobertura del archivo previo; no constituyen un inventario completo."
+    ],
+    [
+      "G1",
+      "Guía del profesor · 8 páginas",
+      "data/organizacion/guia-profesor.pdf",
+      "Sección 7: seis productos y exposición de 15 minutos; sección 5: modelo conceptual riguroso, sin obligación de simular numéricamente."
+    ],
+    [
+      "G2",
+      "Presentación del profesor · 11 páginas",
+      "data/organizacion/presentacion-profesor.pdf",
+      "Red, decisión y causalidad: tres lecturas del mismo sistema. Los ejemplos del profesor no se presentan como evidencia de Kennedy."
+    ]
+  ],
+  "actors": [
+    {
+      "id": "mesa",
+      "name": "Mesa territorial",
+      "group": "humano",
+      "kind": "Organización propuesta",
+      "role": "Formula, documenta y revisa acuerdos; no sustituye competencias públicas.",
+      "resource": "Agenda y registro compartidos.",
+      "limit": "Sin financiación, representación ni autoridad garantizadas.",
+      "source": "Propuesta",
+      "previousId": null
+    },
+    {
+      "id": "vecinos",
+      "name": "Habitantes del entorno",
+      "group": "humano",
+      "kind": "Personas / posiciones diversas",
+      "role": "Proponen necesidades y revisan impactos cotidianos.",
+      "resource": "Experiencia local y tiempo.",
+      "limit": "Convocatoria y participantes concretos pendientes.",
+      "source": "Propuesta",
+      "previousId": null
+    },
+    {
+      "id": "comercio",
+      "name": "Comerciantes y vendedores",
+      "group": "humano",
+      "kind": "Personas / grupos a desagregar",
+      "role": "Comparan alternativas de operación y manejo de residuos.",
+      "resource": "Actividad económica, materiales y trabajo.",
+      "limit": "Formales e informales pueden tener intereses distintos.",
+      "source": "Propuesta",
+      "previousId": null
+    },
+    {
+      "id": "trabajo",
+      "name": "Transportadores y cargadores",
+      "group": "humano",
+      "kind": "Trabajadores a desagregar",
+      "role": "Evalúan maniobras, tiempos y distribución de tareas.",
+      "resource": "Vehículos, conocimiento práctico y trabajo.",
+      "limit": "No se asume que los empleadores representan a todos los trabajadores.",
+      "source": "Propuesta",
+      "previousId": null
+    },
+    {
+      "id": "corabastos",
+      "name": "Corabastos S. A.",
+      "group": "humano",
+      "kind": "Entidad",
+      "role": "Interlocución institucional; seguimiento interno descrito en su informe.",
+      "resource": "Infraestructura y relaciones contractuales internas.",
+      "limit": "No controla por sí sola la vía pública.",
+      "source": "S1 / S2",
+      "previousId": 28
+    },
+    {
+      "id": "supervision",
+      "name": "Supervisión de Corabastos",
+      "group": "humano",
+      "kind": "Función / cargo a precisar",
+      "role": "Documenta seguimiento a la operación interna de residuos.",
+      "resource": "Información y seguimiento contractual.",
+      "limit": "Identificar responsable y mandato vigente antes de ejecutar.",
+      "source": "S1",
+      "previousId": null
+    },
+    {
+      "id": "interaseo",
+      "name": "INTERASEO",
+      "group": "humano",
+      "kind": "Empresa · referencia 2025",
+      "role": "Contratista mencionado en el informe para el servicio interno.",
+      "resource": "Personal y equipos de operación.",
+      "limit": "Vigencia y obligaciones actuales pendientes de contraste contractual.",
+      "source": "S1",
+      "previousId": null
+    },
+    {
+      "id": "aguaseo",
+      "name": "AGUASEO",
+      "group": "humano",
+      "kind": "Empresa · referencia 2025",
+      "role": "Interventoría identificada en el informe.",
+      "resource": "Seguimiento técnico.",
+      "limit": "No se presupone que resuelve los reclamos vecinales ni se confirma continuidad en 2026.",
+      "source": "S1",
+      "previousId": null
+    },
+    {
+      "id": "movilidad",
+      "name": "Autoridad de tránsito / SDM",
+      "group": "humano",
+      "kind": "Entidad / competencia",
+      "role": "Interviene en la definición autorizada de zonas y horas en vía pública.",
+      "resource": "Autorización y regulación.",
+      "limit": "Una propuesta de la mesa no equivale a una autorización.",
+      "source": "S3",
+      "previousId": 6
+    },
+    {
+      "id": "ambiente",
+      "name": "Secretaría de Ambiente",
+      "group": "humano",
+      "kind": "Entidad",
+      "role": "Información y gestión ambiental del humedal.",
+      "resource": "Conocimiento y funciones ambientales.",
+      "limit": "La participación en esta nueva mesa no está acordada.",
+      "source": "S4",
+      "previousId": 5
+    },
+    {
+      "id": "comunidad",
+      "name": "Organización ambiental local",
+      "group": "humano",
+      "kind": "Colectivos por identificar",
+      "role": "Aporta observaciones y solicita revisión ecológica.",
+      "resource": "Conocimiento territorial y seguimiento.",
+      "limit": "La fuente acredita trabajo comunitario, no un mandato otorgado a nuestra mesa.",
+      "source": "S4",
+      "previousId": null
+    },
+    {
+      "id": "delegados",
+      "name": "Delegados con mandato",
+      "group": "humano",
+      "kind": "Cargos propuestos",
+      "role": "Coordinan tareas pactadas y rinden cuentas.",
+      "resource": "Mandato escrito y recursos asignados.",
+      "limit": "Los grupos que los designan pueden sustituirlos; no se revocan funcionarios públicos.",
+      "source": "Propuesta",
+      "previousId": null
+    },
+    {
+      "id": "reciclaje",
+      "name": "Recicladores participantes",
+      "group": "humano",
+      "kind": "Trabajadores / organizaciones por identificar",
+      "role": "Participación propuesta en alternativas y distribución del trabajo.",
+      "resource": "Conocimiento de aprovechamiento.",
+      "limit": "No se da por hecho acceso al contrato ni trabajo gratuito.",
+      "source": "Propuesta",
+      "previousId": null
+    },
+    {
+      "id": "equipos",
+      "name": "Equipos de recolección",
+      "group": "material",
+      "kind": "Objetos técnicos",
+      "role": "Su disponibilidad condiciona la ejecución.",
+      "resource": "Capacidad material de recolección.",
+      "limit": "No se confunden con el operador ni el regulador.",
+      "source": "S1",
+      "previousId": null
+    },
+    {
+      "id": "residuos",
+      "name": "Residuos y permanencia",
+      "group": "material",
+      "kind": "Material / condición",
+      "role": "Conecta generación, almacenamiento y recolección.",
+      "resource": "Materia y espacio ocupado.",
+      "limit": "Ubicación exacta del CCR no verificada: no se dibuja como punto real.",
+      "source": "S1",
+      "previousId": null
+    },
+    {
+      "id": "habitat",
+      "name": "Hábitat de La Vaca norte",
+      "group": "material",
+      "kind": "Condiciones territoriales",
+      "role": "Ámbito ecológico documentado contiguo a Corabastos.",
+      "resource": "Agua, vegetación y suelo.",
+      "limit": "No se representa su límite legal mediante el punto de la red.",
+      "source": "S4",
+      "previousId": null
+    },
+    {
+      "id": "mosca",
+      "name": "Mosca verde metálica",
+      "group": "especie",
+      "kind": "Especie · T3278",
+      "role": "Visita floral registrada en la red existente.",
+      "resource": "Interacción biológica registrada.",
+      "limit": "No se atribuye a residuos ni se prueba presencia actual.",
+      "source": "S7 / S8",
+      "previousId": "T3278"
+    },
+    {
+      "id": "perejil",
+      "name": "Perejil",
+      "group": "especie",
+      "kind": "Especie · T2286",
+      "role": "Planta asociada al registro de visita floral.",
+      "resource": "Flores en el registro.",
+      "limit": "Una referencia no prueba distribución, abundancia ni propuesta de siembra.",
+      "source": "S7 / S8",
+      "previousId": "T2286"
+    }
+  ],
+  "links": [
+    {
+      "source": "vecinos",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "comercio",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "trabajo",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "reciclaje",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "comunidad",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "delegados",
+      "label": "Entrega mandato limitado",
+      "status": "propuesta",
+      "mechanism": "Acta con tarea, responsable, recursos, plazo y revisión; la delegación no transfiere autoridad pública.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "delegados",
+      "target": "mesa",
+      "label": "Rinde cuentas",
+      "status": "propuesta",
+      "mechanism": "Informa ejecución y obstáculos; el colectivo revisa el mandato.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "movilidad",
+      "label": "Solicita evaluación vial",
+      "status": "propuesta",
+      "mechanism": "Las alternativas que afectan vía pública pasan por la autoridad competente.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "movilidad",
+      "target": "trabajo",
+      "label": "Define zonas y horas autorizadas",
+      "status": "documentado",
+      "mechanism": "Competencia general descrita por SDM; no es permiso para este piloto.",
+      "reference": "S3"
+    },
+    {
+      "source": "mesa",
+      "target": "corabastos",
+      "label": "Solicita compromisos",
+      "status": "propuesta",
+      "mechanism": "Negocia recursos y cambios internos sin suponer aceptación.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "corabastos",
+      "target": "supervision",
+      "label": "Seguimiento institucional",
+      "status": "documentado",
+      "mechanism": "El informe de 2025 describe supervisión interna.",
+      "reference": "S1"
+    },
+    {
+      "source": "supervision",
+      "target": "interaseo",
+      "label": "Observaciones operativas",
+      "status": "documentado",
+      "mechanism": "Relación descrita por Corabastos en su balance de 2025; no verificación independiente de cada incumplimiento.",
+      "reference": "S1"
+    },
+    {
+      "source": "aguaseo",
+      "target": "interaseo",
+      "label": "Interventoría técnica",
+      "status": "documentado",
+      "mechanism": "Interventoría identificada en el informe de 2025.",
+      "reference": "S1"
+    },
+    {
+      "source": "interaseo",
+      "target": "equipos",
+      "label": "Opera / mantiene",
+      "status": "documentado",
+      "mechanism": "El informe vincula funcionamiento de equipos con continuidad de recolección.",
+      "reference": "S1"
+    },
+    {
+      "source": "equipos",
+      "target": "residuos",
+      "label": "Condiciona recolección",
+      "status": "documentado",
+      "mechanism": "Mecanismo reportado institucionalmente en 2025.",
+      "reference": "S1"
+    },
+    {
+      "source": "residuos",
+      "target": "vecinos",
+      "label": "Afectación por olores reportada",
+      "status": "documentado",
+      "mechanism": "Fuente institucional reporta efectos en el entorno; no mide exposición individual.",
+      "reference": "S1"
+    },
+    {
+      "source": "residuos",
+      "target": "habitat",
+      "label": "Presión por verificar localmente",
+      "status": "hipotesis",
+      "mechanism": "Comprobar rutas de escorrentía, fuentes y calidad del agua antes de atribuir daños en un punto.",
+      "reference": "S1 / S4"
+    },
+    {
+      "source": "ambiente",
+      "target": "habitat",
+      "label": "Gestión e información ambiental",
+      "status": "documentado",
+      "mechanism": "La ficha oficial describe gestión de la reserva.",
+      "reference": "S4"
+    },
+    {
+      "source": "comunidad",
+      "target": "habitat",
+      "label": "Recuperación comunitaria",
+      "status": "documentado",
+      "mechanism": "La fuente reconoce trabajo comunitario en el norte; no establece un único representante.",
+      "reference": "S4"
+    },
+    {
+      "source": "habitat",
+      "target": "mosca",
+      "label": "Contexto de referencia",
+      "status": "hipotesis",
+      "mechanism": "La coordenada de RIBB está cerca de La Vaca norte; no demuestra dependencia ni presencia continua.",
+      "reference": "S7"
+    },
+    {
+      "source": "mosca",
+      "target": "perejil",
+      "label": "Visita floral registrada",
+      "status": "documentado",
+      "mechanism": "RIBB fila 7205. La dirección conserva el orden del archivo, no mide poder ni flujo.",
+      "reference": "S7 / S8"
+    },
+    {
+      "source": "mosca",
+      "target": "comunidad",
+      "label": "Observación para seguimiento",
+      "status": "propuesta",
+      "mechanism": "Protocolo de observación propuesto; no delegación otorgada por la especie.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "perejil",
+      "target": "comunidad",
+      "label": "Observación para seguimiento",
+      "status": "propuesta",
+      "mechanism": "Registrar condiciones y limitaciones, sin inferir beneficios de una mayor abundancia.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "comunidad",
+      "target": "mesa",
+      "label": "Solicita revisión ecológica",
+      "status": "propuesta",
+      "mechanism": "Aporta evidencias y objeciones; no monopoliza la interpretación ni tiene veto legal automático.",
+      "reference": "Diseño del grupo"
+    }
+  ],
+  "selectedSpecies": [
+    {
+      "id": "T3278",
+      "name": "Mosca verde metálica",
+      "label": "Lucilia sericata",
+      "references": [
+        {
+          "lon": -74.16298,
+          "lat": 4.62891,
+          "xy": [
+            -1774.2523423004895,
+            -1072.2902895726147
+          ],
+          "evidence_id": "RIBB_R07205_E1",
+          "edge_id": "RIBB_R07205",
+          "excel_row": 7205,
+          "reference_coordinate": true
+        }
+      ]
+    },
+    {
+      "id": "T2286",
+      "name": "Perejil",
+      "label": "Petroselinum crispum",
+      "references": [
+        {
+          "lon": -74.16298,
+          "lat": 4.62891,
+          "xy": [
+            -1774.2523423004895,
+            -1072.2902895726147
+          ],
+          "evidence_id": "RIBB_R07205_E1",
+          "edge_id": "RIBB_R07205",
+          "excel_row": 7205,
+          "reference_coordinate": true
+        }
+      ]
+    }
+  ]
+}

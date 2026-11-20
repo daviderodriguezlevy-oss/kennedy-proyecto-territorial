@@ -1,0 +1,23 @@
+.cf-jump{display:flex;flex-wrap:wrap;gap:12px 25px;padding:18px 32px;border-bottom:1px solid #354047;background:#10151b;font-size:13px}.cf-jump span{color:#83919b}.cf-jump a{color:#c5d5dd;text-decoration:none}
+#coexistence-framework{max-width:1480px;margin:70px auto 0;padding:40px 32px 60px;border-top:3px solid #8e9d91;color:#bdc8ce;line-height:1.75;scroll-margin-top:20px}
+#coexistence-framework .cf-heading{display:block;height:auto;padding:0;background:none;border:0;max-width:1060px}
+#coexistence-framework h2{font-size:clamp(30px,4vw,53px);line-height:1.2;color:#e1e8e5;margin:18px 0 4px;font-weight:500;text-shadow:0 0 30px #a0c0ad22}
+#coexistence-framework h3{font-size:23px;line-height:1.4;color:#d8e1e5;font-weight:500;margin:12px 0}
+#coexistence-framework h4{font-size:18px;color:#d8e1e5;margin:12px 0}
+#coexistence-framework .cf-heading>p:last-child{font-size:21px;max-width:930px}
+#coexistence-framework .cf-english{color:#8fa199;margin:0;font-size:16px}
+#coexistence-framework .eyebrow{color:#99aaa4;font-size:11px;letter-spacing:.12em}
+#coexistence-framework a{color:#b3c7d5}#coexistence-framework article>a{font-size:12px}
+.cf-scope{margin:30px 0;padding:20px 24px;border-left:3px solid #91a298;background:#131b20}.cf-scope p{margin:8px 0 0;max-width:1080px}
+.cf-two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:35px 0}.cf-two>article{min-width:0}
+.cf-hierarchy{display:flex;align-items:center;gap:18px;margin-top:35px}.cf-hierarchy>div{flex:1;border:1px solid #35434b;border-radius:8px;padding:20px;background:#10171d}.cf-hierarchy small,.cf-hierarchy b,.cf-hierarchy div>span{display:block}.cf-hierarchy small{font-size:10px;letter-spacing:.1em;color:#93a7a1}.cf-hierarchy b{font-size:18px;color:#dce4e4;margin:8px 0}.cf-hierarchy div>span{font-size:13px}
+#coexistence-framework .cf-caption{font-size:12px;line-height:1.7;color:#94a5af}
+.cf-network-row{padding-top:35px;border-top:1px solid #2c3840}.cf-network{position:relative;width:100%;height:470px;overflow:hidden;background:#090b0e;border:1px solid #34424d;border-radius:8px}
+#cf-relations{padding-left:28px}#cf-relations li{padding:8px 12px;border-left:2px solid transparent;font-size:14px}#cf-relations li p{margin:3px 0;color:#a1b1bb}#cf-relations li.active{border-color:#a9c1b2;background:#899f9415;color:#e1e9e4}#cf-selection{font-size:13px;color:#b2cabb}
+.cf-landscape{margin:35px 0;padding:25px;background:#0e151b;border:1px solid #34424d;border-radius:10px}.cf-scenarios{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.cf-scenarios button{padding:11px 16px;border:1px solid #4a5963;background:#18212a;color:#b7c5ce;border-radius:6px;cursor:pointer}.cf-scenarios button[aria-pressed=true]{border-color:#afc4b7;color:#e1ebe5;background:#25352d;box-shadow:0 0 18px #91a99812}
+#cf-landscape{display:block;width:100%;height:auto}#cf-landscape text{fill:#d8e0e3;font:17px 'Segoe UI',sans-serif}#cf-landscape .cf-svg-small{font-size:13px;fill:#bccbd0}
+#cf-landscape .cf-disturbance,#cf-landscape .cf-barrier{display:none}#cf-landscape[data-scene=pressure] .cf-disturbance{display:block}#cf-landscape[data-scene=pressure] .cf-buffer{display:none}#cf-landscape[data-scene=isolated] .cf-barrier{display:block}#cf-landscape[data-scene=isolated] .cf-connector{display:none}
+.cf-scene-copy{min-height:120px;padding:0 15px;border-left:2px solid #869b91}.cf-scene-copy p{margin-top:4px}
+.cf-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:22px 0 35px}.cf-cards article{padding:20px;background:#10181e;border:1px solid #303e47;border-radius:8px;font-size:14px}.cf-cards b{color:#d0deda;font-size:16px}.cf-cards img{width:100%;height:210px;object-fit:contain;background:#090e13;border-radius:5px}.cf-reading{border-left:3px solid #91a298;padding:5px 25px;margin:35px 0;background:#111a20}
+#coexistence-framework .cf-sources{display:block;background:none;border-top:1px solid #3a474e;padding:25px 0;font-size:13px}#coexistence-framework .cf-sources li{margin:10px 0}
+@media(max-width:850px){#coexistence-framework{padding:28px 18px}.cf-two{grid-template-columns:1fr}.cf-hierarchy{flex-direction:column;align-items:stretch}.cf-hierarchy>span{transform:rotate(90deg);align-self:center}.cf-cards{grid-template-columns:1fr}.cf-network{height:410px}.cf-landscape{padding:15px}.cf-scene-copy{min-height:0}.cf-jump{padding:15px 18px}.cf-hierarchy>div{flex:auto}}

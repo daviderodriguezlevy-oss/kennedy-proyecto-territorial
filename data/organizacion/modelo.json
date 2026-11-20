@@ -1,0 +1,1140 @@
+{
+  "date": "25/10/2026",
+  "sources": [
+    [
+      "S10",
+      "Secretaría de Ambiente · Informe de gestión La Vaca 2023",
+      "https://ambientebogota.gov.co/documents/10184/7130449/2023%2BRDHVA%2BINFORME%2BDE%2BGESTION.pdf/5bdcc164-4601-4d2e-8aa8-715dda62277d",
+      "Referencia del ingreso norte: 4.628904, −74.163147. Punto de acceso reportado; no delimita el humedal ni acredita su estado actual."
+    ],
+    [
+      "S1",
+      "Corabastos · Informe de gestión 2025",
+      "https://corabastos.com.co/wp-content/uploads/2026/03/Informe-de-Gestion-2025.pdf",
+      "Páginas impresas 50–51, páginas PDF 49–50. Relato institucional de problemas y seguimiento contractual en 2025; no prueba el estado de octubre de 2026."
+    ],
+    [
+      "S2",
+      "Corabastos · Convocatorias",
+      "https://corabastos.com.co/convocatorias/",
+      "Procesos 005 y 006 de 2022: manejo de residuos al interior e interventoría. No se confunde este ámbito contractual con el aseo de toda Kennedy."
+    ],
+    [
+      "S3",
+      "Secretaría de Movilidad · Cargue y estacionamiento",
+      "https://www.movilidadbogota.gov.co/preguntas-frecuentes/cuales-son-las-normas-que-regulan-el-estacionamiento-en-publica",
+      "Consulta 23/10/2026. La autoridad de tránsito determina zonas y horas. La mesa propuesta no autoriza ocupación de andenes ni nuevas zonas de cargue."
+    ],
+    [
+      "S4",
+      "Secretaría de Ambiente · Humedal La Vaca",
+      "https://ambientebogota.gov.co/es/humedal-la-vaca",
+      "Documenta separación norte/sur, relación del norte con Corabastos y recuperación comunitaria. No se usa una cifra única de extensión: las fuentes consultadas presentan cifras distintas."
+    ],
+    [
+      "S5",
+      "Corabastos · Horarios",
+      "https://corabastos.com.co/horarios/",
+      "Existen horarios diferenciados por bodegas; la página contiene entradas repetidas para algunas. No se fija un nuevo horario ni se interpreta una franja como universal."
+    ],
+    [
+      "S6",
+      "Corabastos · Directorio de cargos",
+      "https://corabastos.com.co/colaboradores/",
+      "Consulta 23/10/2026. Identifica áreas operativas, ambientales y financieras; no acredita la distribución efectiva de influencia de una decisión concreta."
+    ],
+    [
+      "S7",
+      "RIBB · Archivo utilizado por la red existente",
+      "https://redbiotica.jbb.gov.co/data/RIBB_v2024-12-30.xlsx",
+      "Extracción local: fila 7205, visita floral, coordenada de referencia 4.62891, −74.16298. Registro documental, no censo actual ni trayectoria de vuelo."
+    ],
+    [
+      "S8",
+      "Referencia original de la fila 7205",
+      "https://www.inaturalist.org/observations/95042572",
+      "Citada por RIBB como Garcia (2022). El enlace original no pudo verificarse en esta sesión; no se afirma confirmación independiente."
+    ],
+    [
+      "S9",
+      "Universidad de Melbourne · More-than-human Urban Design",
+      "https://msd.unimelb.edu.au/research/impact-agendas/future-practice/more-than-human-urban-design",
+      "Sustenta el marco de relaciones humanas y no humanas; las reglas de la mesa son diseño propio."
+    ],
+    [
+      "L1",
+      "Cartografía y red urbana del proyecto",
+      "data/organizacion/territorio.json",
+      "Reutiliza el KML del usuario y las posiciones de la conectografía. Algunas posiciones son representativas. Las vías conservan la cobertura del archivo previo; no constituyen un inventario completo."
+    ],
+    [
+      "G1",
+      "Guía del profesor · 8 páginas",
+      "data/organizacion/guia-profesor.pdf",
+      "Sección 7: seis productos y exposición de 15 minutos; sección 5: modelo conceptual riguroso, sin obligación de simular numéricamente."
+    ],
+    [
+      "G2",
+      "Presentación del profesor · 11 páginas",
+      "data/organizacion/presentacion-profesor.pdf",
+      "Red, decisión y causalidad: tres lecturas del mismo sistema. Los ejemplos del profesor no se presentan como evidencia de Kennedy."
+    ],
+    [
+      "S11",
+      "Jardín Botánico · Misión y objetivos",
+      "https://jbb.gov.co/myv/",
+      "Institución y ámbito de actuación documentados. Su participación en la mesa es propuesta."
+    ],
+    [
+      "S12",
+      "IDPYBA · Funciones y deberes",
+      "https://animalesbog.gov.co/informacion-de-la-entidad/funciones-y-deberes",
+      "Objeto y funciones publicados; vocería para este proyecto por acordar."
+    ],
+    [
+      "M1",
+      "OCDE · Guidelines on Measuring Trust",
+      "https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/11/oecd-guidelines-on-measuring-trust_g1g7ca1c/9789264278219-en.pdf",
+      "Referencia metodológica de escala 0–10; adaptación local por pilotear, sin resultados medidos."
+    ]
+  ],
+  "actors": [
+    {
+      "id": "mesa",
+      "name": "Mesa territorial",
+      "group": "humano",
+      "kind": "Organización propuesta",
+      "role": "Formula, documenta y revisa acuerdos; no sustituye competencias públicas.",
+      "resource": "Agenda y registro compartidos.",
+      "limit": "Sin financiación, representación ni autoridad garantizadas.",
+      "source": "Propuesta",
+      "previousId": null,
+      "cluster": "Organización propuesta"
+    },
+    {
+      "id": "corabastos",
+      "name": "Corabastos S. A.",
+      "group": "humano",
+      "kind": "Entidad",
+      "role": "Interlocución institucional; seguimiento interno descrito en su informe.",
+      "resource": "Infraestructura y relaciones contractuales internas.",
+      "limit": "No controla por sí sola la vía pública.",
+      "source": "S1 / S2",
+      "previousId": 28,
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "supervision",
+      "name": "Supervisión de Corabastos",
+      "group": "humano",
+      "kind": "Función / cargo a precisar",
+      "role": "Documenta seguimiento a la operación interna de residuos.",
+      "resource": "Información y seguimiento contractual.",
+      "limit": "Identificar responsable y mandato vigente antes de ejecutar.",
+      "source": "S1",
+      "previousId": null,
+      "cluster": "Áreas y funciones institucionales"
+    },
+    {
+      "id": "interaseo",
+      "name": "INTERASEO",
+      "group": "humano",
+      "kind": "Empresa · referencia 2025",
+      "role": "Contratista mencionado en el informe para el servicio interno.",
+      "resource": "Personal y equipos de operación.",
+      "limit": "Vigencia y obligaciones actuales pendientes de contraste contractual.",
+      "source": "S1",
+      "previousId": null,
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "aguaseo",
+      "name": "AGUASEO",
+      "group": "humano",
+      "kind": "Empresa · referencia 2025",
+      "role": "Interventoría identificada en el informe.",
+      "resource": "Seguimiento técnico.",
+      "limit": "No se presupone que resuelve los reclamos vecinales ni se confirma continuidad en 2026.",
+      "source": "S1",
+      "previousId": null,
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "movilidad",
+      "name": "Autoridad de tránsito / SDM",
+      "group": "humano",
+      "kind": "Entidad / competencia",
+      "role": "Interviene en la definición autorizada de zonas y horas en vía pública.",
+      "resource": "Autorización y regulación.",
+      "limit": "Una propuesta de la mesa no equivale a una autorización.",
+      "source": "S3",
+      "previousId": 6,
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "ambiente",
+      "name": "Secretaría de Ambiente",
+      "group": "humano",
+      "kind": "Entidad",
+      "role": "Información y gestión ambiental del humedal.",
+      "resource": "Conocimiento y funciones ambientales.",
+      "limit": "La participación en esta nueva mesa no está acordada.",
+      "source": "S4",
+      "previousId": 5,
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "comunidad",
+      "name": "Organización ambiental local",
+      "group": "humano",
+      "kind": "Colectivos por identificar",
+      "role": "Aporta observaciones y solicita revisión ecológica.",
+      "resource": "Conocimiento territorial y seguimiento.",
+      "limit": "La fuente acredita trabajo comunitario, no un mandato otorgado a nuestra mesa.",
+      "source": "S4",
+      "previousId": null,
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "delegados",
+      "name": "Delegados con mandato",
+      "group": "humano",
+      "kind": "Cargos propuestos",
+      "role": "Coordinan tareas pactadas y rinden cuentas.",
+      "resource": "Mandato escrito y recursos asignados.",
+      "limit": "Los grupos que los designan pueden sustituirlos; no se revocan funcionarios públicos.",
+      "source": "Propuesta",
+      "previousId": null,
+      "cluster": "Organización propuesta"
+    },
+    {
+      "id": "reciclaje",
+      "name": "Recicladores participantes",
+      "group": "humano",
+      "kind": "Trabajadores / organizaciones por identificar",
+      "role": "Participación propuesta en alternativas y distribución del trabajo.",
+      "resource": "Conocimiento de aprovechamiento.",
+      "limit": "No se da por hecho acceso al contrato ni trabajo gratuito.",
+      "source": "Propuesta",
+      "previousId": null,
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "equipos",
+      "name": "Equipos de recolección",
+      "group": "material",
+      "kind": "Objetos técnicos",
+      "role": "Su disponibilidad condiciona la ejecución.",
+      "resource": "Capacidad material de recolección.",
+      "limit": "No se confunden con el operador ni el regulador.",
+      "source": "S1",
+      "previousId": null,
+      "cluster": "Condiciones y medios materiales"
+    },
+    {
+      "id": "residuos",
+      "name": "Residuos y permanencia",
+      "group": "material",
+      "kind": "Material / condición",
+      "role": "Conecta generación, almacenamiento y recolección.",
+      "resource": "Materia y espacio ocupado.",
+      "limit": "Ubicación exacta del CCR no verificada: no se dibuja como punto real.",
+      "source": "S1",
+      "previousId": null,
+      "cluster": "Condiciones y medios materiales"
+    },
+    {
+      "id": "habitat",
+      "name": "Hábitat de La Vaca norte",
+      "group": "material",
+      "kind": "Condiciones territoriales",
+      "role": "Ámbito ecológico documentado contiguo a Corabastos.",
+      "resource": "Agua, vegetación y suelo.",
+      "limit": "No se representa su límite legal mediante el punto de la red.",
+      "source": "S4",
+      "previousId": null,
+      "cluster": "Condiciones y medios materiales"
+    },
+    {
+      "id": "mosca",
+      "name": "Mosca verde metálica",
+      "group": "especie",
+      "kind": "Especie · T3278",
+      "role": "Visita floral registrada en la red existente.",
+      "resource": "Interacción biológica registrada.",
+      "limit": "No se atribuye a residuos ni se prueba presencia actual.",
+      "source": "S7 / S8",
+      "previousId": "T3278",
+      "cluster": "Especies"
+    },
+    {
+      "id": "perejil",
+      "name": "Perejil",
+      "group": "especie",
+      "kind": "Especie · T2286",
+      "role": "Planta asociada al registro de visita floral.",
+      "resource": "Flores en el registro.",
+      "limit": "Una referencia no prueba distribución, abundancia ni propuesta de siembra.",
+      "source": "S7 / S8",
+      "previousId": "T2286",
+      "cluster": "Especies"
+    },
+    {
+      "id": "residentes",
+      "name": "Residentes del borde",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Registrar molestias, accesos y cambios del entorno.",
+      "resource": "Experiencia cotidiana y registros situados.",
+      "limit": "No se conoce aún quién participa ni su representatividad.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "cuidados",
+      "name": "Personas cuidadoras",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Revisar horarios y cargas de participación.",
+      "resource": "Conocimiento de recorridos y necesidades de cuidado.",
+      "limit": "La disponibilidad de tiempo no equivale a trabajo gratuito.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "peatones",
+      "name": "Peatones y compradores",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Evaluar continuidad de recorridos y accesos.",
+      "resource": "Experiencia de desplazamiento.",
+      "limit": "No todos residen en el sector ni tienen necesidades idénticas.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "mayoristas",
+      "name": "Comerciantes de bodegas",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Proponer organización de recepción, venta y separación de residuos.",
+      "resource": "Espacios de operación y decisiones comerciales.",
+      "limit": "Titulares concretos y obligaciones por verificar.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "ambulantes",
+      "name": "Vendedores ambulantes",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Expresar necesidades de sustento y uso del espacio.",
+      "resource": "Trabajo y conocimiento de flujos cotidianos.",
+      "limit": "No se presume una organización única ni autorización para ocupar vía.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "conductores",
+      "name": "Conductores de carga",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Revisar maniobras y tiempos de espera.",
+      "resource": "Conducción y conocimiento de accesos.",
+      "limit": "Un conductor no decide necesariamente ruta, contrato o pago.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "transportistas",
+      "name": "Empresas o propietarios de carga",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Evaluar recursos y programación de viajes.",
+      "resource": "Vehículos, contratación y logística.",
+      "limit": "Empresas y capacidad de decisión pendientes de identificación.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "cargadores",
+      "name": "Cargadores y auxiliares",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Evaluar esfuerzo, tiempos y condiciones de descarga.",
+      "resource": "Trabajo físico y experiencia operativa.",
+      "limit": "No se asume representación por comerciantes o transportistas.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "aseadores",
+      "name": "Personal de aseo interno",
+      "group": "humano",
+      "kind": "Grupo de personas · convocatoria propuesta",
+      "role": "Aportar experiencia de recolección y mantenimiento.",
+      "resource": "Trabajo, equipos y conocimiento práctico.",
+      "limit": "Contratación y condiciones actuales por verificar; no equivale a la empresa.",
+      "source": "Diseño del grupo · participante por identificar",
+      "cluster": "Personas y colectivos"
+    },
+    {
+      "id": "operativa",
+      "name": "Subgerencia operativa e inmobiliaria",
+      "group": "humano",
+      "kind": "Área de Corabastos · directorio oficial",
+      "role": "Área identificada para contrastar responsabilidades del piloto.",
+      "resource": "Información interna y capacidad sujeta a sus funciones.",
+      "limit": "El directorio acredita el cargo; no demuestra facultad específica para aprobar este acuerdo.",
+      "source": "S6",
+      "cluster": "Áreas y funciones institucionales"
+    },
+    {
+      "id": "finanzas",
+      "name": "Subgerencia administrativa y financiera",
+      "group": "humano",
+      "kind": "Área de Corabastos · directorio oficial",
+      "role": "Área identificada para contrastar responsabilidades del piloto.",
+      "resource": "Información interna y capacidad sujeta a sus funciones.",
+      "limit": "El directorio acredita el cargo; no demuestra facultad específica para aprobar este acuerdo.",
+      "source": "S6",
+      "cluster": "Áreas y funciones institucionales"
+    },
+    {
+      "id": "infraestructura",
+      "name": "Jefatura de infraestructura y ambiente",
+      "group": "humano",
+      "kind": "Área de Corabastos · directorio oficial",
+      "role": "Área identificada para contrastar responsabilidades del piloto.",
+      "resource": "Información interna y capacidad sujeta a sus funciones.",
+      "limit": "El directorio acredita el cargo; no demuestra facultad específica para aprobar este acuerdo.",
+      "source": "S6",
+      "cluster": "Áreas y funciones institucionales"
+    },
+    {
+      "id": "eaab",
+      "name": "Empresa de Acueducto y Alcantarillado",
+      "group": "humano",
+      "kind": "Entidad · antecedente documentado",
+      "role": "Articulación en recuperación del norte de La Vaca reconocida por SDA.",
+      "resource": "Conocimiento e intervención institucional.",
+      "limit": "Antecedente no equivale a aceptar tareas ni financiación del piloto.",
+      "source": "S4",
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "alcaldia",
+      "name": "Alcaldía Local de Kennedy",
+      "group": "humano",
+      "kind": "Entidad · antecedente documentado",
+      "role": "Articulación en recuperación del norte de La Vaca reconocida por SDA.",
+      "resource": "Interlocución territorial.",
+      "limit": "No se atribuye un presupuesto ni competencia específica sin comprobarlos.",
+      "source": "S4",
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "jbb",
+      "name": "Jardín Botánico de Bogotá",
+      "group": "humano",
+      "kind": "Institución pública establecida",
+      "role": "Investigación y coberturas vegetales",
+      "resource": "Conocimiento de flora, vegetación e interacciones.",
+      "limit": "Participación y designación de delegado para este ejercicio pendientes. Vocería técnica propuesta, con alcance por acordar.",
+      "source": "S11",
+      "cluster": "Instituciones y empresas"
+    },
+    {
+      "id": "idpyba",
+      "name": "Instituto de Protección Animal",
+      "group": "humano",
+      "kind": "Institución pública establecida",
+      "role": "Protección y bienestar animal",
+      "resource": "Conocimiento y articulación en bienestar animal.",
+      "limit": "Participación y designación de delegado para este ejercicio pendientes. Vocería técnica propuesta, con alcance por acordar.",
+      "source": "S12",
+      "cluster": "Instituciones y empresas"
+    }
+  ],
+  "links": [
+    {
+      "source": "reciclaje",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "comunidad",
+      "target": "mesa",
+      "label": "Introduce necesidades",
+      "status": "propuesta",
+      "mechanism": "Canal abierto de agenda; identificar participantes, condiciones de acceso y disenso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "delegados",
+      "label": "Entrega mandato limitado",
+      "status": "propuesta",
+      "mechanism": "Acta con tarea, responsable, recursos, plazo y revisión; la delegación no transfiere autoridad pública.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "delegados",
+      "target": "mesa",
+      "label": "Rinde cuentas",
+      "status": "propuesta",
+      "mechanism": "Informa ejecución y obstáculos; el colectivo revisa el mandato.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "movilidad",
+      "label": "Solicita evaluación vial",
+      "status": "propuesta",
+      "mechanism": "Las alternativas que afectan vía pública pasan por la autoridad competente.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "corabastos",
+      "label": "Solicita compromisos",
+      "status": "propuesta",
+      "mechanism": "Negocia recursos y cambios internos sin suponer aceptación.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "corabastos",
+      "target": "supervision",
+      "label": "Seguimiento institucional",
+      "status": "documentado",
+      "mechanism": "El informe de 2025 describe supervisión interna.",
+      "reference": "S1"
+    },
+    {
+      "source": "supervision",
+      "target": "interaseo",
+      "label": "Observaciones operativas",
+      "status": "documentado",
+      "mechanism": "Relación descrita por Corabastos en su balance de 2025; no verificación independiente de cada incumplimiento.",
+      "reference": "S1"
+    },
+    {
+      "source": "aguaseo",
+      "target": "interaseo",
+      "label": "Interventoría técnica",
+      "status": "documentado",
+      "mechanism": "Interventoría identificada en el informe de 2025.",
+      "reference": "S1"
+    },
+    {
+      "source": "interaseo",
+      "target": "equipos",
+      "label": "Opera / mantiene",
+      "status": "documentado",
+      "mechanism": "El informe vincula funcionamiento de equipos con continuidad de recolección.",
+      "reference": "S1"
+    },
+    {
+      "source": "equipos",
+      "target": "residuos",
+      "label": "Condiciona recolección",
+      "status": "documentado",
+      "mechanism": "Mecanismo reportado institucionalmente en 2025.",
+      "reference": "S1"
+    },
+    {
+      "source": "residuos",
+      "target": "habitat",
+      "label": "Presión por verificar localmente",
+      "status": "hipotesis",
+      "mechanism": "Comprobar rutas de escorrentía, fuentes y calidad del agua antes de atribuir daños en un punto.",
+      "reference": "S1 / S4"
+    },
+    {
+      "source": "ambiente",
+      "target": "habitat",
+      "label": "Gestión e información ambiental",
+      "status": "documentado",
+      "mechanism": "La ficha oficial describe gestión de la reserva.",
+      "reference": "S4"
+    },
+    {
+      "source": "comunidad",
+      "target": "habitat",
+      "label": "Recuperación comunitaria",
+      "status": "documentado",
+      "mechanism": "La fuente reconoce trabajo comunitario en el norte; no establece un único representante.",
+      "reference": "S4"
+    },
+    {
+      "source": "habitat",
+      "target": "mosca",
+      "label": "Contexto de referencia",
+      "status": "hipotesis",
+      "mechanism": "La coordenada de RIBB está cerca de La Vaca norte; no demuestra dependencia ni presencia continua.",
+      "reference": "S7"
+    },
+    {
+      "source": "mosca",
+      "target": "perejil",
+      "label": "Visita floral registrada",
+      "status": "documentado",
+      "mechanism": "RIBB fila 7205. La dirección conserva el orden del archivo, no mide poder ni flujo.",
+      "reference": "S7 / S8"
+    },
+    {
+      "source": "mosca",
+      "target": "comunidad",
+      "label": "Observación para seguimiento",
+      "status": "propuesta",
+      "mechanism": "Protocolo de observación propuesto; no delegación otorgada por la especie.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "perejil",
+      "target": "comunidad",
+      "label": "Observación para seguimiento",
+      "status": "propuesta",
+      "mechanism": "Registrar condiciones y limitaciones, sin inferir beneficios de una mayor abundancia.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "comunidad",
+      "target": "mesa",
+      "label": "Solicita revisión ecológica",
+      "status": "propuesta",
+      "mechanism": "Aporta evidencias y objeciones; no monopoliza la interpretación ni tiene veto legal automático.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "corabastos",
+      "target": "operativa",
+      "label": "Incluye área en su directorio",
+      "status": "documentado",
+      "mechanism": "Vínculo organizativo publicado; no mide poder efectivo ni supone participación en el piloto.",
+      "reference": "S6"
+    },
+    {
+      "source": "corabastos",
+      "target": "finanzas",
+      "label": "Incluye área en su directorio",
+      "status": "documentado",
+      "mechanism": "Vínculo organizativo publicado; no mide poder efectivo ni supone participación en el piloto.",
+      "reference": "S6"
+    },
+    {
+      "source": "corabastos",
+      "target": "infraestructura",
+      "label": "Incluye área en su directorio",
+      "status": "documentado",
+      "mechanism": "Vínculo organizativo publicado; no mide poder efectivo ni supone participación en el piloto.",
+      "reference": "S6"
+    },
+    {
+      "source": "eaab",
+      "target": "habitat",
+      "label": "Participó en articulación de recuperación",
+      "status": "documentado",
+      "mechanism": "SDA reconoce articulación con comunidad; no asigna efectos exclusivos a una entidad.",
+      "reference": "S4"
+    },
+    {
+      "source": "alcaldia",
+      "target": "habitat",
+      "label": "Participó en articulación de recuperación",
+      "status": "documentado",
+      "mechanism": "SDA reconoce articulación con comunidad; no asigna efectos exclusivos a una entidad.",
+      "reference": "S4"
+    },
+    {
+      "source": "residentes",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "residentes",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "cuidados",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "cuidados",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "peatones",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "peatones",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mayoristas",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "mayoristas",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "ambulantes",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "ambulantes",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "conductores",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "conductores",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "transportistas",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "transportistas",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "cargadores",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "cargadores",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "aseadores",
+      "target": "mesa",
+      "label": "Propone necesidades y objeciones",
+      "status": "propuesta",
+      "mechanism": "Canal de agenda propuesto; identificar vocerías, horarios y condiciones de acceso.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "aseadores",
+      "label": "Devuelve acuerdos para revisión",
+      "status": "propuesta",
+      "mechanism": "Informar alternativas y registrar aceptación o desacuerdo; no presumir consentimiento.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "residentes",
+      "target": "delegados",
+      "label": "Designa y revisa su vocería",
+      "status": "propuesta",
+      "mechanism": "Mandato propuesto por cada grupo; posibilidad de sustitución por quien lo designa.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mayoristas",
+      "target": "delegados",
+      "label": "Designa y revisa su vocería",
+      "status": "propuesta",
+      "mechanism": "Mandato propuesto por cada grupo; posibilidad de sustitución por quien lo designa.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "ambulantes",
+      "target": "delegados",
+      "label": "Designa y revisa su vocería",
+      "status": "propuesta",
+      "mechanism": "Mandato propuesto por cada grupo; posibilidad de sustitución por quien lo designa.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "cargadores",
+      "target": "delegados",
+      "label": "Designa y revisa su vocería",
+      "status": "propuesta",
+      "mechanism": "Mandato propuesto por cada grupo; posibilidad de sustitución por quien lo designa.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "reciclaje",
+      "target": "delegados",
+      "label": "Designa y revisa su vocería",
+      "status": "propuesta",
+      "mechanism": "Mandato propuesto por cada grupo; posibilidad de sustitución por quien lo designa.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "comunidad",
+      "target": "delegados",
+      "label": "Designa y revisa su vocería",
+      "status": "propuesta",
+      "mechanism": "Mandato propuesto por cada grupo; posibilidad de sustitución por quien lo designa.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "finanzas",
+      "label": "Solicita recursos confirmados",
+      "status": "propuesta",
+      "mechanism": "Presentar costos y responsables; no tratar promesas como dinero disponible.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "operativa",
+      "label": "Solicita revisión de operación",
+      "status": "propuesta",
+      "mechanism": "Contrastar horarios, maniobras y uso de instalaciones antes de comprometer cambios.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "infraestructura",
+      "target": "mesa",
+      "label": "Aporta evaluación técnica",
+      "status": "propuesta",
+      "mechanism": "Propuesta de contraste de equipos y condiciones ambientales; función específica pendiente.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "alcaldia",
+      "label": "Solicita interlocución territorial",
+      "status": "propuesta",
+      "mechanism": "Articular actores sin sustituir autorizaciones sectoriales.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "eaab",
+      "label": "Solicita contraste hídrico",
+      "status": "propuesta",
+      "mechanism": "Verificar conexiones y responsabilidades antes de atribuir una ruta de contaminación.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "movilidad",
+      "target": "conductores",
+      "label": "Regula zonas y horas de carga",
+      "status": "documentado",
+      "mechanism": "Competencia general; no autorización concreta para el piloto.",
+      "reference": "S3"
+    },
+    {
+      "source": "transportistas",
+      "target": "conductores",
+      "label": "Acuerda programación de viajes",
+      "status": "hipotesis",
+      "mechanism": "Relación a investigar: distinguir quien fija ruta, hora y remuneración.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mayoristas",
+      "target": "cargadores",
+      "label": "Coordina descarga y tareas",
+      "status": "hipotesis",
+      "mechanism": "Relación local por contrastar: condiciones, remuneración y capacidad de negociación.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "conductores",
+      "target": "cargadores",
+      "label": "Coordina llegada y descarga",
+      "status": "hipotesis",
+      "mechanism": "Mecanismo operativo por observar; no se inventa contrato entre ambos.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "interaseo",
+      "target": "aseadores",
+      "label": "Organiza trabajo de aseo",
+      "status": "hipotesis",
+      "mechanism": "Verificar relación laboral, intermediación y responsables actuales.",
+      "reference": "S1 · relación laboral por verificar"
+    },
+    {
+      "source": "aseadores",
+      "target": "equipos",
+      "label": "Utiliza equipos en tareas",
+      "status": "hipotesis",
+      "mechanism": "Identificar personal, capacitación, estado y disponibilidad real.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mayoristas",
+      "target": "residuos",
+      "label": "Separa y entrega materiales",
+      "status": "propuesta",
+      "mechanism": "Regla propuesta para el piloto; no declaración de cumplimiento actual.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "reciclaje",
+      "target": "mayoristas",
+      "label": "Acuerda acceso al aprovechamiento",
+      "status": "propuesta",
+      "mechanism": "Negociar condiciones, seguridad, materiales y remuneración sin presumir acceso contractual.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "residuos",
+      "target": "residentes",
+      "label": "Efectos en entorno reportados",
+      "status": "documentado",
+      "mechanism": "Reporte institucional 2025; no exposición individual medida.",
+      "reference": "S1"
+    },
+    {
+      "source": "cuidados",
+      "target": "mesa",
+      "label": "Solicita horarios compatibles",
+      "status": "propuesta",
+      "mechanism": "Evitar que la participación excluya por trabajo de cuidados.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "perejil",
+      "target": "jbb",
+      "label": "Informa la evaluación de flora",
+      "status": "propuesta",
+      "mechanism": "La referencia biológica orienta una solicitud de contraste técnico de condiciones vegetales.",
+      "reference": "S7 / S11"
+    },
+    {
+      "source": "mosca",
+      "target": "jbb",
+      "label": "Informa evaluación de interacción floral",
+      "status": "propuesta",
+      "mechanism": "Proponer revisión del registro y sus condiciones ecológicas.",
+      "reference": "S7 / S11"
+    },
+    {
+      "source": "jbb",
+      "target": "mesa",
+      "label": "Presenta necesidades de flora",
+      "status": "propuesta",
+      "mechanism": "Vocería técnica propuesta: traducir evidencia en condiciones espaciales y seguimiento.",
+      "reference": "S11 · diseño del grupo"
+    },
+    {
+      "source": "idpyba",
+      "target": "mesa",
+      "label": "Presenta criterios de bienestar animal",
+      "status": "propuesta",
+      "mechanism": "Solicitar delegado institucional y definir especies, alcance y coordinación con SDA.",
+      "reference": "S12 · diseño del grupo"
+    },
+    {
+      "source": "ambiente",
+      "target": "mesa",
+      "label": "Presenta condiciones del humedal",
+      "status": "propuesta",
+      "mechanism": "Proponer interlocución con la coordinación de La Vaca para revisar alternativas y evidencia.",
+      "reference": "S4 · diseño del grupo"
+    },
+    {
+      "source": "habitat",
+      "target": "ambiente",
+      "label": "Orienta revisión de hábitat",
+      "status": "propuesta",
+      "mechanism": "Plantear indicadores de agua, vegetación y perturbación ligados a decisiones del piloto.",
+      "reference": "S4 · diseño del grupo"
+    },
+    {
+      "source": "comunidad",
+      "target": "jbb",
+      "label": "Comparte observaciones situadas",
+      "status": "propuesta",
+      "mechanism": "Contrastar saber local y registros técnicos en una revisión conjunta.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "jbb",
+      "label": "Solicita delegado y alcance",
+      "status": "propuesta",
+      "mechanism": "Formalizar quién presenta evidencia, qué puede comprometer y cómo rinde cuentas.",
+      "reference": "Diseño del grupo"
+    },
+    {
+      "source": "mesa",
+      "target": "idpyba",
+      "label": "Solicita delegado y alcance",
+      "status": "propuesta",
+      "mechanism": "Acordar participación institucional y competencia pertinente antes de asumir representación.",
+      "reference": "Diseño del grupo"
+    }
+  ],
+  "selectedSpecies": [
+    {
+      "id": "T3278",
+      "name": "Mosca verde metálica",
+      "label": "Lucilia sericata",
+      "references": [
+        {
+          "lon": -74.16298,
+          "lat": 4.62891,
+          "xy": [
+            -1774.2523423004895,
+            -1072.2902895726147
+          ],
+          "evidence_id": "RIBB_R07205_E1",
+          "edge_id": "RIBB_R07205",
+          "excel_row": 7205,
+          "reference_coordinate": true
+        }
+      ]
+    },
+    {
+      "id": "T2286",
+      "name": "Perejil",
+      "label": "Petroselinum crispum",
+      "references": [
+        {
+          "lon": -74.16298,
+          "lat": 4.62891,
+          "xy": [
+            -1774.2523423004895,
+            -1072.2902895726147
+          ],
+          "evidence_id": "RIBB_R07205_E1",
+          "edge_id": "RIBB_R07205",
+          "excel_row": 7205,
+          "reference_coordinate": true
+        }
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "name": "Personas y colectivos",
+      "ids": [
+        "residentes",
+        "cuidados",
+        "peatones",
+        "ambulantes",
+        "mayoristas",
+        "conductores",
+        "transportistas",
+        "cargadores",
+        "aseadores",
+        "reciclaje",
+        "comunidad"
+      ]
+    },
+    {
+      "name": "Instituciones y empresas",
+      "ids": [
+        "corabastos",
+        "interaseo",
+        "aguaseo",
+        "movilidad",
+        "ambiente",
+        "eaab",
+        "alcaldia",
+        "jbb",
+        "idpyba"
+      ]
+    },
+    {
+      "name": "Áreas y funciones institucionales",
+      "ids": [
+        "operativa",
+        "finanzas",
+        "infraestructura",
+        "supervision"
+      ]
+    },
+    {
+      "name": "Organización propuesta",
+      "ids": [
+        "mesa",
+        "delegados"
+      ]
+    },
+    {
+      "name": "Especies",
+      "ids": [
+        "mosca",
+        "perejil"
+      ]
+    },
+    {
+      "name": "Condiciones y medios materiales",
+      "ids": [
+        "habitat",
+        "equipos",
+        "residuos"
+      ]
+    }
+  ]
+}

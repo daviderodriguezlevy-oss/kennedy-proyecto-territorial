@@ -1,0 +1,570 @@
+[
+  {
+    "id": "E01",
+    "title": "Centro de recepción y distribución de alimentos · Corabastos",
+    "dynamic": "D1",
+    "problem": "P1",
+    "location": "Corabastos",
+    "activity": "Recibir alimentos, organizar su distribución y despachar la carga desde Corabastos.",
+    "actors": "Transportadores, mayoristas, cargadores, compradores; fauna del entorno sujeta a manejo de exposición.",
+    "time": "Organización por ventanas de recepción y despacho; continuidad del abastecimiento durante las obras.",
+    "adjacency": "E01 junto a E04: Proximidad entre recepción y preparación. E01 junto a E05: Proximidad a alimento recuperable con separación sanitaria.",
+    "access": "E07 ↔ E01 directo; carga, tecnico. Ingreso y despacho controlado de mercancía. E01 ↔ E04 directo; carga, tecnico. Traslado de producto a selección y empaque. E01 ↔ E05 directo; carga, tecnico. Entrega de alimentos recuperables bajo control sanitario. E01 ↔ E02 indirecto vía E07 → Red vial metropolitana; carga. Transferencia entre centros por transporte metropolitano. E01 ↔ E03 indirecto vía E07 → Red vial metropolitana; carga. Transferencia entre centros por transporte metropolitano. E17 ↔ E01 indirecto vía Red regional → E07. Envíos consolidados hacia Corabastos. E01 ↔ E19 indirecto vía E07. Transferencia hacia distribución urbana.",
+    "representatives": [
+      "corabastos",
+      "movilidad",
+      "trabajo"
+    ],
+    "variables": "Toneladas recibidas y despachadas; espera; inventario.",
+    "actorIds": [
+      13,
+      18,
+      19,
+      20,
+      25,
+      28
+    ]
+  },
+  {
+    "id": "E02",
+    "title": "Centro de recepción y distribución de alimentos · B",
+    "dynamic": "D1",
+    "problem": "P1",
+    "location": "Bogotá · escala metropolitana, fuera del polígono",
+    "activity": "Recibir y distribuir parte del abastecimiento en otro punto de Bogotá; agrupar entregas y organizar rutas. Incorporar muelles de recepción, almacenamiento, cámaras de conservación y patios de transferencia hacia mercados de proximidad.",
+    "actors": "Operadores, transportadores, trabajadores y habitantes del destino.",
+    "time": "Secuencia por etapas; habilitación antes del traslado de operaciones.",
+    "adjacency": "Carga, almacenamiento y distribución dentro del nodo.",
+    "access": "E01 ↔ E02 indirecto vía E07 → Red vial metropolitana; carga. Transferencia entre centros por transporte metropolitano. E02 ↔ E03 indirecto vía Red vial metropolitana; carga. Coordinación y transferencia entre centros externos. E17 ↔ E02 indirecto vía Red regional. Recepción directa en centro metropolitano B. E02 ↔ E20 indirecto vía Red urbana de reparto. Abastecimiento de proximidad desde B.",
+    "representatives": [
+      "movilidad",
+      "banco",
+      "estructura"
+    ],
+    "variables": "Volumen derivado; kilómetros; costo y espera.",
+    "actorIds": [
+      13,
+      19,
+      20,
+      24
+    ]
+  },
+  {
+    "id": "E03",
+    "title": "Centro de recepción y distribución de alimentos · C",
+    "dynamic": "D1",
+    "problem": "P1",
+    "location": "Bogotá · escala metropolitana, fuera del polígono",
+    "activity": "Recibir y distribuir alimentos desde un tercer punto de Bogotá, repartiendo las operaciones entre los tres centros. Incorporar muelles de recepción, almacenamiento, cámaras de conservación y patios de transferencia hacia mercados de proximidad.",
+    "actors": "Operadores, transportadores, productores y habitantes del destino.",
+    "time": "Operación coordinada con E01/E02; contingencias de interrupción.",
+    "adjacency": "Accesos logísticos y áreas de operación.",
+    "access": "E01 ↔ E03 indirecto vía E07 → Red vial metropolitana; carga. Transferencia entre centros por transporte metropolitano. E02 ↔ E03 indirecto vía Red vial metropolitana; carga. Coordinación y transferencia entre centros externos. E17 ↔ E03 indirecto vía Red regional. Recepción directa en centro metropolitano C. E03 ↔ E20 indirecto vía Red urbana de reparto. Abastecimiento de proximidad desde C.",
+    "representatives": [
+      "movilidad",
+      "inversion",
+      "estructura"
+    ],
+    "variables": "Volumen por destino; dependencia de un nodo; trabajo adicional.",
+    "actorIds": [
+      13,
+      19,
+      20,
+      24
+    ]
+  },
+  {
+    "id": "E04",
+    "title": "Área de selección y empaque de alimentos",
+    "dynamic": "D2",
+    "problem": "P1",
+    "location": "Corabastos · espacio sujeto a liberación efectiva",
+    "activity": "Seleccionar, preparar y empacar los alimentos para su distribución; separar los residuos del proceso.",
+    "actors": "Operarios, comerciantes, mantenimiento y responsables sanitarios.",
+    "time": "Turnos remunerados y mantenimiento; horarios compatibles con vivienda y hábitats.",
+    "adjacency": "E01 junto a E04: Proximidad entre recepción y preparación. E04 junto a E06: Cercanía para retiro por circuito separado y barrera sanitaria. E04 ↔ E23: Suministro de envases limpios con separación sanitaria.",
+    "access": "E01 ↔ E04 directo; carga, tecnico. Traslado de producto a selección y empaque. E04 ↔ E06 directo; tecnico. Circuito separado de residuos: acceso de operación. E23 ↔ E04 directo. Entrega de envases limpios.",
+    "representatives": [
+      "corabastos",
+      "trabajo",
+      "aseo"
+    ],
+    "variables": "Producto procesado; consumo de agua y energía; residuos; exposición laboral.",
+    "actorIds": [
+      13,
+      19,
+      33,
+      34
+    ]
+  },
+  {
+    "id": "E05",
+    "title": "Centro de recuperación y entrega de alimentos",
+    "dynamic": "D2",
+    "problem": "P1",
+    "location": "Corabastos · interfaz comercial",
+    "activity": "Revisar qué alimentos siguen siendo aptos para consumo, conservarlos y entregarlos para su aprovechamiento.",
+    "actors": "Recuperadores, organizaciones alimentarias, donantes y personal sanitario.",
+    "time": "Revisión por lote; tiempos de conservación y despacho definidos por producto.",
+    "adjacency": "E01 junto a E05: Proximidad a alimento recuperable con separación sanitaria.",
+    "access": "E01 ↔ E05 directo; carga, tecnico. Entrega de alimentos recuperables bajo control sanitario.",
+    "representatives": [
+      "comercio",
+      "trabajo",
+      "aseo"
+    ],
+    "variables": "Alimento recuperado; descartes; condiciones y horas de trabajo.",
+    "actorIds": [
+      13,
+      23,
+      24
+    ]
+  },
+  {
+    "id": "E06",
+    "title": "Área de separación y almacenamiento de residuos",
+    "dynamic": "D3",
+    "problem": "P1",
+    "location": "Recinto · puntos operativos",
+    "activity": "Separar los residuos, guardarlos temporalmente y entregarlos a los responsables de su aprovechamiento o retiro.",
+    "actors": "Recicladores, recolectores, técnicos; organismos expuestos a residuos.",
+    "time": "Frecuencia ligada a generación y almacenamiento útil; contingencia por averías.",
+    "adjacency": "E06 junto a E07: Proximidad para retiro de residuos. E04 junto a E06: Cercanía para retiro por circuito separado y barrera sanitaria.",
+    "access": "E04 ↔ E06 directo; tecnico. Circuito separado de residuos: acceso de operación. E06 ↔ E07 directo; carga, tecnico. Salida de residuos hacia recolección. E06 ↔ E21 indirecto vía Red regional. Salida de materiales separados para aprovechamiento. E23 ↔ E06 directo. Separación de materiales no recuperables.",
+    "representatives": [
+      "aseo",
+      "trabajo",
+      "infra"
+    ],
+    "variables": "Generación y retiro t/día; inventario t; equipos y exposición.",
+    "actorIds": [
+      22,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ]
+  },
+  {
+    "id": "E07",
+    "title": "Patios de espera, carga y descarga de camiones",
+    "dynamic": "D3",
+    "problem": "P1",
+    "location": "Accesos de Corabastos y conexiones viales",
+    "activity": "Organizar la entrada y espera de camiones y las maniobras de carga y descarga, manteniendo libres los recorridos peatonales.",
+    "actors": "Conductores, cargadores, ciclistas, peatones y comerciantes.",
+    "time": "Organización por ventanas de carga; conservar accesos de emergencia.",
+    "adjacency": "E06 junto a E07: Proximidad para retiro de residuos. E07 ↔ E19: Transferencia de carga y reparto.",
+    "access": "E07 ↔ E01 directo; carga, tecnico. Ingreso y despacho controlado de mercancía. E06 ↔ E07 directo; carga, tecnico. Salida de residuos hacia recolección. E16 ↔ E07 indirecto vía Recorrido de servicio; tecnico. Visita operativa mediante recorrido de servicio.",
+    "representatives": [
+      "movilidad",
+      "corabastos",
+      "local"
+    ],
+    "variables": "Tiempo de espera; viajes; ocupación de accesos; conflictos de circulación.",
+    "actorIds": [
+      15,
+      19,
+      20,
+      21,
+      25,
+      43
+    ]
+  },
+  {
+    "id": "E08",
+    "title": "Zona de restauración del humedal",
+    "dynamic": "D4",
+    "problem": "P2",
+    "location": "Borde de La Vaca · franja propuesta por delimitar",
+    "activity": "Recuperar el agua, el suelo y la vegetación del humedal y cuidar las áreas restauradas. Destinar parte del suelo liberado por traslado de funciones a vegetación de borde y áreas de restauración, articuladas con el humedal.",
+    "actors": "Equipo ecológico, mantenimiento, flora y fauna según registros y hábitat.",
+    "time": "Estacionalidad hídrica; restricciones por reproducción y recuperación.",
+    "adjacency": "E08 junto a E09: Continuidad de refugio y vegetación. E08 junto a E12: Borde de transición con control de acceso.",
+    "access": "E13 ↔ E08 directo; tecnico. Acceso técnico condicionado a sensibilidad y ciclos del hábitat. E08 ↔ E09 directo; fauna. Continuidad propuesta para fauna compatible con ambos hábitats.",
+    "representatives": [
+      "ambiente",
+      "infra",
+      "local"
+    ],
+    "variables": "Cobertura, superficie afectada, nivel/calidad de agua y esfuerzo de seguimiento.",
+    "actorIds": [
+      11,
+      35,
+      36,
+      40,
+      41,
+      45,
+      46,
+      48,
+      49,
+      50
+    ]
+  },
+  {
+    "id": "E09",
+    "title": "Refugios y corredores para fauna",
+    "dynamic": "D4",
+    "problem": "P2",
+    "location": "La Vaca y conexiones ecológicas pertinentes del polígono",
+    "activity": "Ofrecer espacios de refugio, alimentación y desplazamiento para la fauna, con acceso humano controlado.",
+    "actors": "Especies locales pertinentes, vocero de biodiversidad y cuidadores.",
+    "time": "Periodos de alimentación, reproducción y actividad por especie.",
+    "adjacency": "E08 junto a E09: Continuidad de refugio y vegetación.",
+    "access": "E13 ↔ E09 directo; tecnico. Seguimiento técnico de refugios con protocolo. E08 ↔ E09 directo; fauna. Continuidad propuesta para fauna compatible con ambos hábitats.",
+    "representatives": [
+      "ambiente",
+      "verifica"
+    ],
+    "variables": "Cobertura y recursos; perturbaciones; registros por esfuerzo comparable.",
+    "actorIds": [
+      12,
+      35,
+      36,
+      37,
+      38,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ]
+  },
+  {
+    "id": "E10",
+    "title": "Viviendas de hasta seis pisos",
+    "dynamic": "D5",
+    "problem": "P2",
+    "location": "María Paz · intervención propuesta por etapas",
+    "activity": "Alojar hogares con ventilación, accesibilidad y espacios para la vida cotidiana; integrar el cuidado de los hábitats del entorno.",
+    "actors": "Habitantes, arrendatarios, propietarios, cuidadores; aves y flora del entorno.",
+    "time": "Uso cotidiano; construcción por etapas con continuidad residencial.",
+    "adjacency": "E10 junto a E11: Atención cercana a los hogares. E10 junto a E12: Relación vivienda–espacio público.",
+    "access": "E12 ↔ E10 directo; peaton, tecnico. Acceso residencial accesible.",
+    "representatives": [
+      "vivienda",
+      "comunidad",
+      "suelo"
+    ],
+    "variables": "Permanencia residencial, arriendo, accesibilidad, ruido, luz y riesgo de colisión.",
+    "actorIds": [
+      3,
+      5,
+      6,
+      7,
+      10,
+      37,
+      47
+    ]
+  },
+  {
+    "id": "E11",
+    "title": "Oficina de atención y apoyo a residentes",
+    "dynamic": "D5",
+    "problem": "P2",
+    "location": "María Paz",
+    "activity": "Atender a los hogares durante la transformación del barrio, orientar acuerdos de permanencia o realojamiento y dar seguimiento al retorno.",
+    "actors": "Hogares, arrendatarios, organizaciones vecinales y equipo de vivienda.",
+    "time": "Antes, durante y después de obras; seguimiento a retornos y costos.",
+    "adjacency": "E10 junto a E11: Atención cercana a los hogares.",
+    "access": "E12 ↔ E11 directo; peaton, tecnico. Atención a hogares durante la transformación.",
+    "representatives": [
+      "comunidad",
+      "vivienda",
+      "local"
+    ],
+    "variables": "Hogares con acuerdo; permanencia; variación de costos y tiempos cotidianos.",
+    "actorIds": [
+      3,
+      5,
+      7,
+      10,
+      44
+    ]
+  },
+  {
+    "id": "E12",
+    "title": "Andenes y zonas de estancia",
+    "dynamic": "D6",
+    "problem": "P1/P2",
+    "location": "María Paz y conexiones del polígono",
+    "activity": "Conectar viviendas, comercio y transporte mediante recorridos peatonales accesibles y espacios para descansar y encontrarse.",
+    "actors": "Peatones, vendedores, cuidadores, personas con discapacidad y especies pertinentes.",
+    "time": "Día/noche; horarios comerciales; control de luz en bordes sensibles.",
+    "adjacency": "E08 junto a E12: Borde de transición con control de acceso. E10 junto a E12: Relación vivienda–espacio público. E12 junto a E14: Acceso cotidiano a paraderos. E13 junto a E12: Observación vinculada al recorrido público. E12 junto a E16: Coordinación accesible desde el recorrido público. E12 junto a E15: Acceso al drenaje para mantenimiento desde el espacio público. E12 ↔ E22: Acceso público a mercado local.",
+    "access": "E12 ↔ E10 directo; peaton, tecnico. Acceso residencial accesible. E12 ↔ E11 directo; peaton, tecnico. Atención a hogares durante la transformación. E12 ↔ E14 directo; peaton, tecnico. Camino peatonal a paraderos. E12 ↔ E13 directo; peaton, tecnico. Llegada al puesto de observación; acceso de visitantes según horario. E12 ↔ E16 directo; peaton, tecnico. Ingreso al espacio de coordinación. E12 ↔ E15 directo; tecnico. Acceso de mantenimiento a drenajes; el agua circula en otra red. E12 ↔ E22 directo. Entrada pública desde andenes y estancia.",
+    "representatives": [
+      "movilidad",
+      "comunidad",
+      "comercio"
+    ],
+    "variables": "Accesibilidad; continuidad; sombra; tiempo de recorrido; ocupación.",
+    "actorIds": [
+      3,
+      5,
+      7,
+      15,
+      18,
+      37,
+      43,
+      47
+    ]
+  },
+  {
+    "id": "E13",
+    "title": "Puesto de observación y cuidado del humedal",
+    "dynamic": "D4",
+    "problem": "P2",
+    "location": "Punto de apoyo fuera de zonas sensibles",
+    "activity": "Observar especies y condiciones del agua, revisar registros y organizar el mantenimiento del humedal y sus refugios.",
+    "actors": "Voceros, técnicos, habitantes y especies observadas.",
+    "time": "Campañas comparables; ajuste a ciclos biológicos; revisiones periódicas.",
+    "adjacency": "E13 junto a E12: Observación vinculada al recorrido público.",
+    "access": "E12 ↔ E13 directo; peaton, tecnico. Llegada al puesto de observación; acceso de visitantes según horario. E13 ↔ E08 directo; tecnico. Acceso técnico condicionado a sensibilidad y ciclos del hábitat. E13 ↔ E09 directo; tecnico. Seguimiento técnico de refugios con protocolo.",
+    "representatives": [
+      "ambiente",
+      "verifica",
+      "comunidad"
+    ],
+    "variables": "Horas de observación; alertas verificadas; respuesta y supervivencia vegetal.",
+    "actorIds": [
+      11,
+      12,
+      35,
+      36,
+      37,
+      40,
+      41
+    ]
+  },
+  {
+    "id": "E14",
+    "title": "Paraderos y accesos al transporte público",
+    "dynamic": "D6",
+    "problem": "P1",
+    "location": "Corredores del polígono",
+    "activity": "Esperar y abordar el transporte público, realizar transbordos y conectar con los recorridos peatonales.",
+    "actors": "Usuarios, operadores, peatones y personas con movilidad reducida.",
+    "time": "Horarios de servicio; periodos de mayor demanda.",
+    "adjacency": "E12 junto a E14: Acceso cotidiano a paraderos.",
+    "access": "E12 ↔ E14 directo; peaton, tecnico. Camino peatonal a paraderos.",
+    "representatives": [
+      "movilidad",
+      "local",
+      "infra"
+    ],
+    "variables": "Espera, recorrido, accesibilidad y continuidad del servicio.",
+    "actorIds": [
+      3,
+      5,
+      7,
+      18,
+      44
+    ]
+  },
+  {
+    "id": "E15",
+    "title": "Red de drenaje y manejo de aguas",
+    "dynamic": "D7",
+    "problem": "P1/P2",
+    "location": "Calles, predios y conexiones hídricas del polígono",
+    "activity": "Recoger y conducir el agua, separar flujos según su calidad y mantener los drenajes para controlar la escorrentía.",
+    "actors": "EAAB, operadores, mantenimiento y comunidades; vida asociada al agua.",
+    "time": "Lluvias, periodos secos y mantenimiento preventivo.",
+    "adjacency": "E12 junto a E15: Acceso al drenaje para mantenimiento desde el espacio público.",
+    "access": "E12 ↔ E15 directo; tecnico. Acceso de mantenimiento a drenajes; el agua circula en otra red.",
+    "representatives": [
+      "infra",
+      "ambiente",
+      "trabajo"
+    ],
+    "variables": "Caudal, obstrucciones, calidad y capacidad de respuesta.",
+    "actorIds": [
+      35,
+      40,
+      41,
+      44,
+      46,
+      50
+    ]
+  },
+  {
+    "id": "E16",
+    "title": "Oficina de coordinación y mantenimiento",
+    "dynamic": "D8",
+    "problem": "P1/P2",
+    "location": "Adaptación de un espacio de apoyo operativo",
+    "activity": "Reunir a los responsables, coordinar tareas, organizar el mantenimiento y conservar equipos y documentos de operación. Disponer una sala de reuniones, atención a usuarios y archivo de información operativa; vincular participación con espacios accesibles.",
+    "actors": "Representantes, trabajadores, verificadores y voceros técnicos.",
+    "time": "Encargos propuestos de seis semanas con revisión quincenal; relevo documentado.",
+    "adjacency": "E12 junto a E16: Coordinación accesible desde el recorrido público.",
+    "access": "E12 ↔ E16 directo; peaton, tecnico. Ingreso al espacio de coordinación. E16 ↔ E07 indirecto vía Recorrido de servicio; tecnico. Visita operativa mediante recorrido de servicio.",
+    "representatives": [
+      "local",
+      "estructura",
+      "trabajo"
+    ],
+    "variables": "Compromisos, recursos ejecutados, mantenimiento y horas de participación.",
+    "actorIds": [
+      10,
+      25,
+      28,
+      30,
+      31,
+      35,
+      44,
+      45
+    ]
+  },
+  {
+    "id": "E17",
+    "title": "Centro de acopio y selección en origen",
+    "dynamic": "D7",
+    "problem": "P1",
+    "location": "Región productora · fuera del polígono",
+    "activity": "Recibir cosechas en patios cubiertos, pesar, clasificar y consolidar envíos antes de ingresar a Bogotá.",
+    "actors": "Productores asociados, clasificadores y conductores.",
+    "time": "Jornadas de cosecha y expediciones coordinadas con recepción urbana.",
+    "adjacency": "E18: proximidad entre selección y conservación; patios con circulación separada del producto. E17 ↔ E18: Conservación próxima al acondicionamiento en origen.",
+    "access": "E17 → E02/E03/E01 por rutas regionales; acceso de carga mediante patios de recepción. E17 ↔ E18 directo. Clasificación, conservación y empaque en origen. E17 ↔ E01 indirecto vía Red regional → E07. Envíos consolidados hacia Corabastos. E17 ↔ E02 indirecto vía Red regional. Recepción directa en centro metropolitano B. E17 ↔ E03 indirecto vía Red regional. Recepción directa en centro metropolitano C.",
+    "representatives": [],
+    "variables": "Toneladas consolidadas; viajes; pérdidas; tiempo desde cosecha.",
+    "actorIds": [
+      13,
+      19,
+      20
+    ]
+  },
+  {
+    "id": "E18",
+    "title": "Cámaras de refrigeración y empaque en origen",
+    "dynamic": "D7",
+    "problem": "P1",
+    "location": "Región productora · fuera del polígono",
+    "activity": "Conservar y empacar productos mediante cámaras, áreas limpias de empaque y muelles de despacho.",
+    "actors": "Productores, empacadores, personal de refrigeración y transportadores.",
+    "time": "Conservación continua; despachos según ventanas de recepción.",
+    "adjacency": "Junto a E17; separación entre área sucia, empaque y producto conservado. E17 ↔ E18: Conservación próxima al acondicionamiento en origen.",
+    "access": "E17 ↔ E18 directo de producto y personal autorizado.",
+    "representatives": [],
+    "variables": "Capacidad de frío; consumo energético; tiempo de almacenamiento.",
+    "actorIds": [
+      13,
+      19,
+      20
+    ]
+  },
+  {
+    "id": "E19",
+    "title": "Centro de distribución de última milla",
+    "dynamic": "D8",
+    "problem": "P1",
+    "location": "Borde urbano de Corabastos · anclaje conceptual dentro del polígono",
+    "activity": "Transferir pedidos a vehículos pequeños y bicicletas de carga mediante muelles, clasificación por ruta y estacionamiento de reparto.",
+    "actors": "Tenderos, repartidores, cargadores y compradores.",
+    "time": "Despachos por franjas; acceso peatonal separado de maniobras.",
+    "adjacency": "Junto a E07 y conexión funcional con E01; separación de accesos residenciales. E07 ↔ E19: Transferencia de carga y reparto.",
+    "access": "E01 → E19 por patio logístico; E19 → E20/E22 por red urbana de reparto. E01 ↔ E19 indirecto vía E07. Transferencia hacia distribución urbana. E19 ↔ E20 indirecto vía Red urbana de reparto. Entrega a mercados de otros barrios. E19 ↔ E22 indirecto vía Recorrido de reparto. Entrega en muelle de la plaza local. E19 ↔ E23 indirecto vía E07. Retorno de envases.",
+    "representatives": [],
+    "variables": "Pedidos; viajes pesados evitados en reparto; espera y distancia de distribución.",
+    "actorIds": [
+      16,
+      19,
+      20,
+      21,
+      18
+    ]
+  },
+  {
+    "id": "E20",
+    "title": "Mercados de proximidad en otros barrios",
+    "dynamic": "D8",
+    "problem": "P1",
+    "location": "Red de barrios de Bogotá · fuera del polígono",
+    "activity": "Recibir pedidos en pequeños muelles y vender alimentos mediante puestos, almacenamiento y recorridos peatonales cubiertos.",
+    "actors": "Vendedores minoristas, tenderos, compradores y repartidores.",
+    "time": "Venta diaria; abastecimiento en horarios separados de mayor afluencia peatonal.",
+    "adjacency": "Puestos junto a almacenamiento; acceso público separado del muelle.",
+    "access": "E02/E03/E19 → E20 por distribución urbana; acceso peatonal desde barrios atendidos. E19 ↔ E20 indirecto vía Red urbana de reparto. Entrega a mercados de otros barrios. E02 ↔ E20 indirecto vía Red urbana de reparto. Abastecimiento de proximidad desde B. E03 ↔ E20 indirecto vía Red urbana de reparto. Abastecimiento de proximidad desde C.",
+    "representatives": [],
+    "variables": "Distancia de acceso a alimentos; entregas; usuarios; superficie comercial.",
+    "actorIds": [
+      14,
+      15,
+      16,
+      18,
+      21
+    ]
+  },
+  {
+    "id": "E21",
+    "title": "Centro regional de aprovechamiento de materiales orgánicos",
+    "dynamic": "D9",
+    "problem": "P1/P2",
+    "location": "Escala regional · fuera del polígono",
+    "activity": "Recibir materiales separados en plataforma de pesaje, tratamiento cubierto, control de lixiviados y almacenamiento del producto recuperado.",
+    "actors": "Operarios de tratamiento, recicladores y transportadores.",
+    "time": "Recepción programada y control continuo del proceso.",
+    "adjacency": "Recepción separada del producto tratado; tratamiento de aguas y zonas de amortiguación.",
+    "access": "E06 → E21 mediante transporte a instalación compatible con el material; acceso técnico controlado. E06 ↔ E21 indirecto vía Red regional. Salida de materiales separados para aprovechamiento.",
+    "representatives": [],
+    "variables": "Material recibido y aprovechado; rechazos; agua; energía; capacidad de tratamiento.",
+    "actorIds": [
+      22,
+      31,
+      32,
+      33,
+      41
+    ]
+  },
+  {
+    "id": "E22",
+    "title": "Plaza de mercado y abastecimiento de María Paz",
+    "dynamic": "D8",
+    "problem": "P1",
+    "location": "Borde Corabastos–María Paz · anclaje conceptual dentro del polígono",
+    "activity": "Organizar compra cotidiana en puestos, corredores cubiertos, almacenamiento y zonas de estancia, con recepción separada de peatones.",
+    "actors": "Vendedores, residentes, compradores, cuidadores y repartidores.",
+    "time": "Uso cotidiano; recepción en franjas compatibles con el recorrido peatonal.",
+    "adjacency": "Junto a E12; vínculo peatonal con viviendas E10 y acceso de reparto separado. E12 ↔ E22: Acceso público a mercado local.",
+    "access": "E12 ↔ E22 peatonal directo; E19 → E22 por recorrido de reparto. E19 ↔ E22 indirecto vía Recorrido de reparto. Entrega en muelle de la plaza local.",
+    "representatives": [],
+    "variables": "Puestos; tiempo de acceso; entregas; área de estancia.",
+    "actorIds": [
+      3,
+      5,
+      14,
+      15,
+      16,
+      18
+    ]
+  },
+  {
+    "id": "E23",
+    "title": "Patio de retorno y lavado de canastillas",
+    "dynamic": "D9",
+    "problem": "P1",
+    "location": "Área operativa de Corabastos · anclaje conceptual dentro del polígono",
+    "activity": "Recibir, lavar y almacenar canastillas reutilizables con separación entre retorno sucio y envase limpio, recogida y tratamiento de aguas de proceso.",
+    "actors": "Lavadores, cargadores, responsables de mantenimiento y transportadores.",
+    "time": "Ciclos de retorno después de entregas; lavado y despacho por turnos.",
+    "adjacency": "Junto a E04/E07, con separación sanitaria respecto al alimento. E04 ↔ E23: Suministro de envases limpios con separación sanitaria.",
+    "access": "E19 → E23 retorno; E23 → E04 envases limpios; salida de materiales no recuperables hacia E06. E19 ↔ E23 indirecto vía E07. Retorno de envases. E23 ↔ E04 directo. Entrega de envases limpios. E23 ↔ E06 directo. Separación de materiales no recuperables.",
+    "representatives": [],
+    "variables": "Canastillas reutilizadas; agua tratada; capacidad de lavado; espacio de almacenamiento.",
+    "actorIds": [
+      19,
+      20,
+      29,
+      33,
+      41
+    ]
+  }
+]

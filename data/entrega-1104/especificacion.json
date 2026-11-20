@@ -1,0 +1,86 @@
+{
+  "version": "kennedy-abm-43",
+  "date": "2026-11-04",
+  "purpose": "Explorar distribución del abastecimiento, capacidad de atención y retiro, y uso de refugios bajo reglas sintéticas.",
+  "scope": {
+    "geography": "Polígono de Kennedy como contexto; Corabastos/María Paz/La Vaca como ámbitos del programa. B y C son destinos externos esquemáticos.",
+    "durationMinutes": 360,
+    "stepMinutes": 1,
+    "boundary": "Demanda exógena; salida de producto y de residuos. Tres centros; tres parches de recurso."
+  },
+  "status": "exploratory-synthetic",
+  "implementation": "JavaScript modular, Three.js para representación; motor puro independiente de la cámara.",
+  "agents": [
+    "Vehículos con identidad, destino, llegada, inicio, fin y estado",
+    "Aves representativas con posición, objetivo, reserva y modo de actividad"
+  ],
+  "environment": [
+    "Centros y plaza de servicio",
+    "Colas FIFO",
+    "Existencias de residuos",
+    "Parches de recurso finito y regeneración"
+  ],
+  "humanRoles": "Las personas de la red definen tareas y condiciones de capacidad, retiro y cuidado. No se calcula una decisión institucional autónoma.",
+  "parameters": {
+    "arrivalsPerHour": 12,
+    "serviceMinutes": 6,
+    "diversionPercent": 60,
+    "removalKgEvery15Minutes": 40,
+    "birds": 18,
+    "seed": 42,
+    "shipmentKg": 1000,
+    "wastePerShipmentKg": 20,
+    "wasteBlockThresholdKg": 120,
+    "travelMinutes": [
+      5,
+      10,
+      12
+    ],
+    "patchInitialFood": 30,
+    "patchCapacity": 40,
+    "patchRegenerationPerMinute": 0.5,
+    "birdMetabolismPerMinute": 0.12,
+    "intakePerFeedingStep": 0.4,
+    "reserveGainPerFeedingStep": 0.32
+  },
+  "scenarios": [
+    "S0 todas las llegadas a A",
+    "S1 porcentaje derivado repartido entre B/C",
+    "S2 distribución con interrupción de B desde minuto180; nuevos destinos B pasan a C; cola y servicio de B se conservan"
+  ],
+  "outputs": [
+    "Serie de colas A/B/C",
+    "Descargas completadas",
+    "Residuo almacenado y retirado",
+    "Espera media de servicios iniciados",
+    "Agente-minutos de retirada",
+    "Agotamiento de reservas sintéticas",
+    "Eventos y balances"
+  ],
+  "evidence": {
+    "map": "Modelo cartográfico previo del proyecto",
+    "program": "Propuesta del grupo, E01–E16",
+    "rules": "Hipótesis de modelación; parámetros sintéticos",
+    "references": [
+      "Ecosystem_ABM_Architecture_v6.md §§1,8,11,14,15,18",
+      "Epstein 2008, Why Model?",
+      "Gods Eye View: README, LICENSE y src/app/layers/streetLevel.js",
+      "Everything: presentación del editor",
+      "NetLogo Traffic Basic y Flocking: documentación; ensayos del estudiante separados"
+    ]
+  },
+  "verification": [
+    "Conservación de carga y residuos",
+    "Recurso finito sin negativos",
+    "Semilla reproducible",
+    "Igual demanda entre escenarios",
+    "Interrupción retiene cola y trabajo en curso"
+  ],
+  "limitations": [
+    "Rutas esquemáticas, no cálculo vial",
+    "Población aviar funcional sin asignación taxonómica",
+    "Sin calibración territorial ni predicción ecológica",
+    "No incluye reproducción ni asignación económica autónoma"
+  ],
+  "zipAdaptation": "Selección de principios; no certificación ni implementación completa de arquitectura v6."
+}

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {profile,biological,prepareRoute,advance} from './behavior56.mjs';
+const c={hour:10,day:0,holiday:false,rain:0,temp:19,wind:5,moisture:.5};
+assert(profile('bike',{...c,rain:20}).activity<profile('bike',c).activity);
+assert(profile('taxi',{...c,rain:20}).activity>profile('taxi',c).activity);
+assert(profile('person',{...c,hour:2},true).activity>profile('person',{...c,hour:2}).activity);
+const n={kind:'bird',schedule:'diurnal',label:'Colibri coruscans'};
+assert(biological(n,{...c,hour:22})<biological(n,c));
+const a={d:0,route:prepareRoute({points:[[0,0],[1,0],[1,1]]})};advance(a,3);assert.equal(a.d,2);advance(a,3);assert.equal(a.d,2);
+console.log('PASS weather, night market, birds and finite routes');

@@ -1,0 +1,1240 @@
+{
+  "date": "2026-11-04",
+  "status": "Resultados sintéticos del prototipo; no mediciones territoriales",
+  "seeds": [
+    11,
+    22,
+    33,
+    42,
+    55
+  ],
+  "duration": 360,
+  "summaries": [
+    {
+      "demand": 12,
+      "scenario": 0,
+      "completed": {
+        "mean": 50,
+        "min": 50,
+        "max": 50
+      },
+      "queue": {
+        "mean": 20,
+        "min": 20,
+        "max": 20
+      },
+      "wait": {
+        "mean": 41.35294117647059,
+        "min": 41.35294117647059,
+        "max": 41.35294117647059
+      },
+      "waste": {
+        "mean": 80,
+        "min": 80,
+        "max": 80
+      },
+      "retreat": {
+        "mean": 2036,
+        "min": 2012,
+        "max": 2083
+      }
+    },
+    {
+      "demand": 12,
+      "scenario": 1,
+      "completed": {
+        "mean": 68.6,
+        "min": 68,
+        "max": 69
+      },
+      "queue": {
+        "mean": 0,
+        "min": 0,
+        "max": 0
+      },
+      "wait": {
+        "mean": 0.53158953722334,
+        "min": 0.44285714285714284,
+        "max": 0.7428571428571429
+      },
+      "waste": {
+        "mean": 8,
+        "min": 0,
+        "max": 40
+      },
+      "retreat": {
+        "mean": 0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    {
+      "demand": 12,
+      "scenario": 2,
+      "completed": {
+        "mean": 67.4,
+        "min": 65,
+        "max": 69
+      },
+      "queue": {
+        "mean": 0.8,
+        "min": 0,
+        "max": 2
+      },
+      "wait": {
+        "mean": 0.886909024479357,
+        "min": 0.5942028985507246,
+        "max": 1.1594202898550725
+      },
+      "waste": {
+        "mean": 24,
+        "min": 0,
+        "max": 40
+      },
+      "retreat": {
+        "mean": 0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    {
+      "demand": 30,
+      "scenario": 0,
+      "completed": {
+        "mean": 51,
+        "min": 51,
+        "max": 51
+      },
+      "queue": {
+        "mean": 125,
+        "min": 125,
+        "max": 125
+      },
+      "wait": {
+        "mean": 116.17307692307693,
+        "min": 116.17307692307692,
+        "max": 116.17307692307692
+      },
+      "waste": {
+        "mean": 80,
+        "min": 80,
+        "max": 80
+      },
+      "retreat": {
+        "mean": 2384.2,
+        "min": 2281,
+        "max": 2455
+      }
+    },
+    {
+      "demand": 30,
+      "scenario": 1,
+      "completed": {
+        "mean": 145.2,
+        "min": 142,
+        "max": 148
+      },
+      "queue": {
+        "mean": 27.4,
+        "min": 24,
+        "max": 30
+      },
+      "wait": {
+        "mean": 24.08019716932922,
+        "min": 20.248322147651006,
+        "max": 26.586206896551722
+      },
+      "waste": {
+        "mean": 220,
+        "min": 180,
+        "max": 240
+      },
+      "retreat": {
+        "mean": 1649,
+        "min": 835,
+        "max": 2423
+      }
+    },
+    {
+      "demand": 30,
+      "scenario": 2,
+      "completed": {
+        "mean": 121.4,
+        "min": 117,
+        "max": 125
+      },
+      "queue": {
+        "mean": 51.6,
+        "min": 48,
+        "max": 55
+      },
+      "wait": {
+        "mean": 29.0806384807271,
+        "min": 21.8,
+        "max": 37.891666666666666
+      },
+      "waste": {
+        "mean": 160,
+        "min": 160,
+        "max": 160
+      },
+      "retreat": {
+        "mean": 1649,
+        "min": 835,
+        "max": 2423
+      }
+    }
+  ],
+  "runs": [
+    {
+      "demand": 12,
+      "seed": 11,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 11
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 50,
+        "queueA": 20,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 920,
+        "waitMean": 41.35294117647059,
+        "retreatAgentMinutes": 2017,
+        "exhausted": 7,
+        "food": 87.20000000000029
+      },
+      "maxQueue": 20,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 8.569145393266808e-12
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 11,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 11
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 68,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 0,
+        "removedKg": 1360,
+        "waitMean": 0.44285714285714284,
+        "retreatAgentMinutes": 0,
+        "exhausted": 1,
+        "food": 0.8000000000002436
+      },
+      "maxQueue": 1,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.8355539310732638e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 11,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 11
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 67,
+        "queueA": 0,
+        "queueB": 1,
+        "queueC": 0,
+        "wasteKg": 20,
+        "removedKg": 1320,
+        "waitMean": 0.5942028985507246,
+        "retreatAgentMinutes": 0,
+        "exhausted": 1,
+        "food": 0.8000000000002436
+      },
+      "maxQueue": 2,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.8355539310732638e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 22,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 22
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 50,
+        "queueA": 20,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 920,
+        "waitMean": 41.35294117647059,
+        "retreatAgentMinutes": 2039,
+        "exhausted": 12,
+        "food": 90.80000000000032
+      },
+      "maxQueue": 20,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 8.44124770082999e-12
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 22,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 22
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 68,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 0,
+        "removedKg": 1360,
+        "waitMean": 0.5285714285714286,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 3.200000000000234
+      },
+      "maxQueue": 1,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.822852979671552e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 22,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 22
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 65,
+        "queueA": 0,
+        "queueB": 2,
+        "queueC": 0,
+        "wasteKg": 40,
+        "removedKg": 1260,
+        "waitMean": 0.9264705882352942,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 3.200000000000234
+      },
+      "maxQueue": 4,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.822852979671552e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 33,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 33
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 50,
+        "queueA": 20,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 920,
+        "waitMean": 41.35294117647059,
+        "retreatAgentMinutes": 2083,
+        "exhausted": 9,
+        "food": 90.40000000000032
+      },
+      "maxQueue": 20,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 8.355982572538778e-12
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 33,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 33
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 69,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 40,
+        "removedKg": 1340,
+        "waitMean": 0.7428571428571429,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 2.8000000000002343
+      },
+      "maxQueue": 1,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.8251178346417873e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 33,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 33
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 69,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 40,
+        "removedKg": 1340,
+        "waitMean": 1.1594202898550725,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 2.8000000000002343
+      },
+      "maxQueue": 1,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.8251178346417873e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 42,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 42
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 50,
+        "queueA": 20,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 920,
+        "waitMean": 41.35294117647059,
+        "retreatAgentMinutes": 2012,
+        "exhausted": 10,
+        "food": 88.40000000000029
+      },
+      "maxQueue": 20,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 8.498091119690798e-12
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 42,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 42
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 69,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 0,
+        "removedKg": 1380,
+        "waitMean": 0.4647887323943662,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 2.400000000000205
+      },
+      "maxQueue": 1,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.830313678397033e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 42,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 42
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 69,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 0,
+        "removedKg": 1380,
+        "waitMean": 0.9428571428571428,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 2.400000000000205
+      },
+      "maxQueue": 2,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.830313678397033e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 55,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 55
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 50,
+        "queueA": 20,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 920,
+        "waitMean": 41.35294117647059,
+        "retreatAgentMinutes": 2029,
+        "exhausted": 10,
+        "food": 87.60000000000028
+      },
+      "maxQueue": 20,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 8.668621376273222e-12
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 55,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 55
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 69,
+        "queueA": 0,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 0,
+        "removedKg": 1380,
+        "waitMean": 0.4788732394366197,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 2.000000000000215
+      },
+      "maxQueue": 1,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.8316015371055983e-11
+      }
+    },
+    {
+      "demand": 12,
+      "seed": 55,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 12,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 55
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 72,
+        "completed": 67,
+        "queueA": 0,
+        "queueB": 1,
+        "queueC": 0,
+        "wasteKg": 20,
+        "removedKg": 1320,
+        "waitMean": 0.8115942028985508,
+        "retreatAgentMinutes": 0,
+        "exhausted": 0,
+        "food": 2.000000000000215
+      },
+      "maxQueue": 2,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.8316015371055983e-11
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 11,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 11
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 51,
+        "queueA": 125,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 940,
+        "waitMean": 116.17307692307692,
+        "retreatAgentMinutes": 2402,
+        "exhausted": 16,
+        "food": 106.00000000000054
+      },
+      "maxQueue": 126,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 3.0411229090532288e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 11,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 11
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 142,
+        "queueA": 14,
+        "queueB": 0,
+        "queueC": 16,
+        "wasteKg": 180,
+        "removedKg": 2660,
+        "waitMean": 26.586206896551722,
+        "retreatAgentMinutes": 1482,
+        "exhausted": 3,
+        "food": 71.60000000000008
+      },
+      "maxQueue": 31,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.1993961379630491e-11
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 11,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 11
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 119,
+        "queueA": 14,
+        "queueB": 1,
+        "queueC": 39,
+        "wasteKg": 160,
+        "removedKg": 2220,
+        "waitMean": 33.64462809917355,
+        "retreatAgentMinutes": 1482,
+        "exhausted": 3,
+        "food": 71.60000000000008
+      },
+      "maxQueue": 55,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.1993961379630491e-11
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 22,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 22
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 51,
+        "queueA": 125,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 940,
+        "waitMean": 116.17307692307692,
+        "retreatAgentMinutes": 2281,
+        "exhausted": 16,
+        "food": 106.80000000000055
+      },
+      "maxQueue": 126,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 2.9842794901924208e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 22,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 22
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 147,
+        "queueA": 6,
+        "queueB": 8,
+        "queueC": 12,
+        "wasteKg": 240,
+        "removedKg": 2700,
+        "waitMean": 26.473333333333333,
+        "retreatAgentMinutes": 835,
+        "exhausted": 2,
+        "food": 58.40000000000011
+      },
+      "maxQueue": 28,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.4530598946294049e-11
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 22,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 22
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 123,
+        "queueA": 6,
+        "queueB": 12,
+        "queueC": 32,
+        "wasteKg": 160,
+        "removedKg": 2300,
+        "waitMean": 21.8,
+        "retreatAgentMinutes": 835,
+        "exhausted": 2,
+        "food": 58.40000000000011
+      },
+      "maxQueue": 52,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.4530598946294049e-11
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 33,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 33
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 51,
+        "queueA": 125,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 940,
+        "waitMean": 116.17307692307692,
+        "retreatAgentMinutes": 2455,
+        "exhausted": 16,
+        "food": 106.40000000000055
+      },
+      "maxQueue": 126,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 3.0127011996228248e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 33,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 33
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 143,
+        "queueA": 28,
+        "queueB": 2,
+        "queueC": 0,
+        "wasteKg": 240,
+        "removedKg": 2620,
+        "waitMean": 26.21232876712329,
+        "retreatAgentMinutes": 2423,
+        "exhausted": 15,
+        "food": 101.20000000000047
+      },
+      "maxQueue": 32,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 5.8832938520936295e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 33,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 33
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 117,
+        "queueA": 28,
+        "queueB": 0,
+        "queueC": 27,
+        "wasteKg": 160,
+        "removedKg": 2180,
+        "waitMean": 37.891666666666666,
+        "retreatAgentMinutes": 2423,
+        "exhausted": 15,
+        "food": 101.20000000000047
+      },
+      "maxQueue": 57,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 5.8832938520936295e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 42,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 42
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 51,
+        "queueA": 125,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 940,
+        "waitMean": 116.17307692307692,
+        "retreatAgentMinutes": 2383,
+        "exhausted": 16,
+        "food": 106.40000000000055
+      },
+      "maxQueue": 126,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 3.353761712787673e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 42,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 42
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 148,
+        "queueA": 12,
+        "queueB": 6,
+        "queueC": 6,
+        "wasteKg": 220,
+        "removedKg": 2740,
+        "waitMean": 20.880794701986755,
+        "retreatAgentMinutes": 1767,
+        "exhausted": 7,
+        "food": 80.80000000000018
+      },
+      "maxQueue": 27,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 9.947598300641403e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 42,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 42
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 125,
+        "queueA": 12,
+        "queueB": 4,
+        "queueC": 32,
+        "wasteKg": 160,
+        "removedKg": 2340,
+        "waitMean": 25.818897637795274,
+        "retreatAgentMinutes": 1767,
+        "exhausted": 7,
+        "food": 80.80000000000018
+      },
+      "maxQueue": 50,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 9.947598300641403e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 55,
+      "scenario": 0,
+      "config": {
+        "scenario": 0,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 55
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 51,
+        "queueA": 125,
+        "queueB": 0,
+        "queueC": 0,
+        "wasteKg": 80,
+        "removedKg": 940,
+        "waitMean": 116.17307692307692,
+        "retreatAgentMinutes": 2400,
+        "exhausted": 16,
+        "food": 106.80000000000055
+      },
+      "maxQueue": 126,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 3.325340003357269e-12
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 55,
+      "scenario": 1,
+      "config": {
+        "scenario": 1,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 55
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 146,
+        "queueA": 21,
+        "queueB": 3,
+        "queueC": 3,
+        "wasteKg": 220,
+        "removedKg": 2700,
+        "waitMean": 20.248322147651006,
+        "retreatAgentMinutes": 1738,
+        "exhausted": 4,
+        "food": 79.60000000000016
+      },
+      "maxQueue": 29,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.0373923942097463e-11
+      }
+    },
+    {
+      "demand": 30,
+      "seed": 55,
+      "scenario": 2,
+      "config": {
+        "scenario": 2,
+        "arrivals": 30,
+        "service": 6,
+        "divert": 60,
+        "remove": 40,
+        "birds": 18,
+        "refuge": 0,
+        "seed": 55
+      },
+      "result": {
+        "minute": 360,
+        "arrived": 180,
+        "completed": 123,
+        "queueA": 21,
+        "queueB": 4,
+        "queueC": 26,
+        "wasteKg": 160,
+        "removedKg": 2300,
+        "waitMean": 26.248,
+        "retreatAgentMinutes": 1738,
+        "exhausted": 4,
+        "food": 79.60000000000016
+      },
+      "maxQueue": 53,
+      "balance": {
+        "cargoError": 0,
+        "wasteError": 0,
+        "foodError": 1.0373923942097463e-11
+      }
+    }
+  ]
+}

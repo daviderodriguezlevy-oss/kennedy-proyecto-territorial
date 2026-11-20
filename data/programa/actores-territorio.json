@@ -1,0 +1,2644 @@
+{
+  "actors": [
+    {
+      "id": 1,
+      "name": "Vecina de La Vaca Norte",
+      "group": 0
+    },
+    {
+      "id": 2,
+      "name": "Vecino de La Vaca Sur",
+      "group": 0
+    },
+    {
+      "id": 3,
+      "name": "Vecina de María Paz",
+      "group": 0
+    },
+    {
+      "id": 4,
+      "name": "Vecino de El Amparo",
+      "group": 0
+    },
+    {
+      "id": 5,
+      "name": "Cuidadora",
+      "group": 0
+    },
+    {
+      "id": 6,
+      "name": "Joven",
+      "group": 0
+    },
+    {
+      "id": 7,
+      "name": "Adulto mayor",
+      "group": 0
+    },
+    {
+      "id": 8,
+      "name": "Estudiante",
+      "group": 0
+    },
+    {
+      "id": 9,
+      "name": "Docente",
+      "group": 0
+    },
+    {
+      "id": 10,
+      "name": "Líder vecinal",
+      "group": 0
+    },
+    {
+      "id": 11,
+      "name": "Cuidadora del humedal",
+      "group": 0
+    },
+    {
+      "id": 12,
+      "name": "Observador de aves",
+      "group": 0
+    },
+    {
+      "id": 13,
+      "name": "Vendedor mayorista",
+      "group": 1
+    },
+    {
+      "id": 14,
+      "name": "Vendedora minorista",
+      "group": 1
+    },
+    {
+      "id": 15,
+      "name": "Vendedor ambulante",
+      "group": 1
+    },
+    {
+      "id": 16,
+      "name": "Tendero",
+      "group": 1
+    },
+    {
+      "id": 17,
+      "name": "Cocinera",
+      "group": 1
+    },
+    {
+      "id": 18,
+      "name": "Comprador habitual",
+      "group": 1
+    },
+    {
+      "id": 19,
+      "name": "Cargador",
+      "group": 1
+    },
+    {
+      "id": 20,
+      "name": "Conductor de camión",
+      "group": 1
+    },
+    {
+      "id": 21,
+      "name": "Carretillero",
+      "group": 1
+    },
+    {
+      "id": 22,
+      "name": "Reciclador",
+      "group": 1
+    },
+    {
+      "id": 23,
+      "name": "Recuperador de alimentos",
+      "group": 1
+    },
+    {
+      "id": 24,
+      "name": "Coordinador de donaciones",
+      "group": 1
+    },
+    {
+      "id": 25,
+      "name": "Gerente de Corabastos",
+      "group": 2
+    },
+    {
+      "id": 26,
+      "name": "Delegado de la Junta",
+      "group": 2
+    },
+    {
+      "id": 27,
+      "name": "Responsable de presupuesto",
+      "group": 2
+    },
+    {
+      "id": 28,
+      "name": "Representante de vendedores",
+      "group": 2
+    },
+    {
+      "id": 29,
+      "name": "Supervisor de aseo",
+      "group": 2
+    },
+    {
+      "id": 30,
+      "name": "Interventor de aseo",
+      "group": 2
+    },
+    {
+      "id": 31,
+      "name": "Coordinador de recolección",
+      "group": 2
+    },
+    {
+      "id": 32,
+      "name": "Recolector de residuos",
+      "group": 2
+    },
+    {
+      "id": 33,
+      "name": "Clasificador de residuos",
+      "group": 2
+    },
+    {
+      "id": 34,
+      "name": "Técnico de compactadores",
+      "group": 2
+    },
+    {
+      "id": 35,
+      "name": "Administrador del humedal",
+      "group": 3
+    },
+    {
+      "id": 36,
+      "name": "Biólogo de fauna",
+      "group": 3
+    },
+    {
+      "id": 37,
+      "name": "Especialista en árboles",
+      "group": 3
+    },
+    {
+      "id": 38,
+      "name": "Veterinario",
+      "group": 3
+    },
+    {
+      "id": 39,
+      "name": "Cuidador de animales",
+      "group": 3
+    },
+    {
+      "id": 40,
+      "name": "Jardinero",
+      "group": 3
+    },
+    {
+      "id": 41,
+      "name": "Técnico de mantenimiento hídrico",
+      "group": 3
+    },
+    {
+      "id": 42,
+      "name": "Administrador del parque",
+      "group": 3
+    },
+    {
+      "id": 43,
+      "name": "Coordinador de aseo barrial",
+      "group": 3
+    },
+    {
+      "id": 44,
+      "name": "Gestor de servicios públicos",
+      "group": 3
+    },
+    {
+      "id": 45,
+      "name": "Gestor ambiental local",
+      "group": 3
+    },
+    {
+      "id": 46,
+      "name": "Rana sabanera",
+      "group": 4
+    },
+    {
+      "id": 47,
+      "name": "Copetón",
+      "group": 4
+    },
+    {
+      "id": 48,
+      "name": "Garza rayada",
+      "group": 4
+    },
+    {
+      "id": 49,
+      "name": "Tingua norteña",
+      "group": 4
+    },
+    {
+      "id": 50,
+      "name": "Guapucha",
+      "group": 4
+    },
+    {
+      "id": 51,
+      "name": "Gato doméstico",
+      "group": 4
+    },
+    {
+      "id": 52,
+      "name": "Caucho del Tequendama",
+      "group": 4
+    },
+    {
+      "id": 53,
+      "name": "Sauce",
+      "group": 4
+    },
+    {
+      "id": 54,
+      "name": "Rama negra",
+      "group": 4
+    },
+    {
+      "id": 55,
+      "name": "Ligustro",
+      "group": 4
+    },
+    {
+      "id": 56,
+      "name": "Alcalde local de Kennedy",
+      "group": 5
+    },
+    {
+      "id": 57,
+      "name": "Edil de Kennedy",
+      "group": 5
+    },
+    {
+      "id": 58,
+      "name": "Subdirector de Ecosistemas y Ruralidad",
+      "group": 5
+    },
+    {
+      "id": 59,
+      "name": "Subdirector de Gestión en Vía",
+      "group": 5
+    },
+    {
+      "id": 60,
+      "name": "Subdirector de la Bicicleta y el Peatón",
+      "group": 5
+    },
+    {
+      "id": 61,
+      "name": "Subdirector de Recolección, Barrido y Limpieza",
+      "group": 5
+    },
+    {
+      "id": 62,
+      "name": "Vocero de vendedores ambulantes",
+      "group": 6
+    },
+    {
+      "id": 63,
+      "name": "Vocera de comerciantes minoristas",
+      "group": 6
+    },
+    {
+      "id": 64,
+      "name": "Vocero de comerciantes mayoristas",
+      "group": 6
+    },
+    {
+      "id": 65,
+      "name": "Vocera de trabajadores de carga",
+      "group": 6
+    },
+    {
+      "id": 66,
+      "name": "Vocero de transportadores",
+      "group": 6
+    },
+    {
+      "id": 67,
+      "name": "Vocera de residentes",
+      "group": 6
+    },
+    {
+      "id": 68,
+      "name": "Vocera de personas cuidadoras",
+      "group": 6
+    },
+    {
+      "id": 69,
+      "name": "Profesional de drenaje urbano",
+      "group": 7
+    },
+    {
+      "id": 70,
+      "name": "Profesional de fauna acuática",
+      "group": 7
+    },
+    {
+      "id": 71,
+      "name": "Profesional de polinizadores",
+      "group": 7
+    },
+    {
+      "id": 72,
+      "name": "Coordinador del centro B",
+      "group": 7
+    },
+    {
+      "id": 73,
+      "name": "Coordinador del centro C",
+      "group": 7
+    },
+    {
+      "id": 74,
+      "name": "Vocero de tenderos",
+      "group": 6
+    },
+    {
+      "id": 75,
+      "name": "Coordinador de logística",
+      "group": 7
+    }
+  ],
+  "hubs": [
+    {
+      "id": 67,
+      "title": "VIVIENDA Y CUIDADOS",
+      "members": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        56,
+        57,
+        68
+      ],
+      "decision": "Acordar prioridades de acceso y cuidado entre residentes y dar seguimiento a respuestas.",
+      "resources": "Tiempo remunerado o disponible, información accesible y respaldo de participantes. Las inversiones locales conservan sus procedimientos de aprobación."
+    },
+    {
+      "id": 63,
+      "title": "COMERCIO Y PROXIMIDAD",
+      "members": [
+        13,
+        14,
+        15,
+        16,
+        18,
+        28,
+        62,
+        64,
+        74
+      ],
+      "decision": "Acordar entregas y condiciones comerciales con los participantes y comparar costos de distribución.",
+      "resources": "Consentimiento de comerciantes, instalaciones y medios de transporte. Cada organización conserva las decisiones sobre sus recursos."
+    },
+    {
+      "id": 66,
+      "title": "MOVILIDAD Y ACCESO",
+      "members": [
+        20,
+        59,
+        60
+      ],
+      "decision": "Acordar ventanas operativas con transportadores y presentar ajustes de acceso y recorridos a la autoridad vial.",
+      "resources": "Disponibilidad de flota, información de recorridos y capacidad vial. La señalización y gestión del tránsito corresponden a la autoridad competente."
+    },
+    {
+      "id": 65,
+      "title": "TRABAJO Y SEGURIDAD",
+      "members": [
+        6,
+        8,
+        9,
+        19,
+        21
+      ],
+      "decision": "Acordar condiciones de turnos y manejo de carga con trabajadores y responsables de operación.",
+      "resources": "Representación laboral, equipos, descansos y acuerdos con empleadores. La coordinación debe contar con tiempo y protección para participar."
+    },
+    {
+      "id": 75,
+      "title": "OPERACIÓN LOGÍSTICA",
+      "members": [
+        25,
+        26,
+        27,
+        72,
+        73
+      ],
+      "decision": "Coordinar cupos y transferencias entre destinos con capacidad asignada y acuerdos de cada operador.",
+      "resources": "Muelles, almacenamiento, presupuesto delegado y personal. Gerencia y Junta conservan las facultades establecidas sobre contratos y recursos."
+    },
+    {
+      "id": 24,
+      "title": "RECUPERACIÓN DE ALIMENTOS",
+      "members": [
+        17,
+        23
+      ],
+      "decision": "Acordar recepción, clasificación y entrega de alimentos aptos con donantes y receptores.",
+      "resources": "Almacenamiento, condiciones sanitarias, personal y transporte. La disponibilidad y aptitud del alimento delimitan la operación."
+    },
+    {
+      "id": 31,
+      "title": "RESIDUOS Y MATERIALES",
+      "members": [
+        22,
+        29,
+        30,
+        32,
+        33,
+        34,
+        43,
+        44,
+        61
+      ],
+      "decision": "Coordinar separación, rutas y mantenimiento dentro de capacidades contratadas y registrar cantidades.",
+      "resources": "Contrato, rutas, equipos y capacidad de tratamiento. La autoridad y la interventoría revisan obligaciones y resultados."
+    },
+    {
+      "id": 35,
+      "title": "AGUA Y HUMEDAL",
+      "members": [
+        11,
+        41,
+        45,
+        58,
+        69
+      ],
+      "decision": "Coordinar mantenimiento y seguimiento de agua y hábitat según las actuaciones autorizadas.",
+      "resources": "PMA, permisos, personal técnico y capacidad de drenaje. La autoridad ambiental conserva las decisiones de su competencia."
+    },
+    {
+      "id": 37,
+      "title": "VEGETACIÓN Y POLINIZADORES",
+      "members": [
+        40,
+        42,
+        52,
+        53,
+        54,
+        55,
+        71
+      ],
+      "decision": "Proponer manejo de vegetación, recursos florales y mantenimiento con seguimiento técnico.",
+      "resources": "Inventario, material vegetal, agua y mantenimiento. Las intervenciones requieren autorización y criterios del organismo responsable."
+    },
+    {
+      "id": 36,
+      "title": "FAUNA Y BIENESTAR",
+      "members": [
+        12,
+        38,
+        39,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        70
+      ],
+      "decision": "Acordar protocolos de observación y plantear ajustes ante perturbaciones documentadas.",
+      "resources": "Registros, profesionales y protocolos específicos. Los manejos de fauna se sujetan a las competencias de cada institución."
+    }
+  ],
+  "links": [
+    {
+      "a": 26,
+      "b": 25,
+      "label": "aprueba presupuesto y orienta decisiones",
+      "status": "documentada",
+      "source": "S2",
+      "detail": "Se representa el vínculo Junta–gerencia mediante sus perfiles. No atribuye a un delegado individual las facultades de toda la Junta."
+    },
+    {
+      "a": 25,
+      "b": 31,
+      "label": "gestiona la relación contractual",
+      "status": "documentada",
+      "source": "S1",
+      "detail": "Proyección del vínculo institucional entre gerencia y operación de aseo reportado en 2025; verificar delegado y contrato vigente."
+    },
+    {
+      "a": 30,
+      "b": 25,
+      "label": "informa incumplimientos y recomienda correcciones",
+      "status": "documentada",
+      "source": "S1",
+      "detail": ""
+    },
+    {
+      "a": 30,
+      "b": 31,
+      "label": "requiere acciones correctivas",
+      "status": "documentada",
+      "source": "S1",
+      "detail": "Requerimiento del 10 de junio de 2025 reportado en el informe institucional."
+    },
+    {
+      "a": 35,
+      "b": 41,
+      "label": "coordina seguimiento de mantenimiento",
+      "status": "documentada",
+      "source": "S3",
+      "detail": "Relación entre responsables institucionales reconstruida a nivel de perfiles; el informe registra compromisos de SDA y EAAB/Aguas de Bogotá."
+    },
+    {
+      "a": 37,
+      "b": 40,
+      "label": "acompaña intervención del arbolado",
+      "status": "documentada",
+      "source": "S5",
+      "detail": ""
+    },
+    {
+      "a": 4,
+      "b": 37,
+      "label": "participa en cuidado de árboles",
+      "status": "documentada",
+      "source": "S5",
+      "detail": "Perfil vecinal de El Amparo; la fuente identifica participación de vecinas, no una persona designada para nuestra propuesta."
+    },
+    {
+      "a": 36,
+      "b": 38,
+      "label": "coordina manejo de animales ferales",
+      "status": "documentada",
+      "source": "S6",
+      "detail": "Traducción de la cooperación SDA–IDPYBA a perfiles técnicos; personas y delegaciones por identificar."
+    },
+    {
+      "a": 43,
+      "b": 15,
+      "label": "socializa manejo de residuos",
+      "status": "documentada",
+      "source": "S7",
+      "detail": ""
+    },
+    {
+      "a": 44,
+      "b": 43,
+      "label": "coordina jornada de aseo y sensibilización",
+      "status": "documentada",
+      "source": "S7",
+      "detail": ""
+    },
+    {
+      "a": 13,
+      "b": 24,
+      "label": "aporta alimentos recuperables",
+      "status": "documentada",
+      "source": "S8",
+      "detail": "Relación general entre comerciantes donantes y operación del centro; no identifica a un mayorista particular."
+    },
+    {
+      "a": 24,
+      "b": 23,
+      "label": "coordina recuperación de alimentos",
+      "status": "documentada",
+      "source": "S8",
+      "detail": ""
+    },
+    {
+      "a": 1,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 1,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 2,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 2,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 3,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 3,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 4,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 4,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 5,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 5,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 7,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 7,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 10,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 10,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 56,
+      "label": "presenta alternativa con costos y evidencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "La solicitud se tramita ante el cargo competente. El vínculo representa la articulación propuesta."
+    },
+    {
+      "a": 56,
+      "b": 67,
+      "label": "comunica decisión y condiciones dentro de su competencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El cargo conserva sus facultades legales y presupuestales. La inclusión en la propuesta no acredita un acuerdo institucional ya suscrito."
+    },
+    {
+      "a": 67,
+      "b": 57,
+      "label": "presenta alternativa con costos y evidencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "La solicitud se tramita ante el cargo competente. El vínculo representa la articulación propuesta."
+    },
+    {
+      "a": 57,
+      "b": 67,
+      "label": "comunica decisión y condiciones dentro de su competencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El cargo conserva sus facultades legales y presupuestales. La inclusión en la propuesta no acredita un acuerdo institucional ya suscrito."
+    },
+    {
+      "a": 68,
+      "b": 67,
+      "label": "presenta necesidades de vivienda y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 68,
+      "label": "devuelve acuerdos y verifica efectos cotidianos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 13,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 13,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 14,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 14,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 15,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 15,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 16,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 16,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 18,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 18,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 28,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 28,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 62,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 62,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 64,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 64,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 74,
+      "b": 63,
+      "label": "compara costos y condiciones de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 74,
+      "label": "acuerda condiciones comerciales y distribuye información",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 20,
+      "b": 66,
+      "label": "comparte necesidades de recorrido y horario",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 66,
+      "b": 20,
+      "label": "acuerda ventanas y comunica restricciones de acceso",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 66,
+      "b": 59,
+      "label": "presenta alternativa con costos y evidencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "La solicitud se tramita ante el cargo competente. El vínculo representa la articulación propuesta."
+    },
+    {
+      "a": 59,
+      "b": 66,
+      "label": "comunica decisión y condiciones dentro de su competencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El cargo conserva sus facultades legales y presupuestales. La inclusión en la propuesta no acredita un acuerdo institucional ya suscrito."
+    },
+    {
+      "a": 66,
+      "b": 60,
+      "label": "presenta alternativa con costos y evidencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "La solicitud se tramita ante el cargo competente. El vínculo representa la articulación propuesta."
+    },
+    {
+      "a": 60,
+      "b": 66,
+      "label": "comunica decisión y condiciones dentro de su competencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El cargo conserva sus facultades legales y presupuestales. La inclusión en la propuesta no acredita un acuerdo institucional ya suscrito."
+    },
+    {
+      "a": 6,
+      "b": 65,
+      "label": "presenta condiciones y riesgos del trabajo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 6,
+      "label": "acuerda turnos y verifica condiciones laborales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 8,
+      "b": 65,
+      "label": "presenta condiciones y riesgos del trabajo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 8,
+      "label": "acuerda turnos y verifica condiciones laborales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 9,
+      "b": 65,
+      "label": "presenta condiciones y riesgos del trabajo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 9,
+      "label": "acuerda turnos y verifica condiciones laborales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 19,
+      "b": 65,
+      "label": "presenta condiciones y riesgos del trabajo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 19,
+      "label": "acuerda turnos y verifica condiciones laborales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 21,
+      "b": 65,
+      "label": "presenta condiciones y riesgos del trabajo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 21,
+      "label": "acuerda turnos y verifica condiciones laborales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 25,
+      "b": 75,
+      "label": "comunica capacidad y restricciones de operación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 25,
+      "label": "coordina cupos y transferencias acordadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 26,
+      "b": 75,
+      "label": "comunica capacidad y restricciones de operación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 26,
+      "label": "coordina cupos y transferencias acordadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 27,
+      "b": 75,
+      "label": "comunica capacidad y restricciones de operación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 27,
+      "label": "coordina cupos y transferencias acordadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 72,
+      "b": 75,
+      "label": "comunica capacidad y restricciones de operación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 72,
+      "label": "coordina cupos y transferencias acordadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 73,
+      "b": 75,
+      "label": "comunica capacidad y restricciones de operación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 73,
+      "label": "coordina cupos y transferencias acordadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 17,
+      "b": 24,
+      "label": "comunica disponibilidad de alimentos aptos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 24,
+      "b": 17,
+      "label": "acuerda clasificación y entregas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 23,
+      "b": 24,
+      "label": "comunica disponibilidad de alimentos aptos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 24,
+      "b": 23,
+      "label": "acuerda clasificación y entregas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 22,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 22,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 29,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 29,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 30,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 30,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 32,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 32,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 33,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 33,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 34,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 34,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 43,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 43,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 44,
+      "b": 31,
+      "label": "registra cantidades y capacidad de manejo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 44,
+      "label": "programa acciones dentro de recursos asignados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 61,
+      "label": "presenta alternativa con costos y evidencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "La solicitud se tramita ante el cargo competente. El vínculo representa la articulación propuesta."
+    },
+    {
+      "a": 61,
+      "b": 31,
+      "label": "comunica decisión y condiciones dentro de su competencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El cargo conserva sus facultades legales y presupuestales. La inclusión en la propuesta no acredita un acuerdo institucional ya suscrito."
+    },
+    {
+      "a": 11,
+      "b": 35,
+      "label": "aporta registros de agua y mantenimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 11,
+      "label": "coordina seguimiento de actuaciones autorizadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 41,
+      "b": 35,
+      "label": "aporta registros de agua y mantenimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 41,
+      "label": "coordina seguimiento de actuaciones autorizadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 45,
+      "b": 35,
+      "label": "aporta registros de agua y mantenimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 45,
+      "label": "coordina seguimiento de actuaciones autorizadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 58,
+      "label": "presenta alternativa con costos y evidencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "La solicitud se tramita ante el cargo competente. El vínculo representa la articulación propuesta."
+    },
+    {
+      "a": 58,
+      "b": 35,
+      "label": "comunica decisión y condiciones dentro de su competencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El cargo conserva sus facultades legales y presupuestales. La inclusión en la propuesta no acredita un acuerdo institucional ya suscrito."
+    },
+    {
+      "a": 69,
+      "b": 35,
+      "label": "aporta registros de agua y mantenimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 69,
+      "label": "coordina seguimiento de actuaciones autorizadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 40,
+      "b": 37,
+      "label": "aporta observaciones de vegetación y floración",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 37,
+      "b": 40,
+      "label": "coordina cuidado y seguimiento técnico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 42,
+      "b": 37,
+      "label": "aporta observaciones de vegetación y floración",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 37,
+      "b": 42,
+      "label": "coordina cuidado y seguimiento técnico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 71,
+      "b": 37,
+      "label": "aporta observaciones de vegetación y floración",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 37,
+      "b": 71,
+      "label": "coordina cuidado y seguimiento técnico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 12,
+      "b": 36,
+      "label": "aporta registros de fauna y perturbación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 36,
+      "b": 12,
+      "label": "coordina protocolos y devuelve resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 38,
+      "b": 36,
+      "label": "aporta registros de fauna y perturbación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 36,
+      "b": 38,
+      "label": "coordina protocolos y devuelve resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 39,
+      "b": 36,
+      "label": "aporta registros de fauna y perturbación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 36,
+      "b": 39,
+      "label": "coordina protocolos y devuelve resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 70,
+      "b": 36,
+      "label": "aporta registros de fauna y perturbación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 36,
+      "b": 70,
+      "label": "coordina protocolos y devuelve resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 63,
+      "label": "contrasta abastecimiento y necesidades residenciales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 67,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 66,
+      "label": "acuerda horarios de entregas y recorridos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 66,
+      "b": 63,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 66,
+      "b": 65,
+      "label": "contrasta tiempos de viaje y turnos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 66,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 75,
+      "label": "acuerda condiciones de carga y descanso",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 65,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 24,
+      "label": "coordina derivación de alimentos recuperables",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 24,
+      "b": 75,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 24,
+      "b": 31,
+      "label": "coordina separación entre recuperación alimentaria y residuos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 24,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 35,
+      "label": "contrasta manejo de residuos y protección del agua",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 31,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 37,
+      "label": "coordina agua y mantenimiento de vegetación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 37,
+      "b": 35,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 37,
+      "b": 36,
+      "label": "contrasta recursos de hábitat y uso por fauna",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 36,
+      "b": 37,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 36,
+      "b": 67,
+      "label": "comunica perturbaciones y acuerda seguimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 36,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 63,
+      "b": 24,
+      "label": "acuerda recepción de alimentos aptos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 24,
+      "b": 63,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 66,
+      "b": 75,
+      "label": "coordina llegadas con capacidad de atención",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 66,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 31,
+      "label": "contrasta exposición laboral y manejo de materiales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 31,
+      "b": 65,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 67,
+      "b": 35,
+      "label": "acuerda seguimiento del borde hídrico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 67,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 75,
+      "b": 35,
+      "label": "compara alternativas de operación y afectación hídrica",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 35,
+      "b": 75,
+      "label": "responde con capacidad, condiciones y resultados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 72,
+      "b": 73,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 72,
+      "b": 66,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 73,
+      "b": 63,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 65,
+      "b": 19,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 62,
+      "b": 15,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 68,
+      "b": 5,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 74,
+      "b": 16,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 69,
+      "b": 41,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 71,
+      "b": 40,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 70,
+      "b": 12,
+      "label": "acuerda acción directa y registra resultado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Acuerdo propuesto sujeto a mandato, recursos y aceptación de los participantes."
+    },
+    {
+      "a": 46,
+      "b": 70,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 70,
+      "b": 46,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 47,
+      "b": 36,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 36,
+      "b": 47,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 48,
+      "b": 36,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 36,
+      "b": 48,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 49,
+      "b": 36,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 36,
+      "b": 49,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 50,
+      "b": 70,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 70,
+      "b": 50,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 51,
+      "b": 38,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 38,
+      "b": 51,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 52,
+      "b": 37,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 37,
+      "b": 52,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 53,
+      "b": 37,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 37,
+      "b": 53,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 54,
+      "b": 37,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 37,
+      "b": 54,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 55,
+      "b": 37,
+      "label": "aporta señales observables sobre su condición",
+      "status": "propuesta",
+      "source": "",
+      "detail": "El vínculo expresa observación técnica, no una declaración de voluntad de la especie."
+    },
+    {
+      "a": 37,
+      "b": 55,
+      "label": "propone y verifica condiciones de cuidado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Vocería técnica propuesta, sujeta a mandato, método y aceptación."
+    },
+    {
+      "a": 1,
+      "b": 11,
+      "label": "comunica cambios observados en el borde del humedal",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 2,
+      "b": 41,
+      "label": "reporta obstrucciones y encharcamientos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 3,
+      "b": 15,
+      "label": "acuerda condiciones de paso frente al comercio",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 4,
+      "b": 40,
+      "label": "coordina jornadas de cuidado del arbolado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 5,
+      "b": 60,
+      "label": "comunica necesidades de cruces y accesibilidad",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 6,
+      "b": 9,
+      "label": "participa en formación sobre trabajo seguro",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 7,
+      "b": 68,
+      "label": "comunica necesidades de descanso y acompañamiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 8,
+      "b": 12,
+      "label": "participa en registros de observación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 9,
+      "b": 23,
+      "label": "organiza aprendizaje sobre aprovechamiento alimentario",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 10,
+      "b": 57,
+      "label": "presenta prioridades territoriales para seguimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 11,
+      "b": 41,
+      "label": "reporta necesidades de mantenimiento hídrico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 12,
+      "b": 70,
+      "label": "entrega registros de fauna para revisión técnica",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 13,
+      "b": 19,
+      "label": "coordina preparación de pedidos y carga",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 14,
+      "b": 18,
+      "label": "entrega alimentos y recibe necesidades de compra",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 15,
+      "b": 22,
+      "label": "entrega materiales separados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 16,
+      "b": 20,
+      "label": "acuerda ventanas de entrega",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 17,
+      "b": 23,
+      "label": "recibe alimentos aptos para preparación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 18,
+      "b": 16,
+      "label": "comunica demanda de alimentos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 19,
+      "b": 20,
+      "label": "coordina maniobra y descarga",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 21,
+      "b": 14,
+      "label": "realiza traslados de mercancía",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 22,
+      "b": 33,
+      "label": "entrega materiales para clasificación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 23,
+      "b": 13,
+      "label": "coordina recogida de excedentes aptos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 24,
+      "b": 17,
+      "label": "coordina entrega y trazabilidad de alimentos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 25,
+      "b": 59,
+      "label": "solicita coordinación de accesos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 26,
+      "b": 27,
+      "label": "requiere información presupuestal para decisiones colegiadas",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 27,
+      "b": 34,
+      "label": "recibe costos de mantenimiento de equipos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 28,
+      "b": 19,
+      "label": "acuerda condiciones de entrega de carga",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 29,
+      "b": 32,
+      "label": "organiza tareas de limpieza",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 30,
+      "b": 29,
+      "label": "revisa registros de cumplimiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 31,
+      "b": 34,
+      "label": "programa mantenimiento de equipos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 32,
+      "b": 33,
+      "label": "separa y entrega materiales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 33,
+      "b": 34,
+      "label": "reporta fallas de equipos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 34,
+      "b": 29,
+      "label": "comunica disponibilidad de compactadores",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 35,
+      "b": 69,
+      "label": "coordina revisión de aportes y drenajes",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 36,
+      "b": 12,
+      "label": "define registros de observación de fauna",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 37,
+      "b": 71,
+      "label": "coordina vegetación y seguimiento de polinizadores",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 38,
+      "b": 39,
+      "label": "orienta manejo y cuidado de animales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 39,
+      "b": 51,
+      "label": "realiza cuidado y control de acceso al hábitat",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 40,
+      "b": 41,
+      "label": "coordina agua y mantenimiento de vegetación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 42,
+      "b": 60,
+      "label": "articula accesos peatonales al parque",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 43,
+      "b": 22,
+      "label": "coordina horarios de entrega de materiales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 44,
+      "b": 69,
+      "label": "canaliza reportes de fallas de drenaje",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 45,
+      "b": 56,
+      "label": "presenta necesidades ambientales de intervención",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 46,
+      "b": 11,
+      "label": "aporta observaciones de presencia y actividad",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 47,
+      "b": 12,
+      "label": "aporta registros de presencia y comportamiento",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 48,
+      "b": 12,
+      "label": "aporta registros de uso del hábitat",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 49,
+      "b": 11,
+      "label": "aporta registros de uso del borde hídrico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 50,
+      "b": 41,
+      "label": "aporta observaciones para revisión técnica del agua",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 51,
+      "b": 36,
+      "label": "aporta registros de interacción con fauna silvestre",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 52,
+      "b": 40,
+      "label": "aporta señales para mantenimiento del arbolado",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 53,
+      "b": 41,
+      "label": "aporta observaciones de vegetación en el borde hídrico",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 54,
+      "b": 71,
+      "label": "aporta registros de recursos florales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 55,
+      "b": 40,
+      "label": "aporta registros para manejo de vegetación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 56,
+      "b": 59,
+      "label": "coordina gestión territorial de accesos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 57,
+      "b": 27,
+      "label": "solicita información sobre recursos comprometidos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 58,
+      "b": 69,
+      "label": "articula revisión técnica del drenaje y protección hídrica",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 59,
+      "b": 20,
+      "label": "comunica condiciones operativas de circulación",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 60,
+      "b": 5,
+      "label": "recibe requerimientos de accesibilidad cotidiana",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 61,
+      "b": 30,
+      "label": "solicita seguimiento de obligaciones de aseo",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 62,
+      "b": 43,
+      "label": "coordina separación y horarios de residuos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 63,
+      "b": 24,
+      "label": "articula recuperación de excedentes comerciales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 64,
+      "b": 75,
+      "label": "coordina capacidades de recepción mayorista",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 65,
+      "b": 34,
+      "label": "comunica riesgos y necesidades de equipos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 66,
+      "b": 19,
+      "label": "acuerda condiciones de maniobra y descarga",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 67,
+      "b": 60,
+      "label": "presenta prioridades de recorridos peatonales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 68,
+      "b": 42,
+      "label": "coordina necesidades de estancia y cuidados",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 69,
+      "b": 35,
+      "label": "entrega lectura técnica de drenajes",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 70,
+      "b": 41,
+      "label": "comunica condiciones de agua relevantes para fauna",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 71,
+      "b": 40,
+      "label": "orienta mantenimiento de recursos florales",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 72,
+      "b": 20,
+      "label": "coordina transferencias del escenario externo de referencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 73,
+      "b": 74,
+      "label": "coordina entregas del escenario externo de referencia",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 74,
+      "b": 24,
+      "label": "articula entrega de excedentes aptos",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    },
+    {
+      "a": 75,
+      "b": 33,
+      "label": "coordina separación de materiales en patios",
+      "status": "propuesta",
+      "source": "",
+      "detail": "Fundamento funcional del diseño: acción directa entre los roles descritos. Se propone su coordinación; no se presenta como relación ya documentada."
+    }
+  ],
+  "sources": {
+    "S1": [
+      "Corabastos · Informe de gestión 2025",
+      "data/organizacion/informe-corabastos-2025.pdf",
+      "Inspecciones y requerimientos: p. impresa 45; operación: 51; Mesa Territorial: 144; residuos y olores: 145."
+    ],
+    "S2": [
+      "Corabastos · Estatutos publicados",
+      "https://corabastos.com.co/wp-content/uploads/2025/05/ESTATUTOS-CORABASTOS-4-1.pdf",
+      "Arts. 27, 45 y 52: asamblea, junta, presupuesto y gerencia. La copia publicada recoge la reforma de 2012."
+    ],
+    "S3": [
+      "SDA · Gestión de La Vaca 2023",
+      "https://www.ambientebogota.gov.co/documents/10184/7130449/2023%2BRDHVA%2BINFORME%2BDE%2BGESTION.pdf/5bdcc164-4601-4d2e-8aa8-715dda62277d",
+      "Mesa, responsables, seguimiento de compromisos y mantenimiento."
+    ],
+    "S4": [
+      "EAAB / Bogotá · Recuperación de La Vaca sur",
+      "https://bogota.gov.co/mi-ciudad/habitat/como-se-ha-recuperado-el-humedal-la-vaca-sector-sur-en-bogota",
+      "10 junio 2025: recuperación de espejo de agua y especies reportadas; alcance del sector sur."
+    ],
+    "S5": [
+      "Jardín Botánico · Arbolado junto a La Vaca",
+      "https://jbb.gov.co/historias-del-verde-urbano-el-vecino-verde-del-humedal-la-vaca-fortalecio-su-arbolado/",
+      "12 junio 2026: equipo técnico, jardinería, vecinas y especies arbóreas."
+    ],
+    "S6": [
+      "SDA / IDPYBA · Manejo de animales ferales",
+      "https://bogota.gov.co/mi-ciudad/ambiente/humedales-bogota-operativos-2025-para-controlar-las-especies-ferales",
+      "8 enero 2025: trabajo conjunto; gatos en La Vaca."
+    ],
+    "S7": [
+      "Ciudad Limpia · Trabajo con comerciantes de María Paz",
+      "https://ciudadlimpiabogota.com.co/jornada-de-sensibilizacion-de-manejo-de-residuos-en-maria-paz/",
+      "13 enero 2025: operador, UAESP, Alcaldía Local y comerciantes."
+    ],
+    "S8": [
+      "Banco de Alimentos · Informe 2025",
+      "https://www.bancodealimentos.org.co/wp-content/uploads/2026/03/INFORME-GESTION-2025-1.pdf",
+      "Recuperación de alimentos en Corabastos; diferente de la gestión de residuos."
+    ]
+  },
+  "reps": {
+    "46": 70,
+    "47": 36,
+    "48": 36,
+    "49": 36,
+    "50": 70,
+    "51": 38,
+    "52": 37,
+    "53": 37,
+    "54": 37,
+    "55": 37
+  },
+  "extraInstitutions": {
+    "56": "Alcaldía Local de Kennedy · cargo público",
+    "57": "Junta Administradora Local de Kennedy · cargo de elección popular",
+    "58": "Secretaría Distrital de Ambiente · cargo público",
+    "59": "Secretaría Distrital de Movilidad · cargo público",
+    "60": "Secretaría Distrital de Movilidad · cargo público",
+    "61": "UAESP · cargo público",
+    "62": "Vocería comercial propuesta",
+    "63": "Vocería comercial propuesta",
+    "64": "Vocería comercial propuesta",
+    "65": "Vocería laboral propuesta",
+    "66": "Vocería de transportadores propuesta",
+    "67": "Vocería residencial propuesta",
+    "68": "Vocería de cuidados propuesta",
+    "69": "Perfil técnico propuesto para articulación con EAAB",
+    "70": "Perfil técnico propuesto para articulación con SDA",
+    "71": "Perfil técnico propuesto para articulación con SDA y Jardín Botánico",
+    "72": "Operador del destino B · escenario del proyecto",
+    "73": "Operador del destino C · escenario del proyecto",
+    "74": "Vocería de comercio de proximidad propuesta",
+    "75": "Operación logística · delegación propuesta"
+  }
+}

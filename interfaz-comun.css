@@ -1,0 +1,42 @@
+/* Shared application chrome. Page-specific diagrams and maps retain their controls. */
+body.unified-ui{font-family:Inter,'Segoe UI',Arial,sans-serif!important;background:#080f15!important;color:#dce7e8!important;margin:0!important;color-scheme:dark}
+body.unified-ui>[data-legacy-header],body.unified-ui>[data-legacy-nav]{display:none!important}
+#kennedy-shell,#kennedy-shell *{box-sizing:border-box}
+#kennedy-shell{position:relative!important;z-index:80;width:100%;margin:0;padding:0;background:#0c161e;color:#dce7e8;border-bottom:1px solid #30434d;font-family:Inter,'Segoe UI',Arial,sans-serif;line-height:1.3;isolation:isolate}
+#kennedy-shell .ks-top{height:66px;padding:0 24px;display:flex;align-items:center;gap:25px;border-bottom:1px solid #243640}
+#kennedy-shell .ks-brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:#e0ebe9;padding:0;background:none;border:0}
+#kennedy-shell .ks-mark{width:34px;height:34px;border:1px solid #73958f;border-radius:9px;display:grid;place-items:center;font-size:21px;font-weight:400;box-shadow:0 0 17px #9bbfb018}
+#kennedy-shell .ks-brand b{display:block;font-size:15px;letter-spacing:3px;font-weight:650}
+#kennedy-shell .ks-brand small{display:block;font-size:8px;letter-spacing:1.5px;color:#91a9b2;margin-top:4px}
+#kennedy-shell .ks-location{display:flex;align-items:center;gap:9px;font-size:12px;color:#a8bec8;margin-left:auto;white-space:nowrap}
+#kennedy-shell .ks-dot{width:5px;height:5px;border-radius:50%;background:#a6c9ba;box-shadow:0 0 10px #a6c9ba80}
+#kennedy-shell .ks-actions{display:flex;gap:8px}
+#kennedy-shell .ks-actions:empty{display:none}
+#kennedy-shell .ks-actions button,#kennedy-shell .ks-step{background:#14252e;border:1px solid #354d58;color:#c9dddf;border-radius:6px;padding:8px 11px;font:12px Inter,'Segoe UI',sans-serif;cursor:pointer;letter-spacing:0;text-transform:none;height:auto;box-shadow:none}
+#kennedy-shell .ks-navrow{height:54px;display:flex;align-items:center;gap:8px;padding:0 16px}
+#kennedy-shell nav.ks-nav{position:static!important;display:flex!important;align-items:center;gap:4px;flex:1;min-width:0;overflow-x:auto;white-space:nowrap;margin:0!important;padding:0!important;height:54px;max-width:none;border:0!important;background:transparent!important;scrollbar-width:none;box-shadow:none!important}
+#kennedy-shell .ks-nav::-webkit-scrollbar{display:none}
+#kennedy-shell nav.ks-nav a{display:block;flex-shrink:0;padding:10px 12px!important;font-size:12px!important;font-weight:500!important;line-height:18px;letter-spacing:0!important;text-transform:none!important;text-decoration:none!important;border:1px solid transparent!important;border-radius:7px!important;color:#9eb4be!important;background:transparent!important;white-space:nowrap;box-shadow:none!important}
+#kennedy-shell nav.ks-nav a:hover{background:#172932!important;color:#e3eeed!important}
+#kennedy-shell nav.ks-nav a[aria-current=page]{background:#213b3e!important;color:#d8ede5!important;border-color:#4b716a!important}
+#kennedy-shell .ks-step{font-size:23px;padding:0;width:28px;height:30px;flex-shrink:0;color:#9cb5bd}
+#kennedy-shell a:focus-visible,#kennedy-shell button:focus-visible{outline:2px solid #b8d5ca!important;outline-offset:2px}
+.ks-subnav{display:flex;flex-wrap:wrap;gap:8px;background:#101c24;padding:12px 24px;border-bottom:1px solid #293e48;font:12px Inter,'Segoe UI',sans-serif}.ks-subnav a{padding:7px 10px;color:#aec1c9;text-decoration:none;border:1px solid #304651;border-radius:6px}
+body.shell-map-page>main{height:calc(100dvh - 121px)!important}
+body.unified-ui:not(.shell-map-page) input,body.unified-ui select{font-family:inherit;color:#d6e3e5;background-color:#152630;border-color:#3c5662;border-radius:6px}
+body.unified-ui:not(.shell-map-page) main button:not(.label3d):not(.node-row):not(.photo-node),body.unified-ui .tools button{font-family:inherit;border-radius:6px}
+body.shell-embed #kennedy-shell,body.embed #kennedy-shell,body.embed .ks-subnav{display:none!important}
+@media(max-width:700px){#kennedy-shell .ks-top{padding:0 15px;height:66px;gap:10px}#kennedy-shell .ks-location{font-size:10px;max-width:36%;white-space:normal}#kennedy-shell .ks-brand small{font-size:7px}#kennedy-shell .ks-navrow{padding:0 8px;gap:5px}#kennedy-shell nav.ks-nav a{font-size:11px!important;padding:9px 10px!important}#kennedy-shell .ks-actions button{font-size:10px;padding:7px}#kennedy-shell .ks-brand b{font-size:13px}}
+@media print{#kennedy-shell,.ks-subnav{display:none!important}}
+/* Four groups, one shared reading order. */
+#kennedy-shell .ks-groups{position:static!important;display:flex!important;gap:6px;overflow-x:auto;margin:0!important;padding:7px 20px!important;background:#0d1921!important;border:0!important;white-space:nowrap;scrollbar-width:thin}
+#kennedy-shell .ks-groups button{flex:1;min-width:max-content;border:1px solid #30454e;border-radius:6px;background:#101e26;color:#9db0b8;padding:9px 14px;cursor:pointer;font:12px Inter,'Segoe UI',sans-serif;letter-spacing:0;text-transform:none}
+#kennedy-shell .ks-groups button span{color:#809c97;margin-right:7px;font-size:10px}
+#kennedy-shell .ks-groups button[aria-expanded=true]{background:#233638;color:#e2efea;border-color:#70958b;box-shadow:inset 0 -2px #b0cdc0}
+#kennedy-shell .ks-groups button.is-current span{color:#c4dfcf}
+#kennedy-shell .ks-route{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 24px;border-top:1px solid #233640;font:11px 'Segoe UI',sans-serif;color:#8198a1}
+#kennedy-shell .ks-route a{color:#b9ccc9;text-decoration:none}
+body.shell-map-page>main{height:calc(100dvh - var(--ks-height,210px))!important}
+.topic-main{max-width:1440px;margin:0 auto;padding:24px!important;min-height:calc(100dvh - var(--ks-height,210px))}
+.topic-main>section{padding:24px 0}.topic-main h1{font-size:clamp(28px,4vw,48px);line-height:1.15}.topic-main p{line-height:1.7}.topic-main .sim-frame{width:100%;height:80vh;min-height:600px;border:1px solid #3b5056;border-radius:10px;background:#0b171e}.topic-main .sim-intro{padding:8px 0 16px}.topic-main .sim-intro h1{font-size:28px}.topic-main .sim-intro p{margin:8px 0}.topic-main .pc-links{flex-wrap:wrap}
+@media(max-width:700px){#kennedy-shell .ks-groups{padding:6px 8px!important}#kennedy-shell .ks-groups button{font-size:11px;padding:8px 10px}#kennedy-shell .ks-route{padding:9px 12px;font-size:10px}.topic-main{padding:16px!important}.topic-main .sim-frame{min-height:480px}}

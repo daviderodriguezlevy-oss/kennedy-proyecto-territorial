@@ -1,0 +1,121 @@
+{
+  "collected": "2026-10-15",
+  "polygon": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -74.1644431167385,
+          4.6162329942466
+        ],
+        [
+          -74.1833500778658,
+          4.65190118319509
+        ],
+        [
+          -74.1423562759027,
+          4.67377766737728
+        ],
+        [
+          -74.1234507559979,
+          4.63810837712567
+        ],
+        [
+          -74.1644431167385,
+          4.6162329942466
+        ]
+      ]
+    ]
+  },
+  "bbox3857": [
+    -8258052.756007172,
+    514433.5629366274,
+    -8251384.793997975,
+    520861.4783134934
+  ],
+  "width": 3000,
+  "height": 2892,
+  "outlinePixels": [
+    [
+      946.9369871499283,
+      2892.0
+    ],
+    [
+      0.0,
+      1099.7341019367416
+    ],
+    [
+      2053.1351950952544,
+      0.4330639843402328
+    ],
+    [
+      3000.0,
+      1792.8099017188758
+    ],
+    [
+      946.9369871499283,
+      2892.0
+    ]
+  ],
+  "frames": [
+    {
+      "year": 1998,
+      "image": "data/history/1998.webp",
+      "source": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho1998/MapServer",
+      "description": "Ortoimagen digital que comprende un mosaico ráster con cubrimiento parcial del Distrito Capital de Bogotá. El producto fue generado a partir de fotografías aéreas pancromáticas capturadas en el año 1998 utilizando una cámara métrica analógica. Cuenta con una resolución espacial (GSD) de 16cm; resolución radiométrica de 16 bits y resolución espectral de 1 banda (pancromática).",
+      "credit": "Secretaría Distrital de Planeación - SDP",
+      "coverage": 1.0,
+      "request": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho1998/MapServer/export?bbox=-8258052.756007172%2C514433.5629366274%2C-8251384.793997975%2C520861.4783134934&bboxSR=3857&imageSR=3857&size=3000%2C2892&format=png32&transparent=true&f=json",
+      "extent": {
+        "xmin": -8258052.756007171,
+        "ymin": 514433.56293662725,
+        "xmax": -8251384.793997974,
+        "ymax": 520861.47831349325,
+        "spatialReference": {
+          "wkid": 102100,
+          "latestWkid": 3857
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "image": "data/history/2004.webp",
+      "source": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho2004/MapServer",
+      "description": "Ortoimagen digital que comprende un mosaico ráster con cubrimiento parcial del Distrito Capital de Bogotá. El producto fue generado a partir de fotografías aéreas multiespectrales capturadas en el año 2004 utilizando una cámara métrica análoga. Cuenta con una resolución espacial (GSD) de 1m; resolución radiométrica de 16 bits y resolución espectral de 3 bandas (rojo, verde y azul).",
+      "credit": "Unidad Administrativa Especial de Catastro Distrital - UAECD",
+      "coverage": 0.97747,
+      "request": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho2004/MapServer/export?bbox=-8258052.756007172%2C514433.5629366274%2C-8251384.793997975%2C520861.4783134934&bboxSR=3857&imageSR=3857&size=3000%2C2892&format=png32&transparent=true&f=json",
+      "extent": null
+    },
+    {
+      "year": 2010,
+      "image": "data/history/2010.webp",
+      "source": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho2010/MapServer",
+      "description": "Imagen satelital WorldView-2 que comprende un mosaico ráster del Distrito Capital de Bogotá. El producto fue generado a partir de imágenes satelitales capturadas en el año 2010. Cuenta con una resolución espacial (GSD) de 50cm; resolución radiométrica de 16 bits y resolución espectral de 3 bandas (rojo, verde y azul).",
+      "credit": "Unidad Administrativa Especial de Catastro Distrital - UAECD",
+      "coverage": 0.9779,
+      "request": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho2010/MapServer/export?bbox=-8258052.756007172%2C514433.5629366274%2C-8251384.793997975%2C520861.4783134934&bboxSR=3857&imageSR=3857&size=3000%2C2892&format=png32&transparent=true&f=json",
+      "extent": null
+    },
+    {
+      "year": 2017,
+      "image": "data/history/2017.webp",
+      "source": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho2017/MapServer",
+      "description": "Servicio web que contiene un mosaico raster ortorectificado del Distrito Capital de Bogotá, Los Cerros Orientales y parte de la zona rural de Bogotá de las localidades de Ciudad Bolívar y Usme, correspondientes a 75.000 hectáreas. Cuenta con 4 bandas (rojo, verde, azul).",
+      "credit": "Fuerza Aérea Colombiana - FAC, Unidad Administrativa Especial de Catastro Distrital - UAECD.",
+      "coverage": 1.0,
+      "request": "https://serviciosgis.catastrobogota.gov.co/arcgis/rest/services/imagenes/Ortho2017/MapServer/export?bbox=-8258052.756007172%2C514433.5629366274%2C-8251384.793997975%2C520861.4783134934&bboxSR=3857&imageSR=3857&size=3000%2C2892&format=png32&transparent=true&f=json",
+      "extent": null
+    },
+    {
+      "year": 2021,
+      "image": "data/history/2021.webp",
+      "source": "https://sig.simur.gov.co/arcgis/rest/services/Ortofoto/Ortofoto_2021_Bogota/MapServer",
+      "description": "",
+      "credit": "",
+      "coverage": 0.99942,
+      "request": "https://sig.simur.gov.co/arcgis/rest/services/Ortofoto/Ortofoto_2021_Bogota/MapServer/export?bbox=-8258052.756007172%2C514433.5629366274%2C-8251384.793997975%2C520861.4783134934&bboxSR=3857&imageSR=3857&size=3000%2C2892&format=png32&transparent=true&f=json",
+      "extent": null
+    }
+  ]
+}

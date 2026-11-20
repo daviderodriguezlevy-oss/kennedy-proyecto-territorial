@@ -1,0 +1,157 @@
+{
+  "currentVersion": 11.3,
+  "cimVersion": "3.3.0",
+  "serviceDescription": "",
+  "mapName": "Map",
+  "description": "",
+  "copyrightText": "",
+  "supportsDynamicLayers": true,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Ortofoto_2021_Bogota",
+      "parentLayerId": -1,
+      "defaultVisibility": true,
+      "subLayerIds": null,
+      "minScale": 0,
+      "maxScale": 0,
+      "type": "Raster Layer",
+      "supportsDynamicLegends": true
+    }
+  ],
+  "tables": [],
+  "spatialReference": {
+    "wkid": 102771,
+    "latestWkid": 6247,
+    "xyTolerance": 0.001,
+    "zTolerance": 0.001,
+    "mTolerance": 0.001,
+    "falseX": -464700,
+    "falseY": -444000,
+    "xyUnits": 8085457140.701068,
+    "falseZ": -100000,
+    "zUnits": 10000,
+    "falseM": -100000,
+    "mUnits": 10000
+  },
+  "singleFusedMapCache": false,
+  "initialExtent": {
+    "xmin": 59198.96111718676,
+    "ymin": 82557.57793638598,
+    "xmax": 129736.02356803746,
+    "ymax": 128996.72952439815,
+    "spatialReference": {
+      "wkid": 102771,
+      "latestWkid": 6247,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -464700,
+      "falseY": -444000,
+      "xyUnits": 8085457140.701068,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "fullExtent": {
+    "xmin": 80014.62354329311,
+    "ymin": 84668.4484631138,
+    "xmax": 108920.3611419311,
+    "ymax": 126885.85899767032,
+    "spatialReference": {
+      "wkid": 102771,
+      "latestWkid": 6247,
+      "xyTolerance": 0.001,
+      "zTolerance": 0.001,
+      "mTolerance": 0.001,
+      "falseX": -464700,
+      "falseY": -444000,
+      "xyUnits": 8085457140.701068,
+      "falseZ": -100000,
+      "zUnits": 10000,
+      "falseM": -100000,
+      "mUnits": 10000
+    }
+  },
+  "datesInUnknownTimezone": false,
+  "minScale": 0,
+  "maxScale": 0,
+  "units": "esriMeters",
+  "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+  "documentInfo": {
+    "Title": "Raster",
+    "Author": "",
+    "Comments": "",
+    "Subject": "",
+    "Category": "",
+    "Version": "3.3.0",
+    "AntialiasingMode": "Fast",
+    "TextAntialiasingMode": "Force",
+    "Keywords": "Ortofoto_2021_Bogota,MapServer"
+  },
+  "supportsQueryDomains": true,
+  "capabilities": "Query,Map,Data",
+  "supportedQueryFormats": "JSON, geoJSON, PBF",
+  "exportTilesAllowed": false,
+  "referenceScale": 0.0,
+  "datumTransformations": [
+    {
+      "geoTransforms": [
+        {
+          "wkid": 1096,
+          "latestWkid": 1096,
+          "transformForward": false,
+          "name": "La_Canoa_To_WGS_1984_2"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 1096,
+          "latestWkid": 1096,
+          "transformForward": true,
+          "name": "La_Canoa_To_WGS_1984_2"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": false,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "wkid": 15738,
+          "latestWkid": 15738,
+          "transformForward": true,
+          "name": "MAGNA_To_WGS_1984_1"
+        }
+      ]
+    }
+  ],
+  "supportsDatumTransformation": true,
+  "archivingInfo": {
+    "supportsHistoricMoment": false
+  },
+  "supportsClipping": true,
+  "supportsSpatialFilter": true,
+  "supportsTimeRelation": true,
+  "supportsQueryDataElements": true,
+  "mapUnits": {
+    "uwkid": 9001
+  },
+  "maxRecordCount": 2000,
+  "maxImageHeight": 4096,
+  "maxImageWidth": 4096,
+  "supportedExtensions": "",
+  "serviceItemId": "9521aae79b784b109cc677d8138d8605"
+}

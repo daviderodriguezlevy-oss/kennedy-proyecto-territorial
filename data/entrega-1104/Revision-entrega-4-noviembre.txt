@@ -1,0 +1,30 @@
+REVISIÓN DE ENTREGA — 4 NOVIEMBRE 2026
+
+1. CONTINUIDAD / CORRECCIONES
+Evidencia: actores.html, red de personas actual–propuesta; programa vinculado por actorIds.
+Alcance: restauración solicitada y vínculos con programa. La conformidad con todas las correcciones de la guía anterior requiere cotejar las observaciones específicas del profesor; no equivale a aprobación docente.
+
+2. MATRIZ
+Evidencia: actores.html#program-matrix. 16 espacios con P/D/E, actividad, lugar, actores, tiempo, adyacencia, acceso y variables. Centros B/C: propuestas metropolitanas esquemáticas, sin emplazamiento verificado.
+
+3. DIAGRAMA ESPACIAL
+Evidencia: laboratorio.html#espacios y programa-mapa.html. Diferencia vecindad/paso, perfiles, recorridos intermedios y profundidad desde origen. Temporalidad general en fichas; no simulación de horarios de todos los accesos.
+
+4. AVANCE DEL SIMULADOR
+Evidencia: laboratorio.html#reglas y #experimento. Vehículos/aves activos; centros y recursos como entorno con estado. Reglas, condiciones, efectos, controles y seguimiento de cámara. Parámetros sintéticos. No reproduce todos los actores de la red ni toda la operación territorial.
+
+5. MODELO / ESCENARIOS
+Evidencia: ciclos causales implementados, 30 ejecuciones en #resultados, series y balances descargables. 27 comprobaciones del motor aprobadas.
+Se consultaron partes de la arquitectura y documentos del ZIP; la implementación adopta identidad, estados, recursos finitos y reloj independiente. Aves con búsqueda local y retirada; sin alineación/cohesión de bandada implementada.
+NetLogo: referencias seleccionadas Traffic Basic y Flocking. David registra sus ensayos/capturas y revisión de código. No se certifica esta revisión como terminada.
+Why Model?: dos diapositivas en #por-que, con atribución.
+Audiovisuales: enlaces y criterios de transferencia presentes; revisión completa por el estudiante por realizar/confirmar. Repositorio y licencia de God’s Eye revisados; código no reutilizado.
+
+6. LECTURAS — LUNES 9
+Orden en #referentes: Rosales; Machado; Maldonado y Gómez. Identificadas; no se afirma lectura completa.
+
+7. LISTA FINAL DEL PROFESOR
+Evidencias anteriores disponibles. Para cerrar: ensayos y lectura de código NetLogo; revisión de videos; cotejo final de correcciones previas con el profesor. No se considera toda la guía cumplida únicamente por tener una página operativa.
+
+ORDEN PARA MOSTRAR
+Problema y red → programa → accesos → agentes/reglas → S0/S1/S2 → resultados guardados → por qué modelar → referentes y ensayos propios.

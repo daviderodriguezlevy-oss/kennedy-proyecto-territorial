@@ -1,0 +1,356 @@
+# Kennedy: la ciudad que se declara y la ciudad que se produce
+### Guion revisado · Nicolás y David · Base completa para ensayo; duración por cronometrar
+
+**Inicio · ¿Qué ciudad estamos construyendo?**
+
+[Abrir “Macromodelos”. Pausa antes de comenzar.]
+
+**Una ciudad puede cambiar su discurso sin cambiar la lógica que organiza su territorio.**
+
+Puede proponerse acercar servicios, cuidar a sus habitantes y reverdecer. Pero ¿qué sucede cuando esas prioridades llegan a un lugar organizado alrededor de actividades que tienen razones económicas para seguir concentrándose?
+
+Nuestra investigación comienza con esa pregunta en Kennedy.
+
+Vamos a recorrer ideas, redes, mapas y escenarios. No son temas independientes: son distintas escalas de un mismo problema.
+
+Primero necesitamos entender qué ciudad plantea la planeación. Después, qué relaciones encontramos en el territorio. Y finalmente, qué implicaría incorporar otras formas de vida a las decisiones que lo organizan.
+
+**Macromodelos · De las ideas a la planeación de Kennedy**
+
+[Mostrar la jerarquía: desarrollo urbano sostenible → modelo multiescalar → proximidad, cuidado y reverdecimiento.]
+
+Un macromodelo permite reconocer qué se considera importante al organizar una ciudad: qué se conecta, qué se protege y qué actividades se promueven.
+
+En nuestra lectura, el marco mayor es el **desarrollo urbano sostenible**. Busca relacionar bienestar social, actividad económica, condiciones ambientales y organización espacial.
+
+Bogotá articula estas dimensiones mediante su **Modelo de Ocupación Territorial multiescalar**. Dentro de esa organización reconocemos los enfoques de proximidad, cuidado y reverdecimiento.
+
+No son modelos equivalentes ni opciones excluyentes. Pertenecen a distintos niveles y deben relacionarse.
+
+[Seleccionar “Ciudad de proximidad”. Seguir vivienda → servicios, actividades, movilidad y espacio público.]
+
+La proximidad empieza con una situación cotidiana: salir de casa para trabajar, comprar o acceder a un servicio.
+
+En la red, vivienda representa un origen. Servicios y empleo representan destinos. Movilidad y espacio público hacen posible conectarlos.
+
+La referencia que mostramos para Bogotá es la **ciudad de treinta minutos**. Es un objetivo de planeación, no un tiempo que hayamos comprobado para todos los habitantes de Kennedy.
+
+Un servicio cercano puede seguir siendo difícil de utilizar si no existe un recorrido accesible, si sus horarios no sirven o si no tiene capacidad.
+
+Por eso, proximidad significa acceso efectivo. En Patio Bonito encontramos esta orientación en la propuesta de un circuito de cuidado, espacio público y conexiones locales.
+
+[Seleccionar “Ciudad cuidadora”.]
+
+El cuidado introduce otra dimensión de esa misma vida cotidiana.
+
+Las personas cuidadoras y quienes necesitan apoyo se relacionan con servicios y recorridos. La ubicación de esos servicios puede reducir desplazamientos o hacer más exigente la jornada.
+
+La red muestra que cuidar también depende de cómo se organiza el territorio. Los nodos propuestos en Patio Bonito expresan esa intención; su funcionamiento necesita evaluarse.
+
+[Seleccionar “Reverdecimiento y renaturalización”. Seguir agua y vegetación → estructura ambiental → ordenamiento.]
+
+El reverdecimiento plantea que agua, suelo y vegetación orienten las decisiones urbanas.
+
+Esta relación es fundamental: **la estructura ambiental aparece como una condición para ordenar el territorio**.
+
+No basta con reconocer un humedal en el mapa. Importa qué funciones conserva y cómo se relaciona con las actividades que lo rodean.
+
+[Mostrar brevemente el modelo multiescalar.]
+
+Todo esto ocurre en varias escalas. Una decisión local puede depender del funcionamiento de Bogotá y de relaciones regionales.
+
+Tenemos, entonces, una ciudad que busca articular proximidad, cuidado, ambiente y economía.
+
+Ahora pasemos de esa intención a las relaciones que hemos representado en Kennedy: **¿qué actividades ocupan el centro de nuestra red?**
+
+**Red urbana · Seguir las relaciones de Corabastos**
+
+[Abrir “Red urbana”. Seleccionar Corabastos.]
+
+Corabastos conecta abastecimiento, comercio, trabajo, circulación y residuos.
+
+Los tamaños y las alturas permiten leer la jerarquía de conexiones de nuestro modelo. No representan automáticamente volumen de tráfico ni rentabilidad.
+
+[Mostrar Corabastos → bodegas mayoristas → acumulación de residuos.]
+
+Sigamos una primera rama. El abastecimiento necesita almacenamiento y comercialización. Esas operaciones también generan necesidades de manejo de residuos.
+
+[Mostrar Corabastos → comercio callejero → acumulación de residuos.]
+
+Otra rama incorpora el comercio callejero. Distintas actividades convergen en una misma cuestión: qué ocurre con los materiales que quedan después del intercambio.
+
+[Mostrar camiones de carga → Corabastos; Corabastos → cargue y descargue; cargue y descargue → congestión.]
+
+En paralelo, el abastecimiento necesita camiones, accesos y operaciones de carga. Esas relaciones demandan espacio y tiempo.
+
+La congestión y los residuos no forman una cadena causal automática. Son presiones diferentes relacionadas con una concentración de actividades.
+
+Lo que adquiere protagonismo es una centralidad económica que reúne múltiples funciones.
+
+Aquí empieza nuestra tensión con la planeación: **la proximidad propone facilitar el acceso, pero la concentración también puede producir exigencias sobre los lugares que permiten ese acceso**.
+
+Para entenderlas necesitamos situar la red.
+
+**Conectografía · El polígono no contiene todo el sistema**
+
+[Abrir “Conectografía”. Mostrar el conjunto y los nodos exteriores.]
+
+La conectografía ubica las relaciones en el territorio. Ahora podemos observar distancias, agrupamientos y coincidencias que el diagrama no permitía reconocer.
+
+Las fichas distinguen referencias cartográficas y ubicaciones aproximadas. Las conexiones representan relaciones; no todas son recorridos físicos observados.
+
+Los nodos exteriores son esenciales porque **el límite de nuestro estudio no es el límite del sistema**.
+
+Los alimentos, las personas y las decisiones tienen orígenes y destinos que exceden el recorte. Una actividad puede localizarse en Kennedy y depender de condiciones externas.
+
+Si elimináramos esas relaciones, haríamos parecer local un proceso que opera en varias escalas.
+
+[Descender al indicador de actividades y al modelo combinado.]
+
+Aquí comparamos los nodos con el indicador de actividades urbanas y capacidad del espacio público.
+
+Combinamos densidad de actividades, densidad de población y menor dotación relativa de andenes. Los picos muestran dónde coinciden esas condiciones.
+
+Algunos aparecen próximos a referencias comerciales, como comercio callejero, reciclaje y bodegas. Esto permite relacionar concentración de actividades y soporte urbano, aunque no mide directamente flujo vehicular.
+
+**“Esto nos acerca cada vez más al macromodelo real de la ciudad”.**
+
+Nos acerca porque empezamos a preguntar qué relaciones organizan su funcionamiento y qué exigencias producen sobre el espacio.
+
+Pero esta lectura todavía deja fuera una parte del territorio.
+
+**Red y mapa de especies · Cambiar quién ocupa el centro**
+
+[Abrir “Red de especies”. Mostrar algunas conexiones.]
+
+Nuestra red urbana representa principalmente actividades humanas. La red de especies permite observar otras relaciones del mismo lugar.
+
+Alimentarse, utilizar una planta o encontrar un sustrato adecuado también son formas de depender del territorio.
+
+Cada nodo necesita condiciones y relaciones para desarrollar su vida.
+
+[Abrir “Mapa de especies”. Contrastar con la conectografía.]
+
+Al comparar ambas representaciones aparece una distribución distinta. Varios agrupamientos de referencias de especies se encuentran en sectores poco representados por los nodos urbanos, mientras los agrupamientos comerciales ocupan otras posiciones.
+
+**Lo que parece periférico para una red puede ser central para otra.**
+
+Este contraste no demuestra que donde hay comercio no existan especies. Las redes reúnen registros y criterios diferentes.
+
+Pero sí plantea una pregunta al reverdecimiento: si la estructura ambiental debe orientar el ordenamiento, ¿cómo se relacionan sus funciones con las áreas de mayor intensidad urbana?
+
+Un lugar con pocos nodos urbanos no está vacío. Puede sostener funciones que nuestra primera lectura no estaba mostrando.
+
+Con esta tensión llegamos al problema central.
+
+### Entender el problema: la ciudad que heredamos sigue funcionando
+
+[Mostrar el título del problema. Después, Corabastos en el mapa.]
+
+Después de comparar estas redes, nuestra interpretación es clara: **en el sistema que estamos estudiando persiste una lógica de economía urbana capitalista, basada en ventajas de localización, concentración de actividades y rentabilidad esperada**.
+
+A esa lógica nos referimos cuando hablamos de un macromodelo clásico de economía urbana capitalista. Es nuestra categoría de análisis, no el nombre oficial con el que se creó Corabastos.
+
+Para entenderla, pensemos en una situación cotidiana.
+
+Una persona que abastece una tienda necesita conseguir distintos alimentos. Reunir proveedores en un mismo lugar puede facilitar la compra, la comparación y la organización del transporte. Para quien vende, estar donde llegan compradores también puede resultar conveniente.
+
+**Concentrarse puede ahorrar ciertas búsquedas, recorridos y operaciones. Esa conveniencia ayuda a explicar por qué una centralidad atrae más actividad.**
+
+Ahora volvamos a la historia.
+
+Corabastos se inauguró el 20 de julio de 1972 con el propósito de organizar el mercado de alimentos y centralizar y racionalizar su distribución.
+
+La concentración fue parte de esa propuesta de organización. Reunir operaciones ofrecía una manera de coordinar el abastecimiento.
+
+Pero centralizar no significa que todo el alimento de Bogotá pase por un único lugar, ni garantiza que todos los costos disminuyan. Significa reunir una parte importante de las relaciones en una central.
+
+[Mostrar Corabastos y sus conexiones comerciales.]
+
+Con esa concentración aparecen ventajas para localizar otras actividades cerca.
+
+Si llegan mercancías, puede resultar conveniente disponer de almacenamiento. Si llegan compradores y trabajadores, aparecen oportunidades comerciales y necesidades de servicios.
+
+Aquí reconocemos el primer circuito de nuestro diagrama:
+
+**Actividad, expectativa de rentabilidad, inversión, capacidad y nuevamente actividad.**
+
+La concentración puede reforzarse porque los actores encuentran razones para permanecer cerca de otros actores.
+
+No necesitamos imaginar una decisión única que controle toda la ciudad. Muchas decisiones de localización, tomadas por conveniencia, pueden contribuir a producir una concentración territorial.
+
+[Mostrar las conexiones de carga, circulación y residuos.]
+
+Pero cambiemos de posición.
+
+Hasta ahora mirábamos desde quien necesita comprar, vender o distribuir. Pensemos ahora en quien necesita cruzar esa calle, llegar a su vivienda o recorrer el sector mientras ocurren esas operaciones.
+
+**El mismo lugar puede representar conveniencia para una actividad y dificultad para otra.**
+
+Una operación que ahorra tiempo dentro de su propia organización puede coincidir con esperas o demandas de espacio para otros usuarios. El balance depende de quién lo experimenta y de qué costos estamos contando.
+
+Esta es la cuestión que queremos investigar en Kennedy: **qué beneficios concentra el sistema y cómo se distribuyen sus exigencias sobre el territorio**.
+
+[Recorrer los mapas de 1998, 2004, 2010, 2017 y 2021.]
+
+Mientras esas relaciones se desarrollan, el suelo también cambia.
+
+En nuestra clasificación, la proporción de infraestructura urbana aumenta aproximadamente del 49,5 al 74,1 por ciento entre 1998 y 2021.
+
+Los mapas muestran esa transformación. No permiten atribuir toda la expansión a Corabastos ni afirmar que toda construcción reemplazó un humedal. Para eso necesitamos identificar transiciones y decisiones concretas.
+
+Lo que sí nos obligan a reconocer es que **las nuevas prioridades de planeación llegan a un territorio con una trayectoria material**: construcciones, vías, instalaciones y usos que ya existen.
+
+[Volver brevemente a proximidad y reverdecimiento.]
+
+Entonces aparece nuestra crítica al POT.
+
+La proximidad propone facilitar la vida cotidiana. El reverdecimiento plantea que la estructura ambiental oriente el ordenamiento.
+
+Pero esos objetivos se encuentran con una centralidad que tiene razones económicas para mantenerse concentrada.
+
+**Una declaración de proximidad no elimina las ventajas de concentrarse. Una declaración de reverdecimiento no modifica por sí sola las condiciones que hacen conveniente ocupar y transformar el suelo.**
+
+Por eso, el punto de nuestra crítica no es afirmar que el POT nunca menciona la historia. Es exigir que sus objetivos se confronten con los mecanismos históricos y económicos que siguen funcionando.
+
+Si esa confrontación no se traduce en decisiones efectivas, aparece una incongruencia entre la ciudad que se declara y las relaciones que continúan organizándola.
+
+[Mostrar los bucles de saturación, protección y control.]
+
+El diagrama muestra esa tensión.
+
+La concentración puede reforzarse, pero también aumentar costos de operación. La transformación del suelo puede generar presiones ambientales, mientras las respuestas de protección y control requieren tiempo, recursos y ejecución.
+
+Cambiar una prioridad no desactiva automáticamente esos circuitos.
+
+[Pausa.]
+
+**El problema es que podemos anunciar una nueva ciudad mientras seguimos reproduciendo condiciones de la anterior.**
+
+Por eso sostenemos que el discurso verde y de proximidad puede ocultar la persistencia de una lógica económica de concentración: puede hacer que miremos los objetivos sin examinar suficientemente lo que sostiene el funcionamiento.
+
+No estamos diciendo que conservar el ambiente y abastecer la ciudad sean incompatibles. Estamos preguntando **qué decisiones hacen posible mantener ambas funciones y quién asume sus tensiones**.
+
+Y esta pregunta nos lleva directamente a nuestro enfoque.
+
+Si la organización del territorio depende de las necesidades que cuentan al decidir, tenemos que ampliar la mirada: **¿qué ocurre con las formas de vida cuyas condiciones todavía no hemos incorporado a ese balance?**
+
+**Del balance territorial a la coexistencia**
+
+[Mantener “Problemas e indicadores”. Mostrar niveles y flujos, y después los relieves.]
+
+Antes de responder, precisemos ese balance.
+
+En la vista de niveles y flujos, los rectángulos representan cantidades acumuladas. Las entradas las aumentan; las salidas las reducen.
+
+La capacidad logística cambia con incorporación y retiro. La superficie construida, con ocupación y liberación de suelo. El hábitat funcional, con recuperación y pérdida.
+
+Las ecuaciones expresan esas relaciones; todavía no son predicciones calibradas.
+
+Los indicadores permiten localizar parte de la transformación. En el relieve anual, mayor altura significa mayor concentración de superficie urbana, no edificios más altos.
+
+El complemento hídrico señala coincidencias entre crecimiento edificatorio reciente y un entorno de referencia de protección. Indica dónde profundizar; no demuestra automáticamente daño ambiental.
+
+[Abrir el apartado “Urbanismo más que humano”.]
+
+Ahora sí: si reconocemos distintas funciones y distintas condiciones de vida, necesitamos un marco que las incorpore a las decisiones.
+
+Nuestro enfoque se apoya en el **urbanismo más que humano**, o *more-than-human urbanism*.
+
+Lo adoptamos como orientación del proyecto. Amplía la pregunta por la ciudad hacia las necesidades de otras especies, además de las humanas.
+
+Aquí establecemos una distinción de trabajo:
+
+**“Coexistencia no quiere decir cohabitabilidad”.**
+
+No necesitamos que todas las especies ocupen el mismo espacio ni que estén en contacto constante.
+
+Necesitamos que puedan desarrollar comportamientos y funciones sostenibles en el tiempo. Eso puede requerir refugios, recorridos y periodos diferenciados.
+
+Sus territorios pueden superponerse. La cuestión es reconocer dónde el encuentro resulta compatible y dónde mantener distancia también permite vivir.
+
+**Organización social · Quién convierte una prioridad en una decisión**
+
+[Abrir Organización social. Mostrar la red y después la matriz de poder.]
+
+Las prioridades de ciudad se materializan cuando alguien asigna espacio, compromete recursos y organiza trabajo. Aquí conectamos el problema con nuestra propuesta: investigar quién consigue convertir sus necesidades en decisiones y quién asume sus consecuencias.
+
+Estudiamos cinco capacidades: introducir un asunto, autorizar o condicionar, aportar recursos, ejecutar y conseguir una revisión. Para cada capacidad necesitamos una evidencia concreta: una decisión, un presupuesto, una tarea realizada o un cambio registrado.
+
+En la red distinguimos personas, instituciones, áreas institucionales, órganos propuestos, especies y condiciones materiales. Esta clasificación permite comparar elementos del mismo tipo y seguir sus relaciones. Un cargo se vincula a una institución; un delegado necesita mandato; una especie aporta necesidades ecológicas que requieren interpretación y seguimiento.
+
+La mesa territorial concentra la coordinación que proponemos. El poder efectivo se estudia siguiendo quién puede cambiar el acuerdo y hacerlo ejecutable. La dependencia de recursos externos puede mantener concentrada esa capacidad incluso cuando muchas personas participan.
+
+Para las necesidades más que humanas proponemos interlocución con instituciones establecidas: Jardín Botánico para flora e interacciones, IDPYBA para bienestar animal y Secretaría de Ambiente para el humedal. Su participación requiere un delegado y un alcance acordados. Las observaciones comunitarias acompañan la revisión de la evidencia y sus consecuencias.
+
+La propuesta se prueba en acuerdos sobre carga y residuos dentro del ámbito analítico de 800 metros. Cada acuerdo registra ubicación, horario, responsable, recursos, condiciones ecológicas y mecanismo de revisión. Así podemos comprobar si las prioridades de coexistencia modifican decisiones materiales.
+
+[Mostrar confianza y circuitos.]
+
+La confianza se mide preguntando de cero a diez cuánto confía cada participante en que un actor concreto cumplirá sus compromisos. Repetimos la pregunta antes y después del ciclo y presentamos resultados por actor y grupo. El cumplimiento se observa por separado con compromisos vencidos y comprobados.
+
+El circuito plantea que los resultados pueden fortalecer la confianza y la participación. También estudiamos el desgaste cuando las tareas se concentran, y las correcciones cuando el seguimiento detecta afectaciones. Son mecanismos que evaluaremos mediante registros.
+
+Nuestra propia propuesta enfrenta la tensión inicial: nuevas prioridades llegan a actividades con dependencias existentes. Por eso evaluamos qué cambia, quién sostiene el cambio y quién recibe sus costos. Su valor se comprobará en las decisiones que consiga modificar y en las condiciones que permita sostener.
+
+**Simulación · Cambiar relaciones sin detener el territorio**
+
+[Abrir “Simulación”. Mostrar referencia y activar las intervenciones.]
+
+Nuestro escenario parte de esa idea.
+
+Corabastos continúa abasteciendo. Las personas siguen trabajando y desplazándose. Los vehículos circulan. Persisten las necesidades de recolección y de hábitat.
+
+Modificamos algunas condiciones de esas relaciones.
+
+Con la misma demanda, la coordinación logística cambia un supuesto de capacidad de atención. El reloj permite observar cómo evoluciona la cola.
+
+La recolección modifica la acumulación entre servicios. Los peatones cercanos responden a una regla ilustrativa de interferencia con la espera.
+
+[Seleccionar una referencia de fauna.]
+
+Los circuitos de fauna responden a condiciones hipotéticas de perturbación. Los refugios y la iluminación permiten comparar oportunidades de movimiento.
+
+No mostramos rutas observadas ni recuperación de poblaciones. Mostramos qué consecuencias producen las reglas del escenario.
+
+Por eso mantenemos resultados separados. Atender más operaciones no equivale automáticamente a mejorar el hábitat; una flecha activa tampoco demuestra persistencia de una especie.
+
+**La coexistencia empieza a evaluarse cuando dejamos de confundir la mejora de una función con la mejora de todo el sistema.**
+
+**Videojuego · Entender qué permite continuar**
+
+[Abrir “Videojuego”. Mostrar las tres escenas y sus conexiones.]
+
+El videojuego lleva esta pregunta a una experiencia cotidiana, a pie y en tercera persona.
+
+En Corabastos participamos en un despacho. En Patio Bonito, el mismo lote debe llegar antes de venderse. En El Burro, diferenciamos el recorrido humano y el refugio.
+
+El personaje encuentra dependencias: algunas acciones necesitan otras anteriores, mientras distintas actividades continúan simultáneamente.
+
+Desde aquí planteamos el **game over**.
+
+Queremos que represente el momento en que una configuración deja de sostener alguna condición necesaria: abastecimiento, accesibilidad humana o hábitat funcional.
+
+El prototipo todavía no calcula esa derrota ni determina sostenibilidad a largo plazo. Esa es la dirección de desarrollo: entender qué decisiones permiten continuar y cuáles van cerrando esa posibilidad.
+
+Así, el macromodelo se convierte en criterios concretos: qué protegemos, qué permitimos y qué consideramos un fracaso.
+
+**Cierre · La ciudad que puede seguir viviendo**
+
+[Volver a una vista general de Kennedy.]
+
+Comenzamos preguntando qué sucede cuando nuevas ideas de ciudad llegan a un territorio que ya tiene razones para funcionar de determinada manera.
+
+Las redes mostraron relaciones. Los mapas permitieron situarlas. La historia permitió reconocer una trayectoria. Los diagramas organizaron explicaciones que debemos contrastar.
+
+Nuestra conclusión crítica es que **el nombre del nuevo modelo puede cambiar más rápido que las condiciones que organizan la ciudad**.
+
+Por eso, la investigación no termina en declarar que Kennedy debería ser más verde o más próxima. Exige comprender qué mantiene sus funciones, cómo distribuye sus efectos y qué vidas incorpora a sus decisiones.
+
+La coexistencia amplía esa exigencia.
+
+**La ciudad que importa no es solamente la que podemos nombrar. Es la que nuestras decisiones permiten seguir viviendo.**
+
+NOTAS DE PREPARACIÓN · 25/10/2026
+La cifra 49,5–74,1 % se conserva como resultado de clasificación del proyecto y debe exponerse junto a su método, resolución y limitaciones. La interpretación de economía urbana capitalista se contrasta con mecanismos de localización, inversión y distribución de costos. Las instituciones añadidas están identificadas; su designación en la propuesta está pendiente. La nueva sección amplía el guion: cronometrar y ajustar al tiempo asignado.
+Fuentes añadidas: https://jbb.gov.co/myv/ ; https://animalesbog.gov.co/informacion-de-la-entidad/funciones-y-deberes ; https://ambientebogota.gov.co/es/humedal-la-vaca ; OCDE Guidelines on Measuring Trust (2017).

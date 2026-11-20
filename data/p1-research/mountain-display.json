@@ -1,0 +1,56 @@
+{
+  "profile": "height = 0.10 + 0.65 * ICR * (1 - distance / radius)^2; 0 <= distance <= radius",
+  "radius_m": {
+    "1384": 252.53713948121734,
+    "990": 80.707291392517,
+    "985": 162.65181120014677,
+    "1219": 80.707291392517,
+    "988": 190.09386189918968,
+    "1389": 162.65181120014677
+  },
+  "meaning": "Graphical mountains only, no spatial estimates. Radius limited by 400m, separation and polygon boundary. Peak preserves observed ICR. Closed underside at 0.085.",
+  "checks": [
+    {
+      "hour": "0600",
+      "closed": true,
+      "positive_volume": 0.026606082916259766,
+      "peaks": 6
+    },
+    {
+      "hour": "0700",
+      "closed": true,
+      "positive_volume": 0.024100273847579956,
+      "peaks": 6
+    },
+    {
+      "hour": "1100",
+      "closed": true,
+      "positive_volume": 0.028194012120366096,
+      "peaks": 6
+    },
+    {
+      "hour": "1200",
+      "closed": true,
+      "positive_volume": 0.028074661269783974,
+      "peaks": 6
+    },
+    {
+      "hour": "1300",
+      "closed": true,
+      "positive_volume": 0.024064593017101288,
+      "peaks": 6
+    },
+    {
+      "hour": "1700",
+      "closed": true,
+      "positive_volume": 0.0219931211322546,
+      "peaks": 6
+    },
+    {
+      "hour": "1800",
+      "closed": true,
+      "positive_volume": 0.02173987589776516,
+      "peaks": 6
+    }
+  ]
+}
