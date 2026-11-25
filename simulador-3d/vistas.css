@@ -1,0 +1,51 @@
+/* Interfaz oscura y neutra con acentos luminosos (estado actual, etapa 1).
+   Se carga después de style.css y experiment63.css y solo sobrescribe aspecto. */
+:root{
+  --ui-bg:#0b0c0ce8; --ui-bg2:#121414; --ui-line:#262b2b; --ui-line2:#343a3a;
+  --ui-tx:#ecebe5; --ui-mut:#9aa1a0; --ui-dim:#6c7473;
+  --ui-gold:#f5c46b; --ui-ok:#3dff7a; --ui-warn:#ff9f1c; --ui-bad:#ff2b2b;
+}
+body{background:#050606;color:var(--ui-tx);font-family:"Segoe UI",system-ui,Arial,sans-serif}
+header{background:var(--ui-bg);border:1px solid var(--ui-line);color:var(--ui-tx)}
+header small{color:var(--ui-gold)}header p{color:var(--ui-mut)}
+aside{background:var(--ui-bg);border:1px solid var(--ui-line);box-shadow:0 14px 45px #0008;color:var(--ui-tx)}
+.panel-tabs{background:#0b0c0c}
+h3,.tag{color:var(--ui-gold)}
+.help,.ex-legend{color:var(--ui-mut)}
+button{background:var(--ui-bg2);border:1px solid var(--ui-line2);color:var(--ui-tx)}
+button:hover{background:#1c2020;color:#fff}
+button.active,.panel-tabs button.active{background:var(--ui-gold);border-color:var(--ui-gold);color:#1a1205;font-weight:600}
+input,#dynamics input[type=range],#experiment-panel input[type=range]{accent-color:var(--ui-gold)}
+#dynamics output,#experiment-panel output{color:var(--ui-gold)}
+.agent-control{border-bottom-color:var(--ui-line)}
+.control-note{background:#14120b;border-left-color:var(--ui-gold);color:var(--ui-tx)}
+#dynamics select,#experiment-panel input[type=number],#experiment-panel select{background:var(--ui-bg2);color:var(--ui-tx);border:1px solid var(--ui-line2);border-radius:6px}
+#dynamics details,#experiment-panel details{border-top-color:var(--ui-line)}
+#pause-top{background:var(--ui-gold);color:#1a1205;font-weight:600}
+footer{background:#000000e6;border-top:1px solid var(--ui-line);color:var(--ui-mut)}
+.map-label{background:#000000d9;border:1px solid var(--ui-line2);color:var(--ui-tx);box-shadow:none}
+.map-label small{color:var(--ui-mut)}
+dialog{background:#0b0c0c;color:var(--ui-tx);border:1px solid var(--ui-line2)}
+dialog::backdrop{background:#000a}
+a{color:var(--ui-gold)}
+#sim-hud{background:var(--ui-bg);border:1px solid var(--ui-line2);color:var(--ui-tx)}
+#sim-hud.paused:before{color:var(--ui-gold)}
+#species-card{background:#0b0c0cf5;color:var(--ui-tx);border:1px solid var(--ui-line2)}
+#species-card img{background:#121414}
+#ex-dashboard{background:var(--ui-bg);border:1px solid var(--ui-line2);color:var(--ui-tx)}
+.ex-chart span,#ex-results small{color:var(--ui-mut)}
+#ex-status,#ex-detail{background:var(--ui-bg2);color:var(--ui-tx)}
+aside::-webkit-scrollbar{width:8px}aside::-webkit-scrollbar-thumb{background:var(--ui-line2);border-radius:4px}
+
+/* Selector de modo de vista */
+#view-modes{position:fixed;top:26px;left:50%;transform:translateX(-50%);z-index:15;display:flex;gap:4px;align-items:center;
+  padding:5px;background:var(--ui-bg);border:1px solid var(--ui-line);border-radius:999px;backdrop-filter:blur(10px)}
+#view-modes button{border:0;background:transparent;border-radius:999px;padding:8px 18px;font-size:13px;color:var(--ui-mut)}
+#view-modes button:hover{color:#fff;background:#ffffff10}
+#view-modes button.active{background:var(--ui-gold);color:#1a1205;box-shadow:0 0 18px #f5c46b66}
+#view-legend{white-space:nowrap;display:flex;gap:6px;align-items:center;font-size:11.5px;color:var(--ui-mut);padding:0 12px 0 8px;border-left:1px solid var(--ui-line2);margin-left:4px}
+#view-legend[hidden]{display:none}
+#view-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-left:6px}
+.lg-ok{background:var(--ui-ok);box-shadow:0 0 6px var(--ui-ok)}.lg-warn{background:var(--ui-warn)}.lg-bad{background:var(--ui-bad);box-shadow:0 0 6px var(--ui-bad)}.lg-none{background:#6b5428}
+.state-label{border-color:var(--ui-gold)!important;text-align:center}.state-label small{color:var(--ui-mut)}
+@media(max-width:1100px){#view-modes{top:auto;bottom:58px}}
