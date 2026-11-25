@@ -80,6 +80,28 @@ details.sim-sec>summary{font-size:12px;color:var(--ui-mut);padding:6px 0}
 .proposal-mode #sim-hud,.proposal-mode aside,.proposal-mode #plan-view,.proposal-mode #plan-open{display:none!important}
 .proposal-mode #labels-overlay{opacity:.6}
 
+/* Panel de obra */
+#obra-panel{position:fixed;left:50%;transform:translateX(-50%);top:70px;z-index:14;width:min(520px,60vw);background:#0b0c0cf2;border:1px solid var(--ui-gold);border-radius:12px;padding:10px 14px;font-size:12.5px;box-shadow:0 10px 40px #000a}
+#obra-panel[hidden]{display:none}
+#obra-panel header{display:flex;align-items:center;gap:6px;position:static;background:none;border:0;padding:0;pointer-events:auto}
+#obra-panel header b{color:var(--ui-gold);text-transform:uppercase;letter-spacing:1px;font-size:11.5px}
+#obra-panel header .sp{flex:1}
+#obra-panel header button{padding:3px 9px;font-size:12px}
+.obra-vel{display:flex;gap:2px}.obra-vel button.active{background:var(--ui-gold);color:#1a1205}
+.obra-barra{position:relative;height:8px;border-radius:4px;background:#1e2222;margin:8px 0 4px}
+.obra-barra i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:linear-gradient(90deg,#e6e6e6,var(--ui-gold));box-shadow:0 0 10px #f5c46b88}
+.obra-barra .m{position:absolute;top:-3px;width:2px;height:14px;background:#fff}
+#obra-reloj{font-size:13px}#obra-reloj b{color:#fff}
+.obra-nota{color:var(--ui-mut);font-size:12px;margin:4px 0}
+#obra-frentes{list-style:none;padding:0;margin:6px 0;display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;font-size:11.5px}
+#obra-frentes span{display:inline-block;font-size:10px;padding:1px 6px;border-radius:4px;margin-right:6px}
+#obra-frentes .demo{background:#3a2405;color:#ffc070}#obra-frentes .cons{background:#3a3215;color:var(--ui-gold)}
+#obra-frentes .mas{color:var(--ui-dim)}
+#obra-datos{display:flex;flex-wrap:wrap;gap:4px 14px;border-top:1px solid var(--ui-line);padding-top:6px;font-size:11.5px;color:var(--ui-mut)}#obra-datos b{color:#fff}
+.obra-aviso{color:var(--ui-dim);font-size:10.5px;margin:6px 0 0}
+.obra-mode #proposal-toggle{display:none}
+#obra-panel.min #obra-estado,#obra-panel.min #obra-frentes,#obra-panel.min .obra-aviso{display:none}
+
 /* Pestaña de controles */
 #controls-help{position:fixed;top:26px;left:50%;transform:translateX(-50%);z-index:16;display:flex;flex-direction:column;align-items:center}
 #controls-toggle{background:var(--ui-bg);border:1px solid var(--ui-line2);border-radius:999px;padding:7px 16px;font-size:12.5px;color:var(--ui-tx)}

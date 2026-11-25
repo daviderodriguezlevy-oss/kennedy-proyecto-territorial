@@ -135,6 +135,7 @@ export function setupNavigation({ camera, controls, renderer, groups, invalidate
       <dt>Q / E</dt><dd>Bajar / subir (volando)</dd>
       <dt>Shift</dt><dd>Ir más rápido</dd>
       <dt>Doble clic (caminando)</dt><dd>Saltar a otro punto</dd>
+      <dt>Presionar la rueda</dt><dd>Sale del recorrido y orbita desde donde estás</dd>
       <dt>Esc</dt><dd>Volver a la vista aérea</dd>
     </dl>
     <p>En la planta: clic lleva el 3D a ese punto · rueda acerca · arrastrar mueve.</p>

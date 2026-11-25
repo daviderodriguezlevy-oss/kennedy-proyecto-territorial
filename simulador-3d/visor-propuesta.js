@@ -116,11 +116,10 @@ if (uMaskOn > 0.5) { vec2 mUv = (vWxz - uMaskB.xy) / (uMaskB.zw - uMaskB.xy);
   btn.onclick = () => activar(!on);
 
   // Árboles registrados dentro de las áreas intervenidas: se ocultan en la vista de propuesta.
-  function arbolesDentro(ocultar) {
+  function arbolesDentro(ocultar, polys = prop.masks) {
     const inst = groups.trees.children.filter(o => o.isInstancedMesh);
     if (ocultar) {
       treeBackup = []; const m = new T.Matrix4(), p = new T.Vector3(), zero = new T.Matrix4().makeScale(0, 0, 0);
-      const polys = prop.masks;
       for (const mesh of inst) for (let i = 0; i < mesh.count; i++) {
         mesh.getMatrixAt(i, m); p.setFromMatrixPosition(m);
         if (polys.some(pol => dentroPol(pol, p.x, p.z))) { treeBackup.push([mesh, i, m.clone()]); mesh.setMatrixAt(i, zero); }
@@ -135,7 +134,14 @@ if (uMaskOn > 0.5) { vec2 mUv = (vWxz - uMaskB.xy) / (uMaskB.zw - uMaskB.xy);
     if (!on || !prop) return;
     prop.pins.forEach((p, i) => { v3.set(p.x, p.y, p.z).project(camera); const e = pinEls[i]; e.hidden = v3.z > 1 || v3.z < 0 || Math.abs(v3.x) > 1.05 || Math.abs(v3.y) > 1.05; e.style.left = (v3.x * .5 + .5) * innerWidth + 'px'; e.style.top = (-v3.y * .5 + .5) * innerHeight + 'px'; });
   }
-  return { update, get on() { return on; } };
+  // Acceso para la animación de obra (máscara y árboles por fases).
+  const paraObra = {
+    preparar() { if (!prop) construir(); return prop; },
+    mascara(polys) { pintarMascara(polys); uni.on.value = polys.length ? 1 : 0; invalidate(); },
+    arboles(polys) { arbolesDentro(false); if (polys.length) arbolesDentro(true, polys); invalidate(); },
+    apagar() { uni.on.value = 0; arbolesDentro(false); treeBackup = []; if (prop) pintarMascara(prop.masks); }
+  };
+  return { update, paraObra, get on() { return on; } };
 }
 
 function dentroPol(pol, x, z) { let c = false; for (let i = 0, j = pol.length - 1; i < pol.length; j = i++) { const [ax, az] = pol[i], [bx, bz] = pol[j]; if ((az > z) !== (bz > z) && x < (bx - ax) * (z - az) / (bz - az) + ax) c = !c; } return c; }

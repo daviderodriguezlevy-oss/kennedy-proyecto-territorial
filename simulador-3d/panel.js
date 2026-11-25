@@ -17,9 +17,9 @@ export function setupPanel() {
 
   // 1 · Escenarios en el tiempo (solo botones por ahora)
   const esc = sec('Escenarios en el tiempo', 'sim-scenarios');
-  esc.innerHTML += `<p class="help">Simulan año tras año desde 2026. Se activarán cuando definamos cómo se ve la propuesta.</p>
+  esc.innerHTML += `<p class="help">«Sin intervenir» (año tras año hasta un game over) se activará más adelante. Los botones de obra ya muestran cómo se construye la propuesta mientras la ciudad sigue funcionando.</p>
     <button class="scen-main" data-scen="actual" disabled>▶ Sin intervenir · ¿cuántos años dura el estado actual?</button>
-    <div class="scen-label">Aplicar la propuesta durante la simulación · duración de la obra</div>
+    <div class="scen-label">Construir la propuesta · duración de la obra</div>
     <div class="scen-row"><button data-scen="obra3" disabled>Obra 3 años</button><button data-scen="obra5" disabled>Obra 5 años</button><button data-scen="obra8" disabled>Obra 8 años</button></div>
     <p class="help scen-note">Durante la obra se verán calles cerradas y desvíos, residuos de construcción, camiones de concreto y materiales llegando, y Corabastos seguirá funcionando con paso para carros y peatones.</p>`;
   esc.querySelectorAll('[data-scen]').forEach(b => b.title = 'Pendiente: se habilita cuando la propuesta esté definida');
