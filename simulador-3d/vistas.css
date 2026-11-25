@@ -61,6 +61,25 @@ details.sim-sec>summary{font-size:12px;color:var(--ui-mut);padding:6px 0}
 .derived-ref{display:block;margin-left:22px;color:var(--ui-dim);font-size:10.5px}
 .sim-actions{display:grid;gap:6px;margin-top:12px}
 
+/* Propuesta: botón, ficha y marcadores */
+#proposal-toggle{position:fixed;top:26px;left:calc(50% - 175px);z-index:16;background:var(--ui-bg);border:1px solid var(--ui-gold);border-radius:999px;padding:7px 16px;font-size:12.5px;color:var(--ui-gold)}
+#proposal-toggle.active{background:var(--ui-gold);color:#1a1205}
+#proposal-card{position:fixed;left:30px;top:168px;z-index:7;width:min(380px,34vw);max-height:calc(100vh - 250px);overflow:auto;background:#0b0c0cf0;border:1px solid var(--ui-line2);border-radius:12px;padding:12px 14px;font-size:12.5px}
+#proposal-card[hidden]{display:none}
+#proposal-card header{display:flex;justify-content:space-between;align-items:center;position:static;background:none;border:0;padding:0;pointer-events:auto}
+#proposal-card header b{color:var(--ui-gold);text-transform:uppercase;letter-spacing:1px;font-size:11.5px}
+#proposal-card header button{padding:2px 9px}
+#proposal-card ol{list-style:none;padding:0;margin:8px 0;display:grid;gap:4px}
+#proposal-card ol button{width:100%;text-align:left;display:flex;gap:8px;align-items:center;padding:6px 8px;font-size:12px}
+#proposal-card ol button span{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ui-gold);color:#1a1205;font-weight:700;font-size:11px;flex:none}
+#proposal-card ol button.active{border-color:var(--ui-gold);background:#1f1a0d}
+.proposal-views{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}.proposal-views button{padding:6px 4px;font-size:11px}
+#proposal-pins{position:fixed;inset:0;pointer-events:none;z-index:5}#proposal-pins[hidden]{display:none}
+.prop-pin{position:absolute;transform:translate(-50%,-100%);pointer-events:auto;width:26px;height:26px;border-radius:50%;padding:0;background:var(--ui-gold);color:#1a1205;font-weight:700;border:2px solid #000;box-shadow:0 0 0 2px var(--ui-gold),0 4px 12px #000a}
+.prop-pin.active{background:#fff}
+.proposal-mode #sim-hud,.proposal-mode aside,.proposal-mode #plan-view,.proposal-mode #plan-open{display:none!important}
+.proposal-mode #labels-overlay{opacity:.6}
+
 /* Pestaña de controles */
 #controls-help{position:fixed;top:26px;left:50%;transform:translateX(-50%);z-index:16;display:flex;flex-direction:column;align-items:center}
 #controls-toggle{background:var(--ui-bg);border:1px solid var(--ui-line2);border-radius:999px;padding:7px 16px;font-size:12.5px;color:var(--ui-tx)}
