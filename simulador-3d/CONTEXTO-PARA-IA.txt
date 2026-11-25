@@ -1,0 +1,811 @@
+﻿PROMPT MAESTRO PARA CONTINUAR EL SIMULADOR TERRITORIAL DE KENNEDY
+Contexto de entrega revisado el 25 de noviembre de 2026
+
+Usa este documento como contexto permanente del proyecto. Actúa como colaborador de desarrollo de un simulador urbano y ecológico 3D, con criterio arquitectónico y rigor en los datos. Lee primero el repositorio y sus instrucciones. Luego interpreta mis solicitudes breves de cambios dentro de este contexto, sin obligarme a explicar de nuevo el proyecto. El código que encuentres en la rama de trabajo prevalece sobre este inventario si ha evolucionado. Informa qué diferencias encontraste antes de sustituir una función importante.
+
+1. PROYECTO, PROBLEMA Y PROPÓSITO
+
+El proyecto estudia un polígono de Kennedy, Bogotá, con una intervención principal en Corabastos y relaciones con María Paz, el entorno del humedal La Vaca y otros ámbitos urbanos y ecológicos contenidos en la cartografía. La dependencia del abastecimiento externo y la concentración de operaciones en pocos centros orientan el problema. Buscamos entender cómo la recepción, circulación, almacenamiento, comercialización, generación de residuos y uso del suelo afectan las condiciones de vida y los hábitats. El polígono no constituye un sistema cerrado: recibe alimentos, vehículos, recursos y decisiones desde otras escalas.
+
+Objetivo general aprobado, conservar literalmente salvo instrucción expresa:
+“Configurar una red de espacios de abastecimiento alimentario en el polígono de estudio de Kennedy, con intervención principal en Corabastos para reducir parcialmente la dependencia alimentaria externa, distribuir las operaciones dentro del territorio y propiciar una autoorganización sostenible del abastecimiento y del cuidado de los hábitats.”
+
+El enfoque More Than Human incorpora a las especies y sus soportes materiales dentro del análisis territorial. En este proyecto, coexistencia significa que humanos y otras especies pueden mantener funciones y comportamientos viables en el tiempo, con hábitats, refugios y recorridos adecuados. No exige mezclar todas las especies en un mismo espacio. La cohesión social, la distribución de cargas y beneficios y las condiciones de trabajo también importan.
+
+La simulación debe poner a prueba la propuesta, incluyendo la posibilidad de que falle, desplace el problema o solo funcione bajo determinadas condiciones. No programes una victoria obligatoria de la propuesta. No alteres indicadores para producir un resultado favorable. Queremos comparar continuidad del problema y propuesta material, conocer límites de capacidad y observar si una dinámica se sostiene durante el horizonte ensayado. Una animación atractiva debe acompañar reglas verificables, no sustituirlas.
+
+2. REPOSITORIO Y FORMA DE TRABAJAR
+
+Repositorio: https://github.com/daviderodriguezlevy-oss/kennedy-proyecto-territorial
+La última consulta autenticada no se pudo repetir; su configuración de publicación debe verificarse. El repositorio era privado. Mi compañero necesita acceso con su propia cuenta o una copia autorizada. Tener GitHub Desktop instalado no concede acceso al repositorio ni activa GitHub Pages.
+
+La web completa es estática. Los HTML, estilos, scripts y recursos del atlas están en la raíz. El simulador actualizado está en simulador-3d/. La entrada integrada es simulador.html y contiene un iframe y enlace a simulador-3d/. La portada del relato es macromodelos.html; index.html carga el visor cartográfico. No reemplaces toda la web por una nueva página del simulador.
+
+Trabaja en una rama propia, sincroniza antes de editar y entrega cambios revisables para evitar pisar el trabajo del otro compañero. Conserva rutas relativas compatibles con un sitio de proyecto de GitHub Pages: no presupongas que la web vive en la raíz del dominio. No introduzcas rutas C:/, localhost ni claves privadas en la versión publicada. Para desarrollo, sirve la raíz por HTTP; por ejemplo python -m http.server 8000. Abre /simulador.html o /simulador-3d/. Abrir un HTML con doble clic puede bloquear módulos o datos. Conserva .nojekyll, archivos binarios y bibliotecas locales. No subas un ZIP como sustituto de los archivos descomprimidos de la web.
+
+3. TERRITORIO Y BASE 3D
+
+La base proviene de Kennedy_Red_especies_con_labels.3dm y capas cartográficas conservadas en el proyecto. Incluye terreno, edificios y bodegas, calzadas, andenes, parques, ámbitos hídricos, arbolado y límite de representación. Mantén su alineación: una nueva geometría o ruta debe usar el mismo sistema de coordenadas.
+
+model.json declara scale=1000 y originZ=2540. La escena usa unidades reducidas: 0,001 equivale a un metro en las conversiones implementadas. El terreno ocupa un rectángulo de visualización de aproximadamente 5,15 por 4,47 km, con x entre -2,575863 y 2,575863 y z entre -2,23373 y 2,23373. Ese rectángulo no debe confundirse con el límite administrativo de Kennedy ni con una delimitación predial. Consulta los datos originales del polígono y los anclajes antes de afirmar coordenadas geográficas o superficies.
+
+Referencias visuales existentes: Corabastos, María Paz, La Vaca, El Burro y Techo. Hay accesos de cámara a polígono completo, Corabastos, La Vaca, El Burro y María Paz, además de planta y exploración peatonal. No supongas que todo el modelo es Corabastos–La Vaca: conserva el resto del contexto.
+
+El manifiesto contiene 6.316 elementos de calzada, 10.679 de andén, 276 de parques, 35 de ámbitos hídricos y 72.292 registros de arbolado. Son cantidades de elementos/registros de archivos, no un censo actual de vías, parques o árboles vivos. El modelo de edificios declara 144.317 objetos geométricos: no los presentes como viviendas o predios censados. Las alturas de edificios se conservan del modelo exportado; no están auditadas individualmente.
+
+El arbolado se dibuja con copas y troncos simplificados, usando altura registrada o una altura visual de referencia de 5 m cuando falta. Al pulsar un árbol se consulta su nombre y altura disponible. No inventes una especie para un ejemplar sin identificación.
+
+Los polígonos hídricos incluyen ámbitos de protección; su extensión coloreada no equivale íntegramente a agua abierta. Se aplicó una depresión visual de 1,2 m y separación de superficies para evitar parpadeo por caras superpuestas. Es un ajuste gráfico, no una batimetría. No vuelvas a colocar caras coplanares en el humedal.
+
+Colores actuales: terreno oliva grisáceo #a8ad94; edificios beige #c4b5a3; calzadas gris azulado #657479; andenes gris claro #cfcdc0; parques verde #759b70; ámbitos hídricos verde azulado #438f87; arbolado verde oscuro #376e49; límite ocre #a18a61. El atlas general usa paneles oscuros, neutros y acentos luminosos. Mantén colores territoriales coherentes; los cambios día/noche deben permitir leer la escena.
+
+4. DOS SISTEMAS QUE DEBEN DISTINGUIRSE
+
+A. Territorio vivo: movimiento cotidiano de movilidad, labores, fauna, clima, iluminación y operación de descarga. Cuenta con reloj, día, clima y controles de agentes. Algunas salidas tienen unidades físicas declaradas en interfaz, pero sus coeficientes son de ensayo y no aforos calibrados.
+B. Comparar A/B: experimento de abastecimiento y acceso a refugio con pasos discretos, semilla, condiciones compartidas, indicadores, reglas de cierre y exportación. Usa unidades normalizadas de alimento/residuos y pasos sin calibración temporal.
+
+Hay conexión visual entre ambos, pero no una equivalencia individual completa entre cada camión renderizado y cada unidad alimentaria calculada. No presentes las animaciones como un modelo logístico calibrado. No mezcles kg/h del panel cotidiano con unidades/paso del experimento sin definir una conversión sustentada. El reloj diario y los ticks experimentales no tienen actualmente una correspondencia validada.
+
+5. CONTROLES COTIDIANOS IMPLEMENTADOS
+
+Calendario: día 0–6 (lunes a domingo), festivo, hora 0–23,75 en pasos de 15 minutos y avance automático del reloj. Botones: 02:00 abastecimiento; 07:00 pico; 11:00 valle; 17:00 pico; 16:00 lluvia; 22:00 noche.
+Clima: lluvia 0–30 mm/h; nubosidad 0–100%; temperatura 5–32 °C; viento 0–60 km/h. Humedad y agua relativa son estados 0–1 que evolucionan; no son sensores ni niveles de inundación medidos. Drenaje: capacidad relativa 0–100.
+Movilidad: capacidad vial relativa 30–150%, activación por categoría y población de referencia por slider. Las poblaciones no equivalen a aforos de Kennedy.
+
+Categoría | referencia inicial | máximo del slider | velocidad base declarada en reglas
+Camiones | 24 | 90 | 16 km/h
+Carros | 2.400 | 5.500 | 25 km/h
+Taxis | 100 | 350 | 24 km/h
+Bicicletas | 90 | 350 | 12 km/h
+Motos | 260 | 800 | 22 km/h
+Peatones | 450 | 1.400 | 4,2 km/h
+Vendedores ambulantes | 22 | 80 | posición de venta, velocidad base 0
+Cargadores | 25 | 80 | 3 km/h
+Recuperadores y aseo | 12 | 50 | 3 km/h
+
+La cantidad efectiva visible depende del horario, clima, categoría, creación de agentes, límites visuales y escenario. Una referencia de 2.400 no significa exactamente 2.400 carros visibles en todo momento. Los cambios se incorporan progresivamente, con una transición de aproximadamente 12 segundos en el modo cotidiano, preservando viajes iniciados.
+
+Operación Corabastos: puestos de descarga 1–12 (3 iniciales); duración 2–45 minutos (15 iniciales); retiro de residuos 0–600 kg/h (120 iniciales); residuos por descarga 0–60 kg (20 iniciales). Hay estados de viaje, cola, descarga y salida, y contadores de camiones esperando, descargando, descargas terminadas, residuos acumulados y retirados.
+
+Visualización: tamaño visual 1–4; ritmo real, 5×, 15× o 30×; mostrar recorridos; pausar/reanudar; reiniciar. Biología: activar aves, insectos, fauna terrestre, plantas y hongos; 1–4 individuos de ensayo por taxón animal; multiplicador de altura de vuelo 0,5–2; activar puntos de especies; seleccionar especie o actor.
+
+6. REGLAS TEMPORALES, CLIMÁTICAS Y DE TRÁNSITO
+
+Hay perfiles horarios interpolados: uno de desplazamientos urbanos y otro de mercado. Corabastos conserva actividad de madrugada, especialmente alrededor de 02:00–04:00, aunque el entorno residencial tenga poca circulación. Es una parametrización de ensayo apoyada en la distinción de actividades, no una curva medida. No apagues todo el territorio de noche. Los horarios oficiales citados en la interfaz deben revisarse en su fuente antes de ampliar afirmaciones.
+
+El perfil general tiene picos de mañana y tarde. Carros, taxis y motos reciben un factor adicional durante 06:00–09:00 y 16:00–19:00. Fines de semana y festivos modifican actividades seleccionadas; no hay evidencia codificada de diferencias medidas entre cada día hábil.
+
+Lluvia normalizada r=min(1,lluvia/20): factor de actividad de carros 1+0,10r; taxis 1+0,35r; bicicletas y motos 1−0,70r; peatones 1−0,75r; vendedores 1−0,25r. Camiones y labores de cargue/aseo mantienen actividad base frente a lluvia en ese factor. La velocidad disminuye con lluvia y, para bicicletas/motos, también con viento. El calor o frío extremos reducen algunas actividades expuestas. Son reglas elegidas, no elasticidades empíricas demostradas. Revisa límites de oferta al aumentar taxis.
+
+La iluminación varía con la hora y nubosidad, y la lluvia aparece visualmente. Las condiciones también afectan humedad, agua relativa, refugio y actividad animal.
+
+Rutas actuales: routes59.json declara 219 recorridos viales, 180 peatonales y 35 de carga; separación de carriles 3,6 m y 0 intersecciones con los polígonos hídricos en la comprobación registrada. Estos resultados describen la revisión del archivo, no garantizan señalización legal ni ausencia universal de colisiones. Conserva exclusión del humedal y posiciones sobre vías/andenes. No sustituyas rutas por órbitas, círculos aleatorios o trayectorias a través de edificios. Los sentidos y giros oficiales requieren contraste cartográfico específico.
+
+La congestión usa cercanía de vehículos, distancia al vehículo precedente, orientación, capacidad vial y lluvia. Se reduce la velocidad y pueden formarse colas. El panel informa porcentaje bajo 5 km/h y velocidad media; los puntos naranjas resaltan vehículos lentos/detenidos. Los vehículos deben conservar carril y separación tanto al nacer como al circular y descargar.
+
+7. ESPECIES, PRESENCIA Y COMPORTAMIENTO
+
+El archivo activo contiene 118 taxones y 140 relaciones: 73 plantas, 23 insectos, 14 aves, 7 taxones agrupados como fauna terrestre y 1 hongo. El anexo incluye el inventario íntegro con identificadores, nombres, horarios y posiciones; no reemplaces ese conjunto por especies genéricas. La categoría funcional de simulación no siempre equivale a clasificación taxonómica: por ejemplo, algunos insectos se agrupan como fauna terrestre. Revisar antes de corregir.
+
+Las aves incluidas son garcita rayada, colibrí chillón, paloma común, halcón peregrino, sinsonte común, piranga alinegra, piranga roja, jilguero aliblanco, jilguero andino, chirlobirlo, mirla negra, sirirí común, torcaza y copetón. También hay caracol de tierra, rata negra, arañas y otros taxones detallados en el anexo. Preserva acentos y nombres comunes legibles; el nombre científico identifica inequívocamente cada taxón dentro de la ficha.
+
+Cada taxón tiene anclajes de referencia, atributos de procedencia, tipo funcional, horario y relaciones. Las referencias RIBB documentan presencia/interacciones en el ámbito del proyecto, no el número actual de individuos ni su ocupación exacta cada día. Mantén placement_status, anchor y reference_coordinates. No disperses especies al azar por todos los humedales ni atribuyas todas a La Vaca: el conjunto incluye registros vinculados a otros espacios como El Burro y Techo.
+
+Existe un registro de fotografías para los 118 taxones. Al hacer clic en un punto/individuo se abre ficha con nombre común y científico, imagen disponible, créditos, estado, altura y relaciones. Algunas imágenes pueden ser representativas; conserva su etiqueta y licencia. Los nombres de árboles aparecen al pulsarlos, no como miles de etiquetas permanentes. El selector permite encontrar especies difíciles de localizar. La pausa debe detener desplazamientos y conservar la selección.
+
+Vuelos actuales de ensayo: aves generales 2–12 m; colibrí 1–8 m; garcita 2–10 m; halcón 20–50 m; insectos 0,4–3 m. Se ajusta la trayectoria sobre terreno y cubiertas mediante roof56.bin, por lo que la altura final puede superar el rango base. No conviertas esos rangos en límites legales de altura edificatoria ni pruebas de que seis pisos garantizan seguridad de aves.
+
+La actividad depende de horario diurno, nocturno o crepuscular, lluvia y viento; insectos también de temperatura. Caracol responde a humedad. La garcita está configurada como crepuscular y la rata como nocturna. Hay estados de reposo, refugio, vuelo, desplazamiento y visita al hábitat. Algunas visitas usan relaciones de la red entre anclajes próximos (hasta 250 m en la selección actual); no todas las 140 aristas producen vuelos visibles. Los movimientos son trayectos locales de ensayo, no migraciones ni rumbos medidos. Las plantas cambian representación/estado con humedad; no hay crecimiento vegetal físico o reproducción poblacional completa.
+
+Todo taxón ya incluido debe poder localizarse o consultarse, aunque a una hora concreta esté en reposo. Nuevas especies deben incorporarse con evidencia territorial, nombre, hábitat, anclaje, comportamiento y fotografía acreditada. Evita inventar fauna acuática solo para decorar el humedal.
+
+8. ACTORES HUMANOS Y ORGANIZACIÓN
+
+El simulador carga 75 actores y 255 relaciones en actors56.json y funciones en actor-functions56.json. Incluye residentes, cuidados, comerciantes, logística, trabajadores, actores públicos y representantes relacionados con hábitats. El anexo enumera los nombres reales del archivo y sus funciones. El selector explica relaciones; no significa que los 75 actores estén implementados como agentes autónomos que negocian.
+
+La propuesta del proyecto incorpora representación rotativa, varios puntos de coordinación, conexiones entre actores pequeños y representación humana de necesidades de otras especies. La asamblea se plantea con consentimiento ante ausencia de objeciones fundamentadas y decisiones técnicas de personas competentes dentro de sus responsabilidades. Los cargos públicos se identifican por cargo y entidad; las instituciones siguen teniendo responsabilidades específicas. No atribuyas a la simulación actual negociación, consenso, corrupción, rotación o efectos presupuestales que solo estén descritos en la red del atlas.
+
+No presupongas que rotar representantes elimina influencias ni que dibujar más hubs distribuye poder real. Si modelamos decisiones, deberán tener recursos, competencias, acciones materiales y resultados observables. No uses confianza como un número arbitrario que produce éxito; define un indicador sustentado o una variable observable distinta.
+
+9. COMPARACIÓN ACTUAL / PROPUESTA
+
+El experimento comparte semilla, demanda, lluvia, horizonte y regla de game over. Parámetros iniciales: semilla 42; horizonte 240 pasos; demanda base 100 unidades/paso; lluvia de referencia 8 mm/h; atención mínima 65%; acceso a refugio mínimo 45%; persistencia crítica 12 pasos. La velocidad de reproducción es 2, 6 o 12 pasos/segundo; no convierte los pasos en días reales.
+
+A: un centro C en Corabastos concentra el 100% de las llegadas; capacidad 85 unidades/paso; almacenamiento 1.300; inventario inicial total 200; aporte local 0; retiro de pérdidas 1 unidad/paso; soporte inicial de refugio 75.
+B: C recibe 55%, capacidad 56 y almacenamiento 700; N recibe 22,5%, capacidad 25 y almacenamiento 300; M recibe 22,5%, capacidad 25 y almacenamiento 300. Almacenamiento total sigue en 1.300 e inventario inicial en 200. Aporte local inicial 7% de demanda base; retiro 4 unidades/paso; soporte de refugio 100. La capacidad total inicial B es 106, mayor que A=85: la comparación combina redistribución y cambios de capacidad/otros recursos, y no aísla el efecto de descentralizar. Para aislar mecanismos hay que diseñar ensayos adicionales con capacidades equivalentes.
+
+Espacios conceptuales dibujados: C recepción/conservación Corabastos; N distribución de proximidad norte; M distribución de proximidad María Paz; P producción complementaria; R recuperación de alimentos/materiales; H recursos de refugio La Vaca. Sus posiciones de escena se incluyen en anexo. Son localizaciones conceptuales, no diseños prediales autorizados. Los bloques, barras y conexiones representan esas funciones; no rediseñan automáticamente la geometría real de bodegas, vías o edificios.
+
+Controles A/B: demanda 30–160; lluvia 0–30; horizonte 48–600; umbral de atención 30–95%; refugio 20–90%; persistencia 2–48 pasos; capacidad B 50–150% del diseño; aporte local B 0–15%; refugios B 50–140; retiro B 0–10 unidades/paso; semilla numérica. Configurar antes de iniciar; pausar, avanzar un paso, reiniciar y descargar resultados.
+
+En el núcleo, llegan alimentos según pulsos de 48 pasos; la demanda varía con ruido reproducible. Se descarga hasta el límite de cola, capacidad reducida por lluvia y almacenamiento disponible. Hay pérdidas de manipulación del 3%, deterioro por paso de 0,4% de inventario externo y 0,2% del local. El suministro prioriza inventario local. Las pérdidas alimentan residuos y se retiran hasta una capacidad máxima. Los coeficientes deben permanecer identificados como supuestos.
+
+La presión ecológica simplificada combina cola del centro C y residuos acumulados; reduce recursos de refugio y compite con una recuperación hacia su capacidad de soporte. La fórmula no simula calidad de agua ni dinámica de todas las poblaciones. El grupo virtual de necesidad es 80 usuarios de refugio; no son 80 animales censados ni los 118 taxones.
+
+Indicadores experimentales:
+- Atención alimentaria: alimentos entregados / demanda, en una ventana de hasta 12 pasos, expresado en %.
+- Concentración: mayor volumen acumulado procesado por un centro / procesamiento acumulado total, en %.
+- Dependencia externa: alimento externo entregado acumulado / alimento total entregado acumulado, en %.
+- Cola logística: suma de unidades alimentarias pendientes, no número literal de camiones.
+- Residuos: unidades normalizadas acumuladas tras retiros.
+- Acceso a refugio: recursos disponibles / 80 necesidades virtuales, limitado a 100%.
+
+Falla localizada: cola de un centro mayor que cuatro veces su capacidad base de atención por paso; se registra evento. Game over: atención o acceso a refugio por debajo de su umbral durante el número configurado de pasos consecutivos. Un paso fuera de estado crítico reinicia el contador correspondiente. Si termina el horizonte sin cumplir la regla, declarar “No alcanzado hasta horizonte simulado”. No equivale a sostenibilidad indefinida. Registrar primer paso de cierre, causa, parámetros, semilla y trayectorias. Aplicar exactamente la misma regla a A y B.
+
+Se exportan JSON con configuración, historia y eventos y CSV con series por escenario. Conserva la trazabilidad del resultado y revisa el campo de versión: el exportador aún declara 63 aunque la integración visual sea 65. No confundas una actualización visual con una calibración científica nueva.
+
+10. MOVIMIENTO EN COMPARAR A/B
+
+La versión revisada integra agentes móviles también al comparar. Cambia destinos de camiones y actividades peatonales entre C/N/M según las proporciones de cada escenario, distribuye puntos de descarga, introduce presión de las colas calculadas sobre circulación próxima y modula actividad biológica cercana a La Vaca con el indicador de refugio. Guarda estados visuales al cambiar de A a B.
+
+La implementación usa una muestra visual limitada de tráfico en A/B para rendimiento y un ritmo de movimiento acelerado. Mantiene una representación activa y visible de camiones, personas y fauna. Los centros secundarios eligen recorridos cartográficos próximos; sus extremos no equivalen necesariamente a una entrada de parcela diseñada. Las curvas luminosas entre funciones muestran relaciones conceptuales, no carreteras por donde deban viajar vehículos.
+
+Los dos núcleos numéricos avanzan durante el par; se visualiza la escena seleccionada. No existe una reproducción sincronizada individual de todos los agentes de ambos escenarios simultáneamente. Al pausar o finalizar un escenario, los agentes de la vista seleccionada se detienen por diseño actual. Conserva pausa para inspección y no dejes accidentalmente todo congelado durante una ejecución activa. Si se requiere reproducción posterior al cierre, implementar modo de reproducción separado del cálculo.
+
+11. VARIABLES Y DETALLES A AMPLIAR, SIN AFIRMAR QUE YA EXISTEN
+
+Prioridades posibles: CO2 por clase y combustible a partir de distancia, consumo y ralentí; tiempos de viaje y espera; entregas atendidas; capacidad y localización de nuevos centros; exposición a ruido/luz; acceso a alimento, agua y refugio por gremio; supervivencia/mortalidad solo con reglas y horizonte adecuados; aprovechamiento de residuos y recuperación alimentaria; costos de operación, recursos y mantenimiento del soporte espacial.
+
+CO2 todavía no está calculado en el núcleo revisado. Para implementarlo, define combustible, consumo por distancia o tiempo y factor de emisión con fuente y ámbito. Distingue emisiones directas de escape y ciclo de vida. Un vehículo eléctrico no debe tratarse como ambientalmente nulo por defecto. No uses una misma emisión fija para todos los vehículos.
+
+Las tecnologías convergentes son una línea de desarrollo: sensores de tráfico, pesaje, agua, ruido, monitoreo acústico/ecológico, análisis de datos y modelo digital podrían apoyar decisiones de diseño. No hay integración de sensores reales o inteligencia artificial ecológica en vivo en esta versión. Relaciona cada tecnología con un espacio físico: punto de observación, estación de calidad del agua, área de carga, centro de recuperación, corredor o refugio. Define qué mide, quién mantiene el dispositivo y cómo ese dato modifica una regla.
+
+Cambiar altura de Corabastos, liberar huella, ampliar ronda, patios de carga, vías y áreas de camiones requiere conectar geometría, capacidad, accesibilidad y efectos ecológicos. El A/B actual no tiene un generador paramétrico completo de esa transformación. Revisa laboratorio.html y programa/propuesta territorial para recuperar lo trabajado sin dar por hecho que ya está integrado al simulador independiente. La producción local es complementaria y no reemplaza todo el abastecimiento externo.
+
+12. INTERFAZ Y CALIDAD ESPERADA
+
+Quiero controles comprensibles: nombre, unidad, valor, efecto observable y explicación breve. Agrupa territorio; calendario/clima; movilidad; abastecimiento; especies/hábitats; comparación/resultados. Los sliders deben cambiar estados y resultados, no solo etiquetas. Mantén mapa grande, paneles plegables, leyenda clara, cámara navegable, fichas por clic y botones visibles de pausa/reinicio. No ocupes toda la pantalla con texto ni ocultes los agentes bajo paneles.
+
+Conserva estilo oscuro y neutro con acentos luminosos legibles; colores consistentes entre mapa, agentes y gráficas. No fuerces un mismo color para especies, infraestructura y logística. Mantén nombres comunes en lectura principal y detalles científicos dentro de ficha. No añadas flechas arbitrarias, vehículos flotantes o actores cruzando humedales.
+
+Cuida rendimiento: edificios y terreno son pesados; arbolado usa instancias. Reutiliza geometrías/materiales, evita crear miles de objetos por cuadro y prueba con hardware modesto. No resuelvas lentitud eliminando el contexto territorial sin avisar. Mantén posibilidades de calidad visual y densidad de representación diferenciadas de cantidades calculadas.
+
+13. ARCHIVOS CLAVE Y PRUEBAS
+
+simulador-3d/index.html: estructura, paneles, importmap y entrada.
+simulador-3d/app.js: Three.js, geometría, cámaras, capas, luz, carga y ciclo de actualización. Importa ecosystem56.js y experiment63.js con versión 65.
+simulador-3d/style.css y experiment63.css: interfaz.
+simulador-3d/ecosystem56.js: agentes, clima, rutas, fauna, fichas y conexión visual A/B.
+simulador-3d/behavior56.mjs: modos, perfiles y funciones de comportamiento.
+simulador-3d/experiment63-core.mjs: estado, reglas numéricas, indicadores, cierre, par reproducible y balance.
+simulador-3d/experiment63.js: panel A/B, bloques conceptuales, gráficas, exportaciones y sincronización visual.
+simulador-3d/data/routes59.json: rutas activas y exclusión hídrica.
+simulador-3d/data/ecosystem56.json: taxones, interacciones, procedencia y anclajes.
+simulador-3d/data/species-photos.json y species-images/: imágenes/créditos.
+simulador-3d/data/actors56.json y actor-functions56.json: actores y funciones.
+simulador-3d/data/manifest.json, model.json, height.bin, roof56.json/bin y restantes binarios: cartografía y geometría.
+simulador-3d/data/tree-names57.json, tree-source.json y trees.bin: arbolado.
+simulador-3d/piloto63-resultados.json: resultados guardados de un ensayo, no datos de campo.
+simulador-3d/verify56.mjs y verificar-dinamicas.mjs: comprobar alcance antes de ejecutar. dynamics.js, dynamics-rules.mjs y rutas antiguas pueden ser versiones anteriores; sigue los imports activos, no el nombre más intuitivo.
+
+Después de editar: comprueba carga HTTP sin archivos ausentes; rutas relativas en subcarpeta de GitHub Pages; errores de consola; hora pico/valle/madrugada/lluvia/noche; circulación en carriles; ausencia de trayectos hídricos; fichas/fotos; pausa y reanudación; movimiento continuo de A/B; igualdad de condiciones iniciales compartidas; cambios causales de nuevos sliders; exportación JSON/CSV; resultados reproducibles del núcleo con la misma semilla; balance de entradas, existencias, entregas y pérdidas. Si los agentes visuales no son reproducibles del mismo modo que el núcleo, indícalo y no extiendas la garantía.
+
+Para cada nueva variable entrega: fenómeno, agente o soporte afectado, unidad, rango, valor inicial, fuente/supuesto, ecuación/regla, dirección de efecto, retardos, indicador resultante, representación visual y forma de probarla. Si una propuesta cambia varias capacidades a la vez, explica esa combinación y permite ensayos separados cuando sea necesario.
+
+14. CÓMO RESPONDER A MIS PRÓXIMOS PEDIDOS
+
+Cuando te pida un cambio, localiza primero el archivo y comportamiento existente. Conserva la base territorial y las funciones aprobadas. Si pido discutir antes de modificar, muestra propuesta y espera. Si pido implementar, realiza un cambio acotado, verifica y resume qué cambió, cómo probarlo y sus límites concretos. No reconstruyas toda la web, no inventes resultados ni publiques sin la autorización correspondiente. Mantén este contexto actualizado con cambios relevantes, parámetros y evidencia.
+
+Mi primer pedido será: [ESCRIBIR AQUÍ EL CAMBIO QUE QUIERO EN VARIABLES, ESPECIES, ESCENARIOS, GEOMETRÍA O INTERFAZ].
+
+ANEXOS EXTRAÍDOS DEL REPOSITORIO
+Los anexos siguientes son inventarios del estado revisado. Complementan el contexto y permiten localizar sin ambigüedad las especies, representantes, conexiones y espacios existentes. Los identificadores deben conservarse al editar.
+
+
+ANEXO A. INVENTARIO COMPLETO DE LOS 118 TAXONES
+
+
+AVES
+- T3530 | Garcita rayada | Butorides striata striata | horario crepuscular | vuelo base [2, 10] m | lat 4.648056, lon -74.143056 | base de escena [1.1717456191189122, 0.2410992829063325] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1930 | Colibrí chillón | Colibri coruscans | horario diurnal | vuelo base [1, 8] m | lat 4.652222, lon -74.150833 | base de escena [0.6262061639735476, -0.5708211761259008] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3142 | Paloma común | Columba livia domestica | horario diurnal | vuelo base [2, 12] m | lat 4.6535, lon -74.151917 | base de escena [0.5863755489739124, -0.75207236235257] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3358 | Halcón peregrino | Falco peregrinus cassini | horario diurnal | vuelo base [20, 50] m | lat 4.6535, lon -74.151917 | base de escena [0.5863755489739124, -0.75207236235257] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3151 | Sinsonte común | Mimus gilvus tolimensis | horario diurnal | vuelo base [2, 12] m | lat 4.652222, lon -74.150833 | base de escena [0.6262061639735476, -0.5708211761259008] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3191 | Piranga alinegra | Piranga olivacea | horario diurnal | vuelo base [2, 12] m | lat 4.649389, lon -74.151694 | base de escena [0.3947565789055079, -0.33908727169578196] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1968 | Piranga roja | Piranga rubra | horario diurnal | vuelo base [2, 12] m | lat 4.650833, lon -74.149444 | base de escena [0.6901521693465765, -0.3628421174842515] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3290 | Jilguero aliblanco | Spinus psaltria | horario diurnal | vuelo base [2, 12] m | lat 4.652222, lon -74.150833 | base de escena [0.6262061639735476, -0.5708211761259008] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1976 | Jilguero andino | Spinus spinescens | horario diurnal | vuelo base [2, 12] m | lat 4.6524, lon -74.15116 | base de escena [0.6034151756151114, -0.6052366195239592] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3640 | Chirlobirlo | Sturnella magna | horario diurnal | vuelo base [2, 12] m | lat 4.652222, lon -74.150833 | base de escena [0.6262061639735476, -0.5708211761259008] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3154 | Mirla negra | Turdus fuscater gigas | horario diurnal | vuelo base [2, 12] m | lat 4.643889, lon -74.146944 | base de escena [0.5744949205850717, 0.4453699597169761] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4338 | Sirirí común | Tyrannus melancholicus melancholicus | horario diurnal | vuelo base [2, 12] m | lat 4.643889, lon -74.148056 | base de escena [0.465559310690267, 0.38743404769914924] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3144 | Torcaza | Zenaida auriculata pentheria | horario diurnal | vuelo base [2, 12] m | lat 4.647053, lon -74.128258 | base de escena [2.5693384349502155, 1.1099826439227327] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2000 | Copetón | Zonotrichia capensis costaricensis | horario diurnal | vuelo base [2, 12] m | lat 4.6411688, lon -74.1492182 | base de escena [0.21046011130604894, 0.5924625084107975] | ubicación: Coordenada de referencia RIBB dentro del polígono
+
+PLANTAS
+- T2785 | Duraznillo | Abatia parviflora | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3299 | Bledo | Amaranthus dubius | horario diurnal | vuelo base [0, 0] m | lat 4.64979064, lon -74.16370096 | base de escena [-0.760615538749611, -1.0038827017197036] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2355 | Chilco nativo | Baccharis latifolia | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150531 | base de escena [0.23260180236632005, 0.24061760707775828] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2356 | Chilco | Baccharis macrantha | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2363 | Guaca negra | Bidens laevis | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2364 | Chipaca | Bidens pilosa | horario diurnal | vuelo base [0, 0] m | lat 4.64671915, lon -74.17050728 | base de escena [-1.5868683285957668, -1.0586394021576853] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2447 | Nabo | Brassica rapa | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3043 | Borrachero | Brugmansia arborea | horario diurnal | vuelo base [0, 0] m | lat 4.6513643, lon -74.1500716 | base de escena [0.6562586117889733, -0.44741250496078283] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2448 | Bolsita de pastor | Capsella bursa-pastoris | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2470 | Cenizo | Chenopodium murale | horario diurnal | vuelo base [0, 0] m | lat 4.64345415, lon -74.17842216 | base de escena [-2.531768647515215, -1.1522744931579219] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2373 | Cardo mariano | Cirsium vulgare | horario diurnal | vuelo base [0, 0] m | lat 4.64345415, lon -74.17842216 | base de escena [-2.531768647515215, -1.1522744931579219] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2721 | Cajeto | Citharexylum subflavescens | horario diurnal | vuelo base [0, 0] m | lat 4.6411688, lon -74.1492182 | base de escena [0.21046011130604894, 0.5924625084107975] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2278 | Cicuta | Conium maculatum | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2374 | Venadillo | Conyza bonariensis | horario diurnal | vuelo base [0, 0] m | lat 4.654506954, lon -74.156272631 | base de escena [0.21197674195514993, -1.07731553623348] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2972 | Holly liso | Cotoneaster pannosus | horario diurnal | vuelo base [0, 0] m | lat 4.64833888, lon -74.16652564 | base de escena [-1.112711629782105, -1.009318874892546] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3300 | Cotula | Cotula australis | horario diurnal | vuelo base [0, 0] m | lat 4.64917105, lon -74.16456142 | base de escena [-0.8770810794481076, -0.9882233870345517] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3346 | Sangregado | Croton hibiscifolius | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2750 | Sangregado | Croton mutisianus | horario diurnal | vuelo base [0, 0] m | lat 4.64833888, lon -74.16652564 | base de escena [-1.112711629782105, -1.009318874892546] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2515 | Calabaza | Cucurbita pepo | horario diurnal | vuelo base [0, 0] m | lat 4.648056, lon -74.143056 | base de escena [1.1717456191189122, 0.2410992829063325] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2723 | Espino garbanzo | Duranta mutisii | horario diurnal | vuelo base [0, 0] m | lat 4.641667, lon -74.15 | base de escena [0.1597409297223203, 0.5030893482415122] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3705 | Rama negra | Erigeron bonariensis | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2852 | Eucalipto | Eucalyptus globulus | horario diurnal | vuelo base [0, 0] m | lat 4.643889, lon -74.146944 | base de escena [0.5744949205850717, 0.4453699597169761] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3301 | Lechero | Euphorbia peplus | horario diurnal | vuelo base [0, 0] m | lat 4.64979064, lon -74.16370096 | base de escena [-0.760615538749611, -1.0038827017197036] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3171 | Caucho sabanero | Ficus americana subsp. andicola | horario diurnal | vuelo base [0, 0] m | lat 4.64573791, lon -74.17310698 | base de escena [-1.8924929726873525, -1.098294459595927] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2394 | Guascas | Galinsoga quadriradiata | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2806 | Cayeno | Hibiscus rosa-sinensis | horario diurnal | vuelo base [0, 0] m | lat 4.652222, lon -74.150833 | base de escena [0.6262061639735476, -0.5708211761259008] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2941 | Cebada | Hordeum vulgare | horario diurnal | vuelo base [0, 0] m | lat 4.64540084, lon -74.17415112 | base de escena [-2.012282032351475, -1.1197900957353994] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2404 | Achicoria | Hypochaeris radicata | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2725 | Venturosa | Lantana camara | horario diurnal | vuelo base [0, 0] m | lat 4.6491287, lon -74.1540603 | base de escena [0.14943163532344625, -0.4369602058434393] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2665 | Axyri | Lepechinia bullata | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2943 | Pasto raigrás | Lolium multiflorum | horario diurnal | vuelo base [0, 0] m | lat 4.64573791, lon -74.17310698 | base de escena [-1.8924929726873525, -1.098294459595927] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3053 | Gurrubo | Lycianthes lycioides | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2809 | Malva | Malva sylvestris | horario diurnal | vuelo base [0, 0] m | lat 4.649389, lon -74.151694 | base de escena [0.3947565789055079, -0.33908727169578196] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3488 | Trébol bejuco | Medicago lupulina | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2454 | Berros | Nasturtium officinale | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2885 | Platanito | Oxalis corniculata | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4000 | Pimienta de agua | Persicaria hydropiper | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2286 | Perejil | Petroselinum crispum | horario diurnal | vuelo base [0, 0] m | lat 4.62891, lon -74.16298 | base de escena [-1.7742523423004894, 1.0722902895726147] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2301 | Palma canaria | Phoenix canariensis | horario diurnal | vuelo base [0, 0] m | lat 4.64833888, lon -74.16652564 | base de escena [-1.112711629782105, -1.009318874892546] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3303 | Palma Pasto | Phoenix roebelenii | horario diurnal | vuelo base [0, 0] m | lat 4.64886704, lon -74.16517634 | base de escena [-0.9531060393273365, -0.9905814506279421] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3057 | Uchuva | Physalis peruviana | horario diurnal | vuelo base [0, 0] m | lat 4.6454, lon -74.1437406 | base de escena [0.9667695313659497, 0.46474483740812866] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2293 | Jazmín australiano | Pittosporum undulatum | horario diurnal | vuelo base [0, 0] m | lat 4.655122939, lon -74.15567458 | base de escena [0.3025482655738015, -1.1062963433613187] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3105 | Calaguala | Pleopeltis macrocarpa | horario diurnal | vuelo base [0, 0] m | lat 4.64636434, lon -74.17147272 | base de escena [-1.699868938792497, -1.074301979899872] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3304 | Helecho | Pleopeltis murora | horario diurnal | vuelo base [0, 0] m | lat 4.654210405, lon -74.156575476 | base de escena [0.16691100136423484, -1.064141423848807] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2948 | Pasto gallina | Poa annua | horario diurnal | vuelo base [0, 0] m | lat 4.64468401, lon -74.17547543 | base de escena [-2.179237359532388, -1.1188078128708294] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2989 | Cerezo | Prunus serotina | horario diurnal | vuelo base [0, 0] m | lat 4.652644173, lon -74.158068514 | base de escena [-0.06067761371610686, -0.9890163781769806] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2501 | Yerba envidia | Rumex acetosella | horario diurnal | vuelo base [0, 0] m | lat 4.654210405, lon -74.156575476 | base de escena [0.16691100136423484, -1.064141423848807] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3031 | Ruda macho | Ruta graveolens | horario diurnal | vuelo base [0, 0] m | lat 4.628716, lon -74.144433 | base de escena [0.03263710014102981, 2.057577432329359] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2790 | Sauce llorón | Salix humboldtiana | horario diurnal | vuelo base [0, 0] m | lat 4.647053, lon -74.128258 | base de escena [2.5693384349502155, 1.1099826439227327] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2519 | Sauco | Sambucus nigra | horario diurnal | vuelo base [0, 0] m | lat 4.651417, lon -74.150306 | base de escena [0.6360326625911985, -0.46477008915290935] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4194 | Sauco | Sambucus peruviana | horario diurnal | vuelo base [0, 0] m | lat 4.649389, lon -74.151694 | base de escena [0.3947565789055079, -0.33908727169578196] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3022 | Falso pimiento | Schinus areira | horario diurnal | vuelo base [0, 0] m | lat 4.644927, lon -74.1355621 | base de escena [1.7434088056839536, 0.9370207378980122] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2425 | Flor amarilla | Senecio madagascariensis | horario diurnal | vuelo base [0, 0] m | lat 4.64902676, lon -74.1647754 | base de escena [-0.9055354770047125, -0.9852850753414677] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3306 | Cerrajilla | Senecio vulgaris | horario diurnal | vuelo base [0, 0] m | lat 4.64833888, lon -74.16652564 | base de escena [-1.112711629782105, -1.009318874892546] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2604 | Alcaparro | Senna viarum | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3307 | Espadilla | Sisyrinchium micranthum | horario diurnal | vuelo base [0, 0] m | lat 4.653903132, lon -74.156845204 | base de escena [0.12453258365904912, -1.0481948950106161] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2427 | Arboloco | Smallanthus pyramidalis | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4324 | Yerbamora | Solanum nigrum | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2428 | Cerraja áspera | Sonchus asper | horario diurnal | vuelo base [0, 0] m | lat 4.64556311, lon -74.17370512 | base de escena [-1.9601647679535672, -1.1123941602662089] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2429 | Cerraja | Sonchus oleraceus | horario diurnal | vuelo base [0, 0] m | lat 4.64917105, lon -74.16456142 | base de escena [-0.8770810794481076, -0.9882233870345517] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2483 | Berros | Stellaria media | horario diurnal | vuelo base [0, 0] m | lat 4.64384732, lon -74.17754156 | base de escena [-2.425086851090193, -1.1447762844112586] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4327 | Pirulero | Symphyotrichum squamatum | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2863 | Eugenia | Syzygium paniculatum | horario diurnal | vuelo base [0, 0] m | lat 4.65122, lon -74.14944 | base de escena [0.710638950465247, -0.4004175043424475] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2433 | Diente de León | Taraxacum officinale | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2651 | Ojo de Poeta | Thunbergia alata | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3309 | Trébol amarillo | Trifolium campestre | horario diurnal | vuelo base [0, 0] m | lat 4.64979064, lon -74.16370096 | base de escena [-0.760615538749611, -1.0038827017197036] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2608 | Trébol amarillo | Trifolium dubium | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2609 | Trébol rosado | Trifolium pratense | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2610 | Trébol blanco | Trifolium repens | horario diurnal | vuelo base [0, 0] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2462 | Capuchina | Tropaeolum majus | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2884 | Raque | Vallea stipularis | horario diurnal | vuelo base [0, 0] m | lat 4.63759, lon -74.14914 | base de escena [0.0322924089031294, 0.9459441134373192] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2729 | Verbena negra | Verbena litoralis | horario diurnal | vuelo base [0, 0] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2273 | Cartucho | Zantedeschia aethiopica | horario diurnal | vuelo base [0, 0] m | lat 4.636494, lon -74.126696 | base de escena [2.1741180896756704, 2.222278018248733] | ubicación: Coordenada de referencia RIBB dentro del polígono
+
+INSECTOS VOLADORES
+- T1866 | Polilla colibrí | Aellopos fadus | horario diurnal | vuelo base [1, 8] m | lat 4.64203, lon -74.14894 | base de escena [0.2824313029295299, 0.5228758707811357] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1710 | Mosca rayada de las flores | Allograpta annulipes | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1712 | Mosca rayada de las flores | Allograpta exotica | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1713 | Mosca rayada de las flores | Allograpta neotropica | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1714 | Mosca avispa de cola rayada | Allograpta obliqua | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3173 | Polilla | Ancyloxypha melanoneura | horario diurnal | vuelo base [0.4, 3] m | lat 4.63759, lon -74.14914 | base de escena [0.0322924089031294, 0.9459441134373192] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1791 | Abeja de la miel | Apis mellifera | horario diurnal | vuelo base [0.4, 3] m | lat 4.6454, lon -74.1437406 | base de escena [0.9667695313659497, 0.46474483740812866] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4066 | Mosca de la flor pata de hoz | Asemosyrphus mexicanus | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1838 | Espejito del curubo | Dione glycera | horario diurnal | vuelo base [0.4, 3] m | lat 4.643889, lon -74.146944 | base de escena [0.5744949205850717, 0.4453699597169761] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1716 | Mosca tigre | Eristalinus taeniops | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1717 | Mosca abeja | Eristalis tenax | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4274 | Mosca de la flor | Fazia fascifrons | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3278 | Mosca verde metálica | Lucilia sericata | horario diurnal | vuelo base [0.4, 3] m | lat 4.62891, lon -74.16298 | base de escena [-1.7742523423004894, 1.0722902895726147] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1720 | Mosca de la flor | Ocyptamus giganteus | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1722 | Mosca de felpa | Palpada florea | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3617 | Mosca de marzo | Penthetria neonigrita | horario diurnal | vuelo base [0.4, 3] m | lat 4.642992, lon -74.1519755 | base de escena [0.035014465341344475, 0.2708004169189953] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1724 | Mosca de la flor | Platycheirus ecuadoriensis | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4308 | Mosca de la flor | Platycheirus punctulatum | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3227 | Mata piojo | Rhionaeschna marchali | horario diurnal | vuelo base [0.4, 3] m | lat 4.651417, lon -74.150306 | base de escena [0.6360326625911985, -0.46477008915290935] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1726 | Mosca de la flor | Syrphus shorae | horario diurnal | vuelo base [0.4, 3] m | lat 4.644072, lon -74.150527 | base de escena [0.23299365611048414, 0.24082601127790987] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4329 | Mosca calígrafa | Toxomerus pallipes | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1728 | Mosca calígrafa | Toxomerus watsoni | horario diurnal | vuelo base [0.4, 3] m | lat 4.6453392, lon -74.141374 | base de escena [1.195453748533735, 0.5939804176418693] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1852 | Mariposa colorada | Vanessa carye | horario diurnal | vuelo base [0.4, 3] m | lat 4.6491287, lon -74.1540603 | base de escena [0.14943163532344625, -0.4369602058434393] | ubicación: Coordenada de referencia RIBB dentro del polígono
+
+FAUNA TERRESTRE (categoría funcional del código)
+- T3521 | Araña de tela orbicular | Alpaida variabilis | horario diurnal | vuelo base [0, 0] m | lat 4.654108, lon -74.176742 | base de escena [-1.8139370617540553, -2.104871614822652] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T4351 | Ácaro aterciopelado depredador | Balaustium leanderi | horario diurnal | vuelo base [0, 0] m | lat 4.6384, lon -74.17317 | base de escena [-2.279710659111617, -0.385171797263145] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1781 | Piojo saltador | Calophya schini | horario diurnal | vuelo base [0, 0] m | lat 4.644927, lon -74.1355621 | base de escena [1.7434088056839536, 0.9370207378980122] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T2076 | Caracol de tierra | Cornu aspersum | horario diurnal | vuelo base [0, 0] m | lat 4.6513643, lon -74.1500716 | base de escena [0.6562586117889733, -0.44741250496078283] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1911 | Rata negra | Rattus rattus | horario nocturnal | vuelo base [0, 0] m | lat 4.648056, lon -74.143056 | base de escena [1.1717456191189122, 0.2410992829063325] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T1761 | Escama globosa | Saissetia coffeae | horario diurnal | vuelo base [0, 0] m | lat 4.644927, lon -74.1355621 | base de escena [1.7434088056839536, 0.9370207378980122] | ubicación: Coordenada de referencia RIBB dentro del polígono
+- T3867 | Falsa viuda negra mordedora | Steatoda nobilis | horario diurnal | vuelo base [0, 0] m | lat 4.636782, lon -74.129234 | base de escena [1.9404336566948333, 2.0619335790425537] | ubicación: Coordenada de referencia RIBB dentro del polígono
+
+HONGOS
+- T3815 | Hongo del artista | Ganoderma applanatum | horario diurnal | vuelo base [0, 0] m | lat 4.6417, lon -74.149 | base de escena [0.25941829179017806, 0.5519685519232881] | ubicación: Coordenada de referencia RIBB dentro del polígono
+
+ANEXO B. LAS 140 RELACIONES BIOLÓGICAS
+La dirección preservada de la fuente no demuestra por sí misma causalidad. Una visita floral no equivale automáticamente a polinización efectiva. Consultar atributos originales para evidencia y recurso.
+- RIBB_R00039 | Mosca de felpa [T1722] → Interactúa con → Chilco nativo [T2355] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R00646 | Escama globosa [T1761] → Consume → Falso pimiento [T3022] | recurso/parte: la savia | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R00747 | Abeja de la miel [T1791] → Consume → Cartucho [T2273] | recurso/parte: el polen | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R00863 | Abeja de la miel [T1791] → Consume → Calabaza [T2515] | recurso/parte: el polen | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R01057 | Abeja de la miel [T1791] → Consume → Raque [T2884] | recurso/parte: el néctar | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R01100 | Abeja de la miel [T1791] → Consume → Ruda macho [T3031] | recurso/parte: el néctar | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R01112 | Abeja de la miel [T1791] → Consume → Uchuva [T3057] | recurso/parte: el polen | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R01866 | Mariposa colorada [T1852] → Consume → Venturosa [T2725] | recurso/parte: el néctar | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R03878 | Piranga roja [T1968] → Consume → Eugenia [T2863] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R03903 | Piranga alinegra [T3191] → Consume → Sauco [T4194] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R03916 | Piranga alinegra [T3191] → Consume → Eugenia [T2863] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R03936 | Mosca calígrafa [T1728] → Interactúa con → Diente de León [T2433] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R03937 | Mosca calígrafa [T1728] → Consume → Achicoria [T2404] | recurso/parte: el polen | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04014 | Copetón [T2000] → Consume → Cajeto [T2721] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04081 | Mosca rayada de las flores [T1712] → Interactúa con → Diente de León [T2433] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04138 | Bledo [T3299] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04143 | Chilco nativo [T2355] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04144 | Chipaca [T2364] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04157 | Cenizo [T2470] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04158 | Cardo mariano [T2373] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04160 | Venadillo [T2374] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04162 | Holly liso [T2972] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04164 | Cotula [T3300] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04165 | Cotula [T3300] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04166 | Sangregado [T2750] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04168 | Lechero [T3301] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04170 | Caucho sabanero [T3171] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04171 | Caucho sabanero [T3171] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04175 | Cebada [T2941] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04177 | Pasto raigrás [T2943] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04185 | Jazmín australiano [T2293] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04186 | Calaguala [T3105] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04187 | Helecho [T3304] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04189 | Pasto gallina [T2948] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04190 | Pasto gallina [T2948] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04191 | Pasto gallina [T2948] → Crece sobre → Caucho sabanero [T3171] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04196 | Cerezo [T2989] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04197 | Yerba envidia [T2501] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04198 | Flor amarilla [T2425] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04199 | Flor amarilla [T2425] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04200 | Cerrajilla [T3306] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04201 | Cerrajilla [T3306] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04202 | Espadilla [T3307] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04204 | Cerraja áspera [T2428] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04205 | Cerraja [T2429] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04206 | Cerraja [T2429] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04208 | Berros [T2483] → Crece sobre → Caucho sabanero [T3171] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04209 | Berros [T2483] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04210 | Diente de León [T2433] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04211 | Diente de León [T2433] → Crece sobre → Palma Pasto [T3303] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04215 | Trébol amarillo [T3309] → Crece sobre → Palma canaria [T2301] | recurso/parte: el tallo | EPIBIOSIS | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04433 | Sinsonte común [T3151] → Consume → Sauco [T2519] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04442 | Halcón peregrino [T3358] → Consume → Paloma común [T3142] | recurso/parte: general | DEPREDACIÓN | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04443 | Mata piojo [T3227] → Interactúa con → Sauco [T2519] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04447 | Piojo saltador [T1781] → Consume → Falso pimiento [T3022] | recurso/parte: la savia | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04612 | Abeja de la miel [T1791] → Consume → Malva [T2809] | recurso/parte: el polen | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04689 | Polilla [T3173] → Consume → Diente de León [T2433] | recurso/parte: el néctar | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04690 | Jilguero andino [T1976] → Consume → Diente de León [T2433] | recurso/parte: la semilla | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04691 | Copetón [T2000] → Consume → Eugenia [T2863] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04716 | Sinsonte común [T3151] → Consume → Eugenia [T2863] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04858 | Mosca avispa de cola rayada [T1714] → Interactúa con → Chipaca [T2364] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04905 | Mosca abeja [T1717] → Interactúa con → Diente de León [T2433] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04997 | Mosca de marzo [T3617] → Consume → Chilco nativo [T2355] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R04999 | Caracol de tierra [T2076] → Consume → Borrachero [T3043] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R05551 | Colibrí chillón [T1930] → Consume → Cayeno [T2806] | recurso/parte: el néctar | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R05552 | Jilguero aliblanco [T3290] → Consume → Diente de León [T2433] | recurso/parte: la semilla | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R05766 | Mirla negra [T3154] → Oviposita en → Eucalipto [T2852] | recurso/parte: el tallo | OVIPOSICIÓN | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R05767 | Sirirí común [T4338] → Consume → Sauco [T2519] | recurso/parte: el fruto | HERBIVORÍA | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R05771 | Garcita rayada [T3530] → Consume → Rata negra [T1911] | recurso/parte: general | DEPREDACIÓN | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R06663 | Mosca calígrafa [T1728] → Interactúa con → Chipaca [T2364] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R06668 | Mosca de la flor pata de hoz [T4066] → Interactúa con → Guaca negra [T2363] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07005 | Torcaza [T3144] → Oviposita en → Sauce llorón [T2790] | recurso/parte: el tallo | OVIPOSICIÓN | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07023 | Mosca calígrafa [T1728] → Interactúa con → Arboloco [T2427] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07138 | Mosca calígrafa [T1728] → Interactúa con → Guaca negra [T2363] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07139 | Mosca calígrafa [T1728] → Interactúa con → Cerraja [T2429] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07143 | Mosca rayada de las flores [T1713] → Interactúa con → Cicuta [T2278] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07205 | Mosca verde metálica [T3278] → Interactúa con → Perejil [T2286] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07315 | Mosca de felpa [T1722] → Interactúa con → Chilco [T2356] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07316 | Mosca rayada de las flores [T1713] → Interactúa con → Chilco [T2356] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07317 | Mosca tigre [T1716] → Interactúa con → Chilco [T2356] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07318 | Mosca de la flor [T4308] → Interactúa con → Chilco [T2356] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07319 | Mosca de la flor [T1720] → Interactúa con → Chilco [T2356] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07320 | Mosca rayada de las flores [T1712] → Interactúa con → Chilco [T2356] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07321 | Mosca de felpa [T1722] → Interactúa con → Guaca negra [T2363] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07322 | Mosca tigre [T1716] → Interactúa con → Guaca negra [T2363] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07323 | Mosca de la flor [T4308] → Interactúa con → Guaca negra [T2363] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07324 | Mosca de felpa [T1722] → Interactúa con → Arboloco [T2427] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07325 | Mosca rayada de las flores [T1710] → Interactúa con → Arboloco [T2427] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07326 | Mosca tigre [T1716] → Interactúa con → Arboloco [T2427] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07327 | Mosca de la flor pata de hoz [T4066] → Interactúa con → Arboloco [T2427] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07328 | Mosca de felpa [T1722] → Interactúa con → Sangregado [T3346] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07329 | Mosca calígrafa [T1728] → Interactúa con → Pimienta de agua [T4000] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07330 | Mosca de la flor [T1724] → Interactúa con → Pimienta de agua [T4000] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07331 | Mosca de felpa [T1722] → Interactúa con → Duraznillo [T2785] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07332 | Mosca calígrafa [T1728] → Interactúa con → Duraznillo [T2785] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07333 | Mosca rayada de las flores [T1713] → Interactúa con → Duraznillo [T2785] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07334 | Mosca de la flor [T1726] → Interactúa con → Duraznillo [T2785] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07335 | Mosca de felpa [T1722] → Interactúa con → Espino garbanzo [T2723] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07336 | Mosca calígrafa [T1728] → Interactúa con → Espino garbanzo [T2723] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07337 | Mosca de la flor [T4308] → Interactúa con → Espino garbanzo [T2723] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07338 | Mosca rayada de las flores [T1712] → Interactúa con → Espino garbanzo [T2723] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07339 | Mosca calígrafa [T1728] → Interactúa con → Verbena negra [T2729] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07340 | Mosca calígrafa [T1728] → Interactúa con → Platanito [T2885] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07341 | Mosca calígrafa [T1728] → Interactúa con → Flor amarilla [T2425] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07342 | Mosca de la flor [T4274] → Interactúa con → Diente de León [T2433] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07343 | Mosca de la flor [T4308] → Interactúa con → Diente de León [T2433] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07344 | Mosca calígrafa [T1728] → Interactúa con → Nabo [T2447] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07345 | Mosca de felpa [T1722] → Interactúa con → Holly liso [T2972] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07346 | Mosca de la flor [T1726] → Interactúa con → Holly liso [T2972] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07347 | Mosca calígrafa [T1728] → Interactúa con → Axyri [T2665] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07348 | Mosca rayada de las flores [T1713] → Interactúa con → Axyri [T2665] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07349 | Mosca rayada de las flores [T1713] → Interactúa con → Gurrubo [T3053] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07350 | Mosca de la flor [T4308] → Interactúa con → Gurrubo [T3053] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07351 | Mosca calígrafa [T1728] → Interactúa con → Trébol bejuco [T3488] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07352 | Mosca calígrafa [T1728] → Interactúa con → Ojo de Poeta [T2651] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07353 | Mosca rayada de las flores [T1713] → Interactúa con → Ojo de Poeta [T2651] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07354 | Mosca calígrafa [T1728] → Interactúa con → Capuchina [T2462] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07355 | Mosca de la flor [T1724] → Interactúa con → Sauco [T2519] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07356 | Mosca calígrafa [T1728] → Interactúa con → Alcaparro [T2604] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07357 | Mosca de felpa [T1722] → Interactúa con → Trébol rosado [T2609] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07358 | Mosca calígrafa [T1728] → Interactúa con → Bolsita de pastor [T2448] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07359 | Mosca calígrafa [T1728] → Interactúa con → Guascas [T2394] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07360 | Mosca calígrafa [T4329] → Interactúa con → Guascas [T2394] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07361 | Mosca de la flor [T4274] → Interactúa con → Uchuva [T3057] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07362 | Mosca de la flor [T4308] → Interactúa con → Verbena negra [T2729] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07365 | Mosca de la flor [T1724] → Interactúa con → Yerbamora [T4324] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07366 | Mosca rayada de las flores [T1712] → Interactúa con → Yerbamora [T4324] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07367 | Mosca calígrafa [T1728] → Interactúa con → Yerbamora [T4324] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07368 | Mosca de la flor [T1724] → Interactúa con → Cerraja [T2429] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07369 | Mosca calígrafa [T1728] → Interactúa con → Trébol amarillo [T2608] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07370 | Mosca calígrafa [T1728] → Interactúa con → Trébol blanco [T2610] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07371 | Mosca de felpa [T1722] → Interactúa con → Trébol blanco [T2610] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07372 | Mosca de la flor [T1726] → Interactúa con → Cicuta [T2278] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07373 | Mosca de la flor [T1724] → Interactúa con → Cardo mariano [T2373] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07374 | Mosca calígrafa [T1728] → Interactúa con → Rama negra [T3705] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07375 | Mosca calígrafa [T1728] → Interactúa con → Berros [T2454] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07376 | Mosca calígrafa [T1728] → Interactúa con → Cerezo [T2989] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07377 | Mosca calígrafa [T1728] → Interactúa con → Pirulero [T4327] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07378 | Mosca de la flor [T1726] → Interactúa con → Eugenia [T2863] | recurso/parte: la flor | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+- RIBB_R07428 | Polilla colibrí [T1866] → Consume → Espino garbanzo [T2723] | recurso/parte: el néctar | VISITA FLORAL | evidencia: La interacción tiene evidencia georreferenciada dentro del KML
+
+ANEXO C. LOS 75 ACTORES Y SUS FUNCIONES EN EL ARCHIVO DEL SIMULADOR
+- 1 | Vecina de La Vaca Norte | grupo 0 | Comunica necesidades de acceso y cuidado en La Vaca Norte.
+- 2 | Vecino de La Vaca Sur | grupo 0 | Comunica necesidades de drenaje y acceso en La Vaca Sur.
+- 3 | Vecina de María Paz | grupo 0 | Participa en acuerdos sobre vivienda, comercio y recorridos en María Paz.
+- 4 | Vecino de El Amparo | grupo 0 | Coordina cuidado cotidiano del entorno de El Amparo.
+- 5 | Cuidadora | grupo 0 | Comunica necesidades de accesibilidad, acompañamiento y descanso.
+- 6 | Joven | grupo 0 | Participa en formación y acuerdos de condiciones de trabajo.
+- 7 | Adulto mayor | grupo 0 | Aporta necesidades de accesibilidad y estancia.
+- 8 | Estudiante | grupo 0 | Participa en aprendizaje y registro del territorio.
+- 9 | Docente | grupo 0 | Organiza formación y lectura de prácticas territoriales.
+- 10 | Líder vecinal | grupo 0 | Reúne prioridades vecinales y da seguimiento a acuerdos.
+- 11 | Cuidadora del humedal | grupo 0 | Observa el humedal y comunica cambios a responsables técnicos.
+- 12 | Observador de aves | grupo 0 | Registra aves y usos de hábitat.
+- 13 | Vendedor mayorista | grupo 1 | Recibe y comercializa alimentos al por mayor.
+- 14 | Vendedora minorista | grupo 1 | Distribuye alimentos en pequeñas cantidades.
+- 15 | Vendedor ambulante | grupo 1 | Ofrece alimentos y acuerda condiciones de uso del espacio.
+- 16 | Tendero | grupo 1 | Distribuye alimentos mediante comercio de proximidad.
+- 17 | Cocinera | grupo 1 | Prepara alimentos bajo condiciones sanitarias.
+- 18 | Comprador habitual | grupo 1 | Comunica demanda y accede a los puntos de distribución.
+- 19 | Cargador | grupo 1 | Prepara, carga y descarga mercancías.
+- 20 | Conductor de camión | grupo 1 | Transporta alimentos y coordina ventanas de entrega.
+- 21 | Carretillero | grupo 1 | Traslada mercancías en recorridos locales.
+- 22 | Reciclador | grupo 1 | Recupera materiales separados.
+- 23 | Recuperador de alimentos | grupo 1 | Clasifica y recupera alimentos aptos.
+- 24 | Coordinador de donaciones | grupo 1 | Coordina donaciones, trazabilidad y entrega de alimentos.
+- 25 | Gerente de Corabastos | grupo 2 | Gestiona operación y recursos dentro de las facultades de gerencia.
+- 26 | Delegado de la Junta | grupo 2 | Transmite acuerdos de la Junta y aporta orientación colegiada.
+- 27 | Responsable de presupuesto | grupo 2 | Organiza información de disponibilidad y uso de recursos.
+- 28 | Representante de vendedores | grupo 2 | Comunica necesidades y acuerdos de vendedores.
+- 29 | Supervisor de aseo | grupo 2 | Supervisa tareas y registros de aseo.
+- 30 | Interventor de aseo | grupo 2 | Revisa cumplimiento y registra requerimientos correctivos.
+- 31 | Coordinador de recolección | grupo 2 | Coordina rutas y capacidades de recolección.
+- 32 | Recolector de residuos | grupo 2 | Recoge residuos en horarios y rutas asignados.
+- 33 | Clasificador de residuos | grupo 2 | Clasifica materiales para aprovechamiento o tratamiento.
+- 34 | Técnico de compactadores | grupo 2 | Mantiene equipos de compactación.
+- 35 | Administrador del humedal | grupo 3 | Coordina gestión y cuidado del humedal dentro de su competencia.
+- 36 | Biólogo de fauna | grupo 3 | Interpreta registros de fauna y comunica requerimientos de hábitat.
+- 37 | Especialista en árboles | grupo 3 | Orienta manejo y mantenimiento de árboles.
+- 38 | Veterinario | grupo 3 | Orienta atención y bienestar de animales domésticos.
+- 39 | Cuidador de animales | grupo 3 | Realiza cuidado responsable de animales.
+- 40 | Jardinero | grupo 3 | Ejecuta mantenimiento de vegetación.
+- 41 | Técnico de mantenimiento hídrico | grupo 3 | Ejecuta seguimiento y mantenimiento hídrico.
+- 42 | Administrador del parque | grupo 3 | Coordina mantenimiento y uso del parque.
+- 43 | Coordinador de aseo barrial | grupo 3 | Articula limpieza de espacios cotidianos.
+- 44 | Gestor de servicios públicos | grupo 3 | Canaliza necesidades de servicios públicos.
+- 45 | Gestor ambiental local | grupo 3 | Articula necesidades ambientales y gestión local.
+- 46 | Rana sabanera | grupo 4 | Población vinculada a condiciones de agua y vegetación; sus registros alimentan la vocería técnica.
+- 47 | Copetón | grupo 4 | Población de aves vinculada a alimento, refugio y vegetación.
+- 48 | Garza rayada | grupo 4 | Población vinculada al hábitat hídrico y sus recursos.
+- 49 | Tingua norteña | grupo 4 | Población vinculada a vegetación y refugio del humedal.
+- 50 | Guapucha | grupo 4 | Población acuática vinculada a calidad y continuidad del agua.
+- 51 | Gato doméstico | grupo 4 | Animal doméstico cuyo cuidado requiere manejo responsable de su relación con fauna silvestre.
+- 52 | Caucho del Tequendama | grupo 4 | Árbol que integra cobertura vegetal, refugio y mantenimiento.
+- 53 | Sauce | grupo 4 | Árbol vinculado a cobertura vegetal y condiciones del borde hídrico.
+- 54 | Rama negra | grupo 4 | Vegetación que aporta estructura y recursos al hábitat.
+- 55 | Ligustro | grupo 4 | Vegetación cuyo manejo forma parte del mantenimiento territorial.
+- 56 | Alcalde local de Kennedy | grupo 5 | Articula decisiones locales y ejecución según sus competencias.
+- 57 | Edil de Kennedy | grupo 5 | Representa prioridades territoriales y realiza seguimiento público.
+- 58 | Subdirector de Ecosistemas y Ruralidad | grupo 5 | Articula criterios técnicos de ecosistemas y ruralidad.
+- 59 | Subdirector de Gestión en Vía | grupo 5 | Coordina gestión de circulación y accesos según su competencia.
+- 60 | Subdirector de la Bicicleta y el Peatón | grupo 5 | Articula requerimientos de movilidad peatonal y ciclista.
+- 61 | Subdirector de Recolección, Barrido y Limpieza | grupo 5 | Coordina responsabilidades de recolección, barrido y limpieza.
+- 62 | Vocero de vendedores ambulantes | grupo 6 | Transmite acuerdos y requerimientos de vendedores ambulantes.
+- 63 | Vocera de comerciantes minoristas | grupo 6 | Coordina acuerdos de comercio minorista.
+- 64 | Vocero de comerciantes mayoristas | grupo 6 | Coordina acuerdos de comercio mayorista.
+- 65 | Vocera de trabajadores de carga | grupo 6 | Representa condiciones de trabajo y seguridad en carga.
+- 66 | Vocero de transportadores | grupo 6 | Coordina requerimientos de transportadores.
+- 67 | Vocera de residentes | grupo 6 | Transmite prioridades y acuerdos de residentes.
+- 68 | Vocera de personas cuidadoras | grupo 6 | Transmite necesidades de cuidado y accesibilidad.
+- 69 | Profesional de drenaje urbano | grupo 7 | Interpreta drenajes y requerimientos de mantenimiento.
+- 70 | Profesional de fauna acuática | grupo 7 | Interpreta registros de fauna acuática y condiciones del agua.
+- 71 | Profesional de polinizadores | grupo 7 | Orienta seguimiento de polinizadores y recursos florales.
+- 72 | Coordinador del centro B | grupo 7 | Coordina un destino externo de referencia de escenarios previos.
+- 73 | Coordinador del centro C | grupo 7 | Coordina otro destino externo de referencia de escenarios previos.
+- 74 | Vocero de tenderos | grupo 6 | Articula entregas y recuperación en comercio de proximidad.
+- 75 | Coordinador de logística | grupo 7 | Coordina recepción, almacenamiento y despacho.
+
+ANEXO D. LAS 255 CONEXIONES ENTRE ACTORES
+Estas conexiones alimentan el catálogo relacional; no todas son acciones computacionales del motor. No confundir representación con ejecución de decisiones.
+- Delegado de la Junta [26] → aprueba presupuesto y orienta decisiones → Gerente de Corabastos [25]
+- Gerente de Corabastos [25] → gestiona la relación contractual → Coordinador de recolección [31]
+- Interventor de aseo [30] → informa incumplimientos y recomienda correcciones → Gerente de Corabastos [25]
+- Interventor de aseo [30] → requiere acciones correctivas → Coordinador de recolección [31]
+- Administrador del humedal [35] → coordina seguimiento de mantenimiento → Técnico de mantenimiento hídrico [41]
+- Especialista en árboles [37] → acompaña intervención del arbolado → Jardinero [40]
+- Vecino de El Amparo [4] → participa en cuidado de árboles → Especialista en árboles [37]
+- Biólogo de fauna [36] → coordina manejo de animales ferales → Veterinario [38]
+- Coordinador de aseo barrial [43] → socializa manejo de residuos → Vendedor ambulante [15]
+- Gestor de servicios públicos [44] → coordina jornada de aseo y sensibilización → Coordinador de aseo barrial [43]
+- Vendedor mayorista [13] → aporta alimentos recuperables → Coordinador de donaciones [24]
+- Coordinador de donaciones [24] → coordina recuperación de alimentos → Recuperador de alimentos [23]
+- Vecina de La Vaca Norte [1] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Vecina de La Vaca Norte [1]
+- Vecino de La Vaca Sur [2] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Vecino de La Vaca Sur [2]
+- Vecina de María Paz [3] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Vecina de María Paz [3]
+- Vecino de El Amparo [4] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Vecino de El Amparo [4]
+- Cuidadora [5] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Cuidadora [5]
+- Adulto mayor [7] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Adulto mayor [7]
+- Líder vecinal [10] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Líder vecinal [10]
+- Vocera de residentes [67] → presenta alternativa con costos y evidencia → Alcalde local de Kennedy [56]
+- Alcalde local de Kennedy [56] → comunica decisión y condiciones dentro de su competencia → Vocera de residentes [67]
+- Vocera de residentes [67] → presenta alternativa con costos y evidencia → Edil de Kennedy [57]
+- Edil de Kennedy [57] → comunica decisión y condiciones dentro de su competencia → Vocera de residentes [67]
+- Vocera de personas cuidadoras [68] → presenta necesidades de vivienda y cuidados → Vocera de residentes [67]
+- Vocera de residentes [67] → devuelve acuerdos y verifica efectos cotidianos → Vocera de personas cuidadoras [68]
+- Vendedor mayorista [13] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Vendedor mayorista [13]
+- Vendedora minorista [14] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Vendedora minorista [14]
+- Vendedor ambulante [15] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Vendedor ambulante [15]
+- Tendero [16] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Tendero [16]
+- Comprador habitual [18] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Comprador habitual [18]
+- Representante de vendedores [28] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Representante de vendedores [28]
+- Vocero de vendedores ambulantes [62] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Vocero de vendedores ambulantes [62]
+- Vocero de comerciantes mayoristas [64] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Vocero de comerciantes mayoristas [64]
+- Vocero de tenderos [74] → compara costos y condiciones de entrega → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → acuerda condiciones comerciales y distribuye información → Vocero de tenderos [74]
+- Conductor de camión [20] → comparte necesidades de recorrido y horario → Vocero de transportadores [66]
+- Vocero de transportadores [66] → acuerda ventanas y comunica restricciones de acceso → Conductor de camión [20]
+- Vocero de transportadores [66] → presenta alternativa con costos y evidencia → Subdirector de Gestión en Vía [59]
+- Subdirector de Gestión en Vía [59] → comunica decisión y condiciones dentro de su competencia → Vocero de transportadores [66]
+- Vocero de transportadores [66] → presenta alternativa con costos y evidencia → Subdirector de la Bicicleta y el Peatón [60]
+- Subdirector de la Bicicleta y el Peatón [60] → comunica decisión y condiciones dentro de su competencia → Vocero de transportadores [66]
+- Joven [6] → presenta condiciones y riesgos del trabajo → Vocera de trabajadores de carga [65]
+- Vocera de trabajadores de carga [65] → acuerda turnos y verifica condiciones laborales → Joven [6]
+- Estudiante [8] → presenta condiciones y riesgos del trabajo → Vocera de trabajadores de carga [65]
+- Vocera de trabajadores de carga [65] → acuerda turnos y verifica condiciones laborales → Estudiante [8]
+- Docente [9] → presenta condiciones y riesgos del trabajo → Vocera de trabajadores de carga [65]
+- Vocera de trabajadores de carga [65] → acuerda turnos y verifica condiciones laborales → Docente [9]
+- Cargador [19] → presenta condiciones y riesgos del trabajo → Vocera de trabajadores de carga [65]
+- Vocera de trabajadores de carga [65] → acuerda turnos y verifica condiciones laborales → Cargador [19]
+- Carretillero [21] → presenta condiciones y riesgos del trabajo → Vocera de trabajadores de carga [65]
+- Vocera de trabajadores de carga [65] → acuerda turnos y verifica condiciones laborales → Carretillero [21]
+- Gerente de Corabastos [25] → comunica capacidad y restricciones de operación → Coordinador de logística [75]
+- Coordinador de logística [75] → coordina cupos y transferencias acordadas → Gerente de Corabastos [25]
+- Delegado de la Junta [26] → comunica capacidad y restricciones de operación → Coordinador de logística [75]
+- Coordinador de logística [75] → coordina cupos y transferencias acordadas → Delegado de la Junta [26]
+- Responsable de presupuesto [27] → comunica capacidad y restricciones de operación → Coordinador de logística [75]
+- Coordinador de logística [75] → coordina cupos y transferencias acordadas → Responsable de presupuesto [27]
+- Coordinador del centro B [72] → comunica capacidad y restricciones de operación → Coordinador de logística [75]
+- Coordinador de logística [75] → coordina cupos y transferencias acordadas → Coordinador del centro B [72]
+- Coordinador del centro C [73] → comunica capacidad y restricciones de operación → Coordinador de logística [75]
+- Coordinador de logística [75] → coordina cupos y transferencias acordadas → Coordinador del centro C [73]
+- Cocinera [17] → comunica disponibilidad de alimentos aptos → Coordinador de donaciones [24]
+- Coordinador de donaciones [24] → acuerda clasificación y entregas → Cocinera [17]
+- Recuperador de alimentos [23] → comunica disponibilidad de alimentos aptos → Coordinador de donaciones [24]
+- Coordinador de donaciones [24] → acuerda clasificación y entregas → Recuperador de alimentos [23]
+- Reciclador [22] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Reciclador [22]
+- Supervisor de aseo [29] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Supervisor de aseo [29]
+- Interventor de aseo [30] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Interventor de aseo [30]
+- Recolector de residuos [32] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Recolector de residuos [32]
+- Clasificador de residuos [33] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Clasificador de residuos [33]
+- Técnico de compactadores [34] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Técnico de compactadores [34]
+- Coordinador de aseo barrial [43] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Coordinador de aseo barrial [43]
+- Gestor de servicios públicos [44] → registra cantidades y capacidad de manejo → Coordinador de recolección [31]
+- Coordinador de recolección [31] → programa acciones dentro de recursos asignados → Gestor de servicios públicos [44]
+- Coordinador de recolección [31] → presenta alternativa con costos y evidencia → Subdirector de Recolección, Barrido y Limpieza [61]
+- Subdirector de Recolección, Barrido y Limpieza [61] → comunica decisión y condiciones dentro de su competencia → Coordinador de recolección [31]
+- Cuidadora del humedal [11] → aporta registros de agua y mantenimiento → Administrador del humedal [35]
+- Administrador del humedal [35] → coordina seguimiento de actuaciones autorizadas → Cuidadora del humedal [11]
+- Técnico de mantenimiento hídrico [41] → aporta registros de agua y mantenimiento → Administrador del humedal [35]
+- Administrador del humedal [35] → coordina seguimiento de actuaciones autorizadas → Técnico de mantenimiento hídrico [41]
+- Gestor ambiental local [45] → aporta registros de agua y mantenimiento → Administrador del humedal [35]
+- Administrador del humedal [35] → coordina seguimiento de actuaciones autorizadas → Gestor ambiental local [45]
+- Administrador del humedal [35] → presenta alternativa con costos y evidencia → Subdirector de Ecosistemas y Ruralidad [58]
+- Subdirector de Ecosistemas y Ruralidad [58] → comunica decisión y condiciones dentro de su competencia → Administrador del humedal [35]
+- Profesional de drenaje urbano [69] → aporta registros de agua y mantenimiento → Administrador del humedal [35]
+- Administrador del humedal [35] → coordina seguimiento de actuaciones autorizadas → Profesional de drenaje urbano [69]
+- Jardinero [40] → aporta observaciones de vegetación y floración → Especialista en árboles [37]
+- Especialista en árboles [37] → coordina cuidado y seguimiento técnico → Jardinero [40]
+- Administrador del parque [42] → aporta observaciones de vegetación y floración → Especialista en árboles [37]
+- Especialista en árboles [37] → coordina cuidado y seguimiento técnico → Administrador del parque [42]
+- Profesional de polinizadores [71] → aporta observaciones de vegetación y floración → Especialista en árboles [37]
+- Especialista en árboles [37] → coordina cuidado y seguimiento técnico → Profesional de polinizadores [71]
+- Observador de aves [12] → aporta registros de fauna y perturbación → Biólogo de fauna [36]
+- Biólogo de fauna [36] → coordina protocolos y devuelve resultados → Observador de aves [12]
+- Veterinario [38] → aporta registros de fauna y perturbación → Biólogo de fauna [36]
+- Biólogo de fauna [36] → coordina protocolos y devuelve resultados → Veterinario [38]
+- Cuidador de animales [39] → aporta registros de fauna y perturbación → Biólogo de fauna [36]
+- Biólogo de fauna [36] → coordina protocolos y devuelve resultados → Cuidador de animales [39]
+- Profesional de fauna acuática [70] → aporta registros de fauna y perturbación → Biólogo de fauna [36]
+- Biólogo de fauna [36] → coordina protocolos y devuelve resultados → Profesional de fauna acuática [70]
+- Vocera de residentes [67] → contrasta abastecimiento y necesidades residenciales → Vocera de comerciantes minoristas [63]
+- Vocera de comerciantes minoristas [63] → responde con capacidad, condiciones y resultados → Vocera de residentes [67]
+- Vocera de comerciantes minoristas [63] → acuerda horarios de entregas y recorridos → Vocero de transportadores [66]
+- Vocero de transportadores [66] → responde con capacidad, condiciones y resultados → Vocera de comerciantes minoristas [63]
+- Vocero de transportadores [66] → contrasta tiempos de viaje y turnos → Vocera de trabajadores de carga [65]
+- Vocera de trabajadores de carga [65] → responde con capacidad, condiciones y resultados → Vocero de transportadores [66]
+- Vocera de trabajadores de carga [65] → acuerda condiciones de carga y descanso → Coordinador de logística [75]
+- Coordinador de logística [75] → responde con capacidad, condiciones y resultados → Vocera de trabajadores de carga [65]
+- Coordinador de logística [75] → coordina derivación de alimentos recuperables → Coordinador de donaciones [24]
+- Coordinador de donaciones [24] → responde con capacidad, condiciones y resultados → Coordinador de logística [75]
+- Coordinador de donaciones [24] → coordina separación entre recuperación alimentaria y residuos → Coordinador de recolección [31]
+- Coordinador de recolección [31] → responde con capacidad, condiciones y resultados → Coordinador de donaciones [24]
+- Coordinador de recolección [31] → contrasta manejo de residuos y protección del agua → Administrador del humedal [35]
+- Administrador del humedal [35] → responde con capacidad, condiciones y resultados → Coordinador de recolección [31]
+- Administrador del humedal [35] → coordina agua y mantenimiento de vegetación → Especialista en árboles [37]
+- Especialista en árboles [37] → responde con capacidad, condiciones y resultados → Administrador del humedal [35]
+- Especialista en árboles [37] → contrasta recursos de hábitat y uso por fauna → Biólogo de fauna [36]
+- Biólogo de fauna [36] → responde con capacidad, condiciones y resultados → Especialista en árboles [37]
+- Biólogo de fauna [36] → comunica perturbaciones y acuerda seguimiento → Vocera de residentes [67]
+- Vocera de residentes [67] → responde con capacidad, condiciones y resultados → Biólogo de fauna [36]
+- Vocera de comerciantes minoristas [63] → acuerda recepción de alimentos aptos → Coordinador de donaciones [24]
+- Coordinador de donaciones [24] → responde con capacidad, condiciones y resultados → Vocera de comerciantes minoristas [63]
+- Vocero de transportadores [66] → coordina llegadas con capacidad de atención → Coordinador de logística [75]
+- Coordinador de logística [75] → responde con capacidad, condiciones y resultados → Vocero de transportadores [66]
+- Vocera de trabajadores de carga [65] → contrasta exposición laboral y manejo de materiales → Coordinador de recolección [31]
+- Coordinador de recolección [31] → responde con capacidad, condiciones y resultados → Vocera de trabajadores de carga [65]
+- Vocera de residentes [67] → acuerda seguimiento del borde hídrico → Administrador del humedal [35]
+- Administrador del humedal [35] → responde con capacidad, condiciones y resultados → Vocera de residentes [67]
+- Coordinador de logística [75] → compara alternativas de operación y afectación hídrica → Administrador del humedal [35]
+- Administrador del humedal [35] → responde con capacidad, condiciones y resultados → Coordinador de logística [75]
+- Coordinador del centro B [72] → acuerda acción directa y registra resultado → Coordinador del centro C [73]
+- Coordinador del centro B [72] → acuerda acción directa y registra resultado → Vocero de transportadores [66]
+- Coordinador del centro C [73] → acuerda acción directa y registra resultado → Vocera de comerciantes minoristas [63]
+- Vocera de trabajadores de carga [65] → acuerda acción directa y registra resultado → Cargador [19]
+- Vocero de vendedores ambulantes [62] → acuerda acción directa y registra resultado → Vendedor ambulante [15]
+- Vocera de personas cuidadoras [68] → acuerda acción directa y registra resultado → Cuidadora [5]
+- Vocero de tenderos [74] → acuerda acción directa y registra resultado → Tendero [16]
+- Profesional de drenaje urbano [69] → acuerda acción directa y registra resultado → Técnico de mantenimiento hídrico [41]
+- Profesional de polinizadores [71] → acuerda acción directa y registra resultado → Jardinero [40]
+- Profesional de fauna acuática [70] → acuerda acción directa y registra resultado → Observador de aves [12]
+- Rana sabanera [46] → aporta señales observables sobre su condición → Profesional de fauna acuática [70]
+- Profesional de fauna acuática [70] → propone y verifica condiciones de cuidado → Rana sabanera [46]
+- Copetón [47] → aporta señales observables sobre su condición → Biólogo de fauna [36]
+- Biólogo de fauna [36] → propone y verifica condiciones de cuidado → Copetón [47]
+- Garza rayada [48] → aporta señales observables sobre su condición → Biólogo de fauna [36]
+- Biólogo de fauna [36] → propone y verifica condiciones de cuidado → Garza rayada [48]
+- Tingua norteña [49] → aporta señales observables sobre su condición → Biólogo de fauna [36]
+- Biólogo de fauna [36] → propone y verifica condiciones de cuidado → Tingua norteña [49]
+- Guapucha [50] → aporta señales observables sobre su condición → Profesional de fauna acuática [70]
+- Profesional de fauna acuática [70] → propone y verifica condiciones de cuidado → Guapucha [50]
+- Gato doméstico [51] → aporta señales observables sobre su condición → Veterinario [38]
+- Veterinario [38] → propone y verifica condiciones de cuidado → Gato doméstico [51]
+- Caucho del Tequendama [52] → aporta señales observables sobre su condición → Especialista en árboles [37]
+- Especialista en árboles [37] → propone y verifica condiciones de cuidado → Caucho del Tequendama [52]
+- Sauce [53] → aporta señales observables sobre su condición → Especialista en árboles [37]
+- Especialista en árboles [37] → propone y verifica condiciones de cuidado → Sauce [53]
+- Rama negra [54] → aporta señales observables sobre su condición → Especialista en árboles [37]
+- Especialista en árboles [37] → propone y verifica condiciones de cuidado → Rama negra [54]
+- Ligustro [55] → aporta señales observables sobre su condición → Especialista en árboles [37]
+- Especialista en árboles [37] → propone y verifica condiciones de cuidado → Ligustro [55]
+- Vecina de La Vaca Norte [1] → comunica cambios observados en el borde del humedal → Cuidadora del humedal [11]
+- Vecino de La Vaca Sur [2] → reporta obstrucciones y encharcamientos → Técnico de mantenimiento hídrico [41]
+- Vecina de María Paz [3] → acuerda condiciones de paso frente al comercio → Vendedor ambulante [15]
+- Vecino de El Amparo [4] → coordina jornadas de cuidado del arbolado → Jardinero [40]
+- Cuidadora [5] → comunica necesidades de cruces y accesibilidad → Subdirector de la Bicicleta y el Peatón [60]
+- Joven [6] → participa en formación sobre trabajo seguro → Docente [9]
+- Adulto mayor [7] → comunica necesidades de descanso y acompañamiento → Vocera de personas cuidadoras [68]
+- Estudiante [8] → participa en registros de observación → Observador de aves [12]
+- Docente [9] → organiza aprendizaje sobre aprovechamiento alimentario → Recuperador de alimentos [23]
+- Líder vecinal [10] → presenta prioridades territoriales para seguimiento → Edil de Kennedy [57]
+- Cuidadora del humedal [11] → reporta necesidades de mantenimiento hídrico → Técnico de mantenimiento hídrico [41]
+- Observador de aves [12] → entrega registros de fauna para revisión técnica → Profesional de fauna acuática [70]
+- Vendedor mayorista [13] → coordina preparación de pedidos y carga → Cargador [19]
+- Vendedora minorista [14] → entrega alimentos y recibe necesidades de compra → Comprador habitual [18]
+- Vendedor ambulante [15] → entrega materiales separados → Reciclador [22]
+- Tendero [16] → acuerda ventanas de entrega → Conductor de camión [20]
+- Cocinera [17] → recibe alimentos aptos para preparación → Recuperador de alimentos [23]
+- Comprador habitual [18] → comunica demanda de alimentos → Tendero [16]
+- Cargador [19] → coordina maniobra y descarga → Conductor de camión [20]
+- Carretillero [21] → realiza traslados de mercancía → Vendedora minorista [14]
+- Reciclador [22] → entrega materiales para clasificación → Clasificador de residuos [33]
+- Recuperador de alimentos [23] → coordina recogida de excedentes aptos → Vendedor mayorista [13]
+- Coordinador de donaciones [24] → coordina entrega y trazabilidad de alimentos → Cocinera [17]
+- Gerente de Corabastos [25] → solicita coordinación de accesos → Subdirector de Gestión en Vía [59]
+- Delegado de la Junta [26] → requiere información presupuestal para decisiones colegiadas → Responsable de presupuesto [27]
+- Responsable de presupuesto [27] → recibe costos de mantenimiento de equipos → Técnico de compactadores [34]
+- Representante de vendedores [28] → acuerda condiciones de entrega de carga → Cargador [19]
+- Supervisor de aseo [29] → organiza tareas de limpieza → Recolector de residuos [32]
+- Interventor de aseo [30] → revisa registros de cumplimiento → Supervisor de aseo [29]
+- Coordinador de recolección [31] → programa mantenimiento de equipos → Técnico de compactadores [34]
+- Recolector de residuos [32] → separa y entrega materiales → Clasificador de residuos [33]
+- Clasificador de residuos [33] → reporta fallas de equipos → Técnico de compactadores [34]
+- Técnico de compactadores [34] → comunica disponibilidad de compactadores → Supervisor de aseo [29]
+- Administrador del humedal [35] → coordina revisión de aportes y drenajes → Profesional de drenaje urbano [69]
+- Biólogo de fauna [36] → define registros de observación de fauna → Observador de aves [12]
+- Especialista en árboles [37] → coordina vegetación y seguimiento de polinizadores → Profesional de polinizadores [71]
+- Veterinario [38] → orienta manejo y cuidado de animales → Cuidador de animales [39]
+- Cuidador de animales [39] → realiza cuidado y control de acceso al hábitat → Gato doméstico [51]
+- Jardinero [40] → coordina agua y mantenimiento de vegetación → Técnico de mantenimiento hídrico [41]
+- Administrador del parque [42] → articula accesos peatonales al parque → Subdirector de la Bicicleta y el Peatón [60]
+- Coordinador de aseo barrial [43] → coordina horarios de entrega de materiales → Reciclador [22]
+- Gestor de servicios públicos [44] → canaliza reportes de fallas de drenaje → Profesional de drenaje urbano [69]
+- Gestor ambiental local [45] → presenta necesidades ambientales de intervención → Alcalde local de Kennedy [56]
+- Rana sabanera [46] → aporta observaciones de presencia y actividad → Cuidadora del humedal [11]
+- Copetón [47] → aporta registros de presencia y comportamiento → Observador de aves [12]
+- Garza rayada [48] → aporta registros de uso del hábitat → Observador de aves [12]
+- Tingua norteña [49] → aporta registros de uso del borde hídrico → Cuidadora del humedal [11]
+- Guapucha [50] → aporta observaciones para revisión técnica del agua → Técnico de mantenimiento hídrico [41]
+- Gato doméstico [51] → aporta registros de interacción con fauna silvestre → Biólogo de fauna [36]
+- Caucho del Tequendama [52] → aporta señales para mantenimiento del arbolado → Jardinero [40]
+- Sauce [53] → aporta observaciones de vegetación en el borde hídrico → Técnico de mantenimiento hídrico [41]
+- Rama negra [54] → aporta registros de recursos florales → Profesional de polinizadores [71]
+- Ligustro [55] → aporta registros para manejo de vegetación → Jardinero [40]
+- Alcalde local de Kennedy [56] → coordina gestión territorial de accesos → Subdirector de Gestión en Vía [59]
+- Edil de Kennedy [57] → solicita información sobre recursos comprometidos → Responsable de presupuesto [27]
+- Subdirector de Ecosistemas y Ruralidad [58] → articula revisión técnica del drenaje y protección hídrica → Profesional de drenaje urbano [69]
+- Subdirector de Gestión en Vía [59] → comunica condiciones operativas de circulación → Conductor de camión [20]
+- Subdirector de la Bicicleta y el Peatón [60] → recibe requerimientos de accesibilidad cotidiana → Cuidadora [5]
+- Subdirector de Recolección, Barrido y Limpieza [61] → solicita seguimiento de obligaciones de aseo → Interventor de aseo [30]
+- Vocero de vendedores ambulantes [62] → coordina separación y horarios de residuos → Coordinador de aseo barrial [43]
+- Vocera de comerciantes minoristas [63] → articula recuperación de excedentes comerciales → Coordinador de donaciones [24]
+- Vocero de comerciantes mayoristas [64] → coordina capacidades de recepción mayorista → Coordinador de logística [75]
+- Vocera de trabajadores de carga [65] → comunica riesgos y necesidades de equipos → Técnico de compactadores [34]
+- Vocero de transportadores [66] → acuerda condiciones de maniobra y descarga → Cargador [19]
+- Vocera de residentes [67] → presenta prioridades de recorridos peatonales → Subdirector de la Bicicleta y el Peatón [60]
+- Vocera de personas cuidadoras [68] → coordina necesidades de estancia y cuidados → Administrador del parque [42]
+- Profesional de drenaje urbano [69] → entrega lectura técnica de drenajes → Administrador del humedal [35]
+- Profesional de fauna acuática [70] → comunica condiciones de agua relevantes para fauna → Técnico de mantenimiento hídrico [41]
+- Profesional de polinizadores [71] → orienta mantenimiento de recursos florales → Jardinero [40]
+- Coordinador del centro B [72] → coordina transferencias del escenario externo de referencia → Conductor de camión [20]
+- Coordinador del centro C [73] → coordina entregas del escenario externo de referencia → Vocero de tenderos [74]
+- Vocero de tenderos [74] → articula entrega de excedentes aptos → Coordinador de donaciones [24]
+- Coordinador de logística [75] → coordina separación de materiales en patios → Clasificador de residuos [33]
+
+ANEXO E. COORDENADAS CONCEPTUALES DE LOS ESPACIOS A/B
+Coordenadas locales de escena x,z; no latitud/longitud. Obtener y contrastar transformación antes de trasladarlas a SIG o parcelas.
+C | Corabastos · recepción y conservación | -1,27; 1,05 | #e5b77d
+N | Distribución de proximidad norte | -0,88; 0,38 | #8cb8ce
+M | Distribución de proximidad María Paz | -0,76; 0,77 | #8cb8ce
+P | Producción complementaria | -1,25; 0,52 | #a9c68e
+R | Recuperación de alimentos y materiales | -1,42; 0,89 | #c1a3c9
+H | Recursos de refugio La Vaca | -1,70; 1,26 | #79c7b5

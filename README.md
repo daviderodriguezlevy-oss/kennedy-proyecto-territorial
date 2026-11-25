@@ -28,3 +28,10 @@ Este repositorio conserva el proyecto. Subirlo a GitHub no activa por sí solo u
 ## Derechos
 
 Se conservan las atribuciones de los recursos originales. No se asigna una licencia global que sustituya las licencias de cartografía, fotografías o bibliotecas de terceros.
+
+## Continuar el simulador en equipo
+
+Lee [el contexto completo para la IA](simulador-3d/CONTEXTO-PARA-IA.txt) antes de modificar el simulador. Incluye el territorio, las variables, las reglas A/B, indicadores, especies, actores, archivos y criterios de verificación. Adjunta ese documento al chat de tu IA junto con el acceso al repositorio.
+
+Trabaja en una rama propia, sincroniza antes de editar y presenta los cambios para revisión antes de integrarlos a main. El contexto corresponde al estado revisado el 25 de noviembre de 2026; contrástalo con el código si hay actualizaciones posteriores.
+
