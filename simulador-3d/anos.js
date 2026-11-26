@@ -279,7 +279,7 @@ export function setupYears({ dynamics, obra, groups, invalidate }) {
   const panel = document.createElement('section'); panel.id = 'anos-panel'; panel.hidden = true; document.body.append(panel);
   panel.innerHTML = `<header><b id="an-titulo">Simulación en el tiempo</b><span class="sp"></span>
       <button id="an-pausa" title="Pausar los años (la ciudad sigue)">⏸</button>
-      <small class="dim">1 mes por segundo</small></header>
+      <small class="dim" id="an-vel">1 mes por segundo</small></header>
     <div class="an-fecha"><span id="an-ano">2026</span><span id="an-mes"></span><span id="an-lluvia"></span></div>
     <div class="obra-barra an-barra"><span id="an-obra" hidden></span><i id="an-prog"></i></div>
     <div class="an-ejes"><span>2026</span><span>2036</span><span>2046</span><span>2056</span></div>
@@ -462,6 +462,11 @@ export function setupYears({ dynamics, obra, groups, invalidate }) {
     const b = document.querySelector('[data-scen=actual]'); if (!b) return;
     b.textContent = corriendo ? '■ Terminar y ver resultados' : '▶ Simular'; b.title = corriendo ? 'Terminar la simulación: muestra gráficas y conclusiones de todo lo que pasó' : 'Correr los años desde 2026, un mes por segundo'; b.classList.toggle('corriendo', corriendo);
     const ap = document.getElementById('btn-aplicar'); if (ap) { ap.hidden = !corriendo || prop.aplicada || !!goVisto(); ap.onclick = () => aplicar(); }
+    // Acelerar: 1 año cada 2 segundos (6 meses/s); se vuelve a la velocidad normal (1 mes/s) con el mismo botón.
+    let ac = document.getElementById('btn-acelerar');
+    if (!ac && b.parentElement) { ac = document.createElement('button'); ac.id = 'btn-acelerar'; b.parentElement.insertBefore(ac, document.getElementById('sim-fecha')); ac.onclick = () => { vel = vel > 1 ? 1 : 6; boton(); }; }
+    if (ac) { ac.hidden = !corriendo; ac.classList.toggle('activo', vel > 1); ac.textContent = vel > 1 ? '▶ Velocidad normal · 1 mes por segundo' : '⏩ Acelerar · 1 año cada 2 segundos'; }
+    const lv = panel.querySelector('#an-vel'); if (lv) lv.textContent = vel > 1 ? '⏩ 1 año cada 2 s' : '1 mes por segundo';
     if (!corriendo) { const sf = document.getElementById('sim-fecha'); if (sf) sf.hidden = true; }
   };
   const fmt = (c, v) => c.sel ? '' : (v * c.esc).toFixed(c.step < 1 && c.esc === 100 ? 1 : 0).replace('.', ',');

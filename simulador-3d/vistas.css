@@ -329,3 +329,7 @@ body.dos-vistas #plan-area{background:transparent!important}
 #btn-resultados:hover{background:#22304a}
 #btn-resultados[hidden]{display:none}
 #resultados[hidden]{display:none!important}
+
+#btn-acelerar{grid-column:1/-1;background:transparent;color:var(--ui-gold);border:1px solid var(--ui-gold);border-radius:9px;padding:7px;cursor:pointer;font-size:12.5px}
+#btn-acelerar.activo{background:#3a2a0c;color:#ffd58a}
+#btn-acelerar[hidden]{display:none}
