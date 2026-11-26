@@ -8,7 +8,7 @@
 // viendo cae, los años se detienen y se explica por qué. Puede pasar incluso antes de terminar la obra.
 // TODOS LOS COEFICIENTES SON SUPUESTOS DE ENSAYO (por calibrar con fuentes).
 import * as T from 'three';
-import { mostrarResultados } from './resultados.js?v=4';
+import { mostrarResultados } from './resultados.js?v=5';
 
 const INICIO = 2026, MESES = 30 * 12;
 export const SUPUESTOS = {

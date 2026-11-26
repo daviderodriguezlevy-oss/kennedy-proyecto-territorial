@@ -9,7 +9,7 @@ const durTexto = meses => { const a = Math.floor(meses / 12), r = meses % 12; re
 
 export function mostrarResultados(d) {
   // d = { INICIO, MESES, A, B, prop, log, goA, goB, IND, condiciones:[[t,v]], informeHTML }
-  document.getElementById('resultados')?.remove();
+  document.getElementById('resultados')?.remove(); document.getElementById('btn-resultados')?.remove();
   const { INICIO, MESES, A, B, prop, log, goA, goB, IND, GAME_OVER = [], clima } = d;
   const ult = A.length - 1, conP = prop.aplicada;
   const finA = A[ult], finB = conP ? B[ult] : null;
@@ -123,12 +123,19 @@ export function mostrarResultados(d) {
     <h3>Condiciones de partida de esta corrida</h3><div class="res-cond">${d.condiciones.map(([t, v]) => `<div><span>${t}</span><b>${v}</b></div>`).join('')}</div>
     <p class="obra-aviso">Coeficientes de ensayo, por calibrar con fuentes. Los resultados muestran tendencias y relaciones entre variables, no cifras exactas.</p>`;
   document.body.append(el); document.body.classList.add('con-resultados');
-  const cerrar = () => { el.remove(); document.body.classList.remove('con-resultados'); document.removeEventListener('keydown', esc); window.vista3D?.proyeccion(); };
-  const esc = e => { if (e.key === 'Escape') cerrar(); };
+  // «Volver al territorio» oculta los resultados (no los borra): un botón en la barra derecha permite
+  // volver a verlos hasta que se inicie una simulación nueva.
+  const barra = document.getElementById('sim-barra');
+  const volver = document.createElement('button'); volver.id = 'btn-resultados'; volver.textContent = '📊 Volver a los resultados'; volver.hidden = true;
+  barra ? barra.append(volver) : document.body.append(volver);
+  const ver = on => { el.hidden = !on; volver.hidden = on; document.body.classList.toggle('con-resultados', on); window.vista3D?.proyeccion(); if (on) el.scrollTop = 0; };
+  const esc = e => { if (e.key === 'Escape' && !el.hidden) ver(false); };
   document.addEventListener('keydown', esc);
-  el.querySelector('#res-cerrar').onclick = cerrar;
-  // Volver a simular también cierra los resultados.
-  document.querySelector('[data-scen=actual]')?.addEventListener('click', cerrar, { once: true });
+  el.querySelector('#res-cerrar').onclick = () => ver(false);
+  volver.onclick = () => ver(true);
+  // Una simulación nueva descarta estos resultados.
+  const descartar = () => { el.remove(); volver.remove(); document.body.classList.remove('con-resultados'); document.removeEventListener('keydown', esc); window.vista3D?.proyeccion(); };
+  document.querySelector('[data-scen=actual]')?.addEventListener('click', descartar, { once: true });
   el.querySelector('#res-csv').onclick = () => {
     const ks = IND.map(i => i[1]), cab = ['mes', 'fecha', ...ks.map(k => k + '_sin'), ...(conP ? ks.map(k => k + '_con') : []), ...(conP ? ['avance_obra'] : [])];
     const filas = A.map((a, i) => [i, fecha(INICIO, i), ...ks.map(k => a[k].toFixed(2)), ...(conP ? ks.map(k => B[i][k].toFixed(2)) : []), ...(conP ? [Math.max(0, B[i].f).toFixed(3)] : [])]);
