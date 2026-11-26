@@ -1,5 +1,5 @@
 import * as T from 'three';
-import {modes,clamp,profile,biological,prepareRoute,routeAt,wetAt,advance} from './behavior56.mjs?v=60';
+import {modes,clamp,profile,biological,prepareRoute,routeAt,wetAt,advance} from './behavior56.mjs?v=61';
 export async function createDynamics({scene,ground,sun,camera,invalidate,hemisphere,treeCanopy}){
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const [routes,eco,actors,functions,roofMeta,roofRaw]=await Promise.all(['routes59.json','ecosystem56.json','actors56.json','actor-functions56.json','roof56.json','roof56.bin'].map(f=>fetch('data/'+f+'?v=56').then(r=>{if(!r.ok)throw Error(f);return f.endsWith('.bin')?r.arrayBuffer():r.json()})));const roof=new Float32Array(roofRaw);const [photos,treeNames]=await Promise.all(['species-photos.json','tree-names57.json'].map(f=>fetch('data/'+f).then(r=>r.json())));

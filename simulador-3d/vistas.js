@@ -15,6 +15,7 @@ const ANALISIS = {
 };
 const FONDO = new T.Color('#050606');
 const MODELO = { x: 2.576, z: 2.234 };
+const CENTRO = { x: -1.0, z: .95 };   // Corabastos, María Paz y La Vaca
 const LUGARES = [['Corabastos', -1.29, 1.16], ['María Paz', -.88, .57], ['La Vaca', -1.604, 1.185], ['El Burro', .1597, .5031], ['Techo', 1.159, .244]];
 const TAMANOS = { s: 26, m: 36, l: 48 };   // ancho del panel en % de la ventana
 
@@ -35,8 +36,8 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
   }
   const paint = on => {
     for (const x of mats) {
-      x.m.color.copy(on ? x.dark : x.base);
-      if (x.m.emissive) { x.m.emissive.copy(on ? x.em : x.baseEm); x.m.emissiveIntensity = on ? x.emI : x.baseEmI; }
+      x.m.color.copy(on ? (x.m.userData.tinte ? x.m.userData.tinte.clone().multiplyScalar(.6) : x.dark) : (x.m.userData.tinte || x.base));
+      if (x.m.emissive) { x.m.emissive.copy(on ? x.em : x.baseEm); x.m.emissiveIntensity = on ? (x.m.userData.tinte ? 0 : x.emI) : x.baseEmI; }
     }
   };
 
@@ -56,7 +57,8 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
   panel.querySelectorAll('[data-size]').forEach(b => b.onclick = () => setSize(b.dataset.size));
   panel.querySelector('[data-act=hide]').onclick = () => { hidden = true; panel.hidden = true; reopen.hidden = false; invalidate(); };
   reopen.onclick = () => { hidden = false; panel.hidden = false; reopen.hidden = true; invalidate(); };
-  panel.querySelector('[data-act=fit]').onclick = () => { cam.position.x = 0; cam.position.z = 0; zoom = 1; invalidate(); };
+  const encuadre = () => { cam.position.x = CENTRO.x; cam.position.z = CENTRO.z; zoom = 1; invalidate(); };
+  panel.querySelector('[data-act=fit]').onclick = encuadre;
   setSize('m');
 
   // ---- Cámara cenital ----
@@ -64,7 +66,7 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
   // funciona con cámaras ortográficas. A esta distancia la deformación de perspectiva es mínima.
   const FOV = 8, TAN = Math.tan(FOV / 2 * Math.PI / 180);
   const cam = new T.PerspectiveCamera(FOV, 1, .5, 150);
-  cam.up.set(0, 0, -1); cam.position.set(0, 40, 0); cam.lookAt(0, 0, 0);
+  cam.up.set(0, 0, -1); cam.position.set(CENTRO.x, 40, CENTRO.z); cam.lookAt(CENTRO.x, 0, CENTRO.z);
   let zoom = 1, halfH = MODELO.z, extras = null;
   const ground0 = new T.Plane(new T.Vector3(0, 1, 0), 0), rc = new T.Raycaster(), hp = new T.Vector3();
 
@@ -76,6 +78,8 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
   function footprint() {
     const p = foot.geometry.attributes.position;
     ndc.forEach(([x, y], i) => {
+      // Con dos vistas, el 3D ocupa solo su recuadro: las esquinas se toman de ese recuadro.
+      const g = window.vista3D?.region; if (g) { x = ((x < 0 ? g.x0 : g.x1) / innerWidth) * 2 - 1; y = 1 - ((y < 0 ? g.y1 : g.y0) / innerHeight) * 2; }
       ray.setFromCamera(new T.Vector2(x, y * .98), camera);
       let q = ray.ray.intersectPlane(plane, hit);
       if (!q || q.distanceTo(camera.position) > 8) { // rayo al horizonte: se limita a 8 unidades
@@ -115,11 +119,49 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
   area.addEventListener('wheel', e => {
     e.preventDefault();
     const before = toWorld(e);
-    zoom = Math.max(1, Math.min(14, zoom * (e.deltaY < 0 ? 1.15 : 1 / 1.15))); place();
+    zoom = Math.max(.35, Math.min(14, zoom * (e.deltaY < 0 ? 1.15 : 1 / 1.15))); place();
     const after = toWorld(e);
     cam.position.x += before.x - after.x; cam.position.z += before.z - after.z; invalidate();
   }, { passive: false });
   area.addEventListener('contextmenu', e => e.preventDefault());
+
+  // ---- Todo lo que se mueve en el 3D, también en planta ----
+  // Vehículos, personas, camiones de obra y fauna son InstancedMesh: en planta medirían menos de un píxel,
+  // así que se dibujan como puntos de tamaño fijo con el color de cada tipo, en la misma posición y al mismo tiempo.
+  const MAXP = 20000, pPos = new Float32Array(MAXP * 3), pCol = new Float32Array(MAXP * 3);
+  const pGeo = new T.BufferGeometry(); pGeo.setAttribute('position', new T.BufferAttribute(pPos, 3)); pGeo.setAttribute('color', new T.BufferAttribute(pCol, 3));
+  const puntos = new T.Points(pGeo, new T.PointsMaterial({ size: 4, sizeAttenuation: false, vertexColors: true, depthTest: false, transparent: true, toneMapped: false }));
+  puntos.frustumCulled = false; puntos.renderOrder = 12; puntos.visible = false; scene.add(puntos);
+  const vistos = new Map(); let ultimoBarrido = 0, moviles = [];
+  const brillo = c => { const k = new T.Color(c); const hsl = {}; k.getHSL(hsl); return k.setHSL(hsl.h, Math.min(1, hsl.s * 1.2 + .1), Math.max(.55, hsl.l)); };
+  function barrer(now) {
+    // Cada 1,5 s se revisa qué instancias cambiaron (se mueven); lo estático (árboles, mobiliario) no se dibuja.
+    if (now - ultimoBarrido < 1500 && moviles.length) return;
+    ultimoBarrido = now; const lista = [];
+    scene.traverse(o => {
+      if (!o.isInstancedMesh || o === puntos) return;
+      const v = o.instanceMatrix.version, prev = vistos.get(o);
+      if (prev && (v !== prev.v || now - prev.t < 4000)) lista.push(o);
+      if (!prev || v !== prev.v) vistos.set(o, { v, t: prev && v !== prev.v ? now : (prev?.t ?? -1e9) });
+    });
+    moviles = lista;
+  }
+  const mw = new T.Matrix4(), mi = new T.Matrix4(), pv = new T.Vector3();
+  function llenarPuntos(now) {
+    barrer(now); let n = 0;
+    for (const o of moviles) {
+      if (!o.visible || !o.count) continue;
+      let vis = true; o.traverseAncestors(a => { if (!a.visible) vis = false; }); if (!vis) continue;
+      o.updateWorldMatrix(true, false); const col = brillo(o.material.color || '#ffffff');
+      for (let i = 0; i < o.count && n < MAXP; i++) {
+        o.getMatrixAt(i, mi); pv.setFromMatrixPosition(mi).applyMatrix4(o.matrixWorld);
+        pPos[n * 3] = pv.x; pPos[n * 3 + 1] = pv.y + .01; pPos[n * 3 + 2] = pv.z;
+        pCol[n * 3] = col.r; pCol[n * 3 + 1] = col.g; pCol[n * 3 + 2] = col.b; n++;
+      }
+    }
+    window.simPerf && (window.simPerf.puntosPlanta = n, window.simPerf.movilesPlanta = moviles.length);
+    pGeo.setDrawRange(0, n); pGeo.attributes.position.needsUpdate = true; pGeo.attributes.color.needsUpdate = true;
+  }
 
   // ---- Dibujo ----
   // La planta se dibuja en una textura aparte unas 8 veces por segundo (o al instante si se interactúa),
@@ -135,19 +177,19 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
   function drawPlan(states, r) {
     const pr = renderer.getPixelRatio(), w = Math.max(4, Math.round(r.width * pr)), h = Math.max(4, Math.round(r.height * pr));
     if (rt.width !== w || rt.height !== h) rt.setSize(w, h);
-    const aspect = r.width / r.height; halfH = Math.max(MODELO.z, MODELO.x / aspect) * 1.02;
+    const aspect = r.width / r.height; halfH = (aspect < 1 ? MODELO.z * .62 : Math.max(MODELO.z, MODELO.x / aspect)) * 1.02;   // vista alta: se llena el alto y se centra en el área del proyecto
     cam.aspect = aspect; cam.updateProjectionMatrix(); place();
 
     const bg = scene.background.clone(), hemi = hemisphere.intensity, sunI = sun.intensity, treesVis = groups.trees.visible;
     scene.background.copy(FONDO); hemisphere.intensity = 1.05; sun.intensity = .55; groups.trees.visible = false;
     // En planta no se dibujan los puntos de especies ni la lluvia (tapan la lectura de las vías).
-    if (states && !extras) { extras = []; scene.traverse(o => { if (o.isSprite || (o.isPoints && !o.geometry.attributes.color)) extras.push(o); }); }
+    if (states && !extras) { extras = []; scene.traverse(o => { if (o.isSprite || (o.isPoints && o !== puntos && !o.geometry.attributes.color && o.material.size <= 1.5)) extras.push(o); }); }
     const extrasVis = (extras || []).map(o => o.visible); (extras || []).forEach(o => o.visible = false);
-    paint(true); states?.show(true); footprint(); foot.visible = true;
+    paint(true); states?.show(true); footprint(); foot.visible = true; llenarPuntos(performance.now()); puntos.visible = true;
 
     renderer.setRenderTarget(rt); renderer.render(scene, cam); renderer.setRenderTarget(null);
 
-    paint(false); states?.show(false); foot.visible = false; (extras || []).forEach((o, i) => o.visible = extrasVis[i]);
+    paint(false); states?.show(false); foot.visible = false; puntos.visible = false; (extras || []).forEach((o, i) => o.visible = extrasVis[i]);
     scene.background.copy(bg); hemisphere.intensity = hemi; sun.intensity = sunI; groups.trees.visible = treesVis;
   }
 
@@ -156,7 +198,7 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
     if (hidden || panel.hidden) return;
     const r = area.getBoundingClientRect(), c = renderer.domElement.getBoundingClientRect();
     if (r.width < 20 || r.height < 20) return;
-    if (force || now - lastPlan > 125) { drawPlan(states, r); lastPlan = now; force = false; }
+    if (force || now - lastPlan > 33) { drawPlan(states, r); lastPlan = now; force = false; }
 
     const x = r.left - c.left, y = c.bottom - r.bottom;
     renderer.setScissorTest(true); renderer.setScissor(x, y, r.width, r.height); renderer.setViewport(x, y, r.width, r.height);

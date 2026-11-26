@@ -4,7 +4,7 @@
 //  - Lo que depende de ellos (carros, peatones, camiones, cola, residuos…) se muestra como DATO, no como slider.
 //  - Supuestos del estado actual y visualización quedan plegados, por si se necesitan.
 // Mueve los elementos existentes (no los recrea), así conservan su conexión con la simulación.
-import { modes } from './behavior56.mjs?v=60';
+import { modes } from './behavior56.mjs?v=61';
 
 const $ = id => document.getElementById(id);
 const fila = id => $(id)?.closest('label');           // cada slider vive dentro de su <label>
@@ -15,14 +15,15 @@ export function setupPanel() {
   const sec = (title, cls = '') => { const s = document.createElement('section'); s.className = 'sim-sec ' + cls; if (title) s.innerHTML = `<h3>${title}</h3>`; return s; };
   const plegable = (title, note) => { const d = document.createElement('details'); d.className = 'sim-sec'; d.innerHTML = `<summary>${title}</summary>${note ? `<p class="help">${note}</p>` : ''}`; return d; };
 
-  // 1 · Escenarios en el tiempo (solo botones por ahora)
-  const esc = sec('Escenarios en el tiempo', 'sim-scenarios');
-  esc.innerHTML += `<p class="help">«Sin intervenir» (año tras año hasta un game over) se activará más adelante. Los botones de obra ya muestran cómo se construye la propuesta mientras la ciudad sigue funcionando.</p>
-    <button class="scen-main" data-scen="actual" disabled>▶ Sin intervenir · ¿cuántos años dura el estado actual?</button>
-    <div class="scen-label">Construir la propuesta · duración de la obra</div>
-    <div class="scen-row"><button data-scen="obra3" disabled>Obra 3 años</button><button data-scen="obra5" disabled>Obra 5 años</button><button data-scen="obra8" disabled>Obra 8 años</button></div>
-    <p class="help scen-note">Durante la obra se verán calles cerradas y desvíos, residuos de construcción, camiones de concreto y materiales llegando, y Corabastos seguirá funcionando con paso para carros y peatones.</p>`;
-  esc.querySelectorAll('[data-scen]').forEach(b => b.title = 'Pendiente: se habilita cuando la propuesta esté definida');
+  // 1 · Simular los años: un solo botón. Antes de pulsarlo, todo es el estado actual y se exploran las variables.
+  const esc = sec('Simular los años', 'sim-scenarios');
+  esc.innerHTML += `<p class="help" id="scen-help">Ahora ves el <b>estado actual</b>: mueve el tiempo, el clima y las demás variables para explorarlo. Antes de simular ajusta las condiciones de partida (también las de la obra, que deciden cuánto dura). Al pulsar <b>Simular</b> los años corren solos, un mes por segundo, de 2026 a 2056; en cualquier momento puedes pulsar <b>Aplicar propuesta</b> y verás la obra durar lo que le corresponda según esas condiciones. Si algo colapsa, hay game over.</p>`;
+  // Barra superior del panel derecho: reemplaza las pestañas (Territorio y Comparar A/B se retiran).
+  const barra = document.createElement('div'); barra.id = 'sim-barra';
+  barra.innerHTML = `<button class="scen-main" data-scen="actual" disabled>▶ Simular</button><button id="btn-aplicar" hidden>🏗 Aplicar propuesta</button><div id="sim-fecha" hidden></div>`;
+  const aside = root.closest('aside'); aside?.querySelector('.panel-tabs')?.remove(); aside?.prepend(barra);
+  // Se ocultan (no se borran): otros módulos aún leen controles de ahí (capas, nombres, recorrido).
+  document.body.classList.add('sin-pestanas');
 
   // 2 · Tiempo
   const tiempo = sec('Tiempo');

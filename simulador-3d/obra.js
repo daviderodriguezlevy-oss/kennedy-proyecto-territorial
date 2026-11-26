@@ -8,7 +8,7 @@
 // - Camiones de obra (volquetas, mixers de concreto y materiales) llegan a cada frente y se van.
 // Es una representación del proceso: los plazos son fracciones del total elegido (3, 5 u 8 años), no un cronograma de obra.
 import * as T from 'three';
-import { routeAt } from './behavior56.mjs?v=60';
+import { routeAt } from './behavior56.mjs?v=61';
 import { desplazar, mat, dentro } from './arquitectura.js?v=2';
 
 // Ventanas de cada pieza [inicio demolición, inicio obra, fin obra] como fracción del plazo total.
@@ -21,7 +21,7 @@ function calendario(p) {
 const ESTADO = f => f < .62 ? 'Corabastos opera en las bodegas actuales mientras se levanta el mercado nuevo al oriente del predio.' : f < .64 ? 'Traslado de la operación al mercado nuevo.' : 'Corabastos ya opera en el mercado nuevo; se demuelen las bodegas viejas para el humedal y el parque.';
 
 export function setupConstruction({ scene, dynamics, visor, ground, invalidate }) {
-  let prop = null, activo = false, pausado = false, meses = 0, total = 60, vel = 1, f = 0;
+  let prop = null, activo = false, pausado = false, meses = 0, total = 60, vel = 1, f = 0, externo = false;
   let mundoObra = null, piezas = [], claveMascara = '', claveCierre = '', zonasCierre = [];
   const trucks = [], st = { viajes: 0 };
 
@@ -45,7 +45,7 @@ export function setupConstruction({ scene, dynamics, visor, ground, invalidate }
   $('#obra-min').onclick = () => { panel.classList.toggle('min'); $('#obra-min').textContent = panel.classList.contains('min') ? '▸' : '▾'; };
 
   // Botones de escenario del panel Simular (Obra 3 / 5 / 8 años) pasan a estar activos.
-  const conectar = () => document.querySelectorAll('[data-scen^=obra]').forEach(b => { b.disabled = false; b.title = 'Ver cómo se construye la propuesta mientras la ciudad sigue funcionando'; b.onclick = () => iniciar(+b.dataset.scen.replace('obra', '')); });
+  const conectar = () => document.querySelectorAll('[data-scen^=obra]').forEach(b => { b.disabled = false; b.title = 'Ver cómo se construye la propuesta mientras la ciudad sigue funcionando'; b.onclick = () => { const anos = +b.dataset.scen.replace('obra', ''); api.onPedido ? api.onPedido(anos) : iniciar(anos); }; });
   conectar(); setTimeout(conectar, 1500);
 
   // ---------- Elementos de obra (en metros, grupo escalado a la escena) ----------
@@ -223,22 +223,24 @@ export function setupConstruction({ scene, dynamics, visor, ground, invalidate }
   let ultimoTexto = 0;
   function update(now, dt) {
     if (!activo) return;
-    if (!pausado && !dynamics.state().paused) meses = Math.min(total, meses + dt * vel);
-    f = meses / total;
+    // En modo externo el avance lo fija el reloj de años (fijar); si no, la obra lleva su propio reloj.
+    if (!externo && !pausado && !dynamics.state().paused) meses = Math.min(total, meses + dt * vel);
+    f = Math.min(1, meses / total);
     aplicar(); moverCamiones(dt);
     for (const q of piezas) if (q.grua?.visible) q.grua.userData.pluma.rotation.y = now / 4000 + q.c[0];
-    if (now - ultimoTexto > 250) { ultimoTexto = now; panelTexto(); }
+    if (!externo && now - ultimoTexto > 250) { ultimoTexto = now; panelTexto(); }
     invalidate();
   }
 
-  function iniciar(anos) {
+  function iniciar(anos, modoExterno = false) {
+    externo = modoExterno;
     if (visor.on) document.getElementById('proposal-toggle')?.click();   // sale del modelo estático si estaba abierto
     preparar();
     activo = true; pausado = false; total = anos * 12; meses = 0; f = 0; vel = 1; claveMascara = ''; claveCierre = ''; trucks.length = 0; st.viajes = 0;
     prop.group.visible = true;
     for (const q of piezas) { [...q.edif, ...q.suelo, ...q.veg, ...q.tarde].forEach(o => o.visible = false); }
     mundoObra.visible = true;
-    panel.hidden = false; document.body.classList.add('obra-mode');
+    panel.hidden = externo; document.body.classList.add('obra-mode');
     $('#obra-titulo').textContent = `Obra de la propuesta · ${anos} años`;
     $('#obra-pausa').textContent = '⏸'; panel.querySelectorAll('[data-v]').forEach(x => x.classList.toggle('active', x.dataset.v === '1'));
     dynamics.setPaused(false); invalidate();
@@ -250,5 +252,14 @@ export function setupConstruction({ scene, dynamics, visor, ground, invalidate }
     for (const k of Object.keys(inst)) for (const m of Object.values(inst[k])) m.count = 0;
     trucks.length = 0; dynamics.setClosures(null); visor.paraObra.apagar(); invalidate();
   }
-  return { update, get activo() { return activo; } };
+  const api = {
+    update, iniciar, detener, onPedido: null,
+    get activo() { return activo; },
+    fijar(fr) { meses = Math.max(0, Math.min(1, fr)) * total; },
+    resumen() {
+      const fr = piezas.filter(q => f >= q.d0 && f < q.o1 && q.id !== 'alameda' && q.id !== 'predio-suelo').map(q => ({ nombre: q.nombre, fase: f < q.o0 ? 'demolición' : 'construcción', pct: Math.round(Math.max(0, (f - q.o0) / (q.o1 - q.o0)) * 100) }));
+      return { f, estado: ESTADO(f), frentes: fr, zonas: zonasCierre.length, camiones: trucks.length, viajes: st.viajes };
+    }
+  };
+  return api;
 }
