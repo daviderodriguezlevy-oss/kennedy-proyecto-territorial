@@ -162,16 +162,19 @@ export function paneles(w, d, y) {
 }
 
 // Árboles con copa irregular y tronco (instanciados), alturas variadas.
-export function arboles(puntos, { alto = [7, 14], tono = .3 } = {}) {
+// esbelto: copa alta y angosta (eucalipto, pino, ciprés: especies ornamentales de rápido crecimiento).
+export function arboles(puntos, { alto = [7, 14], tono = .3, esbelto = false } = {}) {
   const n = puntos.length, g = new T.Group(); if (!n) return g;
   const copa = new T.InstancedMesh(new T.IcosahedronGeometry(1, 1), new T.MeshStandardMaterial({ roughness: .9, color: '#ffffff' }), n * 2);
   const tronco = new T.InstancedMesh(new T.CylinderGeometry(.18, .28, 1, 6), mat('#5b4634'), n);
   const o = new T.Object3D(), c = new T.Color();
   puntos.forEach(([x, z, y0 = 0], i) => {
-    const h = alto[0] + rnd() * (alto[1] - alto[0]), r = h * (.28 + rnd() * .1);
+    const h = alto[0] + rnd() * (alto[1] - alto[0]), r = h * (esbelto ? .12 + rnd() * .04 : .28 + rnd() * .1);
     o.position.set(x, y0 + h * .35, z); o.scale.set(1, h * .7, 1); o.rotation.set(0, 0, 0); o.updateMatrix(); tronco.setMatrixAt(i, o.matrix);
     for (let k = 0; k < 2; k++) {
-      o.position.set(x + (rnd() - .5) * r * .5, y0 + h * (.68 + k * .16), z + (rnd() - .5) * r * .5); o.scale.set(r * (1 - k * .25), r * (.8 - k * .15), r * (1 - k * .25)); o.rotation.set(rnd(), rnd(), rnd()); o.updateMatrix();
+      o.position.set(x + (rnd() - .5) * r * .5, y0 + h * (esbelto ? .55 + k * .22 : .68 + k * .16), z + (rnd() - .5) * r * .5);
+      if (esbelto) o.scale.set(r * (1 - k * .3), h * (.32 - k * .08), r * (1 - k * .3)); else o.scale.set(r * (1 - k * .25), r * (.8 - k * .15), r * (1 - k * .25));
+      const rx = rnd(), ry = rnd(), rz = rnd(); if (esbelto) o.rotation.set(0, ry * 6.28, 0); else o.rotation.set(rx, ry, rz); o.updateMatrix();
       copa.setMatrixAt(i * 2 + k, o.matrix); copa.setColorAt(i * 2 + k, c.setHSL(tono - .05 + rnd() * .08, .38 + rnd() * .15, .26 + rnd() * .1));
     }
   });

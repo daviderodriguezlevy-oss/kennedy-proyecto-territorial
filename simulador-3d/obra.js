@@ -9,7 +9,7 @@
 // Es una representación del proceso: los plazos son fracciones del total elegido (3, 5 u 8 años), no un cronograma de obra.
 import * as T from 'three';
 import { routeAt } from './behavior56.mjs?v=61';
-import { desplazar, mat, dentro } from './arquitectura.js?v=2';
+import { desplazar, mat, dentro } from './arquitectura.js?v=3';
 
 // Ventanas de cada pieza [inicio demolición, inicio obra, fin obra] como fracción del plazo total.
 function calendario(p) {
@@ -96,8 +96,11 @@ export function setupConstruction({ scene, dynamics, visor, ground, invalidate }
 
   // ---------- Preparar piezas ----------
   function preparar() {
-    prop = visor.paraObra.preparar();
-    if (mundoObra) return;
+    const nuevo = visor.paraObra.preparar();
+    if (mundoObra && nuevo === prop) return;
+    // La propuesta cambió (otras variables): se rehacen andamios, grúas, cercos y escombros.
+    if (mundoObra) { scene.remove(mundoObra); mundoObra = null; }
+    prop = nuevo;
     mundoObra = new T.Group(); mundoObra.scale.setScalar(.001); scene.add(mundoObra);
     const rutas = [...dynamics.state().roadRoutes, ...dynamics.state().cargoRoutes];
     piezas = prop.piezas.map(p => {

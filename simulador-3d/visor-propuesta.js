@@ -1,10 +1,12 @@
 // Visor del modelo estático de la propuesta: botón "Ver propuesta", fichas numeradas y recorte
 // de lo existente dentro de las áreas intervenidas. No modifica la simulación (la pausa mientras se ve).
 import * as T from 'three';
-import { createProposal } from './propuesta.js?v=2';
+import { createProposal, OPC } from './propuesta.js?v=3';
 
 export function setupProposalView({ scene, groups, camera, controls, ground, flyTo, dynamics, invalidate }) {
-  let prop = null, on = false, hiddenObjs = [], treeBackup = [], sel = -1;
+  let prop = null, on = false, hiddenObjs = [], treeBackup = [], sel = -1, claveOpc = '', sueloCache = null;
+  // La propuesta se vuelve a construir si cambian sus variables (pisos, humedal, vegetación, nodos).
+  const vigente = () => prop && claveOpc === JSON.stringify(OPC);
   // Máscara en textura: todas las áreas intervenidas pintadas en blanco sobre el sector (≈0,8 m por píxel).
   const B = { x0: -2.0, z0: 0.2, x1: -0.3, z1: 1.85 }, RES = 2048;
   const lienzo = document.createElement('canvas'); lienzo.width = lienzo.height = RES;
@@ -69,7 +71,10 @@ if (uMaskOn > 0.5) { vec2 mUv = (vWxz - uMaskB.xy) / (uMaskB.zw - uMaskB.xy);
   }
 
   function construir() {
-    prop = createProposal({ scene, ground: sueloExacto() });
+    if (prop) { scene.remove(prop.group); prop.group.traverse(o => o.geometry?.dispose?.()); pinEls.forEach(e => e.remove()); pinEls = []; }
+    sueloCache ||= sueloExacto();
+    claveOpc = JSON.stringify(OPC);
+    prop = createProposal({ scene, ground: sueloCache, opc: { ...OPC } });
     pintarMascara(prop.masks);
     card.innerHTML = `<header><b>Propuesta · modelo estático</b><button id="proposal-close" title="Volver al estado actual">×</button></header>
       <p class="help">Solo para ver y corregir: no es la simulación. Se ubica sobre suelo que hoy no tiene vivienda.</p>
@@ -101,7 +106,7 @@ if (uMaskOn > 0.5) { vec2 mUv = (vWxz - uMaskB.xy) / (uMaskB.zw - uMaskB.xy);
   }
 
   function activar(estado) {
-    on = estado; if (on && !prop) construir();
+    on = estado; if (on && !vigente()) construir();
     prop.group.visible = on; uni.on.value = on ? 1 : 0;
     btn.classList.toggle('active', on); btn.textContent = on ? '🏗 Ver estado actual' : '🏗 Ver propuesta';
     card.hidden = !on; pinsLayer.hidden = !on; document.body.classList.toggle('proposal-mode', on);
@@ -136,7 +141,7 @@ if (uMaskOn > 0.5) { vec2 mUv = (vWxz - uMaskB.xy) / (uMaskB.zw - uMaskB.xy);
   }
   // Acceso para la animación de obra (máscara y árboles por fases).
   const paraObra = {
-    preparar() { if (!prop) construir(); return prop; },
+    preparar() { if (!vigente()) construir(); return prop; },
     mascara(polys) { pintarMascara(polys); uni.on.value = polys.length ? 1 : 0; invalidate(); },
     arboles(polys) { arbolesDentro(false); if (polys.length) arbolesDentro(true, polys); invalidate(); },
     apagar() { uni.on.value = 0; arbolesDentro(false); treeBackup = []; if (prop) pintarMascara(prop.masks); }

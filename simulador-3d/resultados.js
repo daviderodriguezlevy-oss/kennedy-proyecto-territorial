@@ -10,7 +10,7 @@ const durTexto = meses => { const a = Math.floor(meses / 12), r = meses % 12; re
 export function mostrarResultados(d) {
   // d = { INICIO, MESES, A, B, prop, log, goA, goB, IND, condiciones:[[t,v]], informeHTML }
   document.getElementById('resultados')?.remove(); document.getElementById('btn-resultados')?.remove();
-  const { INICIO, MESES, A, B, prop, log, goA, goB, IND, GAME_OVER = [], clima } = d;
+  const { INICIO, MESES, A, B, prop, log, goA, goB, IND, GAME_OVER = [], clima, GRUPOS = {}, EVENTOS = {}, bitacora = [], semilla, par = null } = d;
   const ult = A.length - 1, conP = prop.aplicada;
   const finA = A[ult], finB = conP ? B[ult] : null;
   const malo = (v, [a, b], mas) => mas ? v <= b : v >= b;
@@ -85,6 +85,8 @@ export function mostrarResultados(d) {
   if (go?.id === 'plagas' || go?.id === 'residuos') sug.push('más recolección y más aprovechamiento de residuos');
   if (go?.id === 'comida') sug.push('aplicar la propuesta antes: los nodos y el mercado nuevo suben la capacidad');
   if (go?.id === 'aves' || go?.id === 'abejas') sug.push('proteger el humedal, obra solo de día y aplicar la propuesta antes (humedal ampliado, huertas y techos verdes)');
+  if (go?.id === 'ensordecido') sug.push('carga de noche o pico y placa (menos tráfico), menos frentes de obra y obra solo de día; la ronda con vegetación del humedal ampliado amortigua el ruido');
+  if (go?.id === 'corredor') sug.push('control de la ronda del humedal y aplicar la propuesta antes (huertas, techos verdes y parques conectan los parches)');
   if (!conP) sug.push('correr de nuevo y aplicar la propuesta para comparar');
   if (sug.length) C.push(`Para probar en otra corrida: ${[...new Set(sug)].join('; ')}.`);
 
@@ -105,17 +107,40 @@ export function mostrarResultados(d) {
     return `<div class="gm"><div class="gm-h"><b>${g.titulo}</b><span>límite: ${g.menor != null ? 'menos de' : 'más de'} ${num(lim)} ${u}${g.meses > 1 ? ` durante ${g.meses} meses` : ''}</span></div>
       ${fila('Sin intervenir', A, goA)}${conP ? fila('Con propuesta', B, goB) : ''}</div>`;
   }
+  // ---------- Niveles de cada regla: primer mes de alerta temprana, falla localizada y condición crítica ----------
+  function niveles(arr, g) {
+    const ind = IDX[g.k]; if (!ind) return [null, null, null];
+    const um = ind[3], peor = (v, l) => g.menor != null ? v < l : v > l, lim = g.menor ?? g.mayor;
+    let alerta = null, falla = null, critica = null, cuenta = 0;
+    for (const x of arr) {
+      if (alerta == null && peor(x[g.k], um[0])) alerta = x.mes;
+      cuenta = peor(x[g.k], lim) ? cuenta + 1 : 0;
+      if (cuenta && falla == null) falla = x.mes;
+      if (cuenta >= g.meses) { critica = x.mes; break; }
+    }
+    return [alerta, falla, critica];
+  }
+  const celdaNv = (m, cls) => m == null ? '<td class="dim">—</td>' : `<td class="${cls}">${fecha(INICIO, m)}</td>`;
+  const filaNv = g => { const a = niveles(A, g), b = conP ? niveles(B, g) : null;
+    return `<tr><th>${g.titulo}<small>${IDX[g.k]?.[0] || g.k} ${g.menor != null ? '<' : '>'} ${num(g.menor ?? g.mayor)} · ${g.meses} ${g.meses === 1 ? 'mes' : 'meses'}</small></th>${a.map((m, i) => celdaNv(m, 'nv' + (i + 1))).join('')}${b ? b.map((m, i) => celdaNv(m, 'nv' + (i + 1))).join('') : ''}</tr>`; };
+  const tablaNiveles = `<table class="res-nv"><thead><tr><th rowspan="2">Regla</th><th colspan="3">Sin intervenir</th>${conP ? '<th colspan="3">Con propuesta</th>' : ''}</tr>
+    <tr>${'<th class="nv1">Alerta temprana</th><th class="nv2">Falla localizada</th><th class="nv3">Condición crítica</th>'.repeat(conP ? 2 : 1)}</tr></thead>
+    <tbody>${Object.entries(GRUPOS).map(([gr, n]) => `<tr class="grupo"><td colspan="${conP ? 7 : 4}">${n}</td></tr>` + GAME_OVER.filter(x => x.g === gr).map(filaNv).join('')).join('')}</tbody></table>`;
   const climaTxt = clima ? `Clima del periodo: ${clima.nina} año${clima.nina === 1 ? '' : 's'} de La Niña, ${clima.nino} de El Niño y ${clima.normal} normal${clima.normal === 1 ? '' : 'es'} · ${clima.dias.toLocaleString('es')} días de lluvia en total (${Math.round(clima.mm).toLocaleString('es')} mm) · ${clima.mesesLluvia} meses de temporada fuerte de lluvias.` : '';
 
   // ---------- Página ----------
   const el = document.createElement('section'); el.id = 'resultados';
   el.innerHTML = `<header class="res-top"><div><small>RESULTADOS DE LA SIMULACIÓN · ${conP ? 'SIN INTERVENIR VS CON PROPUESTA' : 'ESTADO ACTUAL SIN INTERVENIR'}</small>
+      ${par ? `<p class="res-par"><b>${par.codigo}</b> ${par.t} · ${par.pregunta}${par.mod ? ' <em>(condiciones modificadas: no es el par guardado)</em>' : ''}</p>` : ''}
       <h1 class="res-tiempo">Pasaron ${durTexto(ult + 1)}</h1>
       <p>De enero de ${INICIO} a ${fin}${conP ? ` · propuesta aplicada en ${fecha(INICIO, prop.inicio)}${log?.fin != null ? ` y construida en ${durTexto(log.fin - log.inicio + 1)}` : ' (obra sin terminar)'}` : ''}</p></div>
       <div class="res-acc"><button id="res-csv">Descargar datos (CSV)</button><button id="res-cerrar">Volver al territorio</button></div></header>
-    <div class="res-go">${[['Sin intervenir', goA], ...(conP ? [['Con propuesta', goB]] : [])].map(([t, g]) => `<div class="${g ? 'cae' : 'ok'}"><span>${t}</span><b>${g ? `GAME OVER · ${fecha(INICIO, g.mes)}` : 'Sin game over'}</b>${g ? `<em>${g.titulo}</em>` : ''}</div>`).join('')}</div>
-    <h3>Cómo quedó cada game over al terminar</h3><p class="res-nota">La barra muestra qué tan cerca estuvo del límite (vacía = sano, llena = game over). Clara: peor momento · fuerte: al terminar.</p><div class="gm-grid">${GAME_OVER.map(medidor).join('')}</div>
-    ${climaTxt ? `<p class="res-clima">${climaTxt}</p>` : ''}
+    <div class="res-go">${[['Sin intervenir', goA], ...(conP ? [['Con propuesta', goB]] : [])].map(([t, g]) => `<div class="${g ? 'cae' : 'ok'}"><span>${t}</span><b>${g ? `GAME OVER · ${fecha(INICIO, g.mes)}` : `Game over no alcanzado hasta ${fin}`}</b>${g ? `<em>${g.titulo}${GRUPOS[g.g] ? ` · ${GRUPOS[g.g].toLowerCase()}` : ''}</em><small>${durTexto(g.mes + 1)} desde el inicio${t === 'Con propuesta' && conP ? ` · ${durTexto(Math.max(0, g.mes - prop.inicio))} después de aplicar la propuesta` : ''}</small>` : ''}</div>`).join('')}</div>
+    <p class="res-regla"><b>Regla del sistema integrado:</b> la ciudad y el ecosistema simulados caen con la <b>primera</b> de las ${GAME_OVER.length} reglas que se cumpla (${Object.entries(GRUPOS).map(([g, n]) => `${GAME_OVER.filter(x => x.g === g).length} de ${n.toLowerCase()}`).join(' y ')}). La misma regla se usa en los dos escenarios.</p>
+    <h3>Niveles de cada regla</h3><p class="res-nota">Primer mes en que cada regla llegó a cada nivel. <b>Alerta temprana</b>: el indicador cruza su umbral naranja. <b>Falla localizada</b>: cruza el límite de game over, pero todavía no se sostiene. <b>Condición crítica</b>: se sostiene los meses que pide la regla (game over). «—» = no llegó.</p>${tablaNiveles}
+    <h3>Cómo quedó cada game over al terminar</h3><p class="res-nota">La barra muestra qué tan cerca estuvo del límite (vacía = sano, llena = game over). Clara: peor momento · fuerte: al terminar.</p>${Object.entries(GRUPOS).length ? Object.entries(GRUPOS).map(([g, n]) => `<h4 class="gm-grupo">${n}</h4><div class="gm-grid">${GAME_OVER.filter(x => x.g === g).map(medidor).join('')}</div>`).join('') : `<div class="gm-grid">${GAME_OVER.map(medidor).join('')}</div>`}
+    ${climaTxt ? `<p class="res-clima">${climaTxt}${semilla ? ` · Semilla de azar: <b>${semilla}</b> (escríbela en «Condiciones de partida» para repetir esta corrida)` : ''}</p>` : ''}
+    ${bitacora.length ? `<h3>Lo que pasó en el territorio</h3><div class="res-ev">${Object.entries(bitacora.reduce((a, e) => (a[e.id] = (a[e.id] || 0) + 1, a), {})).sort((a, b) => b[1] - a[1]).map(([id, n]) => `<span class="${EVENTOS[id]?.malo ? 'malo' : 'bueno'}">${EVENTOS[id]?.t || id}: <b>${n}</b> ${n === 1 ? 'vez' : 'veces'}</span>`).join('')}</div>` : ''}
     <h3>Conclusiones</h3><ul class="res-conc">${C.map(c => `<li>${c}</li>`).join('')}</ul>
     <h3>Indicadores en el tiempo</h3><div class="legend res-ley"><span><i class="sw" style="background:#9aa7b4"></i>sin intervenir</span>${conP ? '<span><i class="sw" style="background:#f5c46b"></i>con propuesta</span><span><i class="sw" style="background:#f5c46b33"></i>periodo de obra</span>' : ''}<span><i class="sw" style="background:#ff9f1c"></i>regular</span><span><i class="sw" style="background:#ff2b2b"></i>falla</span></div>
     <div class="res-grid">${IND.map(grafica).join('')}</div>

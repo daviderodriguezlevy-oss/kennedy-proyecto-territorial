@@ -17,10 +17,10 @@ const INSECTOS = [
   { id: 'abeja', n: 'Abejas', c: '#f2c230', tam: .00002, base: 140 },
   { id: 'mariposa', n: 'Mariposas', c: '#f08a2c', tam: .00006, base: 40 }
 ];
-const MAX_AVES = 420, MAX_INS = 260;
+const MAX_AVES = 1000, MAX_INS = 600;   // margen para que, si el modelo dice que llegan más aves o abejas, se vean más (hasta ~3×)
 const LIM = { x: 2.5, z: 2.15 };
 
-export function setupFauna({ scene, ground, camera, controls, groups, dynamics, years, invalidate }) {
+export function setupFauna({ scene, ground, camera, controls, groups, dynamics, years, territorio, invalidate }) {
   // ---------- Hábitats: puntos muestreados de la geometría ----------
   const muestrear = (grupo, cada) => {
     const pts = [], v = new T.Vector3();
@@ -32,13 +32,17 @@ export function setupFauna({ scene, ground, camera, controls, groups, dynamics, 
     return pts;
   };
   const HAB = { agua: muestrear(groups.hydrology, 7), verde: muestrear(groups.parks, 9), mercado: [] };
-  for (let i = 0; i < 200; i++) { const a = i * 2.39996, r = .03 + (i % 20) / 20 * .28; HAB.mercado.push([-1.29 + Math.cos(a) * r, 1.16 + Math.sin(a) * r * .8]); }
+  for (let i = 0; i < 200; i++) { const a = i * 2.39996, r = .03 + (i % 20) / 20 * .28; HAB.mercado.push([-1.29 + Math.cos(a) * r, 1.16 + Math.sin(a) * r * .8, 'mercado']); }
   if (!HAB.agua.length) HAB.agua.push([-1.604, 1.185], [.16, .5]);
   if (!HAB.verde.length) HAB.verde.push(...HAB.agua);
   let semilla = 7; const rnd = () => (semilla = (semilla * 16807) % 2147483647) / 2147483647;
+  // Desplazamiento: se prefieren los lugares tranquilos y frescos (territorio.habitable). Si el ruido o el calor
+  // ocupan un hábitat, las especies lo dejan y se concentran en otros; si no queda ninguno, se van del mapa.
+  const vivible = p => !territorio || p[2] === 'mercado' || rnd() < .08 + .92 * territorio.habitable(p[0], p[1]);
   const punto = (hab, cerca, radio = .35) => {
-    const L = HAB[hab];
-    for (let k = 0; k < 12; k++) { const p = L[Math.floor(rnd() * L.length)]; if (!cerca || Math.hypot(p[0] - cerca.x, p[1] - cerca.z) < radio) return p; }
+    const L = HAB[hab], tolera = hab === 'mercado';
+    for (let k = 0; k < 24; k++) { const p = L[Math.floor(rnd() * L.length)]; if ((!cerca || Math.hypot(p[0] - cerca.x, p[1] - cerca.z) < radio) && (tolera || vivible(p))) return p; }
+    for (let k = 0; k < 24; k++) { const p = L[Math.floor(rnd() * L.length)]; if (tolera || vivible(p)) return p; }
     return L[Math.floor(rnd() * L.length)];
   };
 
@@ -73,8 +77,10 @@ export function setupFauna({ scene, ground, camera, controls, groups, dynamics, 
   let conteo = {}, factores = {};
   function objetivos() {
     const e = years?.estado || null;
-    const aves = e ? e.aves / 52 : 1, H = e ? Math.max(0, e.H) / 100 : 1, Q = e ? Math.max(0, e.Q) / 55 : 1, R = e ? e.R / 58 : 1;
-    const plagas = e ? e.plagas / 100 : 1, abejas = e ? Math.max(0, e.abejas) / 100 : 1, pm = e ? e.pm / 22 : 1;
+    // Exagerado a propósito: cada 5 % real de cambio se ve como ~17 % más o menos individuos.
+    const fx = (k, d) => e && territorio ? territorio.factor(k) : d;
+    const aves = fx('aves', 1), H = fx('H', 1), Q = fx('Q', 1), R = e ? e.R / 58 : 1;
+    const plagas = fx('plagas', 1), abejas = fx('abejas', 1) * fx('V', 1) ** .5, pm = fx('pm', 1);
     const hora = val('hour', 8) % 24, lluvia = val('rain', 0), viento = val('wind', 10), temp = val('temp', 16);
     const dia = hora >= 6 && hora < 18.5, crep = (hora >= 5 && hora < 6) || (hora >= 18.5 && hora < 19.5);
     const clima = Math.max(.15, 1 - lluvia / 25 - Math.max(0, viento - 20) / 50);   // fracción que vuela
@@ -120,6 +126,8 @@ export function setupFauna({ scene, ground, camera, controls, groups, dynamics, 
       let flap = 0, yaw = a.ang, pitch = 0;
       if (a.estado === 'posado') {
         a.espera -= dt;
+        // Si su sitio se volvió ruidoso o caliente, se va a otro (desplazamiento).
+        if (a.activo && territorio && e.hab !== 'mercado' && rnd() < dt * .4 && territorio.habitable(a.pos.x, a.pos.z) < .35) a.espera = 0;
         // De noche, con lluvia o viento fuerte se quedan posadas más tiempo.
         const vuela = (F.dia || (F.crep && rnd() < .5)) && rnd() < F.clima;
         if ((a.espera <= 0 && vuela) || !a.activo) { nuevoDestino(a); a.estado = 'vuela'; }

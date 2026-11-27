@@ -8,7 +8,7 @@
 //  · Lote libre al oriente de María Paz (cerca del punto M del proyecto) para el mercado de proximidad.
 // Sistema de ejes local: U a lo largo de las bodegas (rumbo 32°), V perpendicular; en metros.
 import * as T from 'three';
-import { edificio, muros, plano, poligono, mat, arboles, juncos, pasarela, puntosEn, dentro, area, organico, paneles, edificioPoligono, desplazar, tramos } from './arquitectura.js?v=2';
+import { edificio, muros, plano, poligono, mat, arboles, juncos, pasarela, puntosEn, dentro, area, organico, paneles, edificioPoligono, desplazar, tramos } from './arquitectura.js?v=3';
 
 const ANG = 32 * Math.PI / 180, CS = Math.cos(ANG), SN = Math.sin(ANG);
 const km = ([u, v]) => [u * 1000, v * 1000];
@@ -17,7 +17,26 @@ const PREDIO = [[-1.013, 1.622], [-1.024, 1.582], [-0.886, 1.439], [-0.718, 1.27
 // Ampliación del humedal: franja occidental del predio, contigua al agua actual de La Vaca.
 const HUMEDAL = [[-1.013, 1.622], [-0.886, 1.439], [-0.80, 1.405], [-0.735, 1.47], [-0.705, 1.62], [-0.672, 1.80], [-0.64, 1.95], [-0.733, 1.919], [-0.86, 1.80], [-0.95, 1.70]].map(km);
 
-export function createProposal({ scene, ground }) {
+// VARIABLES DE LA PROPUESTA (se eligen en «Condiciones de partida»; anos.js las copia aquí antes de construir).
+//  pisosViv: pisos de las manzanas renovadas de María Paz (prevista: 6, alternando 6 y 5)
+//  nivelesMercado: niveles de nave del mercado vertical sobre el zócalo de 2 (prevista: 4 → 6 pisos)
+//  humedalEsc: tamaño de la ampliación del humedal (1 = prevista; se escala desde el borde del agua actual)
+//  vegCant: cantidad de árboles nuevos (1 = prevista) · vegTipo: 'nativa' | 'mixta' | 'ornamental'
+//  nodos: 4 (N, M, R, P) | 2 (solo distribución N y M) | 0 (todo en el mercado vertical)
+export const OPC = { pisosViv: 6, nivelesMercado: 4, humedalEsc: 1, vegCant: 1, vegTipo: 'nativa', nodos: 4 };
+
+export function createProposal({ scene, ground, opc = OPC }) {
+  const vc = opc.vegCant, nm = opc.nivelesMercado, pv = opc.pisosViv;
+  // Humedal escalado desde el borde occidental (donde está el agua actual de La Vaca) y recortado al predio.
+  const A0 = [-960, 1620], escH = ([u, v]) => [A0[0] + (u - A0[0]) * opc.humedalEsc, A0[1] + (v - A0[1]) * opc.humedalEsc];
+  const HUM = recorteConvexo(HUMEDAL.map(escH), PREDIO);
+  // Árboles nuevos según el tipo: nativos (copa ancha) u ornamentales de rápido crecimiento (altos y esbeltos).
+  const ORN = { alto: [14, 24], tono: .24, esbelto: true };
+  const bosque = (pts, base = {}) => {
+    if (opc.vegTipo === 'ornamental') return arboles(pts, ORN);
+    if (opc.vegTipo !== 'mixta') return arboles(pts, base);
+    const g = new T.Group(), a = arboles(pts.filter((_, i) => i % 2), base), b = arboles(pts.filter((_, i) => !(i % 2)), ORN); g.add(...a.children, ...b.children); return g;
+  };
   const toWorld = (U, V) => [(U * CS - V * SN) / 1000, (U * SN + V * CS) / 1000];
   const gy = (U, V) => { const [x, z] = toWorld(U, V); return ground(x, z) * 1000; };
 
@@ -52,9 +71,9 @@ export function createProposal({ scene, ground }) {
     const cu = PREDIO.reduce((s, p) => s + p[0], 0) / PREDIO.length, cv = PREDIO.reduce((s, p) => s + p[1], 0) / PREDIO.length, pts = [];
     for (let i = 0; i < PREDIO.length; i++) {
       const [a, b] = [PREDIO[i], PREDIO[(i + 1) % PREDIO.length]], L = Math.hypot(b[0] - a[0], b[1] - a[1]);
-      for (let s = 6; s < L - 6; s += 13) { const t = s / L, U = a[0] + (b[0] - a[0]) * t, V = a[1] + (b[1] - a[1]) * t, k = 9 / Math.hypot(cu - U, cv - V); const UU = U + (cu - U) * k, VV = V + (cv - V) * k; if (!dentro(HUMEDAL, UU, VV)) pts.push([UU, VV, gy(UU, VV)]); }
+      for (let s = 6; s < L - 6; s += 13 / vc ** .7) { const t = s / L, U = a[0] + (b[0] - a[0]) * t, V = a[1] + (b[1] - a[1]) * t, k = 9 / Math.hypot(cu - U, cv - V); const UU = U + (cu - U) * k, VV = V + (cv - V) * k; if (!dentro(HUM, UU, VV)) pts.push([UU, VV, gy(UU, VV)]); }
     }
-    const alameda = arboles(pts, { alto: [8, 14], tono: .3 }); sitio.add(alameda); reg('alameda', 'Alameda perimetral', 'veg', uvMundo(PREDIO), [alameda]);
+    const alameda = bosque(pts, { alto: [8, 14], tono: .3 }); sitio.add(alameda); reg('alameda', 'Alameda perimetral', 'veg', uvMundo(PREDIO), [alameda]);
   }
 
   // ---- 1. Mercado vertical de Corabastos (recepción, conservación y venta) ----
@@ -67,10 +86,10 @@ export function createProposal({ scene, ground }) {
   muelles.position.set(0, zH * .4, zD / 2 + .05); mercado.add(muelles);   // muelles en la cara sur, hacia el patio
   const techoZ = new T.Mesh(plano(zW, zD, 8), mat('techoVerde')); techoZ.position.y = zH + .02; mercado.add(techoZ);
   // Tres naves de mercado sobre el zócalo, 4 niveles de 5 m (6 pisos en total), con cubierta en diente de sierra y lucernarios.
-  const NH = 20;
+  const NH = nm * 5;
   for (const dv of [-62, 0, 62]) {
     const nave = new T.Mesh(muros(250, 44, NH, 5, 5), mat('vidrio', { roughness: .25, metalness: .3 })); nave.position.set(0, zH, dv); mercado.add(nave);
-    for (let i = 1; i <= 4; i++) { const l = new T.Mesh(new T.BoxGeometry(251, .35, 45), mat('#e8e2d6')); l.position.set(0, zH + i * 5 - .17, dv); mercado.add(l); }
+    for (let i = 1; i <= nm; i++) { const l = new T.Mesh(new T.BoxGeometry(251, .35, 45), mat('#e8e2d6')); l.position.set(0, zH + i * 5 - .17, dv); mercado.add(l); }
     const sierra = new T.Shape([new T.Vector2(-22, 0), new T.Vector2(22, 0), new T.Vector2(22, 1.5), new T.Vector2(-22, 7)].map(p => p));
     const diente = new T.ExtrudeGeometry(sierra, { depth: 12, bevelEnabled: false });
     for (let k = -120; k < 120; k += 13) {
@@ -84,7 +103,7 @@ export function createProposal({ scene, ground }) {
   mercado.add(arboles([...Array(18)].map((_, i) => [-110 + i * 13, (i % 2 ? 31 : -31), zH])));
   // Núcleos de circulación vertical (escaleras y montacargas), más altos que las naves.
   for (const [cu, cv] of [[-130, -92], [130, -92], [-130, 92], [130, 92], [0, 92]]) {
-    const n = edificio({ w: 14, d: 14, pisos: 8, piso: 4.4, vano: 3.5, fachada: 'celosia', cubierta: 'plana' }); n.position.set(cu, 0, cv); mercado.add(n);
+    const n = edificio({ w: 14, d: 14, pisos: Math.ceil((zH + NH) / 4.4) + 1, piso: 4.4, vano: 3.5, fachada: 'celosia', cubierta: 'plana' }); n.position.set(cu, 0, cv); mercado.add(n);
   }
   // Rampa de camiones al nivel superior del zócalo (cara sur).
   const rampa = new T.Mesh(new T.BoxGeometry(70, .6, 12), mat('asfalto')); rampa.position.set(70, zH / 2, zD / 2 + 8); rampa.rotation.z = Math.atan2(zH, 70); mercado.add(rampa);
@@ -94,8 +113,8 @@ export function createProposal({ scene, ground }) {
   const yM = minSuelo([[MU - 135, MV - 90], [MU + 135, MV - 90], [MU + 135, MV + 90], [MU - 135, MV + 90]]);
   const base = new T.Mesh(new T.BoxGeometry(zW + 1, 10, zD + 1), mat('#b9b1a3')); base.position.y = -5; mercado.add(base);
   add(mercado, MU, MV, yM);
-  reg('mercado', 'Mercado vertical de Corabastos', 'edificio', uvMundo([[MU - 140, MV - 95], [MU + 140, MV - 95], [MU + 140, MV + 95], [MU - 140, MV + 95]]), [mercado], 36);
-  pin('Mercado vertical de Corabastos', 'Seis pisos: un zócalo logístico de 2 niveles (muelles, cuartos fríos, acopio) y encima tres naves de mercado de 4 niveles (recepción, conservación y venta), unos 30 m de altura y núcleos de circulación de 35 m. Ocupa ~49.000 m² de suelo frente a los ~380.000 m² del predio actual. Va al oriente porque ahí están la glorieta y las avenidas: los camiones entran y salen sin cruzar barrios ni el humedal.', MU, MV, 45);
+  reg('mercado', 'Mercado vertical de Corabastos', 'edificio', uvMundo([[MU - 140, MV - 95], [MU + 140, MV - 95], [MU + 140, MV + 95], [MU - 140, MV + 95]]), [mercado], zH + NH + 6);
+  pin('Mercado vertical de Corabastos', `${nm + 2} pisos: un zócalo logístico de 2 niveles (muelles, cuartos fríos, acopio) y encima tres naves de mercado de ${nm} niveles (recepción, conservación y venta), unos ${zH + NH} m de altura y núcleos de circulación más altos. Ocupa ~49.000 m² de suelo frente a los ~380.000 m² del predio actual. Va al oriente porque ahí están la glorieta y las avenidas: los camiones entran y salen sin cruzar barrios ni el humedal.`, MU, MV, zH + NH + 15);
 
   // ---- 2. Patio de camiones y muelles (P05) ----
   // Dentro del predio, al sur del mercado (frente a sus muelles) y siguiendo el borde del predio: no toca la vía.
@@ -113,26 +132,27 @@ export function createProposal({ scene, ground }) {
   pin('Patio de camiones y muelles', 'Dentro del predio, al sur del mercado y frente a sus muelles. La espera de camiones ocurre adentro, no en las calles ni en la avenida. Entrada y salida por la avenida sur.', -400, 1810, 10);
   // ---- 3. Ampliación del humedal La Vaca ----
   const hum = new T.Group(), nHum = sitio.children.length;
-  const orilla = recorteConvexo(organico(HUMEDAL, 10, 7), PREDIO);   // la orilla ondulada nunca sale del predio
-  hum.add(new T.Mesh(terreno(orilla, 6, .2, 3), mat('#58703c', { roughness: 1 })));     // pradera húmeda
-  // Espejos de agua escalonados (no todo es agua: hay zonas de pantano y orillas suaves).
-  const lag1 = organico([[-930, 1660], [-860, 1520], [-780, 1500], [-760, 1600], [-800, 1700], [-880, 1720]], 9, 8);
-  const lag2 = organico([[-760, 1700], [-715, 1680], [-690, 1800], [-680, 1900], [-730, 1880], [-770, 1790]], 7, 8);
+  const orilla = recorteConvexo(organico(HUM, 10, 7), PREDIO);   // la orilla ondulada nunca sale del predio
+  hum.add(new T.Mesh(terreno(orilla, 6, .26, 3), mat('#58703c', { roughness: 1 })));     // pradera húmeda
+  // Espejos de agua escalonados (no todo es agua: hay zonas de pantano y orillas suaves). Se escalan con el humedal.
+  const lag1 = recorteConvexo(organico([[-930, 1660], [-860, 1520], [-780, 1500], [-760, 1600], [-800, 1700], [-880, 1720]].map(escH), 9, 8), PREDIO);
+  const lag2 = recorteConvexo(organico([[-760, 1700], [-715, 1680], [-690, 1800], [-680, 1900], [-730, 1880], [-770, 1790]].map(escH), 7, 8), PREDIO);
   const agua = mat('#2f6a6c', { roughness: .08, metalness: .35, transparent: true, opacity: .92 });
-  for (const l of [lag1, lag2]) { const m = new T.Mesh(terreno(l, 10, .35, 2.5), agua); hum.add(m); }
+  for (const l of [lag1, lag2]) { const m = new T.Mesh(terreno(l, 10, .4, 2.5), agua); hum.add(m); }
   // Juncos en las orillas de las lagunas y bosque de borde en el perímetro.
   const enOrilla = l => puntosEn(organico(l, 16, 6), 900).filter(([x, z]) => !dentro(l, x, z));
   hum.add(juncos([...enOrilla(lag1), ...enOrilla(lag2)].map(([x, z]) => [x, z, gy(x, z) + .2])));
-  hum.add(arboles(puntosEn(orilla, 260).filter(([x, z]) => !dentro(lag1, x, z) && !dentro(lag2, x, z) && Math.min(...[lag1, lag2].map(l => dist(l, x, z))) > 18).map(([x, z]) => [x, z, gy(x, z)]), { alto: [6, 15], tono: .28 }));
+  const areaHum = Math.max(.2, Math.abs(area(HUM)) / Math.abs(area(HUMEDAL)));
+  hum.add(bosque(puntosEn(orilla, Math.round(260 * vc * areaHum)).filter(([x, z]) => !dentro(lag1, x, z) && !dentro(lag2, x, z) && Math.min(...[lag1, lag2].map(l => dist(l, x, z))) > 18).map(([x, z]) => [x, z, gy(x, z)]), { alto: [6, 15], tono: .28 }));
   // Islas con árboles (refugio de aves) y pasarela elevada con mirador.
-  hum.add(arboles([[-860, 1600], [-850, 1610], [-845, 1595], [-735, 1790], [-728, 1802]].map(([x, z]) => [x, z, gy(x, z)]), { alto: [8, 12] }));
-  hum.add(pasarela([[-760, 1450], [-790, 1530], [-770, 1620], [-745, 1700], [-720, 1780], [-700, 1880]], (x, z) => gy(x, z) + 1.2, 3));
+  hum.add(arboles([[-860, 1600], [-850, 1610], [-845, 1595], [-735, 1790], [-728, 1802]].map(escH).filter(([x, z]) => dentro(orilla, x, z)).map(([x, z]) => [x, z, gy(x, z)]), { alto: [8, 12] }));
+  hum.add(pasarela([[-760, 1450], [-790, 1530], [-770, 1620], [-745, 1700], [-720, 1780], [-700, 1880]].map(escH).filter(([x, z]) => dentro(PREDIO, x, z)), (x, z) => gy(x, z) + 1.2, 3));
   const mirador = new T.Group(); const fuste = new T.Mesh(new T.BoxGeometry(6, 12, 6), mat('madera')); fuste.position.y = 6; mirador.add(fuste);
   const top = new T.Mesh(new T.BoxGeometry(9, .4, 9), mat('#6b543e')); top.position.y = 12; mirador.add(top);
   const tech = new T.Mesh(new T.ConeGeometry(7, 3, 4), mat('#4a3a2b')); tech.position.y = 15; tech.rotation.y = Math.PI / 4; mirador.add(tech);
-  mirador.position.set(-770, gy(-770, 1620), 1620); hum.add(mirador);
-  add(hum, 0, 0, 0); reg('humedal', 'Ampliación del humedal La Vaca', 'veg', uvMundo(HUMEDAL), sitio.children.slice(nHum));
-  pin('Ampliación del humedal La Vaca', `Unos ${Math.round(area(HUMEDAL) / 10000)} ha nuevas contiguas al agua actual, sobre patios y bodegas que se desmontan. Lagunas poco profundas, pantano con juncos, islas-refugio para aves y bosque de borde. Una pasarela elevada y un mirador permiten recorrerlo sin entrar a las zonas de refugio.`, -800, 1620, 16);
+  const [mU, mV] = escH([-770, 1620]); mirador.position.set(mU, gy(mU, mV), mV); hum.add(mirador);
+  add(hum, 0, 0, 0); reg('humedal', 'Ampliación del humedal La Vaca', 'veg', uvMundo(HUM), sitio.children.slice(nHum));
+  pin('Ampliación del humedal La Vaca', `Unos ${Math.round(Math.abs(area(HUM)) / 10000)} ha nuevas contiguas al agua actual, sobre patios y bodegas que se desmontan. Lagunas poco profundas, pantano con juncos, islas-refugio para aves y bosque de borde. Una pasarela elevada y un mirador permiten recorrerlo sin entrar a las zonas de refugio.`, -800, 1620, 16);
 
   // ---- 4. Parque de Corabastos: une el barrio con el humedal ----
   // Ocupa todo el borde norte del predio (frente a María Paz) y la franja entre el mercado y el humedal.
@@ -142,7 +162,7 @@ export function createProposal({ scene, ground }) {
   for (let i = 1; i < camino.length; i++) { const [a, b] = [camino[i - 1], camino[i]], L = Math.hypot(b[0] - a[0], b[1] - a[1]); const s = new T.Mesh(new T.BoxGeometry(L + .5, .1, 4.5), mat('adoquin')); s.position.set((a[0] + b[0]) / 2, gy((a[0] + b[0]) / 2, (a[1] + b[1]) / 2) + .3, (a[1] + b[1]) / 2); s.rotation.y = -Math.atan2(b[1] - a[1], b[0] - a[0]); sitio.add(s); }
   const plaza = new T.Mesh(new T.CylinderGeometry(30, 30, .3, 40), mat('adoquin')); plaza.position.set(-450, gy(-450, 1440) + .25, 1440); sitio.add(plaza);
   const fuente = new T.Mesh(new T.CylinderGeometry(7, 7, .5, 32), agua); fuente.position.set(-450, gy(-450, 1440) + .5, 1440); sitio.add(fuente);
-  sitio.add(arboles(puntosEn(parque, 260).filter(([U, V]) => Math.abs(V - (1440 + Math.sin(U / 45) * 22)) > 6 && Math.hypot(U + 450, V - 1440) > 34).map(([U, V]) => [U, V, gy(U, V)]), { alto: [7, 16], tono: .29 }));
+  sitio.add(bosque(puntosEn(parque, Math.round(260 * vc)).filter(([U, V]) => Math.abs(V - (1440 + Math.sin(U / 45) * 22)) > 6 && Math.hypot(U + 450, V - 1440) > 34).map(([U, V]) => [U, V, gy(U, V)]), { alto: [7, 16], tono: .29 }));
   const juego = new T.Group(); for (let i = 0; i < 4; i++) { const p = new T.Mesh(new T.BoxGeometry(3, 2.5 + i, 3), mat(['#d9483b', '#f2b134', '#3d8bd9', '#58b368'][i])); p.position.set(i * 4, 1.25 + i / 2, 0); juego.add(p); }
   juego.position.set(-300, gy(-300, 1420), 1420); sitio.add(juego); reg('parque', 'Parque de Corabastos', 'veg', uvMundo(parque), sitio.children.slice(nParque));
   pin('Parque de Corabastos', `Unos ${(area(parque) / 10000).toFixed(1).replace('.', ',')} ha de parque sobre el suelo liberado: plaza con fuente, juegos y un camino que va del barrio María Paz al humedal. Abre el borde del mercado al barrio en vez de cerrarlo con muros.`, -450, 1440, 6);
@@ -178,22 +198,22 @@ export function createProposal({ scene, ground }) {
   // siguen la forma de la manzana, con comercio cotidiano en primer piso, pasajes y patios.
   let k = 0;
   for (const [id, pol] of Object.entries(MARIA_PAZ.vivienda)) {
-    const P = M(pol); masks.push(pol); const m0 = mundo.children.length, pisos = k % 3 === 0 ? 6 : 5;
+    const P = M(pol); masks.push(pol); const m0 = mundo.children.length, pisos = k % 3 === 0 ? pv : pv - 1;
     construir(P, { pisos, piso: 2.9, fachada: k % 2 ? 'ladrillo' : 'balcon', cubierta: k % 2 ? 'pv' : 'verde', patio: 11, largo: 42 + (k % 3) * 6 });
     reg('mp-' + id, 'Manzana ' + id + ' · vivienda', 'edificio', pol, mundo.children.slice(m0), pisos * 2.9 + 4.2, { grupo: 'mp', ola: k % 2 });
     k++;
   }
   {
     const [x, z] = centro(M(MARIA_PAZ.vivienda[718]));
-    pins.push({ titulo: 'Renovación de manzanas en María Paz', texto: 'Ocho manzanas repartidas en el barrio (no todo el barrio) cambian casas de 2–3 pisos por edificios de máximo 6 pisos con la forma exacta de cada manzana: comercio cotidiano en el primer piso, pasajes peatonales cada ~45 m y patios interiores. Con más viviendas en menos huella, otras manzanas quedan libres para parques.', x: x / 1000, z: z / 1000, y: (gw(x, z) + 24) / 1000 });
+    pins.push({ titulo: 'Renovación de manzanas en María Paz', texto: `Ocho manzanas repartidas en el barrio (no todo el barrio) cambian casas de 2–3 pisos por edificios de máximo ${pv} pisos con la forma exacta de cada manzana: comercio cotidiano en el primer piso, pasajes peatonales cada ~45 m y patios interiores. Con más viviendas en menos huella, otras manzanas quedan libres para parques.`, x: x / 1000, z: z / 1000, y: (gw(x, z) + pv * 2.9 + 7) / 1000 });
   }
   // ---- 6. Manzanas que se vuelven parque ----
   for (const [id, pol] of Object.entries(MARIA_PAZ.parque)) {
     const P = M(pol); masks.push(pol); const m0 = mundo.children.length;
     const plazaTri = P.length <= 4 || Math.abs(area(P)) < 2000;   // triángulos y cuñas: plazoleta dura con árboles
     suelo(P, plazaTri ? mat('adoquin') : mat('pasto'), .15, plazaTri ? 4 : 6);
-    const dentroP = puntosEn(desplazar(P, 3) || P, Math.max(4, Math.round(Math.abs(area(P)) / 140)));
-    mundo.add(arboles(dentroP.map(([x, z]) => [x, z, gw(x, z)]), { alto: [6, 13], tono: .3 }));
+    const dentroP = puntosEn(desplazar(P, 3) || P, Math.max(3, Math.round(Math.abs(area(P)) / 140 * vc)));
+    mundo.add(bosque(dentroP.map(([x, z]) => [x, z, gw(x, z)]), { alto: [6, 13], tono: .3 }));
     if (!plazaTri) {   // sendero a lo largo de la manzana y juegos
       const c = centro(P); const j = new T.Group(); for (let i = 0; i < 3; i++) { const b = new T.Mesh(new T.BoxGeometry(2.5, 2 + i, 2.5), mat(['#d9483b', '#f2b134', '#3d8bd9'][i])); b.position.set(i * 3.2, 1 + i / 2, 0); j.add(b); }
       j.position.set(c[0], gw(c[0], c[1]), c[1]); mundo.add(j);
@@ -203,7 +223,7 @@ export function createProposal({ scene, ground }) {
   pinMundo('Parques en manzanas liberadas', 'Cinco manzanas se vuelven espacio público: la 557 amplía el parque que ya existe en María Paz; las triangulares y en cuña (836, 792, 680) se vuelven plazoletas arborizadas en los cruces; la 826 es un parque largo en el centro del sector. Las casas que se demuelen se reponen en las manzanas renovadas.', M(MARIA_PAZ.parque[557]), 10);
 
   // ---- 7. Corabastos repartido: nodos de distribución, recuperación y producción en lotes libres ----
-  for (const [clave, d] of Object.entries(NODOS)) {
+  for (const [clave, d] of Object.entries(NODOS).filter(([c]) => opc.nodos >= 4 || (opc.nodos >= 2 && 'NM'.includes(c)))) {
     const P = M(d.lote); masks.push(d.lote); const m0 = mundo.children.length;
     construir(P, { ...d.edificio, piso: d.edificio.piso || 4.2, primerPiso: 5, patio: 0, largo: d.edificio.largo || 60, pasaje: d.edificio.pasaje || 10 }, 4, d.dividir ?? true);
     if (d.extra) d.extra({ P, mundo, gw, centro, suelo });
@@ -213,7 +233,7 @@ export function createProposal({ scene, ground }) {
 
   // Áreas a "desmontar" en la vista de propuesta: predio de Corabastos, manzanas renovadas o liberadas y lotes de nodos.
   const predioMundo = PREDIO.map(([U, V]) => toWorld(U, V));
-  return { group: raiz, pins, piezas, predio: predioMundo, mercadoZona: uvMundo(recorteConvexo([[MU - 150, MV - 100], [MU + 150, MV - 100], [MU + 150, MV + 100], [-276, 1752], [-292, 1812], [-346, 1882], [-495, 1882], [MU - 150, MV + 100]], PREDIO)), masks: [predioMundo, ...masks], areas: { predio: area(PREDIO), humedal: area(HUMEDAL), parque: area(parque) } };
+  return { group: raiz, pins, piezas, predio: predioMundo, mercadoZona: uvMundo(recorteConvexo([[MU - 150, MV - 100], [MU + 150, MV - 100], [MU + 150, MV + 100], [-276, 1752], [-292, 1812], [-346, 1882], [-495, 1882], [MU - 150, MV + 100]], PREDIO)), masks: [predioMundo, ...masks], areas: { predio: area(PREDIO), humedal: Math.abs(area(HUM)), parque: area(parque) } };
 }
 
 // ---------- Datos de lotes (coordenadas de escena, del análisis de ocupación de la cartografía) ----------

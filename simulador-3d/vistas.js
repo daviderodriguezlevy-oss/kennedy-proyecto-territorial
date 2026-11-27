@@ -187,7 +187,9 @@ export function setupPlanView({ scene, renderer, groups, hemisphere, sun, camera
     const extrasVis = (extras || []).map(o => o.visible); (extras || []).forEach(o => o.visible = false);
     paint(true); states?.show(true); footprint(); foot.visible = true; llenarPuntos(performance.now()); puntos.visible = true;
 
+    window.simTerritorio?.planta(true);
     renderer.setRenderTarget(rt); renderer.render(scene, cam); renderer.setRenderTarget(null);
+    window.simTerritorio?.planta(false);
 
     paint(false); states?.show(false); foot.visible = false; puntos.visible = false; (extras || []).forEach((o, i) => o.visible = extrasVis[i]);
     scene.background.copy(bg); hemisphere.intensity = hemi; sun.intensity = sunI; groups.trees.visible = treesVis;

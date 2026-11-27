@@ -43,6 +43,21 @@ export function setupStates({ scene, ground, dynamics, invalidate }) {
   ribbons.frustumCulled = false; ribbons.renderOrder = 2; ribbons.visible = false; scene.add(ribbons);
   const sum = new Float32Array(nCells), cnt = new Uint16Array(nCells), ema = new Float32Array(nCells).fill(-1);
 
+  // ---- Trancones también en 3D: franjas anchas sobre la calzada, solo donde el tráfico va lento o detenido ----
+  // (verde = transparente, para no tapar la ciudad; ámbar = lento; rojo = detenido).
+  const nSeg = pos.length / 6, ANCHO3D = .0075;
+  const p3 = new Float32Array(nSeg * 4 * 3), c3 = new Float32Array(nSeg * 4 * 4), idx = new Uint32Array(nSeg * 6);
+  for (let s = 0; s < nSeg; s++) {
+    const x1 = pos[s * 6], y1 = pos[s * 6 + 1] + .001, z1 = pos[s * 6 + 2], x2 = pos[s * 6 + 3], y2 = pos[s * 6 + 4] + .001, z2 = pos[s * 6 + 5];
+    const dx = x2 - x1, dz = z2 - z1, L = Math.hypot(dx, dz) || 1, nx = -dz / L * ANCHO3D / 2, nz = dx / L * ANCHO3D / 2;
+    p3.set([x1 + nx, y1, z1 + nz, x1 - nx, y1, z1 - nz, x2 + nx, y2, z2 + nz, x2 - nx, y2, z2 - nz], s * 12);
+    idx.set([s * 4, s * 4 + 1, s * 4 + 2, s * 4 + 1, s * 4 + 3, s * 4 + 2], s * 6);
+  }
+  const geo3 = new T.BufferGeometry(); geo3.setAttribute('position', new T.BufferAttribute(p3, 3)); geo3.setAttribute('color', new T.BufferAttribute(c3, 4)); geo3.setIndex(new T.BufferAttribute(idx, 1));
+  const franjas = new T.Mesh(geo3, new T.MeshBasicMaterial({ vertexColors: true, transparent: true, depthWrite: false, side: T.DoubleSide, toneMapped: false, polygonOffset: true, polygonOffsetFactor: -4 }));
+  franjas.frustumCulled = false; franjas.renderOrder = 3; scene.add(franjas);
+  let ver3D = true;
+
   // ---- Barras en Corabastos: cola, descargando y residuos ----
   const [cx, cz] = st0.center;
   const box = new T.BoxGeometry(1, 1, 1); box.translate(0, .5, 0);
@@ -74,8 +89,10 @@ export function setupStates({ scene, ground, dynamics, invalidate }) {
     for (let s = 0; s < segCell.length; s++) {
       const v = ema[segCell[s]], c = v < 0 ? GOLD : v < VEL_DETENIDO ? COL.bad : v < VEL_FLUYE ? COL.warn : COL.ok, a = v < 0 ? .7 : 1;
       const o = s * 8; colors[o] = colors[o + 4] = c.r; colors[o + 1] = colors[o + 5] = c.g; colors[o + 2] = colors[o + 6] = c.b; colors[o + 3] = colors[o + 7] = a;   // sin crear arreglos temporales
+      const a3 = v < 0 ? 0 : v < VEL_DETENIDO ? .85 : v < VEL_FLUYE ? .5 : 0, o3 = s * 16;
+      for (let k = 0; k < 4; k++) { c3[o3 + k * 4] = c.r; c3[o3 + k * 4 + 1] = c.g; c3[o3 + k * 4 + 2] = c.b; c3[o3 + k * 4 + 3] = a3; }
     }
-    geo.attributes.color.needsUpdate = true;
+    geo.attributes.color.needsUpdate = true; geo3.attributes.color.needsUpdate = true;
 
     const bays = +document.getElementById('bays').value, q = st.cargo.queue.length, srv = st.cargo.service.length;
     bars.cola.scale.y = .002 + Math.min(.16, q * .0045);
@@ -90,7 +107,8 @@ export function setupStates({ scene, ground, dynamics, invalidate }) {
 
   return {
     update,
-    show(on) { ribbons.visible = on; for (const b of Object.values(bars)) b.visible = on; },
+    show(on) { ribbons.visible = on; franjas.visible = !on && ver3D; for (const b of Object.values(bars)) b.visible = on; },
+    set ver3D(v) { ver3D = v; franjas.visible = v; invalidate(); },
     labelElement(parent) { if (label.parentElement !== parent) parent.append(label); return { el: label, x: cx, z: cz + .05 }; }
   };
 }
