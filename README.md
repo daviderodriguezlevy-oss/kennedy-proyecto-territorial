@@ -2,6 +2,10 @@
 
 Atlas web de investigación y propuesta arquitectónica en Kennedy, Bogotá. Integra macromodelos, problema, evidencia, redes urbanas y de especies, actores, programa arquitectónico, propuesta territorial y simulador 3D.
 
+## Video del proyecto
+
+[Ver en YouTube: Modelamiento Dinamico y Simulacion Kennedy](https://www.youtube.com/watch?v=x5zrAuT9yGQ)
+
 ## Abrir en el computador
 
 Desde esta carpeta, iniciar un servidor estático (por ejemplo `python -m http.server 8000`) y abrir:
